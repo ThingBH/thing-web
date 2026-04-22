@@ -38,7 +38,7 @@ export function Header() {
       <div className="tc-wrap tc-header-inner">
         <a href="#" className="tc-logo" onClick={() => setOpen(false)}>
           <span className="tc-logo-mark" aria-hidden>
-            <img src="/logo.svg" alt="" width="22" height="22" style={{ filter: 'invert(1)', display: 'block' }} />
+            <img src="/logo.svg" alt="" width="28" height="28" style={{ filter: 'invert(1)', display: 'block' }} />
           </span>
           Thing Company
         </a>

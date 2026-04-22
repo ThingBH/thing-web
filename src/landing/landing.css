@@ -54,15 +54,15 @@
   gap: 12px;
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: 1.05rem;
+  font-size: 1.2rem;
   color: var(--text);
   letter-spacing: -0.03em;
 }
 
 .tc-logo-mark {
-  width: 36px;
-  height: 36px;
-  border-radius: 11px;
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
   background: linear-gradient(145deg, var(--elevated-2), var(--elevated));
   border: 1px solid var(--border-strong);
   display: grid;
@@ -71,8 +71,8 @@
 }
 
 .tc-logo-mark svg {
-  width: 18px;
-  height: 18px;
+  width: 24px;
+  height: 24px;
 }
 
 .tc-nav {
