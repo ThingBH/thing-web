@@ -34,37 +34,6 @@ export function GymHighlight() {
           </div>
 
           <div className="tc-gym-mocks" aria-hidden>
-            <div className="tc-mock-mobile-lg">
-              <div className="tc-phone-notch" />
-              <div className="tc-phone-screen">
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 6 }}>
-                  <span style={{ fontSize: 10, fontWeight: 700, color: 'var(--text)' }}>Today</span>
-                  <span className="tc-pill">Live</span>
-                </div>
-                <div className="tc-phone-line accent" />
-                <div className="tc-phone-line" />
-                <div className="tc-phone-line short" />
-                <div style={{ marginTop: 10, display: 'grid', gap: 8 }}>
-                  {[1, 2, 3].map((i) => (
-                    <div
-                      key={i}
-                      style={{
-                        padding: '10px 10px',
-                        borderRadius: 12,
-                        border: '1px solid var(--border)',
-                        background: 'var(--elevated)',
-                        display: 'grid',
-                        gap: 6,
-                      }}
-                    >
-                      <div className="tc-phone-line" style={{ width: '70%' }} />
-                      <div className="tc-phone-line short" />
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
             <div className="tc-mock-dash-lg">
               <div className="tc-dash-top">
                 <div className="tc-dash-dots">
