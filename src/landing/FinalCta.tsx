@@ -1,4 +1,4 @@
-import { RevealSection } from './RevealSection'
+import { RevealSection } from "./RevealSection";
 
 export function FinalCta() {
   return (
@@ -7,12 +7,13 @@ export function FinalCta() {
         <div className="tc-final-box">
           <h2>Bring Thing Company into your next chapter.</h2>
           <p>
-            Tell us about your locations, members, and timelines. We will tailor a walkthrough across Thing Gym and the
-            wider suite, with solution architects on the line from day one.
+            Tell us about your locations, members, and timelines. We will tailor
+            a walkthrough across Thing Gym and the wider suite, with solution
+            architects on the line from day one.
           </p>
           <div className="tc-final-actions">
             <a href="mailto:hello@thing.bh" className="tc-btn tc-btn-primary">
-              Book a demo
+              Get in touch
             </a>
             <a href="#products" className="tc-btn tc-btn-ghost">
               Explore products
@@ -21,5 +22,5 @@ export function FinalCta() {
         </div>
       </div>
     </RevealSection>
-  )
+  );
 }

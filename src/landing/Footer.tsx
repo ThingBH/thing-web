@@ -6,11 +6,20 @@ export function Footer() {
           <div className="tc-footer-brand">
             <a href="#" className="tc-logo">
               <span className="tc-logo-mark" aria-hidden>
-                <img src="/logo.svg" alt="" width="20" height="20" style={{ filter: 'invert(1)', display: 'block' }} />
+                <img
+                  src="/logo.svg"
+                  alt=""
+                  width="20"
+                  height="20"
+                  style={{ filter: "invert(1)", display: "block" }}
+                />
               </span>
               Thing Company
             </a>
-            <p>Digital products, platforms, and partnerships for teams who expect more than a vendor relationship.</p>
+            <p>
+              Digital products, platforms, and partnerships for teams who expect
+              more than a vendor relationship.
+            </p>
           </div>
           <div>
             <h4>Products</h4>
@@ -44,16 +53,29 @@ export function Footer() {
             <h4>Contact</h4>
             <ul>
               <li>
-                <span style={{ color: 'var(--text-muted)', fontSize: '0.92rem' }}>Manama, Bahrain</span>
+                <span
+                  style={{ color: "var(--text-muted)", fontSize: "0.92rem" }}
+                >
+                  <a href="mailto:hello@thing.bh">hello@thing.bh</a>
+                </span>
+              </li>
+              <li>
+                <span
+                  style={{ color: "var(--text-muted)", fontSize: "0.92rem" }}
+                >
+                  Manama, Bahrain
+                </span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="tc-footer-bottom">
-          <span>© {new Date().getFullYear()} Thing Company. All rights reserved.</span>
+          <span>
+            © {new Date().getFullYear()} Thing Company. All rights reserved.
+          </span>
         </div>
       </div>
     </footer>
-  )
+  );
 }
