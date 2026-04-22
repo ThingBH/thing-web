@@ -22,7 +22,7 @@ export function Hero() {
           <dl className="tc-hero-meta reveal reveal-delay-3">
             <div>
               <dt>Products live</dt>
-              <dd>3A+</dd>
+              <dd>3+</dd>
             </div>
             <div>
               <dt>Uptime posture</dt>
