@@ -24,7 +24,7 @@ const products = [
     features: [] as string[],
   },
   {
-    name: "Thing Field",
+    name: "Field Thing",
     description:
       "Dispatch, asset tracking, and mobile-first tasking for teams that work beyond the desk, from facilities to field service.",
     featured: false,
