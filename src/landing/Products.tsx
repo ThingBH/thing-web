@@ -44,7 +44,7 @@ export function Products() {
         <div className="tc-products-grid">
           {products.map((p) => (
             <article key={p.name} className={`tc-product${p.featured ? ' featured' : ''}`}>
-              {p.featured ? <span className="tc-product-badge">Flagship</span> : null}
+              {p.featured ? <span className="tc-product-badge">3A+</span> : null}
               <div className="tc-product-icon">
                 <p.Icon />
               </div>
