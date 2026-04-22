@@ -25,8 +25,7 @@ export function SocialProof() {
     <RevealSection id="proof" className="tc-section">
       <div className="tc-wrap">
         <header className="tc-section-head">
-          <p className="tc-kicker">Evidence</p>
-          <h2>Trusted by operators who measure everything.</h2>
+<h2>Trusted by operators who measure everything.</h2>
           <p>Teams across boutique fitness, hybrid gyms, and multi-site franchises run critical workflows on Thing Company products.</p>
         </header>
 
