@@ -263,6 +263,7 @@
 .tc-hero-visual {
   position: relative;
   min-height: 420px;
+  padding-top: 48px;
 }
 
 @media (max-width: 960px) {
