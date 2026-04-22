@@ -58,13 +58,7 @@ export function Footer() {
             <h4>Contact</h4>
             <ul>
               <li>
-                <a href="mailto:hello@thing.company">hello@thing.company</a>
-              </li>
-              <li>
-                <a href="tel:+14155550127">+1 (415) 555-0127</a>
-              </li>
-              <li>
-                <span style={{ color: 'var(--text-muted)', fontSize: '0.92rem' }}>San Francisco, California</span>
+                <span style={{ color: 'var(--text-muted)', fontSize: '0.92rem' }}>Manama, Bahrain</span>
               </li>
             </ul>
           </div>
