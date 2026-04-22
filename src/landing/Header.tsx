@@ -38,21 +38,7 @@ export function Header() {
       <div className="tc-wrap tc-header-inner">
         <a href="#" className="tc-logo" onClick={() => setOpen(false)}>
           <span className="tc-logo-mark" aria-hidden>
-            <svg viewBox="0 0 24 24" fill="none" aria-hidden>
-              <path
-                d="M7 17 12 6l5 11M9.5 13h5"
-                stroke="url(#lg)"
-                strokeWidth="1.7"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <defs>
-                <linearGradient id="lg" x1="7" y1="6" x2="17" y2="18" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#5ee7d8" />
-                  <stop offset="1" stopColor="#d4b896" />
-                </linearGradient>
-              </defs>
-            </svg>
+            <img src="/logo.png" alt="" width="22" height="22" style={{ filter: 'invert(1)', display: 'block' }} />
           </span>
           Thing Company
         </a>
