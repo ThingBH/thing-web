@@ -11,7 +11,7 @@ export function FinalCta() {
             wider suite, with solution architects on the line from day one.
           </p>
           <div className="tc-final-actions">
-            <a href="mailto:hello@thing.company" className="tc-btn tc-btn-primary">
+            <a href="mailto:hello@thing.bh" className="tc-btn tc-btn-primary">
               Book a demo
             </a>
             <a href="#products" className="tc-btn tc-btn-ghost">
