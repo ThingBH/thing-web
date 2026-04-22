@@ -6,7 +6,7 @@ export function Footer() {
           <div className="tc-footer-brand">
             <a href="#" className="tc-logo">
               <span className="tc-logo-mark" aria-hidden>
-                <img src="/logo.png" alt="" width="20" height="20" style={{ filter: 'invert(1)', display: 'block' }} />
+                <img src="/logo.svg" alt="" width="20" height="20" style={{ filter: 'invert(1)', display: 'block' }} />
               </span>
               Thing Company
             </a>
