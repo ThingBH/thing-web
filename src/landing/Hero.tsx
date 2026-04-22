@@ -5,11 +5,13 @@ export function Hero() {
         <div>
           <p className="tc-eyebrow reveal">Multi-product platform studio</p>
           <h1 id="hero-heading" className="reveal reveal-delay-1">
-            Software products built for <span className="accent">real operations</span>, not slide decks.
+            Software products built for{" "}
+            <span className="accent">real operations</span>, not slide decks.
           </h1>
           <p className="tc-hero-lead reveal reveal-delay-2">
-            Thing Company designs and ships cloud-native tools for growing businesses, from boutique studios to
-            distributed enterprises, with deep expertise in fitness and gym management.
+            Thing Company designs and ships cloud-native tools for growing
+            businesses, from boutique studios to distributed enterprises, with
+            deep expertise in fitness and gym management.
           </p>
           <div className="tc-hero-ctas reveal reveal-delay-2">
             <a href="#products" className="tc-btn tc-btn-primary">
@@ -59,11 +61,11 @@ export function Hero() {
                   </div>
                 </div>
                 <div className="tc-dash-chart">
-                  <div className="tc-bar" style={{ height: '42%' }} />
+                  <div className="tc-bar" style={{ height: "42%" }} />
                   <div className="tc-bar" />
-                  <div className="tc-bar" style={{ height: '58%' }} />
+                  <div className="tc-bar" style={{ height: "58%" }} />
                   <div className="tc-bar" />
-                  <div className="tc-bar" style={{ height: '50%' }} />
+                  <div className="tc-bar" style={{ height: "50%" }} />
                   <div className="tc-bar" />
                 </div>
               </div>
@@ -76,7 +78,7 @@ export function Hero() {
                   <span />
                   <span />
                 </div>
-                <span className="tc-dash-title">Thing Gym / Overview</span>
+                <span className="tc-dash-title">Gym Thing / Overview</span>
               </div>
               <div className="tc-dash-body">
                 <div className="tc-dash-row">
@@ -90,12 +92,12 @@ export function Hero() {
                   </div>
                 </div>
                 <div className="tc-dash-chart">
-                  <div className="tc-bar" style={{ height: '38%' }} />
-                  <div className="tc-bar" style={{ height: '62%' }} />
-                  <div className="tc-bar" style={{ height: '48%' }} />
-                  <div className="tc-bar" style={{ height: '88%' }} />
-                  <div className="tc-bar" style={{ height: '52%' }} />
-                  <div className="tc-bar" style={{ height: '70%' }} />
+                  <div className="tc-bar" style={{ height: "38%" }} />
+                  <div className="tc-bar" style={{ height: "62%" }} />
+                  <div className="tc-bar" style={{ height: "48%" }} />
+                  <div className="tc-bar" style={{ height: "88%" }} />
+                  <div className="tc-bar" style={{ height: "52%" }} />
+                  <div className="tc-bar" style={{ height: "70%" }} />
                 </div>
               </div>
             </div>
@@ -114,5 +116,5 @@ export function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }

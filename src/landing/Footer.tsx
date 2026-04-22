@@ -25,13 +25,13 @@ export function Footer() {
             <h4>Products</h4>
             <ul>
               <li>
-                <a href="#products">Thing Gym</a>
+                <a href="#products">Gym Thing</a>
               </li>
               <li>
-                <a href="#products">Thing Ledger</a>
+                <a href="#products">Ledger Thing</a>
               </li>
               <li>
-                <a href="#products">Thing Field</a>
+                <a href="#products">Field Thing</a>
               </li>
             </ul>
           </div>

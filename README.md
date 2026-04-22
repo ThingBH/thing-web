@@ -1,4 +1,4 @@
-# Thing Gym — Landing Page
+# Gym Thing — Landing Page
 
 A modern, animated landing page for a gym brand. Built with React + TypeScript + Vite.
 

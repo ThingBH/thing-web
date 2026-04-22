@@ -8,7 +8,7 @@ export function FinalCta() {
           <h2>Bring Thing Company into your next chapter.</h2>
           <p>
             Tell us about your locations, members, and timelines. We will tailor
-            a walkthrough across Thing Gym and the wider suite, with solution
+            a walkthrough across Gym Thing and the wider suite, with solution
             architects on the line from day one.
           </p>
           <div className="tc-final-actions">
