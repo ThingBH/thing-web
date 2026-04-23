@@ -155,6 +155,6 @@ p {
 
 @media (max-width: 640px) {
   .tc-wrap {
-    width: calc(100% - 28px);
+    width: calc(100% - 36px);
   }
 }

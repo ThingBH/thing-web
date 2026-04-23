@@ -1047,3 +1047,90 @@
   border-color: rgba(79, 209, 197, 0.35);
   background: var(--accent-dim);
 }
+
+/* ——— Mobile improvements ——— */
+@media (max-width: 640px) {
+  /* Tighter section padding */
+  .tc-section {
+    padding: 56px 0;
+  }
+
+  .tc-gym {
+    padding: 56px 0;
+  }
+
+  .tc-final {
+    padding: 64px 0 72px;
+  }
+
+  .tc-hero {
+    padding: 32px 0 64px;
+  }
+
+  /* Hero visual: hide on small phones */
+  .tc-hero-visual {
+    display: none;
+  }
+
+  /* Full-width CTA buttons on mobile */
+  .tc-hero-ctas {
+    flex-direction: column;
+  }
+
+  .tc-hero-ctas .tc-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Products: 1 col already, but tighten */
+  .tc-products-grid {
+    gap: 14px;
+  }
+
+  /* Section head tighter */
+  .tc-section-head {
+    margin-bottom: 32px;
+  }
+
+  /* Final CTA box padding */
+  .tc-final-box {
+    padding: 28px 20px;
+  }
+
+  /* Gym inner padding */
+  .tc-gym-inner {
+    padding: 24px 20px;
+  }
+
+  /* Footer bottom policy links stack */
+  .tc-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  /* Reduce hero meta gap */
+  .tc-hero-meta {
+    gap: 20px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 960px) {
+  /* Products: 2 columns on tablet */
+  .tc-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Section padding on tablet */
+  .tc-section {
+    padding: 72px 0;
+  }
+
+  .tc-gym {
+    padding: 72px 0;
+  }
+
+  .tc-final {
+    padding: 80px 0 96px;
+  }
+}
