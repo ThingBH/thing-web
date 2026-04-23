@@ -53,16 +53,12 @@ export function Footer() {
             <h4>Contact</h4>
             <ul>
               <li>
-                <span
-                  style={{ color: "var(--text-muted)", fontSize: "0.92rem" }}
-                >
+                <span style={{ color: "var(--text-muted)", fontSize: "0.92rem" }}>
                   <a href="mailto:hello@thing.bh">hello@thing.bh</a>
                 </span>
               </li>
               <li>
-                <span
-                  style={{ color: "var(--text-muted)", fontSize: "0.92rem" }}
-                >
+                <span style={{ color: "var(--text-muted)", fontSize: "0.92rem" }}>
                   Manama, Bahrain
                 </span>
               </li>
@@ -74,6 +70,11 @@ export function Footer() {
           <span>
             © {new Date().getFullYear()} Thing Company. All rights reserved.
           </span>
+          <div style={{ display: "flex", gap: 20 }}>
+            <a href="/privacy" style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>Privacy</a>
+            <a href="/terms" style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>Terms</a>
+            <a href="/data-deletion" style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>Data Deletion</a>
+          </div>
         </div>
       </div>
     </footer>
