@@ -60,13 +60,15 @@
 }
 
 .tc-logo-mark {
-  width: 44px;
-  height: 44px;
-  border-radius: 12px;
-  /* Crop to the frame mark only — offset calculated from SVG coordinates (429,313) in a 1536x1024 canvas, scaled so 410px height = 44px */
+  /* Shows full THING wordmark (frame+text): x=429-1205, y=313-723 in the 1536x1024 SVG */
+  /* Scale: 34/410 = 0.0829 → content renders 64px wide × 34px tall */
+  width: 68px;
+  height: 34px;
+  border-radius: 6px;
+  overflow: hidden;
   background-image: url('/logo.svg');
-  background-size: 165px 110px;
-  background-position: -46px -34px;
+  background-size: 127px 85px;
+  background-position: -36px -26px;
   flex-shrink: 0;
 }
 

@@ -7,7 +7,6 @@ export function Footer() {
           <div className="tc-footer-brand">
             <a href="/" className="tc-logo">
               <span className="tc-logo-mark" aria-hidden />
-              Thing Company
             </a>
             <p>
               Digital products, platforms, and partnerships for teams who expect

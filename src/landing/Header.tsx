@@ -38,7 +38,6 @@ export function Header() {
       <div className="tc-wrap tc-header-inner">
         <a href="/" className="tc-logo" onClick={() => setOpen(false)}>
           <span className="tc-logo-mark" aria-hidden />
-          Thing Company
         </a>
 
         <nav className="tc-nav" aria-label="Primary">

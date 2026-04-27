@@ -1,10 +1,26 @@
-import type { ReactNode } from 'react'
+import { Component, type ReactNode } from 'react'
 import { Header } from './Header'
 import { Footer } from './Footer'
 import { RevealSection } from './RevealSection'
 import { useCardTilt } from '../hooks/useCardTilt'
 import './landing.css'
 import './gym.css'
+
+class ErrorBoundary extends Component<{ children: ReactNode }, { err: string | null }> {
+  state = { err: null }
+  static getDerivedStateFromError(e: Error) { return { err: e.message } }
+  render() {
+    if (this.state.err) {
+      return (
+        <div style={{ padding: 40, color: '#C6FF00', fontFamily: 'monospace', background: '#050608', minHeight: '100vh' }}>
+          <h2>Page error</h2>
+          <pre style={{ whiteSpace: 'pre-wrap', color: '#f87171' }}>{this.state.err}</pre>
+        </div>
+      )
+    }
+    return this.props.children
+  }
+}
 
 type Feature = { title: string; desc: string; icon: ReactNode }
 
@@ -69,7 +85,6 @@ const features: Feature[] = [
 function HeroVisual() {
   return (
     <div className="gym-hero-visual" aria-hidden>
-      {/* back card */}
       <div className="gym-hero-card gym-hero-card-back">
         <div className="tc-dash-top">
           <div className="tc-dash-dots"><span /><span /><span /></div>
@@ -89,7 +104,6 @@ function HeroVisual() {
           </div>
         </div>
       </div>
-      {/* front card */}
       <div className="gym-hero-card gym-hero-card-front">
         <div className="tc-dash-top">
           <div className="tc-dash-dots"><span /><span /><span /></div>
@@ -194,12 +208,11 @@ function DashboardPreview() {
   )
 }
 
-export default function GymPage() {
+function GymPageContent() {
   return (
     <div className="gym-page">
       <Header />
       <main>
-        {/* ——— Hero ——— */}
         <section className="gym-hero">
           <div className="gym-hero-grid-bg" aria-hidden />
           <div className="tc-wrap gym-hero-inner">
@@ -230,7 +243,6 @@ export default function GymPage() {
           </div>
         </section>
 
-        {/* ——— Features ——— */}
         <RevealSection id="features" className="gym-features">
           <div className="tc-wrap">
             <header className="tc-section-head">
@@ -250,19 +262,17 @@ export default function GymPage() {
           </div>
         </RevealSection>
 
-        {/* ——— Dashboard preview ——— */}
         <RevealSection className="gym-preview">
           <div className="tc-wrap">
             <div className="gym-preview-head">
               <p className="gym-kicker">Live dashboard</p>
               <h2>Real-time visibility across your whole operation.</h2>
-              <p>From MRR to member churn — the numbers leadership needs, always current. <em>Drag your cursor over the cards.</em></p>
+              <p>From MRR to member churn — always current. <em>Move your cursor over the cards.</em></p>
             </div>
             <DashboardPreview />
           </div>
         </RevealSection>
 
-        {/* ——— CTA ——— */}
         <RevealSection className="gym-cta">
           <div className="tc-wrap">
             <div className="gym-cta-box">
@@ -281,5 +291,13 @@ export default function GymPage() {
       </main>
       <Footer />
     </div>
+  )
+}
+
+export default function GymPage() {
+  return (
+    <ErrorBoundary>
+      <GymPageContent />
+    </ErrorBoundary>
   )
 }
