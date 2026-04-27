@@ -62,13 +62,12 @@
 .tc-logo-mark {
   width: 44px;
   height: 44px;
-  border-radius: 13px;
-  background: #0a0b0e;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  display: grid;
-  place-items: center;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
-  padding: 10px;
+  border-radius: 12px;
+  /* Crop to the frame mark only — offset calculated from SVG coordinates (429,313) in a 1536x1024 canvas, scaled so 410px height = 44px */
+  background-image: url('/logo.svg');
+  background-size: 165px 110px;
+  background-position: -46px -34px;
+  flex-shrink: 0;
 }
 
 .tc-logo-mark svg {
