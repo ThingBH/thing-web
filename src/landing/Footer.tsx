@@ -1,18 +1,22 @@
+const LogoMark = () => (
+  <svg width="20" height="20" viewBox="0 0 32 32" fill="none" aria-hidden>
+    <path d="M5 9V5h4" stroke="#C6FF00" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M27 9V5h-4" stroke="#C6FF00" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M5 23v4h4" stroke="#C6FF00" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M27 23v4h-4" stroke="#C6FF00" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M10 12h12M16 12v8" stroke="white" strokeWidth="2.4" strokeLinecap="round" />
+  </svg>
+)
+
 export function Footer() {
   return (
     <footer className="tc-footer">
       <div className="tc-wrap">
         <div className="tc-footer-grid">
           <div className="tc-footer-brand">
-            <a href="#" className="tc-logo">
+            <a href="/" className="tc-logo">
               <span className="tc-logo-mark" aria-hidden>
-                <img
-                  src="/logo.svg"
-                  alt=""
-                  width="20"
-                  height="20"
-                  style={{ filter: "invert(1)", display: "block" }}
-                />
+                <LogoMark />
               </span>
               Thing Company
             </a>
