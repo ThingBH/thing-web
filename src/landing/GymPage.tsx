@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import { Header } from './Header'
 import { Footer } from './Footer'
 import { RevealSection } from './RevealSection'
+import { useCardTilt } from '../hooks/useCardTilt'
 import './landing.css'
 import './gym.css'
 
@@ -34,8 +35,7 @@ const features: Feature[] = [
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round">
         <rect x="2" y="5" width="20" height="14" rx="2" />
-        <path d="M2 10h20" />
-        <path d="M6 15h4" />
+        <path d="M2 10h20M6 15h4" />
       </svg>
     ),
   },
@@ -70,6 +70,106 @@ const features: Feature[] = [
   },
 ]
 
+function DashboardPreview() {
+  const revenueCard = useCardTilt(6)
+  const membersCard = useCardTilt(6)
+
+  return (
+    <div className="gym-preview-grid">
+      <div
+        ref={revenueCard.ref}
+        className="gym-mock-card large"
+        onMouseMove={revenueCard.onMouseMove}
+        onMouseLeave={revenueCard.onMouseLeave}
+        aria-hidden
+      >
+        <div className="tc-dash-top">
+          <div className="tc-dash-dots"><span /><span /><span /></div>
+          <span className="tc-dash-title">Gym Thing / Revenue</span>
+        </div>
+        <div className="tc-dash-body">
+          <div className="tc-dash-row">
+            <div className="tc-dash-stat">
+              <strong style={{ color: '#C6FF00' }}>$48.2k</strong>
+              <span>MRR</span>
+            </div>
+            <div className="tc-dash-stat">
+              <strong>+12%</strong>
+              <span>vs last quarter</span>
+            </div>
+          </div>
+          <div className="gym-chart">
+            <div className="gym-bar" style={{ height: '42%' }} />
+            <div className="gym-bar" style={{ height: '58%' }} />
+            <div className="gym-bar" style={{ height: '36%' }} />
+            <div className="gym-bar" style={{ height: '78%' }} />
+            <div className="gym-bar" style={{ height: '52%' }} />
+            <div className="gym-bar" style={{ height: '68%' }} />
+            <div className="gym-bar" style={{ height: '90%' }} />
+          </div>
+          <div className="tc-mock-table">
+            <div className="tc-mock-table-row head">
+              <span>Plan</span><span>Members</span><span>Churn</span>
+            </div>
+            <div className="tc-mock-table-row">
+              <span>Unlimited</span><span>412</span><span>1.8%</span>
+            </div>
+            <div className="tc-mock-table-row">
+              <span>Corporate</span><span>96</span><span>0.9%</span>
+            </div>
+            <div className="tc-mock-table-row">
+              <span>Drop-in</span><span>58</span><span>—</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        ref={membersCard.ref}
+        className="gym-mock-card"
+        onMouseMove={membersCard.onMouseMove}
+        onMouseLeave={membersCard.onMouseLeave}
+        aria-hidden
+      >
+        <div className="tc-dash-top">
+          <div className="tc-dash-dots"><span /><span /><span /></div>
+          <span className="tc-dash-title">Members / Active</span>
+        </div>
+        <div className="tc-dash-body">
+          <div className="tc-dash-row" style={{ gridTemplateColumns: '1fr 1fr' }}>
+            <div className="tc-dash-stat">
+              <strong>842</strong>
+              <span>Active</span>
+            </div>
+            <div className="tc-dash-stat">
+              <strong style={{ color: '#C6FF00' }}>+24</strong>
+              <span>This month</span>
+            </div>
+          </div>
+          <div className="gym-member-list">
+            {[
+              { name: 'Sara Al-Dosari', plan: 'Unlimited', active: true },
+              { name: 'Khalid Mansoor', plan: 'Corporate', active: true },
+              { name: 'Nour Rashid', plan: 'Unlimited', active: true },
+              { name: 'Ali Al-Farsi', plan: 'Drop-in', active: false },
+            ].map((m) => (
+              <div key={m.name} className="gym-member-row">
+                <div>
+                  <div className="name">{m.name}</div>
+                  <div className="plan">{m.plan}</div>
+                </div>
+                <span className={`status${m.active ? '' : ' inactive'}`}>
+                  {m.active ? 'Active' : 'Lapsed'}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export default function GymPage() {
   return (
     <div className="gym-page">
@@ -77,7 +177,8 @@ export default function GymPage() {
       <main>
         {/* ——— Hero ——— */}
         <section className="gym-hero">
-          <div className="tc-wrap">
+          <div className="gym-hero-grid-bg" aria-hidden />
+          <div className="tc-wrap gym-hero-content">
             <div className="gym-eyebrow">
               <span className="gym-badge">Gym Thing</span>
               <span>Gym management software</span>
@@ -122,7 +223,7 @@ export default function GymPage() {
               <p className="gym-kicker">What it does</p>
               <h2>Everything your gym needs. Nothing it doesn't.</h2>
               <p>
-                Gym Thing is a cohesive platform, not a patchwork of integrations. Every feature
+                Gym Thing is a cohesive platform — not a patchwork of integrations. Every feature
                 shares the same member data, billing layer, and identity system.
               </p>
             </header>
@@ -146,104 +247,7 @@ export default function GymPage() {
               <h2>Real-time visibility across your whole operation.</h2>
               <p>From MRR to member churn — the numbers leadership actually needs, always current.</p>
             </div>
-            <div className="gym-preview-grid">
-              {/* Revenue card */}
-              <div className="gym-mock-card large" aria-hidden>
-                <div className="tc-dash-top">
-                  <div className="tc-dash-dots">
-                    <span />
-                    <span />
-                    <span />
-                  </div>
-                  <span className="tc-dash-title">Gym Thing / Revenue</span>
-                </div>
-                <div className="tc-dash-body">
-                  <div className="tc-dash-row">
-                    <div className="tc-dash-stat">
-                      <strong style={{ color: '#C6FF00' }}>$48.2k</strong>
-                      <span>MRR</span>
-                    </div>
-                    <div className="tc-dash-stat">
-                      <strong>+12%</strong>
-                      <span>vs last quarter</span>
-                    </div>
-                  </div>
-                  <div className="gym-chart">
-                    <div className="gym-bar" style={{ height: '42%' }} />
-                    <div className="gym-bar" style={{ height: '58%' }} />
-                    <div className="gym-bar" style={{ height: '36%' }} />
-                    <div className="gym-bar" style={{ height: '78%' }} />
-                    <div className="gym-bar" style={{ height: '52%' }} />
-                    <div className="gym-bar" style={{ height: '68%' }} />
-                    <div className="gym-bar" style={{ height: '90%' }} />
-                  </div>
-                  <div className="tc-mock-table">
-                    <div className="tc-mock-table-row head">
-                      <span>Plan</span>
-                      <span>Members</span>
-                      <span>Churn</span>
-                    </div>
-                    <div className="tc-mock-table-row">
-                      <span>Unlimited</span>
-                      <span>412</span>
-                      <span>1.8%</span>
-                    </div>
-                    <div className="tc-mock-table-row">
-                      <span>Corporate</span>
-                      <span>96</span>
-                      <span>0.9%</span>
-                    </div>
-                    <div className="tc-mock-table-row">
-                      <span>Drop-in</span>
-                      <span>58</span>
-                      <span>—</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Members card */}
-              <div className="gym-mock-card" aria-hidden>
-                <div className="tc-dash-top">
-                  <div className="tc-dash-dots">
-                    <span />
-                    <span />
-                    <span />
-                  </div>
-                  <span className="tc-dash-title">Members / Active</span>
-                </div>
-                <div className="tc-dash-body">
-                  <div className="tc-dash-row" style={{ gridTemplateColumns: '1fr 1fr' }}>
-                    <div className="tc-dash-stat">
-                      <strong>842</strong>
-                      <span>Active</span>
-                    </div>
-                    <div className="tc-dash-stat">
-                      <strong style={{ color: '#C6FF00' }}>+24</strong>
-                      <span>This month</span>
-                    </div>
-                  </div>
-                  <div className="gym-member-list">
-                    {[
-                      { name: 'Sara Al-Dosari', plan: 'Unlimited', active: true },
-                      { name: 'Khalid Mansoor', plan: 'Corporate', active: true },
-                      { name: 'Nour Rashid', plan: 'Unlimited', active: true },
-                      { name: 'Ali Al-Farsi', plan: 'Drop-in', active: false },
-                    ].map((m) => (
-                      <div key={m.name} className="gym-member-row">
-                        <div>
-                          <div className="name">{m.name}</div>
-                          <div className="plan">{m.plan}</div>
-                        </div>
-                        <span className={`status${m.active ? '' : ' inactive'}`}>
-                          {m.active ? 'Active' : 'Lapsed'}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
+            <DashboardPreview />
           </div>
         </RevealSection>
 

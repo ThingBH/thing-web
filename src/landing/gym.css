@@ -17,8 +17,8 @@
   position: fixed;
   inset: -40% -20%;
   background:
-    radial-gradient(ellipse 55% 45% at 20% 5%, rgba(198, 255, 0, 0.06), transparent 55%),
-    radial-gradient(ellipse 50% 40% at 80% 10%, rgba(198, 255, 0, 0.04), transparent 50%),
+    radial-gradient(ellipse 55% 45% at 20% 5%, rgba(198, 255, 0, 0.05), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 80% 10%, rgba(198, 255, 0, 0.03), transparent 50%),
     radial-gradient(ellipse 60% 50% at 50% 100%, rgba(198, 255, 0, 0.03), transparent 45%);
   pointer-events: none;
   z-index: 0;
@@ -32,12 +32,38 @@
 /* ——— Hero ——— */
 .gym-hero {
   padding: 56px 0 100px;
+  position: relative;
+  overflow: hidden;
 }
 
 @media (max-width: 640px) {
   .gym-hero {
     padding: 40px 0 72px;
   }
+}
+
+/* perspective grid floor — GPU-only, paints once */
+.gym-hero-grid-bg {
+  position: absolute;
+  left: -10%;
+  right: -10%;
+  top: 30%;
+  bottom: -60%;
+  background-image:
+    linear-gradient(rgba(198, 255, 0, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(198, 255, 0, 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+  transform: perspective(340px) rotateX(62deg);
+  transform-origin: 50% 0%;
+  mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.6) 40%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.6) 40%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.gym-hero-content {
+  position: relative;
+  z-index: 1;
 }
 
 .gym-eyebrow {
@@ -136,7 +162,7 @@
   transform: translateY(1px);
 }
 
-/* ——— Stats bar ——— */
+/* ——— Stats ——— */
 .gym-stats {
   display: flex;
   flex-wrap: wrap;
@@ -144,6 +170,21 @@
   padding: 32px 0 0;
   border-top: 1px solid var(--border);
   margin-top: 40px;
+}
+
+@keyframes gym-float {
+  0%, 100% { transform: translateY(0px) }
+  50%       { transform: translateY(-5px) }
+}
+
+.gym-stat {
+  animation: gym-float 4.5s ease-in-out infinite;
+}
+.gym-stat:nth-child(2) { animation-delay: 0.8s; }
+.gym-stat:nth-child(3) { animation-delay: 1.6s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .gym-stat { animation: none; }
 }
 
 .gym-stat dt {
@@ -201,6 +242,7 @@
   }
 }
 
+/* 3D card tilt — CSS-only perspective on hover, GPU composited */
 .gym-feature-card {
   padding: 28px 24px;
   border-radius: var(--radius-lg);
@@ -209,16 +251,22 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  transform-style: preserve-3d;
   transition:
     border-color 0.3s,
-    transform 0.3s var(--ease-out),
-    box-shadow 0.3s;
+    box-shadow 0.3s,
+    transform 0.4s var(--ease-out);
 }
 
 .gym-feature-card:hover {
   border-color: var(--lime-border);
-  transform: translateY(-4px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(198, 255, 0, 0.12);
+  transform: perspective(900px) rotateY(-4deg) rotateX(3deg) translateY(-6px);
+}
+
+/* Every other card tilts the opposite direction for visual rhythm */
+.gym-feature-card:nth-child(even):hover {
+  transform: perspective(900px) rotateY(4deg) rotateX(3deg) translateY(-6px);
 }
 
 .gym-feature-icon {
@@ -286,17 +334,26 @@
   }
 }
 
+/* 3D tilt cards — JS-driven via useCardTilt */
 .gym-mock-card {
   border-radius: var(--radius-lg);
   background: var(--elevated);
   border: 1px solid var(--border);
   overflow: hidden;
   box-shadow: var(--shadow-card);
+  cursor: default;
+  /* initial perspective baked in so the JS snap back looks smooth */
+  transform: perspective(900px) rotateY(0deg) rotateX(0deg) translateZ(0px);
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s;
 }
 
 .gym-mock-card.large {
   box-shadow: var(--shadow-soft);
   border-color: rgba(198, 255, 0, 0.12);
+}
+
+.gym-mock-card:hover {
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(198, 255, 0, 0.1);
 }
 
 .gym-chart {
@@ -317,7 +374,7 @@
   opacity: 0.88;
 }
 
-/* ——— Members table mock ——— */
+/* ——— Members list ——— */
 .gym-member-list {
   display: grid;
   gap: 0;
@@ -373,10 +430,17 @@
   }
 }
 
+@keyframes gym-glow-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.55; }
+}
+
 .gym-cta-box {
   border-radius: var(--radius-xl);
   padding: clamp(36px, 5vw, 60px);
   text-align: center;
+  position: relative;
+  overflow: hidden;
   background:
     linear-gradient(135deg, rgba(198, 255, 0, 0.08), transparent 50%),
     var(--elevated);
@@ -384,10 +448,22 @@
   box-shadow: var(--shadow-soft);
 }
 
+/* animated glow ring — opacity only, GPU composited */
+.gym-cta-box::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(198, 255, 0, 0.14), transparent 70%);
+  pointer-events: none;
+  animation: gym-glow-pulse 3.5s ease-in-out infinite;
+}
+
 .gym-cta-box h2 {
   font-size: clamp(1.75rem, 3vw, 2.4rem);
   color: var(--text);
   margin-bottom: 14px;
+  position: relative;
 }
 
 .gym-cta-box p {
@@ -395,6 +471,7 @@
   max-width: 48ch;
   margin: 0 auto 32px;
   font-size: 1.05rem;
+  position: relative;
 }
 
 .gym-cta-actions {
@@ -402,4 +479,5 @@
   gap: 12px;
   justify-content: center;
   flex-wrap: wrap;
+  position: relative;
 }

@@ -63,11 +63,12 @@
   width: 44px;
   height: 44px;
   border-radius: 13px;
-  background: linear-gradient(145deg, #111418, #0a0b0e);
-  border: 1px solid rgba(198, 255, 0, 0.2);
+  background: #0a0b0e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   display: grid;
   place-items: center;
-  box-shadow: 0 0 0 1px rgba(198, 255, 0, 0.08), 0 8px 28px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.4);
+  padding: 10px;
 }
 
 .tc-logo-mark svg {
