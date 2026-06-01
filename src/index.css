@@ -8,9 +8,9 @@
   --text: #e8eaef;
   --text-muted: #9399a8;
   --text-subtle: #6b7284;
-  --accent: #4fd1c5;
-  --accent-dim: rgba(79, 209, 197, 0.14);
-  --accent-glow: rgba(79, 209, 197, 0.35);
+  --accent: #eba23c;
+  --accent-dim: rgba(235, 162, 60, 0.14);
+  --accent-glow: rgba(235, 162, 60, 0.35);
   --warm: #d4b896;
   --warm-dim: rgba(212, 184, 150, 0.12);
   --danger: #f87171;
@@ -20,8 +20,8 @@
   --radius-xl: 28px;
   --shadow-soft: 0 24px 80px rgba(0, 0, 0, 0.45);
   --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.35);
-  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
-  --font-body: 'Epilogue', system-ui, sans-serif;
+  --font-display: 'Schibsted Grotesk', system-ui, sans-serif;
+  --font-body: 'Schibsted Grotesk', system-ui, sans-serif;
   --max: 1180px;
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -43,10 +43,12 @@ html {
   .reveal,
   .reveal-delay-1,
   .reveal-delay-2,
-  .reveal-delay-3 {
+  .reveal-delay-3,
+  .js .reveal-on-scroll {
     animation: none !important;
     opacity: 1 !important;
     transform: none !important;
+    transition: none !important;
   }
 }
 
@@ -90,6 +92,11 @@ h4 {
   color: var(--text);
   letter-spacing: -0.02em;
   margin: 0;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 p {
@@ -135,7 +142,8 @@ p {
   animation-delay: 0.3s;
 }
 
-.reveal-on-scroll {
+/* Reveals enhance an already-visible default: only hide when JS is present to bring it back. */
+.js .reveal-on-scroll {
   opacity: 0;
   transform: translateY(22px);
   transition:
@@ -143,7 +151,7 @@ p {
     transform 0.75s var(--ease-out);
 }
 
-.reveal-on-scroll.is-visible {
+.js .reveal-on-scroll.is-visible {
   opacity: 1;
   transform: translateY(0);
 }

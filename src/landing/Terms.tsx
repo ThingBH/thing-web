@@ -10,12 +10,12 @@ export default function Terms() {
         <p className="policy-meta">Last Updated: 28 Jan 2026</p>
 
         <p>These Terms & Conditions establish the rules for accessing and using the Thing Company platform, which includes a mobile application, website, and connected services.</p>
-        <p>Thing Company operates under <strong>The 1 Percent Solutions</strong>, a Bahrain-registered entity (Commercial Registration No. 102103-1), headquartered in Seef.</p>
+        <p>Thing Company operates under <strong>Thing W.L.L</strong>, a Bahrain-registered entity (Commercial Registration No. 196454-1), headquartered in Seef.</p>
         <p>By using the platform, you agree to these terms. Non-agreement means you should refrain from using the service.</p>
 
         <h2>1. Definitions</h2>
         <ul>
-          <li><strong>Thing Company</strong> (also "we," "us," "our"): The 1 Percent Solutions</li>
+          <li><strong>Thing Company</strong> (also "we," "us," "our"): Thing W.L.L</li>
           <li><strong>User</strong>: Anyone accessing or using the platform</li>
           <li><strong>Buyer</strong>: A user purchasing goods or services</li>
           <li><strong>Seller</strong>: A user listing or selling goods or services</li>
@@ -124,7 +124,7 @@ export default function Terms() {
         <p>Thing Company may revise these terms anytime. Continuing to use the service means accepting modifications.</p>
 
         <h2>17. Contact Information</h2>
-        <p><strong>Email:</strong> <a href="mailto:hello@thing.bh">hello@thing.bh</a><br /><strong>Organisation:</strong> The 1 Percent Solutions<br /><strong>Region:</strong> Kingdom of Bahrain</p>
+        <p><strong>Email:</strong> <a href="mailto:hello@thing.bh">hello@thing.bh</a><br /><strong>Organisation:</strong> Thing W.L.L<br /><strong>Region:</strong> Kingdom of Bahrain</p>
 
         <p className="policy-copy">© {new Date().getFullYear()} Thing Company. All rights reserved.</p>
       </div>

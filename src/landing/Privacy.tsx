@@ -9,7 +9,7 @@ export default function Privacy() {
         <h1>Privacy Policy</h1>
         <p className="policy-meta">Last Updated: 28 Jan 2026</p>
 
-        <p>Thing Company ("Thing Company", "we", "us", or "our") is a digital platform operated by <strong>The 1 Percent Solutions</strong>, Commercial Registration No. <strong>102103-1</strong>, headquartered in <strong>Seef, Kingdom of Bahrain</strong>.</p>
+        <p>Thing Company ("Thing Company", "we", "us", or "our") is a digital platform operated by <strong>Thing W.L.L</strong>, Commercial Registration No. <strong>196454-1</strong>, headquartered in <strong>Seef, Kingdom of Bahrain</strong>.</p>
         <p>This Privacy Policy explains how we collect, use, disclose, store, and protect personal data when you use the Thing Company platform and related services (collectively, the "Platform"). This policy is issued in accordance with Bahrain's Personal Data Protection Law (Law No. 30 of 2018) ("PDPL").</p>
         <p>By accessing or using Thing Company, you acknowledge that you have read and understood this Privacy Policy.</p>
 
@@ -24,7 +24,7 @@ export default function Privacy() {
 
         <h2>2. Data Controller</h2>
         <p>For the purposes of the PDPL, the data controller is:</p>
-        <p><strong>The 1 Percent Solutions</strong><br />CR No.: 102103-1<br />Address: Seef, Kingdom of Bahrain<br />Email: <a href="mailto:hello@thing.bh">hello@thing.bh</a></p>
+        <p><strong>Thing W.L.L</strong><br />CR No.: 196454-1<br />Address: Seef, Kingdom of Bahrain<br />Email: <a href="mailto:hello@thing.bh">hello@thing.bh</a></p>
         <p>Thing Company does not currently appoint a formal Data Protection Officer. All data protection matters are handled internally.</p>
 
         <h2>3. Personal Data We Collect</h2>
@@ -122,7 +122,7 @@ export default function Privacy() {
         <p>We may update this Privacy Policy from time to time to reflect operational, legal, or regulatory changes. Material changes will be communicated through the Platform. Continued use of Thing Company constitutes acceptance of the updated policy.</p>
 
         <h2>13. Contact Us</h2>
-        <p><strong>Email:</strong> <a href="mailto:hello@thing.bh">hello@thing.bh</a><br /><strong>Entity:</strong> The 1 Percent Solutions<br /><strong>Location:</strong> Kingdom of Bahrain</p>
+        <p><strong>Email:</strong> <a href="mailto:hello@thing.bh">hello@thing.bh</a><br /><strong>Entity:</strong> Thing W.L.L<br /><strong>Location:</strong> Kingdom of Bahrain</p>
 
         <p className="policy-copy">© {new Date().getFullYear()} Thing Company. All rights reserved.</p>
       </div>

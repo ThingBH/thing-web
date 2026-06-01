@@ -8,7 +8,7 @@ export default function DataDeletion() {
         <Link to="/" className="policy-back">← Back</Link>
         <h1>Data Deletion Policy</h1>
 
-        <p><strong>Operator:</strong> The 1 Percent Solutions (Commercial Registration No. 102103-1), based in Seef, Bahrain</p>
+        <p><strong>Operator:</strong> Thing W.L.L (Commercial Registration No. 196454-1), based in Seef, Bahrain</p>
 
         <h2>Current Status</h2>
         <p>Thing Company does not support self-service account deletion through the mobile application or website at this time. Account removal requires a formal request submission.</p>
@@ -39,7 +39,7 @@ export default function DataDeletion() {
         <p>This policy may be revised as platform capabilities, regulations, or internal practices evolve.</p>
 
         <h2>Contact</h2>
-        <p><strong>Email:</strong> <a href="mailto:hello@thing.bh">hello@thing.bh</a><br /><strong>Entity:</strong> The 1 Percent Solutions<br /><strong>Location:</strong> Kingdom of Bahrain</p>
+        <p><strong>Email:</strong> <a href="mailto:hello@thing.bh">hello@thing.bh</a><br /><strong>Entity:</strong> Thing W.L.L<br /><strong>Location:</strong> Kingdom of Bahrain</p>
 
         <p className="policy-copy">© {new Date().getFullYear()} Thing Company. All rights reserved.</p>
       </div>

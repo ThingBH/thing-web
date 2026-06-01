@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react'
 
 
 const links = [
-  { href: '#products', label: 'Products' },
   { href: '/gym', label: 'Gym Thing' },
-  { href: '#about', label: 'About' },
+  { href: '/#approach', label: 'How we work' },
+  { href: '/#about', label: 'About' },
 ]
 
 export function Header() {
@@ -50,7 +50,7 @@ export function Header() {
           </div>
           <div className="tc-nav-cta" style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
             <a href="#contact" className="tc-btn tc-btn-primary tc-btn-sm">
-              Request demo
+              Request a demo
             </a>
           </div>
           <button

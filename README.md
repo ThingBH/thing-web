@@ -18,6 +18,17 @@ A modern, animated landing page for a gym brand. Built with React + TypeScript +
 - [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
 - [Vite](https://vitejs.dev/) for bundling
 - CSS with scroll-based reveal animations (`useInView` hook)
+- **Static pre-rendering**: each route is emitted as real HTML at build time, then hydrated in the browser. No SPA redirect hacks; works natively on GitHub Pages.
+
+## How routing works
+
+Routes are declared once in `src/routes.tsx` and shared by both the client and the build:
+
+- `src/main.tsx` hydrates the pre-rendered markup (or mounts fresh in `dev`).
+- `src/entry-server.tsx` renders each route to a string during the build.
+- `scripts/prerender.mjs` writes one static file per route with its own `<title>` and meta description.
+
+Output uses clean URLs: `/` → `index.html`, `/gym` → `gym/index.html`, etc. The catch-all route is written to `404.html`, which GitHub Pages serves for any unmatched path. To add a page, add a component and one entry to `src/routes.tsx`.
 
 ## Getting Started
 

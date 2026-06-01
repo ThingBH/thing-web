@@ -1,85 +1,52 @@
-import { IconCalendar, IconCart, IconDumbbell } from "./icons";
-import { RevealSection } from "./RevealSection";
-
-const products = [
-  {
-    name: "Gym Thing",
-    description:
-      "Member journeys, staff workflows, and revenue visibility in one cohesive system built for modern fitness operators.",
-    featured: true,
-    Icon: IconDumbbell,
-    features: [
-      "Member management",
-      "Class scheduling",
-      "Payments and subscriptions",
-      "Analytics dashboard",
-    ],
-  },
-  {
-    name: "Thing Ledger",
-    description:
-      "Financial operations hub for multi-location brands: consolidated reporting, approvals, and audit-ready exports.",
-    featured: false,
-    Icon: IconCart,
-    features: [] as string[],
-  },
-  {
-    name: "Field Thing",
-    description:
-      "Dispatch, asset tracking, and mobile-first tasking for teams that work beyond the desk, from facilities to field service.",
-    featured: false,
-    Icon: IconCalendar,
-    features: [] as string[],
-  },
-];
+import { RevealSection } from './RevealSection'
 
 export function Products() {
   return (
     <RevealSection id="products" className="tc-section">
       <div className="tc-wrap">
         <header className="tc-section-head">
-          <p className="tc-kicker">Product portfolio</p>
-          <h2>A company of products, not a single feature shipped once.</h2>
+          <h2>Everything your gym runs on, in one system.</h2>
           <p>
-            Each product is engineered as a long-lived platform. Gym Thing is
-            our flagship for fitness, with shared identity, billing primitives,
-            and observability across the suite.
+            Most gyms run on a handful of tools that never talk to each other. Gym Thing replaces the
+            lot: the front desk, classes, sales, HR, payroll, and the accounting, all sharing the
+            same data.
           </p>
         </header>
 
-        <div className="tc-products-grid">
-          {products.map((p) => (
-            <article
-              key={p.name}
-              className={`tc-product${p.featured ? " featured" : ""}`}
-            >
-              {p.featured ? (
-                <span className="tc-product-badge">3A+</span>
-              ) : null}
-              <div className="tc-product-icon">
-                <p.Icon />
+        <div className="tc-products">
+          <article className="tc-product-flag">
+            <div className="tc-product-flag-body">
+              <span className="tc-product-tag">Gym Thing</span>
+              <h3>One login for the whole team.</h3>
+              <p>
+                Your manager, your coaches, and your accountant all work in the same place, looking
+                at the same numbers. No more exporting spreadsheets between five apps to see how the
+                month went.
+              </p>
+              <div className="tc-chiplist">
+                <span>Memberships</span>
+                <span>Classes</span>
+                <span>Sales &amp; front desk</span>
+                <span>HR &amp; payroll</span>
+                <span>Accounting</span>
+                <span>Multi-location</span>
               </div>
-              <h3>{p.name}</h3>
-              <p>{p.description}</p>
-              {p.features.length ? (
-                <ul className="tc-product-features">
-                  {p.features.map((f) => (
-                    <li key={f}>{f}</li>
-                  ))}
-                </ul>
-              ) : (
-                <a
-                  href="#contact"
-                  className="tc-btn tc-btn-ghost tc-btn-sm"
-                  style={{ alignSelf: "flex-start" }}
-                >
-                  Talk to product team
-                </a>
-              )}
-            </article>
-          ))}
+              <a href="/gym" className="tc-textlink">
+                Explore Gym Thing
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden>
+                  <path
+                    d="M5 12h14M13 6l6 6-6 6"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            </div>
+          </article>
         </div>
       </div>
     </RevealSection>
-  );
+  )
 }
