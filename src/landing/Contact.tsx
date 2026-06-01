@@ -52,7 +52,7 @@ export function Contact() {
               </span>
               <span className="tc-contact-method-body">
                 <span className="tc-contact-method-k">Call us</span>
-                <span className="tc-contact-method-v">Sunday to Thursday, 9 to 6</span>
+                <span className="tc-contact-method-v">anytime</span>
               </span>
               <Arrow />
             </a>
