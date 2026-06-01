@@ -7,7 +7,7 @@ import { readFile, writeFile, mkdir, rm } from 'node:fs/promises'
 const here = dirname(fileURLToPath(import.meta.url))
 const distDir = resolve(here, '..', 'dist')
 
-const { render, routes, notFound } = await import(resolve(distDir, 'server/entry-server.js'))
+const { render, routes, notFound, SITE_URL } = await import(resolve(distDir, 'server/entry-server.js'))
 const template = await readFile(resolve(distDir, 'index.html'), 'utf-8')
 
 const escapeHtml = (s) =>
@@ -19,16 +19,30 @@ const escapeHtml = (s) =>
 
 const ROOT_MARKER = '<div id="root"></div>'
 
-function buildPage({ title, description }, appHtml) {
+// Swap the content="" of a meta tag matched by property= or name=.
+function setMeta(html, attr, key, value) {
+  const re = new RegExp(`(<meta\\s+${attr}="${key}"\\s+content=")[\\s\\S]*?(")`)
+  return html.replace(re, `$1${escapeHtml(value)}$2`)
+}
+
+function buildPage(route, appHtml) {
+  const { title, description, image, path } = route
   if (!template.includes(ROOT_MARKER)) {
     throw new Error(`Root marker ${ROOT_MARKER} not found in dist/index.html`)
   }
+  const url = SITE_URL + (path === '/' || path === '*' ? '/' : path)
+  const imageUrl = SITE_URL + image
+
   let html = template.replace(ROOT_MARKER, `<div id="root">${appHtml}</div>`)
   html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(title)}</title>`)
-  html = html.replace(
-    /(<meta\s+name="description"\s+content=")[\s\S]*?(")/,
-    `$1${escapeHtml(description)}$2`,
-  )
+  html = setMeta(html, 'name', 'description', description)
+  html = setMeta(html, 'property', 'og:title', title)
+  html = setMeta(html, 'property', 'og:description', description)
+  html = setMeta(html, 'property', 'og:url', url)
+  html = setMeta(html, 'property', 'og:image', imageUrl)
+  html = setMeta(html, 'name', 'twitter:title', title)
+  html = setMeta(html, 'name', 'twitter:description', description)
+  html = setMeta(html, 'name', 'twitter:image', imageUrl)
   return html
 }
 

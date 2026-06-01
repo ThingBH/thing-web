@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components -- build-time SSR entry, not an HMR boundary */
 import { renderToString } from 'react-dom/server'
 import { StaticRouter } from 'react-router-dom'
 import { AppRoutes } from './AppRoutes'
@@ -11,4 +12,4 @@ export function render(url: string): string {
   )
 }
 
-export { routes, notFound } from './routes'
+export { routes, notFound, SITE_URL } from './routes'

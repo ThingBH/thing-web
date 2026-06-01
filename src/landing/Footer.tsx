@@ -41,6 +41,9 @@ export function Footer() {
                 <a href="mailto:hello@thing.bh">hello@thing.bh</a>
               </li>
               <li>
+                <a href="https://instagram.com/thing.bh" target="_blank" rel="noreferrer">@thing.bh</a>
+              </li>
+              <li>
                 <span className="tc-footer-muted">Seef, Bahrain</span>
               </li>
             </ul>
