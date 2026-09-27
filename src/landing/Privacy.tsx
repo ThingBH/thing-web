@@ -7,11 +7,14 @@ export default function Privacy() {
       <div className="policy-wrap">
         <Link to="/" className="policy-back">← Back</Link>
         <h1>Privacy Policy</h1>
-        <p className="policy-meta">Last Updated: 28 Jan 2026</p>
+        <p className="policy-meta">Last Updated: 27 Sep 2026</p>
 
         <p>Thing Company ("Thing Company", "we", "us", or "our") is a digital platform operated by <strong>Thing W.L.L</strong>, Commercial Registration No. <strong>196454-1</strong>, headquartered in <strong>Seef, Kingdom of Bahrain</strong>.</p>
         <p>This Privacy Policy explains how we collect, use, disclose, store, and protect personal data when you use the Thing Company platform and related services (collectively, the "Platform"). This policy is issued in accordance with Bahrain's Personal Data Protection Law (Law No. 30 of 2018) ("PDPL").</p>
         <p>By accessing or using Thing Company, you acknowledge that you have read and understood this Privacy Policy.</p>
+
+        <h2>Apps covered by this policy</h2>
+        <p><strong>Gym Thing Admin</strong> (Android package / iOS bundle identifier <strong>bh.thing.gym.admin</strong>), published on Google Play and the Apple App Store by <strong>Thing W.L.L.</strong>, is developed and operated by Thing W.L.L, Commercial Registration No. 196454-1, Seef, Kingdom of Bahrain. This Privacy Policy applies to Gym Thing Admin in addition to the Thing Company marketplace platform and the thing.bh website. Gym Thing Admin is the employee/staff app of the Gym Thing platform, used by gym staff and managers at gyms that subscribe to Gym Thing; other Gym Thing apps we may publish are covered by this policy.</p>
 
         <h2>1. Scope of Application</h2>
         <p>This Privacy Policy applies to:</p>
@@ -19,6 +22,7 @@ export default function Privacy() {
           <li>Users who browse, register, or transact on Thing Company</li>
           <li>Buyers and sellers using the Platform</li>
           <li>Visitors to Thing Company's landing website</li>
+          <li>Employees and managers of subscribing gyms who use the Gym Thing Admin app</li>
         </ul>
         <p>Thing Company is intended for users of all ages. Where legally required, consent is obtained from a parent or legal guardian.</p>
 
@@ -100,7 +104,44 @@ export default function Privacy() {
           <li>Data is retained only for as long as required for operational, legal, or regulatory purposes</li>
         </ul>
 
-        <h2>8. User Rights</h2>
+        <h2>8. Gym Thing Admin App</h2>
+        <p>This section applies specifically to <strong>Gym Thing Admin</strong> (package/bundle id <strong>bh.thing.gym.admin</strong>), the staff app used by employees and managers of gyms subscribed to the Gym Thing platform, and supplements the rest of this Privacy Policy.</p>
+
+        <h3>8.1 Data We Collect</h3>
+        <ul>
+          <li><strong>Account identity</strong> – email address and password/authentication tokens (via AWS Cognito), your gym/organisation association, and your role and permissions</li>
+          <li><strong>Employee profile data</strong> provided by your employer gym – name, employee number, job title/department, contact details, and HR records the gym maintains, including attendance, shifts, leave, and, for gyms using payroll, salary/payslip data the employer records</li>
+          <li><strong>Attendance data</strong> – check-in/check-out timestamps and status</li>
+          <li><strong>Location data</strong> – see "Location Data" below</li>
+          <li><strong>Device and technical data</strong> – device type, OS version, app version, and basic diagnostic logs</li>
+        </ul>
+
+        <h3>8.2 Location Data</h3>
+        <p>Gym Thing Admin captures a single location fix (latitude, longitude, and accuracy) only at the moment an employee checks in or out, only while the app is in use in the foreground ("when in use" permission), used solely to verify that the check-in happened at the assigned branch (geofence verification). This location fix is stored with the attendance record. The app does not track location continuously or in the background, and location data is never sold or used for advertising.</p>
+
+        <h3>8.3 Why We Collect This Data</h3>
+        <p>We use this data to provide the staff app (attendance, scheduling, member check-in, and payroll access where enabled by the employer gym), to verify attendance location, for security and fraud prevention, to support the employer gym's HR and compliance obligations, and to provide customer support.</p>
+
+        <h3>8.4 Sharing & Processors</h3>
+        <ul>
+          <li><strong>Amazon Web Services (AWS)</strong> – hosting, authentication, storage, and email/SMS/push delivery. Data for the Gym Thing platform is hosted in the AWS <strong>eu-west-3 (Paris, European Union)</strong> region</li>
+          <li><strong>Google Wallet / Apple Wallet</strong> – only when a gym issues member wallet passes, limited to the pass data required</li>
+          <li><strong>Your employer gym</strong> – your employer gym is the data controller for your HR data; Thing W.L.L processes it on the gym's behalf</li>
+        </ul>
+        <p>We do not sell personal data collected through Gym Thing Admin, and we do not share it with advertising networks.</p>
+
+        <h3>8.5 App Permissions</h3>
+        <ul>
+          <li><strong>Location ("when in use")</strong> – to verify check-in/check-out at the assigned branch, as described above</li>
+          <li><strong>Camera</strong> – to scan member QR codes at reception, requested only when the employee opens the scanner; the app does not read your photos</li>
+          <li><strong>Notifications</strong> – to deliver work notifications; the app does not read your contacts</li>
+        </ul>
+        <p>Gym Thing Admin does not use any third-party analytics or crash-reporting SDKs.</p>
+
+        <h3>8.6 Retention & Deletion</h3>
+        <p>We retain this data for as long as your account or employment record with your employer gym is active, and as required by the employer's legal and payroll record-keeping obligations. To request deletion, contact <a href="mailto:hello@thing.bh">hello@thing.bh</a> or see our <Link to="/data-deletion">Data Deletion</Link> page.</p>
+
+        <h2>9. User Rights</h2>
         <p>Subject to applicable law, users have the right to:</p>
         <ul>
           <li>Access their personal data</li>
@@ -109,19 +150,19 @@ export default function Privacy() {
         </ul>
         <p>Requests related to personal data may be submitted to <a href="mailto:hello@thing.bh">hello@thing.bh</a>.</p>
 
-        <h2>9. Marketing Communications</h2>
+        <h2>10. Marketing Communications</h2>
         <p>Thing Company may send marketing emails or messages related to offers, features, or updates. Users may opt out at any time via provided unsubscribe mechanisms or by contacting us directly. Transactional communications are mandatory and cannot be opted out of.</p>
 
-        <h2>10. Data Security</h2>
+        <h2>11. Data Security</h2>
         <p>We implement commercially reasonable administrative, technical, and organizational measures to protect personal data against unauthorized access, alteration, disclosure, or destruction. No system is completely secure. Users acknowledge and accept residual risks inherent in digital platforms.</p>
 
-        <h2>11. Children's Privacy</h2>
+        <h2>12. Children's Privacy</h2>
         <p>Thing Company is accessible to users of all ages. Where required by law, consent must be obtained from a parent or legal guardian before collecting personal data from minors.</p>
 
-        <h2>12. Changes to This Policy</h2>
+        <h2>13. Changes to This Policy</h2>
         <p>We may update this Privacy Policy from time to time to reflect operational, legal, or regulatory changes. Material changes will be communicated through the Platform. Continued use of Thing Company constitutes acceptance of the updated policy.</p>
 
-        <h2>13. Contact Us</h2>
+        <h2>14. Contact Us</h2>
         <p><strong>Email:</strong> <a href="mailto:hello@thing.bh">hello@thing.bh</a><br /><strong>Entity:</strong> Thing W.L.L<br /><strong>Location:</strong> Kingdom of Bahrain</p>
 
         <p className="policy-copy">© {new Date().getFullYear()} Thing Company. All rights reserved.</p>

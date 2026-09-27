@@ -45,7 +45,8 @@ export const routes: RouteDef[] = [
     path: '/privacy',
     element: <Privacy />,
     title: `Privacy Policy · ${SITE}`,
-    description: 'How Thing Company collects, uses, and protects your personal data under Bahrain PDPL.',
+    description:
+      'How Thing Company and the Gym Thing Admin app collect, use, and protect your personal data under Bahrain PDPL.',
     image: OG_DEFAULT,
   },
   {
