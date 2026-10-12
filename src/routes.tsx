@@ -46,7 +46,7 @@ export const routes: RouteDef[] = [
     element: <Privacy />,
     title: `Privacy Policy · ${SITE}`,
     description:
-      'How Thing Company and the Gym Thing Admin app collect, use, and protect your personal data under Bahrain PDPL.',
+      'How Thing Company and the Gym Thing apps (admin and member) collect, use, and protect your personal data under Bahrain PDPL.',
     image: OG_DEFAULT,
   },
   {
@@ -59,8 +59,8 @@ export const routes: RouteDef[] = [
   {
     path: '/data-deletion',
     element: <DataDeletion />,
-    title: `Data Deletion · ${SITE}`,
-    description: 'How to request deletion of your personal data from Thing Company.',
+    title: `Account & Data Deletion · ${SITE}`,
+    description: 'How to request deletion of your account and personal data from Thing Company and the Gym Thing apps.',
     image: OG_DEFAULT,
   },
 ]
