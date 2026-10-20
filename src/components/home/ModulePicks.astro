@@ -1,0 +1,17 @@
+---
+import { content } from '../../data/content'
+import { href, langOf } from '../../data/i18n'
+import { picks } from '../../data/site'
+
+const lang = langOf(Astro.currentLocale)
+const more = lang === 'ar' ? 'اقرأ أكثر عن' : 'Read more on'
+---
+<div class="modpick">
+  {picks[lang].map(([slug, title, text]) => (
+    <a class="modcard" href={href(lang, `/modules/${slug}/`)}>
+      <h3>{title}</h3>
+      <p>{text}</p>
+      <span class="textlink">{more} {content[lang].modules.find((m) => m.slug === slug)?.name} <svg class="i go"><use href="#i-arrow" /></svg></span>
+    </a>
+  ))}
+</div>

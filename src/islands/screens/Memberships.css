@@ -1,0 +1,430 @@
+.mx-memberships {
+  container-type: inline-size;
+  font-family: var(--sans);
+  background: #f8f9fb;
+  color: #171717;
+  font-size: 14px;
+  line-height: 1.45;
+  border: 1px solid #e8eaee;
+  border-radius: 14px;
+  padding: 20px;
+  display: grid;
+  gap: 16px;
+  text-align: start;
+  font-variant-numeric: tabular-nums;
+}
+.mx-memberships * {
+  box-sizing: border-box;
+}
+.mx-memberships p,
+.mx-memberships h3,
+.mx-memberships h4 {
+  margin: 0;
+}
+.mx-memberships svg.i {
+  width: 16px;
+  height: 16px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex: none;
+}
+
+.mx-memberships .ms-ph h3 {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+.mx-memberships .ms-ph p {
+  font-size: 14px;
+  color: #737373;
+}
+.mx-memberships .ms-tabs {
+  justify-self: start;
+  display: inline-flex;
+  height: 32px;
+  padding: 3px;
+  border-radius: 10px;
+  background: #f5f5f5;
+}
+.mx-memberships .ms-tabs button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 10px;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(23 23 23 / 0.6);
+  white-space: nowrap;
+}
+.mx-memberships .ms-tabs .ms-on {
+  background: #fff;
+  color: #171717;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.08);
+}
+
+.mx-memberships .ms-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.mx-memberships .ms-bar p {
+  font-size: 14px;
+  color: #737373;
+}
+.mx-memberships .ms-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 32px;
+  padding: 0 10px;
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.mx-memberships .ms-pri {
+  background: #171717;
+  border-color: #171717;
+  color: #fafafa;
+  flex: none;
+}
+
+.mx-memberships .ms-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+.mx-memberships .ms-card {
+  background: #fff;
+  border: 1px solid #e8eaee;
+  border-radius: 14px;
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+.mx-memberships .ms-ch {
+  display: grid;
+  gap: 4px;
+}
+.mx-memberships .ms-t {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+.mx-memberships .ms-t h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.mx-memberships .ms-code {
+  height: 20px;
+  padding: 0 8px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #e5e5e5;
+  border-radius: 999px;
+  font-family: var(--mono);
+  font-size: 12px;
+}
+.mx-memberships .ms-act {
+  height: 20px;
+  padding: 0 8px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background: #dcfce7;
+  color: #166534;
+  font-size: 12px;
+  font-weight: 500;
+}
+.mx-memberships .ms-desc {
+  font-size: 14px;
+  color: #737373;
+}
+.mx-memberships .ms-pkg {
+  font-size: 11px;
+  font-weight: 500;
+  color: #b45309;
+}
+
+.mx-memberships .ms-tbl {
+  width: 100%;
+  border-collapse: collapse;
+}
+.mx-memberships .ms-tbl th {
+  text-align: start;
+  font-size: 12px;
+  font-weight: 500;
+  color: #171717;
+  padding: 8px 8px 8px 0;
+  border-bottom: 1px solid #e5e5e5;
+  white-space: nowrap;
+}
+.mx-memberships .ms-tbl td {
+  padding: 8px 8px 8px 0;
+  border-bottom: 1px solid #e5e5e5;
+  vertical-align: middle;
+  font-size: 14px;
+}
+.mx-memberships .ms-tbl tr:last-child td {
+  border-bottom: 0;
+}
+.mx-memberships .ms-tbl th:last-child,
+.mx-memberships .ms-tbl td:last-child {
+  padding-inline-end: 0;
+}
+.mx-memberships .ms-tbl b {
+  display: block;
+  font-weight: 500;
+}
+.mx-memberships .ms-tbl small {
+  display: block;
+  font-size: 10px;
+  color: #737373;
+  line-height: 1.35;
+}
+.mx-memberships .ms-tbl small.ms-amb {
+  color: #b45309;
+}
+.mx-memberships .ms-per {
+  color: #171717;
+}
+.mx-memberships .ms-pr {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+.mx-memberships .ms-sw {
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 18px;
+  border-radius: 999px;
+  background: #e5e5e5;
+  position: relative;
+}
+.mx-memberships .ms-sw::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fff;
+}
+.mx-memberships .ms-swon {
+  background: #171717;
+}
+.mx-memberships .ms-swon::after {
+  left: 16px;
+}
+.mx-memberships .ms-add {
+  width: 100%;
+  height: 28px;
+  font-size: 12px;
+  border-radius: 8px;
+}
+.mx-memberships .ms-add svg.i {
+  width: 14px;
+  height: 14px;
+}
+
+@container (max-width: 820px) {
+  .mx-memberships .ms-grid {
+    grid-template-columns: 1fr;
+  }
+  .mx-memberships .ms-grid > .ms-card + .ms-card {
+    display: none;
+  }
+}
+@container (max-width: 600px) {
+  .mx-memberships .ms-ph h3 {
+    font-size: 20px;
+  }
+  .mx-memberships .ms-bar p {
+    display: none;
+  }
+  .mx-memberships .ms-per {
+    display: none;
+  }
+  .mx-memberships .ms-card {
+    padding: 14px;
+  }
+}
+
+/* Island additions: real buttons, inline price edit, switch motion, Subscriptions tab. */
+.mx-memberships {
+  position: relative;
+}
+:where(.mx-memberships) button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  text-align: inherit;
+}
+@media (hover: hover) {
+  .mx-memberships .ms-btn:hover {
+    background: #f5f5f5;
+  }
+  .mx-memberships .ms-pri:hover {
+    background: #262626;
+  }
+  .mx-memberships .ms-tabs button:not(.ms-on):hover {
+    color: #171717;
+  }
+  .mx-memberships .ms-prb:hover {
+    background: #f5f5f5;
+  }
+}
+.mx-memberships .ms-sw {
+  transition: background-color 140ms ease;
+}
+.mx-memberships .ms-sw::after {
+  transition: left 140ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.mx-memberships .ms-prb {
+  margin: -2px -4px;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.mx-memberships .ms-edit {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px;
+  max-width: 150px;
+}
+.mx-memberships .ms-edit input {
+  width: 88px;
+  height: 28px;
+  padding: 0 6px;
+  border: 1px solid #d4d4d4;
+  border-radius: 6px;
+  background: #fff;
+  font: inherit;
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.mx-memberships .ms-edit input[aria-invalid] {
+  border-color: #dc2626;
+}
+.mx-memberships .ms-ib {
+  width: 24px;
+  height: 24px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 6px;
+  color: #737373;
+}
+.mx-memberships .ms-ib:first-of-type {
+  color: #16a34a;
+}
+.mx-memberships .ms-ib:hover {
+  background: #f5f5f5;
+}
+.mx-memberships .ms-ib svg.i {
+  width: 14px;
+  height: 14px;
+}
+.mx-memberships .ms-err {
+  flex-basis: 100%;
+  font-size: 10px;
+  color: #dc2626;
+}
+
+.mx-memberships .ms-subs {
+  display: grid;
+  gap: 16px;
+}
+.mx-memberships .ms-sums {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+.mx-memberships .ms-sum {
+  gap: 4px;
+  align-content: start;
+}
+.mx-memberships .ms-sl {
+  font-size: 14px;
+  font-weight: 500;
+  color: #737373;
+}
+.mx-memberships .ms-sum b {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.mx-memberships .ms-sum .ms-desc {
+  font-size: 12px;
+}
+.mx-memberships .ms-gr {
+  color: #15803d;
+}
+.mx-memberships .ms-bl {
+  color: #1d4ed8;
+}
+.mx-memberships .ms-yl {
+  color: #a16207;
+}
+.mx-memberships .ms-rd {
+  color: #b91c1c;
+}
+.mx-memberships .ms-rh {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.mx-memberships .ms-sm {
+  height: 28px;
+  font-size: 12px;
+  border-radius: 8px;
+}
+.mx-memberships td.ms-amb {
+  color: #b45309;
+  white-space: nowrap;
+}
+
+@container (max-width: 820px) {
+  .mx-memberships .ms-sums {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@container (max-width: 600px) {
+  .mx-memberships .ms-sums {
+    gap: 12px;
+  }
+  .mx-memberships .ms-sum {
+    padding: 12px 14px;
+  }
+  .mx-memberships .ms-sum b {
+    font-size: 24px;
+  }
+  .mx-memberships .ms-sl {
+    font-size: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mx-memberships .ms-sw,
+  .mx-memberships .ms-sw::after {
+    transition: none;
+  }
+}

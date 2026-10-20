@@ -1,0 +1,93 @@
+---
+import CloseBand from '../components/CloseBand.astro'
+import { content } from '../data/content'
+import { href, langOf } from '../data/i18n'
+import { breadcrumbs } from '../data/jsonld'
+import type { Module } from '../data/modules'
+import { SITE_URL } from '../data/site'
+import Base from '../layouts/Base.astro'
+
+const lang = langOf(Astro.currentLocale)
+const { modules } = content[lang]
+const t = {
+  en: {
+    crumb: 'Modules',
+    title: 'Modules · Gym Thing',
+    description: "Every gym gets every module. Here's all of it, from the front desk to payday.",
+    list: 'Gym Thing modules',
+    h1: 'Everything a gym runs on.',
+    lede: "Every gym gets every module. Here's all of it, from the front desk to payday.",
+    all: 'All modules',
+    features: (n: number) => `All ${n} features`,
+    groups: {
+      Members: 'Members',
+      'The front desk': 'The front desk',
+      Money: 'Money',
+      'Running the business': 'Running the business',
+    },
+  },
+  ar: {
+    crumb: 'الأقسام',
+    title: 'الأقسام · Gym Thing',
+    description:
+      'يحصل كل نادٍ على جميع أقسام Gym Thing لإدارة النوادي الرياضية. تعرّف عليها كلها، من الاستقبال وحتى يوم صرف الرواتب.',
+    list: 'أقسام Gym Thing',
+    h1: 'كل شي يحتاجه النادي.',
+    lede: 'كل نادي ياخذ كل الأقسام. وهذي كلها، من الاستقبال لين يوم الراتب.',
+    all: 'كل الأقسام',
+    features: (n: number) => `كل الخصائص (${n})`,
+    groups: {
+      Members: 'الأعضاء',
+      'The front desk': 'الاستقبال',
+      Money: 'المالية',
+      'Running the business': 'إدارة النادي',
+    },
+  },
+}[lang]
+const groups = Object.keys(t.groups) as Module['group'][]
+const featCount = (m: Module) => m.groups.reduce((a, g) => a + g.items.length, 0)
+const graph = [
+  breadcrumbs([
+    ['Gym Thing', href(lang, '/')],
+    [t.crumb, href(lang, '/modules/')],
+  ]),
+  {
+    '@type': 'ItemList',
+    name: t.list,
+    itemListElement: modules.map((m, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: m.name,
+      url: `${SITE_URL}${href(lang, `/modules/${m.slug}/`)}`,
+    })),
+  },
+]
+---
+<Base title={t.title} description={t.description} graph={graph}>
+  <section class="page-hero gutter" aria-labelledby="h-modules">
+    <div class="inner">
+      <h1 class="d1" id="h-modules">{t.h1}</h1>
+      <p class="lede">{t.lede}</p>
+    </div>
+  </section>
+  <section class="sec tight gutter" aria-label={t.all}>
+    <div class="inner">
+      {groups.map((g, gi) => (
+        <section class="modgroup" aria-labelledby={`mg-${gi}`}>
+          <h2 class="d3" id={`mg-${gi}`}>{t.groups[g]}</h2>
+          <div class="modcards">
+            {modules.filter((m) => m.group === g).map((m) => (
+              <a class="modcard rise" href={href(lang, `/modules/${m.slug}/`)}>
+                <h3>{m.name}</h3>
+                <p>{m.promise}</p>
+                <ul>{m.groups.slice(0, 4).map((gr) => <li>{gr.items[0][0]}</li>)}</ul>
+                <span class="textlink">{t.features(featCount(m))} <svg class="i go"><use href="#i-arrow" /></svg></span>
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  </section>
+  <CloseBand />
+</Base>

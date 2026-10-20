@@ -1,0 +1,53 @@
+---
+// One interactive product screen by name. Astro needs each hydrated island named
+// in markup, so the screens are listed here instead of looked up from a map.
+// Screens stay in English, like the product, on both sites.
+import Accounting from '../islands/screens/Accounting'
+import Analytics from '../islands/screens/Analytics'
+import Branding from '../islands/screens/Branding'
+import CheckIns from '../islands/screens/CheckIns'
+import Classes from '../islands/screens/Classes'
+import MemberApp from '../islands/screens/MemberApp'
+import Members from '../islands/screens/Members'
+import Memberships from '../islands/screens/Memberships'
+import PayLinks from '../islands/screens/PayLinks'
+import PayPage from '../islands/screens/PayPage'
+import Payroll from '../islands/screens/Payroll'
+import PayslipApp from '../islands/screens/PayslipApp'
+import Pos from '../islands/screens/Pos'
+import StaffApp from '../islands/screens/StaffApp'
+
+export type ScreenName =
+  | 'Accounting'
+  | 'Analytics'
+  | 'Branding'
+  | 'CheckIns'
+  | 'Classes'
+  | 'MemberApp'
+  | 'Members'
+  | 'Memberships'
+  | 'PayLinks'
+  | 'PayPage'
+  | 'Payroll'
+  | 'PayslipApp'
+  | 'Pos'
+  | 'StaffApp'
+type Props = { name: ScreenName }
+const { name } = Astro.props
+---
+<div data-frag={name.toLowerCase()} lang="en" dir="ltr">
+{name === 'Accounting' && <Accounting client:visible />}
+{name === 'Analytics' && <Analytics client:visible />}
+{name === 'Branding' && <Branding client:visible />}
+{name === 'CheckIns' && <CheckIns client:visible />}
+{name === 'Classes' && <Classes client:visible />}
+{name === 'MemberApp' && <MemberApp client:visible />}
+{name === 'Members' && <Members client:visible />}
+{name === 'Memberships' && <Memberships client:visible />}
+{name === 'PayLinks' && <PayLinks client:visible />}
+{name === 'PayPage' && <PayPage client:visible />}
+{name === 'Payroll' && <Payroll client:visible />}
+{name === 'PayslipApp' && <PayslipApp client:visible />}
+{name === 'Pos' && <Pos client:visible />}
+{name === 'StaffApp' && <StaffApp client:visible />}
+</div>

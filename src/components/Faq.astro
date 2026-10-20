@@ -1,0 +1,12 @@
+---
+type Props = { items: [question: string, answer: string][] }
+const { items } = Astro.props
+---
+<div class="faq rise">
+  {items.map(([q, a], i) => (
+    <details open={i === 0}>
+      <summary>{q}<svg class="i"><use href="#i-plus" /></svg></summary>
+      <p>{a}</p>
+    </details>
+  ))}
+</div>

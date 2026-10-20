@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-20T22:00:00Z",
+  "title": "Design System: Gym Thing (thing.bh)",
+  "extensions": {
+    "colorMeta": {
+      "admin-canvas": { "role": "neutral", "displayName": "Admin Canvas", "canonical": "#f8f9fb", "tonalRamp": ["#1f2124", "#3a3d42", "#5a5e65", "#80848b", "#a8acb3", "#d0d3d8", "#eceef2", "#f8f9fb"] },
+      "paper-white": { "role": "neutral", "displayName": "Paper White", "canonical": "#ffffff", "tonalRamp": ["#262626", "#404040", "#5c5c5c", "#7a7a7a", "#a3a3a3", "#d4d4d4", "#f5f5f5", "#ffffff"] },
+      "ink-black": { "role": "primary", "displayName": "Ink Black", "canonical": "#0a0a0a", "tonalRamp": ["#0a0a0a", "#1a1a1a", "#2a2a2a", "#3f3f46", "#5c5c5c", "#8a8a92", "#bdbdc2", "#e7e7e9"] },
+      "graphite": { "role": "neutral", "displayName": "Graphite", "canonical": "#262626", "tonalRamp": ["#0a0a0a", "#171717", "#262626", "#404040", "#5c5c5c", "#8a8a8a", "#bdbdbd", "#e5e5e5"] },
+      "pencil-grey": { "role": "neutral", "displayName": "Pencil Grey", "canonical": "#5c5c5c", "tonalRamp": ["#1f1f1f", "#333333", "#474747", "#5c5c5c", "#7a7a7a", "#9e9e9e", "#c7c7c7", "#ededed"] },
+      "hairline": { "role": "neutral", "displayName": "Hairline", "canonical": "#e7e7e9", "tonalRamp": ["#2b2b2e", "#4a4a4f", "#6b6b71", "#8a8a92", "#a9a9b0", "#c9c9cf", "#d9d9dd", "#e7e7e9"] },
+      "hairline-strong": { "role": "neutral", "displayName": "Hairline Strong", "canonical": "#d9d9dd", "tonalRamp": ["#2b2b2e", "#4a4a4f", "#6b6b71", "#8a8a92", "#a9a9b0", "#bdbdc2", "#d9d9dd", "#ececef"] },
+      "band-grey": { "role": "neutral", "displayName": "Band Grey", "canonical": "#f1f3f6", "tonalRamp": ["#1e2126", "#3a3f47", "#5a616b", "#7f8792", "#a6adb7", "#cdd2d9", "#e3e6eb", "#f1f3f6"] },
+      "night-band": { "role": "neutral", "displayName": "Night Band", "canonical": "#0a0a0a", "tonalRamp": ["#0a0a0a", "#171717", "#27272a", "#3f3f46", "#52525b", "#a3a3a3", "#d4d4d4", "#fafafa"] },
+      "night-text": { "role": "neutral", "displayName": "Night Text", "canonical": "#fafafa" },
+      "night-soft": { "role": "neutral", "displayName": "Night Soft", "canonical": "#d4d4d4" },
+      "door-green": { "role": "tertiary", "displayName": "Door Green (product only)", "canonical": "#15803d", "tonalRamp": ["#052e16", "#14532d", "#166534", "#15803d", "#16a34a", "#4ade80", "#bbf7d0", "#f0fdf4"] },
+      "door-red": { "role": "tertiary", "displayName": "Door Red (product only)", "canonical": "#c8102e", "tonalRamp": ["#3f0510", "#6b0a1c", "#9a0d26", "#c8102e", "#e0334f", "#f07a8c", "#fbc8d0", "#fff1f3"] },
+      "focus-blue": { "role": "secondary", "displayName": "Focus Blue", "canonical": "#2563eb", "tonalRamp": ["#172554", "#1e3a8a", "#1d4ed8", "#2563eb", "#3b82f6", "#93c5fd", "#dbeafe", "#eff6ff"] },
+      "error-red": { "role": "tertiary", "displayName": "Error Red", "canonical": "#b91c1c" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The one hero headline per page." },
+      "headline": { "displayName": "Headline", "purpose": "Section openers." },
+      "title": { "displayName": "Title", "purpose": "Sub-sections, cell headings, company facts." },
+      "statement": { "displayName": "Statement", "purpose": "A single spoken-weight sentence, max 30ch." },
+      "lede": { "displayName": "Lede", "purpose": "The paragraph under a headline, max 46ch, Graphite." },
+      "body": { "displayName": "Body", "purpose": "Running copy, max 56ch." },
+      "label": { "displayName": "Label", "purpose": "Buttons, form labels, nav." },
+      "small": { "displayName": "Small", "purpose": "Fine print and metadata in Pencil Grey." }
+    },
+    "shadows": [
+      { "name": "hairline-lift", "value": "0 1px 2px rgba(0, 0, 0, 0.08)", "purpose": "White cells on the canvas." },
+      { "name": "scroll-edge", "value": "0 1px 0 #e7e7e9", "purpose": "Sticky header once scrolled." },
+      { "name": "product-window", "value": "0 1px 2px rgba(0, 0, 0, 0.04), 0 24px 60px -24px rgba(16, 24, 40, 0.18)", "purpose": "Rebuilt Gym Thing screens only." },
+      { "name": "active-node", "value": "0 10px 28px -14px rgba(0, 0, 0, 0.35)", "purpose": "Selected node in the access-control flow." },
+      { "name": "menu-drop", "value": "0 12px 24px rgba(0, 0, 0, 0.06)", "purpose": "Opened mobile nav panel." },
+      { "name": "field-focus", "value": "0 0 0 3px rgba(10, 10, 10, 0.08)", "purpose": "Soft ink halo on focused inputs." }
+    ],
+    "motion": [
+      { "name": "ease-out", "value": "cubic-bezier(0.23, 1, 0.32, 1)", "purpose": "Presses, reveals, icon nudges." },
+      { "name": "ease-io", "value": "cubic-bezier(0.77, 0, 0.175, 1)", "purpose": "On-screen movement that starts and stops." },
+      { "name": "press", "value": "transform: scale(0.97) 140ms ease-out", "purpose": "Button and node press response." },
+      { "name": "rise", "value": "opacity + translateY(24px) 640ms ease-out", "purpose": "Below-the-fold reveal; fade-only under reduced motion." },
+      { "name": "colour-state", "value": "150ms ease", "purpose": "Background and border colour changes on hover." }
+    ],
+    "breakpoints": [
+      { "name": "stack", "value": "900px" },
+      { "name": "nav-collapse", "value": "1020px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ink-filled main action, e.g. Request a free trial.",
+      "html": "<button class=\"ds-btn ds-btn-pri\">Request a free trial <svg class=\"ds-i\" viewBox=\"0 0 24 24\"><path d=\"M5 12h14M13 6l6 6-6 6\"/></svg></button>",
+      "css": ".ds-btn { display: inline-flex; align-items: center; gap: 8px; height: 46px; padding: 0 20px; border-radius: 10px; font: 600 15.5px/1 var(--sans, system-ui); border: 1px solid transparent; cursor: pointer; transition: transform 140ms cubic-bezier(0.23,1,0.32,1), background-color 150ms ease, border-color 150ms ease; } .ds-btn:active { transform: scale(0.97); } .ds-btn:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; } .ds-btn-pri { background: #0a0a0a; color: #fafafa; } .ds-btn-pri:hover { background: #2a2a2a; } .ds-i { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; transition: transform 200ms cubic-bezier(0.23,1,0.32,1); } .ds-btn:hover .ds-i { transform: translateX(3px); }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "White secondary action with a hairline border.",
+      "html": "<button class=\"ds-btn-ghost\">See every module</button>",
+      "css": ".ds-btn-ghost { display: inline-flex; align-items: center; height: 46px; padding: 0 20px; border-radius: 10px; font: 600 15.5px/1 var(--sans, system-ui); background: #fff; color: #0a0a0a; border: 1px solid #d9d9dd; cursor: pointer; transition: transform 140ms cubic-bezier(0.23,1,0.32,1), border-color 150ms ease; } .ds-btn-ghost:hover { border-color: #bdbdc2; } .ds-btn-ghost:active { transform: scale(0.97); } .ds-btn-ghost:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-field",
+      "description": "Trial form field with label and ink focus halo.",
+      "html": "<label class=\"ds-field\"><span>Gym name</span><input placeholder=\"ABC Gym\"></label>",
+      "css": ".ds-field { display: grid; gap: 6px; font: 600 14.5px/1.4 var(--sans, system-ui); color: #0a0a0a; max-width: 360px; } .ds-field input { height: 46px; border: 1px solid #d9d9dd; border-radius: 10px; background: #fff; padding: 0 14px; font: 400 16px var(--sans, system-ui); transition: border-color 150ms ease, box-shadow 150ms ease; } .ds-field input:hover { border-color: #bdbdc2; } .ds-field input:focus { outline: none; border-color: #0a0a0a; box-shadow: 0 0 0 3px rgba(10,10,10,0.08); }"
+    },
+    {
+      "name": "Top Navigation",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Sticky translucent bar with pill links and current-page wash.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" aria-current=\"page\">Modules</a><a href=\"#\">Compare</a><a href=\"#\">About</a><a href=\"#\" class=\"ds-lang\">العربية</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 4px; height: 72px; padding: 0 24px; background: rgba(248,249,251,0.92); box-shadow: 0 1px 0 #e7e7e9; font-family: var(--sans, system-ui); } .ds-nav a { padding: 8px 12px; border-radius: 8px; text-decoration: none; font-size: 15px; font-weight: 500; color: #262626; transition: background-color 150ms ease, color 150ms ease; } .ds-nav a:hover { background: rgba(0,0,0,0.04); } .ds-nav a[aria-current=page] { color: #0a0a0a; background: rgba(0,0,0,0.06); } .ds-nav a:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; } .ds-nav .ds-lang { margin-inline-start: auto; color: #5c5c5c; font-weight: 400; }"
+    },
+    {
+      "name": "Cell",
+      "kind": "card",
+      "refersTo": "cell",
+      "description": "White container on the canvas, hairline lift, no border.",
+      "html": "<div class=\"ds-cell\"><h3>PT packs that count down.</h3><p>Sell 10 sessions, and every session a coach marks done comes off the member's pack.</p></div>",
+      "css": ".ds-cell { background: #fff; border-radius: 20px; padding: 32px; box-shadow: 0 1px 2px rgba(0,0,0,0.08); color: #0a0a0a; font-family: var(--sans, system-ui); max-width: 380px; } .ds-cell h3 { margin: 0 0 12px; font-size: 26px; line-height: 1.08; letter-spacing: -0.035em; font-weight: 700; } .ds-cell p { margin: 0; color: #262626; font-size: 17px; line-height: 1.55; }"
+    },
+    {
+      "name": "Night Band",
+      "kind": "custom",
+      "refersTo": "close-band",
+      "description": "The once-per-page inverted closing call to action.",
+      "html": "<section class=\"ds-close\"><h2>Run your gym on one system.</h2><div><button class=\"ds-close-pri\">Request a free trial</button></div></section>",
+      "css": ".ds-close { background: #0a0a0a; color: #fafafa; border-radius: 28px; padding: 64px 48px; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 48px; align-items: end; font-family: var(--sans, system-ui); } .ds-close h2 { margin: 0; font-size: 48px; line-height: 0.98; letter-spacing: -0.048em; font-weight: 700; } .ds-close-pri { height: 46px; padding: 0 20px; border-radius: 10px; border: 0; background: #fff; color: #0a0a0a; font: 600 15.5px/1 var(--sans, system-ui); cursor: pointer; transition: transform 140ms cubic-bezier(0.23,1,0.32,1); } .ds-close-pri:active { transform: scale(0.97); } .ds-close-pri:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }"
+    },
+    {
+      "name": "Flow Node",
+      "kind": "custom",
+      "refersTo": "flow-node",
+      "description": "Fixed-size node on the access-control canvas; selected state lifts.",
+      "html": "<button class=\"ds-fnode ds-on\"><span class=\"ds-fi\">QR</span>Member QR code</button>",
+      "css": ".ds-fnode { display: flex; align-items: center; gap: 12px; width: 252px; padding: 11px 16px 11px 11px; background: #fff; border: 1.5px solid #c9c9cf; border-radius: 12px; font: 600 15px var(--sans, system-ui); color: #0a0a0a; text-align: start; cursor: pointer; transition: border-color 160ms ease, box-shadow 200ms ease, transform 140ms cubic-bezier(0.23,1,0.32,1); } .ds-fnode:hover { border-color: #8a8a92; } .ds-fnode:active { transform: scale(0.97); } .ds-fnode:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; } .ds-fnode.ds-on { border-color: #0a0a0a; box-shadow: 0 10px 28px -14px rgba(0,0,0,0.35); } .ds-fi { min-width: 40px; height: 40px; border-radius: 10px; background: #f1f3f6; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Daylight",
+    "overview": "The site runs on the same light canvas as the Gym Thing admin, with the lights fully on. Nothing is hidden behind atmosphere: a near-white canvas, black ink, and headlines set very large and very tight. The page carries no colour of its own, so the only colour a visitor sees comes from the product itself. That includes the live, rebuilt Gym Thing screens and the real payment marks. Confidence comes from scale and emptiness, not decoration.\n\nDensity is low in the marketing chrome and true to the product inside the product pieces. Sections are separated by wide vertical gaps (140px), not rules or panels. The product fragments are faithful HTML rebuilds of the real admin, member and staff apps. They keep their own colours, radii and density. The marketing system frames them and never restyles them. Once per page, a black \"night\" band flips the canvas for a closing call to action or a support statement.\n\nMotion is short and physical: a strong ease-out, a 0.97 press scale on controls, arrows that nudge forward on hover, and content that rises 24px into place below the fold. Reduced motion turns rises into plain fades and turns off smooth scroll.",
+    "keyCharacteristics": [
+      "Monochrome chrome: canvas, paper, ink and greys only.",
+      "Huge, tight Geist headlines (up to 132px, tracking down to −0.058em).",
+      "White cells on a grey-white canvas, separated by tone rather than borders.",
+      "Real product fragments are the colour and the proof.",
+      "One black night band per page for the closing moment.",
+      "Short, physical motion with a reduced-motion fallback everywhere."
+    ],
+    "rules": [
+      { "name": "The Daylight Monochrome Rule", "body": "Marketing chrome is black, white and grey only. Green, red and blue appear only inside product fragments, plus the blue focus ring and red form errors. Payment brand marks keep their own colours.", "section": "colors" },
+      { "name": "The Product Keeps Its Colours Rule", "body": "A rebuilt Gym Thing screen uses the real product's tokens (`src/styles/dash.css`, `src/islands/screens/*.css`), never the marketing palette. The page frames the product and never repaints it.", "section": "colors" },
+      { "name": "The Tighten-As-You-Grow Rule", "body": "Tracking tightens as size grows: −0.015em at 18px, −0.035em at title, −0.048em at headline and −0.058em at display. Body text is never tracked.", "section": "typography" },
+      { "name": "The One Display Rule", "body": "Display size appears once per page, in the hero. Every later section starts at Headline or smaller.", "section": "typography" },
+      { "name": "The Gap Is The Divider Rule", "body": "Sections are separated by space, not by rules, borders or alternating backgrounds. The night band is the only full-bleed tone change.", "section": "layout" },
+      { "name": "The Only Product Lifts Rule", "body": "At rest, a long or soft shadow belongs only to a real product window. Marketing cells stay at hairline lift.", "section": "elevation" },
+      { "name": "The Bigger Box, Bigger Corner Rule", "body": "Pick the radius by the object's scale on the ladder above. Never put a cell-sized radius on a control or a control radius on a band.", "section": "shapes" },
+      { "name": "The Square Logo Rule", "body": "The THING logo mark is never rounded and never placed in a rounded tile. Use `public/logo.svg` as drawn.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do keep marketing chrome to canvas, paper, ink and the greys. Colour comes from product fragments and real payment marks.",
+      "Do set headlines in Geist 700 with tracking that tightens as size grows (−0.035em to −0.058em), and wrap them with `text-wrap: balance`.",
+      "Do separate sections with 140px of space (96px on mobile), not rules or alternating backgrounds.",
+      "Do show proof as live HTML rebuilds of the real Gym Thing UI, using the product's own tokens, inside a 16px product window.",
+      "Do use one night band per page for the closing moment.",
+      "Do use logical properties so every layout mirrors for the Arabic RTL site.",
+      "Do give every motion a reduced-motion fallback: rises become fades and smooth scroll turns off."
+    ],
+    "donts": [
+      "Don't use screenshots, device frames, invented look-alike UI, or animated hero glows or auroras.",
+      "Don't use Gym Thing's product green or red, or any accent colour, in marketing chrome.",
+      "Don't round the THING logo mark or put it in a rounded tile.",
+      "Don't use black-and-gold, boxy tile boards, or blocky grids of identical cells.",
+      "Don't put a soft or long shadow on marketing cells. Only product windows lift.",
+      "Don't let flow-canvas nodes resize or move when their content changes.",
+      "Don't set Arabic and English on the same page."
+    ]
+  }
+}

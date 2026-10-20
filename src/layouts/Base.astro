@@ -1,0 +1,92 @@
+---
+import { Font } from 'astro:assets'
+import Footer from '../components/Footer.astro'
+import Header from '../components/Header.astro'
+import Sprite from '../components/Sprite.astro'
+import { langOf, otherPath } from '../data/i18n'
+import { baseGraph, webPage } from '../data/jsonld'
+import { SITE_URL } from '../data/site'
+import '../styles/site.css'
+
+type Props = {
+  title: string
+  description: string
+  /** Page-specific JSON-LD nodes, merged into the site-wide graph. */
+  graph?: Record<string, unknown>[]
+  ogImage?: string
+  /** A plain Markdown copy of this page for AI readers. */
+  markdown?: string
+  /** Keep this page out of search results (e.g. the form thank-you page). */
+  noindex?: boolean
+  /** Pages with no Arabic version (legal pages, 404). */
+  englishOnly?: boolean
+}
+const lang = langOf(Astro.currentLocale)
+const {
+  title,
+  description,
+  graph = [],
+  ogImage = lang === 'ar' ? '/og-ar.png' : '/og.png',
+  markdown,
+  noindex,
+  englishOnly,
+} = Astro.props
+const path = Astro.url.pathname
+const canonical = new URL(path, SITE_URL).href
+const en = new URL(lang === 'en' ? path : otherPath(path), SITE_URL).href
+const ar = englishOnly ? undefined : new URL(lang === 'ar' ? path : otherPath(path), SITE_URL).href
+const ld = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': [...baseGraph(lang), webPage(lang, canonical, title, description), ...graph],
+})
+---
+<!doctype html>
+<html lang={lang} dir={lang === 'ar' ? 'rtl' : 'ltr'}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en" href={en} />
+    {ar && <link rel="alternate" hreflang="ar" href={ar} />}
+    {ar && <link rel="alternate" hreflang="x-default" href={en} />}
+    {markdown && <link rel="alternate" type="text/markdown" href={markdown} />}
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Gym Thing" />
+    <meta property="og:locale" content={lang === 'ar' ? 'ar_BH' : 'en_GB'} />
+    {ar && <meta property="og:locale:alternate" content={lang === 'ar' ? 'en_GB' : 'ar_BH'} />}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={new URL(ogImage, SITE_URL).href} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <Font cssVariable="--font-geist" preload />
+    {lang === 'ar' && <Font cssVariable="--font-plex-arabic" preload={[{ weight: 400 }, { weight: 700 }]} />}
+    <script type="application/ld+json" set:html={ld} />
+    <!-- Google tag (gtag.js) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-NKTD6FNG1H"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-NKTD6FNG1H');
+    </script>
+  </head>
+  <body>
+    <Sprite />
+    <Header switchTo={englishOnly ? '/ar/' : otherPath(path)} />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <script>
+      import '../scripts/site'
+    </script>
+  </body>
+</html>

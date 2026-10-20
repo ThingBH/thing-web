@@ -1,0 +1,31 @@
+---
+// Where Web3Forms sends visitors whose browser posted the form without JavaScript.
+import { href, langOf } from '../data/i18n'
+import Base from '../layouts/Base.astro'
+
+const lang = langOf(Astro.currentLocale)
+const t = {
+  en: {
+    title: 'Thanks · Gym Thing',
+    p: "Your free trial request is in. We'll message you on WhatsApp to book your walkthrough.",
+    h1: "Thanks. We're on it.",
+    home: 'Back to the homepage',
+  },
+  ar: {
+    title: 'شكراً · Gym Thing',
+    p: 'طلب تجربتك المجانية وصلنا. بنراسلك على واتساب عشان نحجز موعد الشرح.',
+    h1: 'شكراً، وصلنا طلبك.',
+    home: 'رجوع للصفحة الرئيسية',
+  },
+}[lang]
+---
+<Base title={t.title} description={t.p} noindex>
+  <section class="page-hero gutter" aria-labelledby="h-thanks">
+    <div class="inner">
+      <h1 class="d1" id="h-thanks">{t.h1}</h1>
+      <p class="lede" style="margin-top:24px">{t.p}</p>
+      <p style="margin-top:32px"><a class="btn ghost" href={href(lang, '/')}>{t.home}</a></p>
+    </div>
+  </section>
+  <div class="gutter"><div class="inner" style="height:96px"></div></div>
+</Base>

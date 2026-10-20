@@ -1,0 +1,22 @@
+---
+// A brand mark that names itself needs no label; the rest keep their words.
+import { langOf } from '../../data/i18n'
+
+const lang = langOf(Astro.currentLocale)
+const t = {
+  en: { ways: 'Ways to pay', visa: 'Visa and Mastercard', link: 'WhatsApp link', cash: 'Cash' },
+  ar: { ways: 'طرق الدفع', visa: 'Visa وMastercard', link: 'رابط واتساب', cash: 'كاش' },
+}[lang]
+---
+<div class="paymarks">
+  <ul class="marks" aria-label={t.ways}>
+    <li class="logo-only"><span class="mk" role="img" aria-label="BenefitPay"><img class="brand" src="/brand/benefitpay.png" alt="" width="22" height="22" /></span></li>
+    <li class="logo-only"><span class="mk" role="img" aria-label="Apple Pay"><svg class="brand wide" viewBox="0 0 24 24" aria-hidden="true"><use href="#b-applepay" /></svg></span></li>
+    <li class="logo-only"><span class="mk" role="img" aria-label="Google Pay"><svg class="brand wide" viewBox="0 0 24 24" aria-hidden="true"><use href="#b-googlepay" /></svg></span></li>
+    <li class="logo-only">
+      <span class="mk" role="img" aria-label={t.visa}><svg class="brand wide" viewBox="0 0 24 24" aria-hidden="true"><use href="#b-visa" /></svg><svg class="brand" viewBox="0 0 24 24" aria-hidden="true"><use href="#b-mastercard" /></svg></span>
+    </li>
+    <li><span class="mk"><svg class="brand" viewBox="0 0 24 24" aria-hidden="true"><use href="#b-whatsapp" /></svg></span><span class="mn">{t.link}</span></li>
+    <li><span class="mk"><svg class="i"><use href="#i-cash" /></svg></span><span class="mn">{t.cash}</span></li>
+  </ul>
+</div>

@@ -1,48 +1,70 @@
 # Product
 
+<!-- impeccable:product-schema 1 -->
+
 ## Register
 
 brand
 
+## Platform
+
+web
+
 ## Users
 
-Mixed B2B decision-makers evaluating business software, spanning two buyer types the site must serve without diluting either:
-
-- **Gym & studio operators** — the audience for the `/gym` product page. Often non-technical fitness business owners who need to run memberships, classes, billing, and staff workflows reliably.
-- **Ops & finance leaders at growing / multi-location businesses** — the audience for the `/` studio page. Evaluating a platform vendor across industries; care about consolidation, uptime, and not betting on a one-off tool.
-
-Shared context: they arrive skeptical, comparing vendors, "tired of duct-taped workflows." They are deciding whether Thing Company is a serious enough company to trust, then whether to start a conversation.
+Owners and managers of gyms, studios and clubs across the Gulf. Bahrain, Saudi Arabia, the UAE and the rest of the Gulf are treated as one market. They arrive comparing vendors, often while running on spreadsheets, paper, or software built for another region. What they want to know is whether Gym Thing can run their whole gym (desk, door, till, classes, payroll) and whether the people behind it will pick up the phone. Usually a non-technical owner makes the decision. Front-desk staff, coaches and accountants feel the result.
 
 ## Product Purpose
 
-Thing Company is a multi-product software studio that ships cloud-native operational tools for businesses across industries. The site is **deliberately tiered**:
+thing.bh is the marketing site for **Gym Thing**, one system that runs a gym end to end. It is made by **Thing W.L.L.**, a software company in Seef, Bahrain. The company has its own page at `/about/`; the site sells the product, not a studio portfolio. Thing Ledger and Field Thing are retired and must not appear.
 
-- `/` markets the **studio** and its portfolio — flagship **Gym Thing** (fitness operations), plus **Thing Ledger** (multi-location finance) and **Field Thing** (field/dispatch). It sells the company: a portfolio of long-lived platforms, not a single feature.
-- `/gym` is a dedicated **product** page for Gym Thing, speaking directly to studio operators.
-- Legal surfaces (`/privacy`, `/terms`, `/data-deletion`) support the above.
+Success is a **free-trial request**. "Request a free trial" is the one conversion: the trial lasts up to 3 months and Thing sets it up. Price comes up in that conversation. `/pricing` and `/get-a-quote` redirect away.
 
-Two registers, one brand system. Success is **a qualified demo request or contact** — every surface should route the visitor toward that conversation.
+## Positioning
 
-## Brand Personality
+Gym Thing is built and supported locally for how Gulf gyms actually work. Members pay with BenefitPay, Apple Pay, Google Pay, cards, cash or a WhatsApp link. Members get Arabic and English. Payroll handles GOSI and WPS. Any door works: QR, wallet pass, turnstile, or an iPad at reception. The team that builds it also sets it up, moves members over, trains staff, and answers on WhatsApp, phone or email 7 days a week with same-day replies. Every gym gets every module, and there are no plan tiers.
 
-**Premium and understated.** Quiet confidence over volume. The brand should read like a team that ships dependable infrastructure: precise, engineering-credible, generous with space, high polish, nothing shouting. Three words: **composed, credible, deliberate.**
+## Operating Context
 
-Voice: specific and plain. Name what a product literally does; let concrete capability carry the weight instead of adjectives. The feel to aim for is the dark, sharp, restrained credibility of Linear, Vercel, and Stripe.
+- Site sections: home, `/modules/` plus 13 module pages, `/compare/` plus one page per competitor (Mindbody, Glofox, Perfect Gym, Tamarran, spreadsheets and paper), `/about/`, `/free-trial/`, and legal pages (`/privacy/`, `/terms/`, `/data-deletion/`).
+- Module pages: Members, Memberships, Classes and PT, Member app, Access control, Point of sale and stock, Staff app, Payments, Invoicing and accounting, HR and payroll, Automations, Reports and analytics, Branches, roles and branding.
+- The only purchase choice is the member app: the generic "Gym Thing" app with the gym inside it, or the gym's own branded store app.
+- Bring your own domain is a marketed feature.
+- Trial form fields: gym name, name, WhatsApp. Nothing else. It submits through Web3Forms.
+- Content is written for skeptical owners and for AI crawlers: static HTML per page, plus Markdown copies and `llms.txt`.
 
-## Anti-references
+## Capabilities and Constraints
 
-- **Generic SaaS template.** The hero-metric stat block (big number + tiny label, repeated), identical icon-heading-text card grids, and warm cream/sand body backgrounds. This is the "AI made that" landing page. Note: the current hero leans on a `3+ / 99.99% / 12+` metric strip and a uniform three-card product grid — refine these toward something with more editorial intent.
-- **Loud gym / fitness clichés.** No neon, no aggressive bodybuilder energy, no stock barbell photography. Gym Thing is operations software, not a supplement ad.
-- Anything that reads as overstated or buzzword-driven; restraint is the point.
+- **Languages:** English at `/` and Arabic (RTL) at `/ar/`, both **required at launch**. They are two separate sites joined by a language switch, and Arabic and English never share a page.
+- **Every feature is live.** Never write "coming soon" or "rolling out".
+- **Claims Thing must never make:** hosted in Bahrain (it is AWS Paris), ZATCA, an uptime SLA, PDPL or compliance badges, or any support speed faster than same-day.
+- **Copy is about the owner's outcome, never system internals.** No jargon such as rotating codes, gapless series, geofencing, permission counts, AWS or replication detail, or trigger/action.
+- **Market:** positioning covers the whole Gulf. The payment, payroll and compliance integrations confirmed today are Bahrain's (BenefitPay, GOSI, WPS). Do not claim country-specific integrations for other Gulf states until confirmed.
 
-## Design Principles
+## Brand Commitments
 
-1. **Tiered clarity.** The studio story and the product story each get a surface that does one job well. Don't let `/` and `/gym` blur into the same generic pitch.
-2. **Earn trust through specificity.** Concrete capabilities, named products, real outcomes — over adjectives and marketing superlatives. A skeptical buyer is convinced by precision.
-3. **Quiet confidence.** Restraint reads as competence. Let space, typography, and subtle craft carry the premium feel; resist the urge to shout or over-decorate.
-4. **Every surface routes to a conversation.** The demo / contact path is always one clear, low-friction step away, without the page feeling like a funnel.
-5. **Preserve and deepen the dark identity.** The teal-on-void system with its warm-sand secondary is the brand. Refine its craft and polish rather than reinventing the palette.
+- Name: **Gym Thing**, by **Thing W.L.L.** (CR No. 196454-1, Seef, Kingdom of Bahrain). Logo: `public/logo.svg`.
+- Voice: confident and sales-forward, plain and specific. Name what the gym owner gets in their own words. Lead with graphics and live product over text.
+- Product proof is **live HTML fragments rebuilt faithfully from the real Gym Thing UI** (source of truth: `../the-gym-thing`), never screenshots, device mockups or invented look-alike UI. Each module page shows its own module screen.
+- Sample tenant in product fragments: **"ABC Gym"**.
+- Payment brands appear as their real marks (BenefitPay mark in `public/brand/`) with no text labels.
+- No loud gym clichés: no neon, no bodybuilder energy, no stock barbell photography.
+
+## Evidence on Hand
+
+- Gyms running Gym Thing that may be named: **Train Fitness**, **RSX Fitness**, **Pulse Fitness**, **Core District Gym**, **Elevation Fitness Club**. Never write "in Bahrain" in the clients line.
+- Competitor comparisons with dated sources: `src/data/compare.ts`.
+- Contact: WhatsApp and phone +973 3993 6601, support@thing.bh, hello@thing.bh (`src/data/site.ts`).
+- **No testimonials, owner quotes, case studies, metrics or benchmarks exist yet.** Do not invent any. Only real, attributed owner quotes may be used.
+
+## Product Principles
+
+1. **One product, one conversation.** Every surface sells Gym Thing and routes to a free trial.
+2. **Show the real thing.** Faithful live product beats description, and a module's own screen beats a generic dashboard.
+3. **Outcomes, not internals.** Say what changes for the owner, desk or member. Leave out how the system does it.
+4. **Truth is the ceiling.** Sell confidently, but within the claims truth table above.
+5. **People are part of the product.** Local setup, migration, training and same-day support are things you sell, not footnotes.
 
 ## Accessibility & Inclusion
 
-No formal compliance target was set by the stakeholder. Default baseline is **WCAG 2.1 AA**: ≥4.5:1 body-text contrast, keyboard-navigable interactive elements, semantic markup, and a `prefers-reduced-motion` alternative for the scroll-reveal animations (already partially implemented in `index.css` — keep and extend it). Given the dark theme and teal/sand accents, verify accent-on-dark contrast and avoid encoding meaning in color alone.
+No formal compliance target. The baseline is **WCAG 2.1 AA**: at least 4.5:1 body contrast, keyboard-navigable controls, semantic markup, and reduced-motion alternatives for all animation. The Arabic site must be fully mirrored RTL, not a translated LTR layout.

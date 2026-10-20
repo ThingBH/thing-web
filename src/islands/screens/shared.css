@@ -1,0 +1,35 @@
+/* Toast shared by every product screen: the root must be position: relative. */
+.mx-toast {
+  position: absolute;
+  inset-inline-start: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: calc(100% - 32px);
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #0a0a0a;
+  color: #fff;
+  font-size: 13.5px;
+  font-weight: 500;
+  animation: mx-toast-in 240ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.mx-toast .i {
+  width: 15px;
+  height: 15px;
+  flex: none;
+}
+@keyframes mx-toast-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 8px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mx-toast {
+    animation: none;
+  }
+}

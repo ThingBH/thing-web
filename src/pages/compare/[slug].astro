@@ -1,0 +1,7 @@
+---
+import { comparisons } from '../../data/compare'
+import Compare from '../../views/Compare.astro'
+
+export const getStaticPaths = () => comparisons.map((c) => ({ params: { slug: c.slug } }))
+---
+<Compare slug={Astro.params.slug} />

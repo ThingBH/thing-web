@@ -1,0 +1,31 @@
+---
+import { href, langOf } from '../data/i18n'
+
+const lang = langOf(Astro.currentLocale)
+const t = {
+  en: {
+    h: 'Your gym, set up and ready to try.',
+    p: 'We set it up with your logo, plans and members. Run it for up to 3 months, then decide.',
+    cta: 'Start with a free trial',
+  },
+  ar: {
+    h: 'ناديك، مجهّز وجاهز تجربه.',
+    p: 'نجهزه بشعارك وباقاتك وأعضاءك. شغّله لين 3 شهور، وبعدين قرر.',
+    cta: 'ابدأ بتجربة مجانية',
+  },
+}[lang]
+const id = `close-${Math.random().toString(36).slice(2, 7)}`
+---
+<div class="gutter">
+  <div class="inner">
+    <section class="close" aria-labelledby={id}>
+      <div>
+        <h2 class="d2" id={id}>{t.h}</h2>
+        <p class="lede" style="margin-top:20px">{t.p}</p>
+      </div>
+      <div class="ctas" style="justify-content:flex-end">
+        <a class="btn pri" href={href(lang, '/free-trial/')}>{t.cta}</a>
+      </div>
+    </section>
+  </div>
+</div>

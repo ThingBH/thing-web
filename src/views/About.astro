@@ -1,0 +1,163 @@
+---
+import CloseBand from '../components/CloseBand.astro'
+import { href, langOf } from '../data/i18n'
+import { breadcrumbs } from '../data/jsonld'
+import { clients, contact } from '../data/site'
+import Base from '../layouts/Base.astro'
+
+const lang = langOf(Astro.currentLocale)
+const t = {
+  en: {
+    crumb: 'About',
+    title: 'About · Gym Thing',
+    description:
+      'Thing is a software company in Seef. Gym Thing is what we make: one system for the gyms, studios and clubs of the Gulf, set up by us and supported by us.',
+    h1: 'We build it here, and we pick up.',
+    lede: 'Thing is a software company in Seef. Gym Thing is what we make: one system for the gyms, studios and clubs of the Gulf, set up by us and supported by us.',
+    whyH: 'Why we built it',
+    why: "Gyms here were running on software made for somewhere else. No BenefitPay, no Arabic for members, no GOSI or WPS, and support that answered on another continent's clock.",
+    whyMore:
+      'So the front desk kept a spreadsheet, the accountant kept another, and the owner chased payments on WhatsApp. We built Gym Thing so the desk, the door, the till and payroll finally agree, in the way gyms in Bahrain actually work.',
+    howH: 'How we work with you.',
+    how: [
+      [
+        'Before you start',
+        'We set it up',
+        'Your plans, prices, branches, logo and doors, ready before your team logs in.',
+      ],
+      [
+        'Your first weeks',
+        'We move your members over',
+        'Members, plans and history from your old system. You check it before anything goes live.',
+      ],
+      ['Go-live', 'We train your team', 'Front desk, managers and coaches, in Arabic or English, at your pace.'],
+      ['Every day after', 'We stay on call', 'WhatsApp, phone or email, 7 days a week, with a reply the same day.'],
+    ],
+    supportH: 'Support is part of the product.',
+    supportP:
+      'When the turnstile stops or a payment looks wrong, you reach the people who build Gym Thing. Not a ticket queue in another time zone.',
+    wa: 'WhatsApp',
+    phone: 'Phone',
+    email: 'Email',
+    hours: 'Hours',
+    hoursV: '7 days a week',
+    replies: 'Replies',
+    repliesV: 'The same day',
+    companyH: 'The company',
+    name: 'Name',
+    cr: 'Commercial Registration No.',
+    office: 'Office',
+    officeV: 'Seef, Kingdom of Bahrain',
+    clients: 'Running gyms including',
+    sales: 'Sales',
+    dataH: 'Your data',
+    data: "Encrypted and backed up every day on Amazon's cloud. Card payments go through a licensed payment provider, so card numbers never reach us. Your data is yours: export it any time, and ask us to delete it when you leave.",
+  },
+  ar: {
+    crumb: 'من نحن',
+    title: 'من نحن · Gym Thing',
+    description:
+      'Thing شركة برمجيات في السيف بمملكة البحرين. نطوّر Gym Thing، نظاماً واحداً لإدارة النوادي والاستوديوهات الرياضية في الخليج، ونتولى تجهيزه ودعمه بأنفسنا.',
+    h1: 'نبنيه هني، ونرد عليك.',
+    lede: 'Thing شركة برمجيات في السيف. وGym Thing هو اللي نسويه: نظام واحد للنوادي والاستوديوهات في الخليج، إحنا نجهزه وإحنا ندعمه.',
+    whyH: 'ليش بنيناه',
+    why: 'النوادي هني كانت تشتغل على برامج مسوية لمكان ثاني. لا BenefitPay، ولا عربي للأعضاء، ولا تأمينات ولا حماية أجور، ودعم يرد على توقيت قارة ثانية.',
+    whyMore:
+      'فالاستقبال عنده ملف إكسل، والمحاسب عنده ملف ثاني، وصاحب النادي يلاحق المدفوعات على واتساب. بنينا Gym Thing عشان الاستقبال والباب ونقطة البيع والرواتب أخيراً يتفقون، بالطريقة اللي تشتغل فيها النوادي في البحرين فعلاً.',
+    howH: 'شلون نشتغل وياك.',
+    how: [
+      ['قبل لا تبدأ', 'إحنا نجهزه', 'باقاتك وأسعارك وفروعك وشعارك وأبوابك، كلها جاهزة قبل لا يدخل فريقك.'],
+      ['أول أسابيعك', 'ننقل أعضاءك', 'الأعضاء والباقات والتاريخ من نظامك القديم. وتراجعها بنفسك قبل لا يشتغل أي شي.'],
+      ['يوم التشغيل', 'ندرّب فريقك', 'الاستقبال والمدراء والمدربين، بالعربي أو الإنجليزي، وعلى راحتكم.'],
+      ['كل يوم بعدها', 'نظل موجودين', 'واتساب أو تلفون أو إيميل، 7 أيام في الأسبوع، والرد في نفس اليوم.'],
+    ],
+    supportH: 'الدعم جزء من المنتج.',
+    supportP: 'لما توقف البوابة أو يبان دفع غلط، توصل للناس اللي يبنون Gym Thing. مو طابور تذاكر في منطقة زمنية ثانية.',
+    wa: 'واتساب',
+    phone: 'تلفون',
+    email: 'إيميل',
+    hours: 'الأوقات',
+    hoursV: '7 أيام في الأسبوع',
+    replies: 'الرد',
+    repliesV: 'في نفس اليوم',
+    companyH: 'الشركة',
+    name: 'الاسم',
+    cr: 'رقم السجل التجاري',
+    office: 'المكتب',
+    officeV: 'السيف، مملكة البحرين',
+    clients: 'نوادي تشتغل على Gym Thing، منها',
+    sales: 'المبيعات',
+    dataH: 'بياناتك',
+    data: 'مشفّرة وتنحفظ منها نسخة احتياطية كل يوم على سحابة Amazon. الدفع بالبطاقات يمر عن طريق مزود دفع مرخّص، يعني أرقام البطاقات ما توصلنا. وبياناتك ملكك: صدّرها أي وقت، واطلب منا نمسحها لما تطلع.',
+  },
+}[lang]
+const graph = [
+  breadcrumbs([
+    ['Gym Thing', href(lang, '/')],
+    [t.crumb, href(lang, '/about/')],
+  ]),
+]
+---
+<Base title={t.title} description={t.description} graph={graph}>
+  <section class="page-hero gutter" aria-labelledby="h-about">
+    <div class="inner">
+      <h1 class="d1" id="h-about">{t.h1}</h1>
+      <p class="lede" style="margin-top:28px">{t.lede}</p>
+    </div>
+  </section>
+
+  <section class="sec gutter" aria-labelledby="h-why">
+    <div class="inner why">
+      <h2 class="d3 rise" id="h-why">{t.whyH}</h2>
+      <div class="rise">
+        <p class="statement">{t.why}</p>
+        <p class="body" style="margin-top:24px">{t.whyMore}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec gutter" aria-labelledby="h-how">
+    <div class="inner">
+      <h2 class="d2 rise" id="h-how">{t.howH}</h2>
+      <ol class="how rise">
+        {t.how.map(([when, what, detail]) => <li><span>{when}</span><b>{what}</b><p>{detail}</p></li>)}
+      </ol>
+    </div>
+  </section>
+
+  <section class="sec night gutter" aria-labelledby="h-support-a" id="support">
+    <div class="inner duo">
+      <div class="rise">
+        <h2 class="d2" id="h-support-a">{t.supportH}</h2>
+        <p class="lede" style="margin-top:20px">{t.supportP}</p>
+      </div>
+      <ul class="contacts rise">
+        <li><span>{t.wa}</span><a href={contact.whatsappHref} dir="ltr">{contact.whatsapp}</a></li>
+        <li><span>{t.phone}</span><a href={contact.phoneHref} dir="ltr">{contact.whatsapp}</a></li>
+        <li><span>{t.email}</span><a href={`mailto:${contact.support}`}>{contact.support}</a></li>
+        <li><span>{t.hours}</span><b>{t.hoursV}</b></li>
+        <li><span>{t.replies}</span><b>{t.repliesV}</b></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="sec gutter" aria-labelledby="h-company">
+    <div class="inner duo top">
+      <div class="rise">
+        <h2 class="d3" id="h-company">{t.companyH}</h2>
+        <dl class="facts">
+          <div><dt>{t.name}</dt><dd>Thing W.L.L.</dd></div>
+          <div><dt>{t.cr}</dt><dd>196454-1</dd></div>
+          <div><dt>{t.office}</dt><dd>{t.officeV}</dd></div>
+          <div><dt>{t.clients}</dt><dd lang="en">{clients.join(', ')}</dd></div>
+          <div><dt>{t.sales}</dt><dd><a href={`mailto:${contact.sales}`}>{contact.sales}</a></dd></div>
+        </dl>
+      </div>
+      <div class="rise">
+        <h2 class="d3">{t.dataH}</h2>
+        <p class="body" style="margin-top:20px">{t.data}</p>
+      </div>
+    </div>
+  </section>
+  <CloseBand />
+</Base>
