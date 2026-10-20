@@ -44,15 +44,15 @@ const t = {
         <p class="small" style="max-width:34ch">{t.about}</p>
       </div>
       <div>
-        <h4>{t.modules}</h4>
+        <h2>{t.modules}</h2>
         <ul>{content[lang].modules.slice(0, 6).map((m) => <li><a href={href(lang, `/modules/${m.slug}/`)}>{m.name}</a></li>)}<li><a href={href(lang, '/modules/')}>{t.all}</a></li></ul>
       </div>
       <div>
-        <h4>{t.company}</h4>
+        <h2>{t.company}</h2>
         <ul><li><a href={href(lang, '/about/')}>{t.aboutLink}</a></li><li><a href={href(lang, '/about/#support')}>{t.support}</a></li><li><a href={href(lang, '/compare/')}>{t.compare}</a></li></ul>
       </div>
       <div>
-        <h4>{t.start}</h4>
+        <h2>{t.start}</h2>
         <!-- Legal pages are English only. -->
         <ul><li><a href={href(lang, '/free-trial/')}>{t.trial}</a></li><li><a href="/privacy/" hreflang="en">{t.privacy}</a></li><li><a href="/terms/" hreflang="en">{t.terms}</a></li></ul>
       </div>

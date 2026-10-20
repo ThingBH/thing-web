@@ -177,6 +177,12 @@ svg.i {
   }
   .menu-btn {
     display: inline-flex;
+    width: 44px;
+    height: 44px;
+  }
+  /* Touch targets: 44px minimum on the phone header. */
+  .top .end .btn.sm {
+    height: 44px;
   }
   .top.open nav {
     display: block;
@@ -263,7 +269,8 @@ svg.i {
 /* ---------- type ---------- */
 .d1 {
   margin: 0;
-  font-size: clamp(52px, 8.4vw, 132px);
+  /* The floor eases from 52px at 390px to 44px at 320px so one long word ("Spreadsheets") still fits. */
+  font-size: clamp(min(52px, 11.4vw + 7.5px), 8.4vw, 132px);
   line-height: 0.92;
   letter-spacing: -0.058em;
   font-weight: 700;
@@ -452,7 +459,7 @@ svg.i {
 .cell.band {
   background: var(--band);
 }
-.cell h3 {
+.cell :is(h2, h3) {
   margin: 0;
   font-size: 26px;
   letter-spacing: -0.035em;
@@ -586,7 +593,8 @@ table.cmp {
 .faq details p {
   margin: 0 0 22px;
   color: var(--ink-2);
-  max-width: 70ch;
+  /* Geist's "0" is wide: 50ch is about 70 characters. */
+  max-width: 50ch;
 }
 @media (max-width: 900px) {
   .faq {
@@ -645,7 +653,7 @@ table.cmp {
   aspect-ratio: 720 / 410;
   margin-bottom: 16px;
 }
-.foot h4 {
+.foot h2 {
   margin: 0 0 12px;
   font-size: 14px;
   font-weight: 600;
@@ -1461,6 +1469,10 @@ button.fnode:active {
   letter-spacing: -0.02em;
   line-height: 1.25;
 }
+/* Compare strengths are whole sentences with no caption and wrap to two lines. */
+.ways li > b:only-child {
+  line-height: 1.4;
+}
 .ways span {
   color: var(--soft);
   font-size: 15.5px;
@@ -2192,7 +2204,7 @@ button.fnode:active {
 :lang(ar) .d3 {
   line-height: 1.35;
 }
-:lang(ar) :is(h3, b, strong, .statement) {
+:lang(ar) :is(h3, .aside h2, b, strong, .statement) {
   line-height: 1.4;
 }
 /* Arrows point the way you read. The hover nudge flips with them. */

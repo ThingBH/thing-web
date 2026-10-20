@@ -29,6 +29,9 @@ function clear(field: Element | null) {
   field?.classList.remove('bad')
   const err = field?.querySelector('.err')
   if (err) err.textContent = ''
+  const el = field?.querySelector('input, select')
+  el?.removeAttribute('aria-invalid')
+  el?.removeAttribute('aria-describedby')
 }
 
 function validate(form: HTMLFormElement) {
@@ -43,7 +46,12 @@ function validate(form: HTMLFormElement) {
     const f = el.closest('.field')
     f?.classList.add('bad')
     const err = f?.querySelector('.err')
-    if (err) err.textContent = msg
+    if (err) {
+      err.textContent = msg
+      err.id ||= `${el.id}-err`
+      el.setAttribute('aria-describedby', err.id)
+    }
+    el.setAttribute('aria-invalid', 'true')
     first ??= el
   }
   first?.focus()

@@ -67,6 +67,16 @@ const ld = JSON.stringify({
     <Font cssVariable="--font-geist" preload />
     {lang === 'ar' && <Font cssVariable="--font-plex-arabic" preload={[{ weight: 400 }, { weight: 700 }]} />}
     <script type="application/ld+json" set:html={ld} />
+    <!-- Google tag (gtag.js) -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-NKTD6FNG1H"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-NKTD6FNG1H');
+    </script>
   </head>
   <body>
     <Sprite />

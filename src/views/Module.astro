@@ -15,8 +15,20 @@ const i = modules.findIndex((x) => x.slug === Astro.props.slug)
 const m = modules[i]
 const next = modules[(i + 1) % modules.length]
 const t = {
-  en: { crumb: 'Modules', does: 'What it does.', faq: 'Questions owners ask.', next: 'Next module' },
-  ar: { crumb: 'الأقسام', does: 'شنو يسوي.', faq: 'أسئلة يسألها أصحاب النوادي.', next: 'القسم التالي' },
+  en: {
+    crumb: 'Modules',
+    does: 'What it does.',
+    faq: 'Questions owners ask.',
+    next: 'Next module',
+    sample: 'Sample Gym Thing screen',
+  },
+  ar: {
+    crumb: 'الأقسام',
+    does: 'شنو يسوي.',
+    faq: 'أسئلة يسألها أصحاب النوادي.',
+    next: 'القسم التالي',
+    sample: 'شاشة تجريبية من Gym Thing',
+  },
 }[lang]
 // `show` is `screen:<Name>` or `flow:<key>`, joined with `+`.
 const pieces = m.show ? m.show.split('+').map((s) => s.split(':')) : []
@@ -50,8 +62,10 @@ const graph = [
           {pieces.map(([kind, name], i) => (
             <>
               {i > 0 && <div style="height:24px" />}
-              {kind === 'screen' && <Screen name={name as ScreenName} />}
-              {kind === 'flow' && <Flow flow={name as 'access' | 'auto'} />}
+              <div role="region" aria-label={t.sample}>
+                {kind === 'screen' && <Screen name={name as ScreenName} />}
+                {kind === 'flow' && <Flow flow={name as 'access' | 'auto'} />}
+              </div>
             </>
           ))}
         </div>

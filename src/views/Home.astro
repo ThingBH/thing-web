@@ -59,6 +59,7 @@ const t = {
     all: 'See all 13 modules',
     plansH: 'No tiers. Everything included.',
     faqH: 'Questions owners ask.',
+    sample: 'Sample Gym Thing screen',
   },
   ar: {
     title: 'Gym Thing · برنامج إدارة النوادي الرياضية في البحرين والخليج',
@@ -100,6 +101,7 @@ const t = {
     all: 'شوف كل الأقسام الـ13',
     plansH: 'بدون مستويات. كل شي مشمول.',
     faqH: 'أسئلة يسألها أصحاب النوادي.',
+    sample: 'شاشة تجريبية من Gym Thing',
   },
 }[lang]
 ---
@@ -114,7 +116,7 @@ const t = {
         </div>
       </div>
       <div class="hero-shot">
-        <div lang="en" dir="ltr"><Dashboard client:visible /></div>
+        <div role="region" aria-label={t.sample}><div lang="en" dir="ltr"><Dashboard client:visible /></div></div>
         <p class="hint"><span class="pulse-dot"></span><span><b>{t.hintB}</b> {t.hint}</span></p>
       </div>
       <div class="clients"><span>{t.clients}</span>{clients.map((c) => <b lang="en">{c}</b>)}</div>
@@ -163,7 +165,9 @@ const t = {
         <p class="lede" style="margin-top:20px">{t.payrollP}</p>
         <a class="textlink more" href={href(lang, '/modules/hr-payroll/')}>{t.more} {t.payroll} <svg class="i go"><use href="#i-arrow" /></svg></a>
       </div>
-      <div class="rise paydayui" data-frag="payslipapp" lang="en" dir="ltr"><PayslipApp client:visible /></div>
+      <div class="rise paydayui" data-frag="payslipapp" lang="en" dir="ltr" role="region" aria-labelledby="sample-pay"><PayslipApp client:visible /></div>
+      {/* Named from outside so the label keeps the page language; a wrapper would shift the .rise stagger. */}
+      <span id="sample-pay" hidden>{t.sample}</span>
     </div>
   </section>
 

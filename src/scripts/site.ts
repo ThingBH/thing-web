@@ -1,10 +1,18 @@
 // Site-wide behaviour: the mobile menu, the header shadow, and fading in sections below the fold.
 const header = document.getElementById('top')
 const menu = document.getElementById('menu')
-menu?.addEventListener('click', () => {
-  const open = !header?.classList.contains('open')
+const setMenu = (open: boolean) => {
   header?.classList.toggle('open', open)
-  menu.setAttribute('aria-expanded', String(open))
+  menu?.setAttribute('aria-expanded', String(open))
+}
+menu?.addEventListener('click', () => setMenu(!header?.classList.contains('open')))
+addEventListener('keydown', (e) => {
+  if (e.key !== 'Escape' || !header?.classList.contains('open')) return
+  setMenu(false)
+  menu?.focus()
+})
+header?.querySelector('nav')?.addEventListener('click', (e) => {
+  if ((e.target as Element).closest('a')) setMenu(false)
 })
 addEventListener('scroll', () => header?.classList.toggle('scrolled', scrollY > 8), { passive: true })
 
