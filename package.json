@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "typecheck": "tsc --noEmit --runExternalCode",
+    "typecheck": "astro sync && tsc --noEmit --runExternalCode",
     "lint": "biome check .",
     "format": "biome check --write ."
   },
