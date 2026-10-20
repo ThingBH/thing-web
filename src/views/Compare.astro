@@ -1,0 +1,169 @@
+---
+import CloseBand from '../components/CloseBand.astro'
+import Faq from '../components/Faq.astro'
+import { checkedOn, content } from '../data/content'
+import { href, langOf } from '../data/i18n'
+import { breadcrumbs, faqPage } from '../data/jsonld'
+import { SITE_URL } from '../data/site'
+import Base from '../layouts/Base.astro'
+
+type Props = { slug: string | undefined }
+const lang = langOf(Astro.currentLocale)
+const { comparisons } = content[lang]
+const c = comparisons.find((x) => x.slug === Astro.props.slug)
+if (!c) throw new Error(`Unknown comparison "${Astro.props.slug}"`)
+const others = comparisons.filter((o) => o.slug !== c.slug)
+const rows = c.rows.filter((r) => r[0] !== 'Topic')
+const meh = (s: string) => /^(not listed|no|none|غير مذكور|لا)/i.test(s)
+// Latest "checked" date as an ISO day; checked dates read like "20 Oct 2026".
+const modified = c.sources
+  .map((s) => new Date(`${s[2]} UTC`))
+  .sort((a, b) => +b - +a)[0]
+  ?.toISOString()
+  .slice(0, 10)
+const t = {
+  en: {
+    crumb: 'Compare',
+    strong: `Where ${c.name} is strong`,
+    side: 'Side by side.',
+    need: 'What you need',
+    from: `From ${c.name}'s public website, help pages and listings. Sources are at the bottom of this page.`,
+    matters: 'What matters for a gym here.',
+    moving: `Moving from ${c.name}`,
+    cta: 'Start with a free trial',
+    faq: 'Questions owners ask.',
+    more: 'Sources and other comparisons',
+    sources: 'Sources',
+    checked: 'Checked',
+    stale: "Something out of date? Tell us at hello@thing.bh and we'll correct it.",
+    others: 'Other comparisons',
+    vs: 'vs',
+  },
+  ar: {
+    crumb: 'المقارنة',
+    strong: `نقاط قوة ${c.name}`,
+    side: 'جنب بعض.',
+    need: 'اللي تحتاجه',
+    from: `من موقع ${c.name} الرسمي وصفحات المساعدة والقوائم. المصادر في آخر الصفحة.`,
+    matters: 'شنو يهم النادي هني.',
+    moving: `النقل من ${c.name}`,
+    cta: 'ابدأ بتجربة مجانية',
+    faq: 'أسئلة يسألها أصحاب النوادي.',
+    more: 'المصادر ومقارنات ثانية',
+    sources: 'المصادر',
+    checked: 'تم التحقق',
+    stale: 'في معلومة قديمة؟ قول لنا على hello@thing.bh ونصلحها.',
+    others: 'مقارنات ثانية',
+    vs: 'مقابل',
+  },
+}[lang]
+const url = (path: string) => `${SITE_URL}${href(lang, path)}`
+const graph = [
+  {
+    '@type': 'Article',
+    headline: c.title,
+    description: c.description ?? c.lede,
+    url: url(`/compare/${c.slug}/`),
+    inLanguage: lang,
+    author: { '@id': `${SITE_URL}/#org` },
+    publisher: { '@id': `${SITE_URL}/#org` },
+    about: [{ '@id': `${SITE_URL}/#gymthing` }, { '@type': 'Thing', name: c.name }],
+    ...(c.sources.length ? { citation: c.sources.map((s) => s[1]) } : {}),
+    ...(modified ? { dateModified: modified } : {}),
+  },
+  breadcrumbs([
+    ['Gym Thing', href(lang, '/')],
+    [t.crumb, href(lang, '/compare/')],
+    [c.name, href(lang, `/compare/${c.slug}/`)],
+  ]),
+  faqPage(c.faq),
+]
+---
+<Base
+  title={`${c.title} · Gym Thing`}
+  description={c.description ?? c.lede}
+  graph={graph}
+  markdown={href(lang, `/compare/${c.slug}.md`)}
+>
+  <div class="cmppage">
+    <section class="page-hero gutter" aria-labelledby={`ch-${c.slug}`}>
+      <div class="inner">
+        <p class="crumbs"><a href={href(lang, '/compare/')}>{t.crumb}</a> <span aria-hidden="true">/</span> {c.name}</p>
+        <h1 class="d1" id={`ch-${c.slug}`}>{c.title}</h1>
+        <p class="lede mod-promise">{c.lede}</p>
+      </div>
+    </section>
+    <section class="sec tight gutter" aria-labelledby={`cs-${c.slug}`}>
+      <div class="inner why">
+        <h2 class="d3" id={`cs-${c.slug}`}>{t.strong}</h2>
+        <div>
+          <p class="body" style="font-size:18px">{c.they}</p>
+          <ul class="ways">{c.strengths.map((s) => <li><b>{s}</b></li>)}</ul>
+        </div>
+      </div>
+    </section>
+    <section class="sec gutter" aria-labelledby={`ct-${c.slug}`}>
+      <div class="inner">
+        <h2 class="d2" id={`ct-${c.slug}`}>{t.side}</h2>
+        <div class="tbl" style="margin-top:32px">
+          <table class="cmp">
+            <thead><tr><th>{t.need}</th><th class="us">Gym Thing</th><th>{c.name}</th></tr></thead>
+            <tbody>
+              {rows.map(([topic, us, them]) => (
+                <tr><td>{topic}</td><td class="us">{us}</td><td>{meh(them) ? <span class="meh">{them}</span> : them}</td></tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p class="small" style="margin-top:14px">{t.from}</p>
+      </div>
+    </section>
+    <section class="sec gutter" aria-labelledby={`cd-${c.slug}`}>
+      <div class="inner">
+        <h2 class="d2" id={`cd-${c.slug}`}>{t.matters}</h2>
+        <div class="diffs">
+          {c.differences.map(([h, p]) => (
+            <div class="rise"><h3>{h}</h3><p>{p}</p></div>
+          ))}
+        </div>
+      </div>
+    </section>
+    <section class="sec gutter" aria-labelledby={`cw-${c.slug}`}>
+      <div class="inner">
+        <div class="cell rise" style="padding:48px">
+          <h2 class="d3" id={`cw-${c.slug}`}>{t.moving}</h2>
+          <p class="body" style="font-size:18px">{c.switching}</p>
+          <div class="ctas" style="margin-top:8px">
+            <a class="btn pri" href={href(lang, '/free-trial/')}>{t.cta}</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="sec gutter" aria-labelledby={`cq-${c.slug}`}>
+      <div class="inner">
+        <h2 class="d2" id={`cq-${c.slug}`}>{t.faq}</h2>
+        <div style="margin-top:32px"><Faq items={c.faq} /></div>
+      </div>
+    </section>
+    <section class="sec gutter" aria-label={t.more}>
+      <div class="inner">
+        {c.sources.length > 0 && (
+          <>
+            <h2 class="d3">{t.sources}</h2>
+            <ul class="sources">
+              {c.sources.map(([label, link, checked]) => (
+                <li><a href={link} rel="noopener" target="_blank" lang="en">{label}</a><span>{t.checked} {checkedOn(lang, checked)}</span></li>
+              ))}
+            </ul>
+            <p class="small">{t.stale}</p>
+          </>
+        )}
+        <div class="othercmp">
+          <span>{t.others}</span>
+          {others.map((o) => <a href={href(lang, `/compare/${o.slug}/`)}>{t.vs} {o.name}</a>)}
+        </div>
+      </div>
+    </section>
+    <CloseBand />
+  </div>
+</Base>

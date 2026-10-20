@@ -1,0 +1,62 @@
+---
+import { content } from '../data/content'
+import { href, langOf } from '../data/i18n'
+
+const lang = langOf(Astro.currentLocale)
+const t = {
+  en: {
+    about: 'Gym Thing is gym management software by Thing W.L.L., Seef, Kingdom of Bahrain. CR No. 196454-1.',
+    modules: 'Modules',
+    all: 'All modules',
+    company: 'Company',
+    aboutLink: 'About',
+    support: 'Support',
+    compare: 'Compare',
+    start: 'Start',
+    trial: 'Start with a free trial',
+    privacy: 'Privacy',
+    terms: 'Terms',
+    rights: 'All rights reserved.',
+    cr: 'Commercial Registration No. 196454-1',
+  },
+  ar: {
+    about: 'Gym Thing برنامج لإدارة النوادي الرياضية من Thing W.L.L.، السيف، مملكة البحرين. سجل تجاري رقم 196454-1.',
+    modules: 'الأقسام',
+    all: 'كل الأقسام',
+    company: 'الشركة',
+    aboutLink: 'من نحن',
+    support: 'الدعم',
+    compare: 'المقارنة',
+    start: 'ابدأ',
+    trial: 'ابدأ بتجربة مجانية',
+    privacy: 'الخصوصية',
+    terms: 'الشروط',
+    rights: 'جميع الحقوق محفوظة.',
+    cr: 'سجل تجاري رقم 196454-1',
+  },
+}[lang]
+---
+<footer class="foot gutter">
+  <div class="inner">
+    <div class="foot-grid">
+      <div>
+        <svg class="logo" viewBox="0 0 720 410" role="img" aria-label="Thing"><use href="#thing-logo" /></svg>
+        <p class="small" style="max-width:34ch">{t.about}</p>
+      </div>
+      <div>
+        <h4>{t.modules}</h4>
+        <ul>{content[lang].modules.slice(0, 6).map((m) => <li><a href={href(lang, `/modules/${m.slug}/`)}>{m.name}</a></li>)}<li><a href={href(lang, '/modules/')}>{t.all}</a></li></ul>
+      </div>
+      <div>
+        <h4>{t.company}</h4>
+        <ul><li><a href={href(lang, '/about/')}>{t.aboutLink}</a></li><li><a href={href(lang, '/about/#support')}>{t.support}</a></li><li><a href={href(lang, '/compare/')}>{t.compare}</a></li></ul>
+      </div>
+      <div>
+        <h4>{t.start}</h4>
+        <!-- Legal pages are English only. -->
+        <ul><li><a href={href(lang, '/free-trial/')}>{t.trial}</a></li><li><a href="/privacy/" hreflang="en">{t.privacy}</a></li><li><a href="/terms/" hreflang="en">{t.terms}</a></li></ul>
+      </div>
+    </div>
+    <div class="foot-base"><span>© {new Date().getFullYear()} Thing W.L.L. {t.rights}</span><span>{t.cr}</span></div>
+  </div>
+</footer>

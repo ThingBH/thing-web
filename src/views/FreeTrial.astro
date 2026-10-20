@@ -1,0 +1,94 @@
+---
+import { href, langOf } from '../data/i18n'
+import { breadcrumbs } from '../data/jsonld'
+import { contact, SITE_URL, web3forms } from '../data/site'
+import Base from '../layouts/Base.astro'
+
+const lang = langOf(Astro.currentLocale)
+const t = {
+  en: {
+    crumb: 'Start with a free trial',
+    title: 'Start with a free trial · Gym Thing',
+    description:
+      'We set up Gym Thing for your gym, walk your team through it, and you run it for up to 3 months. No card, no contract.',
+    h1: 'Try it on your own gym.',
+    lede: 'We set up Gym Thing for your gym, walk your team through it, and you run it for up to 3 months. No card, no contract.',
+    subject: 'Free trial request · thing.bh',
+    gym: 'Gym name',
+    name: 'Your name',
+    wa: 'WhatsApp number',
+    submit: 'Start my free trial',
+    getH: 'What you get',
+    get: [
+      'Up to 3 months on the full system, every module switched on.',
+      'Your logo, colours, plans and prices set up for you.',
+      'Your members imported, so you trial on real data.',
+      'Training for your front desk and managers, plus support on WhatsApp.',
+      'Everything carries over when you go live. Nothing to redo.',
+    ],
+    talkH: 'Rather talk first?',
+    talk: ['Message us on WhatsApp at', 'or email'],
+  },
+  ar: {
+    crumb: 'ابدأ بتجربة مجانية',
+    title: 'ابدأ بتجربة مجانية · Gym Thing',
+    description: 'نجهّز Gym Thing لناديك وندرّب فريقك، وتستخدمه مجاناً لمدة تصل إلى 3 أشهر. بدون بطاقة دفع وبدون عقد.',
+    h1: 'جرّبه على ناديك.',
+    lede: 'نجهز Gym Thing لناديك، نمشّي فريقك فيه خطوة خطوة، وتشغّله لين 3 شهور. بدون بطاقة، وبدون عقد.',
+    subject: 'Free trial request (Arabic site) · thing.bh',
+    gym: 'اسم النادي',
+    name: 'اسمك',
+    wa: 'رقم الواتساب',
+    submit: 'ابدأ تجربتي المجانية',
+    getH: 'شنو تحصل',
+    get: [
+      'لين 3 شهور على النظام كامل، وكل الأقسام شغّالة.',
+      'شعارك وألوانك وباقاتك وأسعارك، نجهزها لك.',
+      'أعضاءك ننقلهم، عشان تجرب على بيانات حقيقية.',
+      'تدريب للاستقبال والمدراء، ودعم على واتساب.',
+      'كل شي ينتقل وياك لما تبدأ رسمي. ما في شي تعيده.',
+    ],
+    talkH: 'تبي تكلمنا أول؟',
+    talk: ['راسلنا على واتساب على', 'أو ارسل إيميل على'],
+  },
+}[lang]
+const graph = [
+  breadcrumbs([
+    ['Gym Thing', href(lang, '/')],
+    [t.crumb, href(lang, '/free-trial/')],
+  ]),
+]
+---
+<Base title={t.title} description={t.description} graph={graph}>
+  <section class="page-hero gutter" aria-labelledby="h-trial">
+    <div class="inner">
+      <h1 class="d1" id="h-trial">{t.h1}</h1>
+      <p class="lede" style="margin-top:24px">{t.lede}</p>
+      <div class="formwrap">
+        <div data-form="trial">
+          <form class="form" data-kind="trial" action={web3forms.endpoint} method="POST">
+            <input type="hidden" name="access_key" value={web3forms.accessKey} />
+            <input type="hidden" name="subject" value={t.subject} />
+            <input type="hidden" name="from_name" value="thing.bh free trial" />
+            <input type="hidden" name="redirect" value={`${SITE_URL}${href(lang, '/free-trial/thanks/')}`} />
+            <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <div class="field"><label for="t-gym">{t.gym}</label><input id="t-gym" name="gym" type="text" required autocomplete="organization" /><span class="err" aria-live="polite"></span></div>
+            <div class="row2">
+              <div class="field"><label for="t-name">{t.name}</label><input id="t-name" name="name" type="text" required autocomplete="name" /><span class="err" aria-live="polite"></span></div>
+              <div class="field"><label for="t-wa">{t.wa}</label><input id="t-wa" name="whatsapp" type="tel" dir="ltr" required inputmode="tel" autocomplete="tel" placeholder="+973 3xxx xxxx" /><span class="err" aria-live="polite"></span></div>
+            </div>
+            <button class="btn pri" type="submit">{t.submit} <svg class="i go"><use href="#i-arrow" /></svg></button>
+          </form>
+        </div>
+        <aside class="aside">
+          <div class="cell band"><h3>{t.getH}</h3><ol>{t.get.map((g) => <li>{g}</li>)}</ol></div>
+          <div class="cell"><h3>{t.talkH}</h3><p class="body">{t.talk[0]} <a href={contact.whatsappHref} dir="ltr">{contact.whatsapp}</a> {t.talk[1]} <a href={`mailto:${contact.sales}`}>{contact.sales}</a>.</p></div>
+        </aside>
+      </div>
+    </div>
+  </section>
+  <div class="gutter"><div class="inner" style="height:96px"></div></div>
+  <script>
+    import '../scripts/forms'
+  </script>
+</Base>

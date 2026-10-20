@@ -1,0 +1,224 @@
+.mx-payslipapp {
+  container-type: inline-size;
+  font-family: var(--sans);
+  color: #fafafa;
+  text-align: start;
+}
+.mx-payslipapp * {
+  box-sizing: border-box;
+}
+.mx-payslipapp .ps-screen {
+  width: 100%;
+  max-width: 380px;
+  margin-inline: auto;
+  background: #09090b;
+  border: 1px solid #27272a;
+  border-radius: 28px;
+  padding: 8px 16px 28px;
+}
+.mx-payslipapp .i {
+  width: 18px;
+  height: 18px;
+}
+.mx-payslipapp .ps-back {
+  padding: 8px 0 4px;
+}
+.mx-payslipapp .ps-back .i {
+  width: 28px;
+  height: 28px;
+  transform: scaleX(-1);
+  color: #fafafa;
+}
+.mx-payslipapp .ps-h1 {
+  margin: 0;
+  padding: 8px 0 16px;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.mx-payslipapp .ps-card {
+  background: #18181b;
+  border: 1px solid #3f3f46;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.mx-payslipapp .ps-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 44px;
+  padding: 12px 16px;
+}
+.mx-payslipapp .ps-per {
+  flex: 1;
+  min-width: 0;
+}
+.mx-payslipapp .ps-per b {
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mx-payslipapp .ps-per small,
+.mx-payslipapp .ps-net small {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  color: #a1a1aa;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mx-payslipapp .ps-net {
+  text-align: end;
+}
+.mx-payslipapp .ps-net b {
+  display: block;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.mx-payslipapp .ps-open {
+  flex-wrap: wrap;
+  align-items: flex-start;
+  row-gap: 10px;
+}
+.mx-payslipapp .ps-open .ps-net {
+  order: 3;
+  flex-basis: 100%;
+  text-align: start;
+}
+.mx-payslipapp .ps-open .ps-net b {
+  font-size: 34px;
+  line-height: 40px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.mx-payslipapp .ps-chev {
+  color: #a1a1aa;
+}
+.mx-payslipapp .ps-open .ps-chev {
+  transform: rotate(180deg);
+  margin-top: 3px;
+}
+.mx-payslipapp .ps-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 16px 12px;
+}
+.mx-payslipapp .ps-sep {
+  display: block;
+  height: 1px;
+  background: #3f3f46;
+}
+.mx-payslipapp .ps-sep.ps-in {
+  margin-inline-start: 16px;
+}
+.mx-payslipapp .ps-lbl {
+  padding-top: 4px;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #a1a1aa;
+}
+.mx-payslipapp .ps-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.mx-payslipapp .ps-ded {
+  padding-top: 4px;
+}
+.mx-payslipapp .ps-ln {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.mx-payslipapp .ps-ln span:first-child {
+  color: #a1a1aa;
+}
+.mx-payslipapp .ps-ln span:last-child {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.mx-payslipapp .ps-btn {
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  border: 2px solid #fafafa;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fafafa;
+}
+@container (max-width: 360px) {
+  .mx-payslipapp .ps-screen {
+    padding-inline: 12px;
+  }
+  .mx-payslipapp .ps-row {
+    padding-inline: 12px;
+    gap: 8px;
+  }
+  .mx-payslipapp .ps-detail {
+    padding-inline: 12px;
+  }
+}
+
+/* ── Interactive island additions ── */
+.mx-payslipapp {
+  position: relative;
+}
+.mx-payslipapp :where(button) {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  text-align: start;
+}
+.mx-payslipapp button.ps-row {
+  width: 100%;
+  padding: 12px 16px;
+}
+.mx-payslipapp button.ps-row:active {
+  opacity: 0.7;
+}
+.mx-payslipapp button.ps-row:focus-visible {
+  outline-offset: -2px;
+  border-radius: 12px;
+}
+.mx-payslipapp button.ps-btn {
+  width: 100%;
+  padding: 0 16px;
+}
+.mx-payslipapp button.ps-btn:active {
+  opacity: 0.7;
+}
+.mx-payslipapp .mx-toast {
+  background: #fafafa;
+  color: #09090b;
+}
+@container (max-width: 360px) {
+  .mx-payslipapp button.ps-row {
+    padding-inline: 12px;
+  }
+}
+.mx-payslipapp .mx-toast {
+  pointer-events: none;
+}

@@ -1,0 +1,88 @@
+---
+import CloseBand from '../components/CloseBand.astro'
+import { content } from '../data/content'
+import { href, langOf } from '../data/i18n'
+import { breadcrumbs } from '../data/jsonld'
+import Base from '../layouts/Base.astro'
+
+const lang = langOf(Astro.currentLocale)
+const t = {
+  en: {
+    crumb: 'Compare',
+    title: 'Compare · Gym Thing',
+    description:
+      'An honest look at the other options gyms in Bahrain use, with what each does well. Every claim links to its source.',
+    h1: 'Gym Thing, side by side.',
+    lede: 'An honest look at the other options gyms in Bahrain use, with what each does well. Every claim links to its source.',
+    list: 'Comparisons',
+    vs: 'vs',
+    read: 'Read the comparison',
+    switchH: 'Switching is our job, not yours.',
+    switchP:
+      'Send us your export from the old system or a spreadsheet. We bring your members, plans and history across, and you check it before anything goes live.',
+    ways: [
+      ['Members and photos', 'brought across in one go'],
+      ['Active memberships', 'with their days left'],
+      ['Invoice numbers', 'carry on where you left off'],
+      ['The member app', 'everyone invited at once'],
+    ],
+  },
+  ar: {
+    crumb: 'المقارنة',
+    title: 'المقارنة · Gym Thing',
+    description:
+      'مقارنة صريحة بين Gym Thing والخيارات الأخرى التي تستخدمها النوادي في البحرين، مع نقاط قوة كل منها ومصدر لكل معلومة.',
+    h1: 'Gym Thing، جنب غيره.',
+    lede: 'نظرة صريحة على الخيارات الثانية اللي تستخدمها النوادي في البحرين، وشنو يسوي كل واحد زين. وكل معلومة لها مصدر.',
+    list: 'المقارنات',
+    vs: 'مقابل',
+    read: 'اقرأ المقارنة',
+    switchH: 'النقل شغلنا، مو شغلك.',
+    switchP:
+      'ارسل لنا ملف التصدير من نظامك القديم أو ملف إكسل. ننقل أعضاءك وباقاتك وتاريخهم، وتراجعها قبل لا يشتغل أي شي.',
+    ways: [
+      ['الأعضاء وصورهم', 'ينتقلون مرة وحدة'],
+      ['الاشتراكات الفعّالة', 'مع الأيام الباقية'],
+      ['أرقام الفواتير', 'تكمل من وين ما وقفت'],
+      ['تطبيق الأعضاء', 'الدعوة توصل للكل مرة وحدة'],
+    ],
+  },
+}[lang]
+const graph = [
+  breadcrumbs([
+    ['Gym Thing', href(lang, '/')],
+    [t.crumb, href(lang, '/compare/')],
+  ]),
+]
+---
+<Base title={t.title} description={t.description} graph={graph}>
+  <section class="page-hero gutter" aria-labelledby="h-compare">
+    <div class="inner">
+      <h1 class="d1" id="h-compare">{t.h1}</h1>
+      <p class="lede" style="margin-top:28px">{t.lede}</p>
+    </div>
+  </section>
+  <section class="sec tight gutter" aria-label={t.list}>
+    <div class="inner">
+      <div class="modpick cmphub">
+        {content[lang].comparisons.map((c) => (
+          <a class="modcard rise" href={href(lang, `/compare/${c.slug}/`)}>
+            <h3>{t.vs} {c.name}</h3>
+            <p>{c.lede}</p>
+            <span class="textlink">{t.read} <svg class="i go"><use href="#i-arrow" /></svg></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="sec gutter" aria-labelledby="h-switch">
+    <div class="inner duo">
+      <div class="rise">
+        <h2 class="d2" id="h-switch">{t.switchH}</h2>
+        <p class="lede" style="margin-top:20px">{t.switchP}</p>
+      </div>
+      <ul class="ways rise">{t.ways.map(([b, s]) => <li><b>{b}</b><span>{s}</span></li>)}</ul>
+    </div>
+  </section>
+  <CloseBand />
+</Base>

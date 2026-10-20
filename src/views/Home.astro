@@ -1,0 +1,207 @@
+---
+import CloseBand from '../components/CloseBand.astro'
+import Faq from '../components/Faq.astro'
+import Flow from '../components/Flow.astro'
+import Invoice from '../components/home/Invoice.astro'
+import ModulePicks from '../components/home/ModulePicks.astro'
+import Offer from '../components/home/Offer.astro'
+import PayMarks from '../components/home/PayMarks.astro'
+import SupportChat from '../components/home/SupportChat.astro'
+import WalletPass from '../components/home/WalletPass.astro'
+import { href, langOf } from '../data/i18n'
+import { faqPage } from '../data/jsonld'
+import { clients, homeFaq } from '../data/site'
+import Dashboard from '../islands/Dashboard'
+import PayslipApp from '../islands/screens/PayslipApp'
+import Base from '../layouts/Base.astro'
+
+const lang = langOf(Astro.currentLocale)
+const t = {
+  en: {
+    title: 'Gym Thing · Gym management software for Bahrain and the Gulf',
+    description:
+      'Gym Thing runs the whole gym in one system: members, doors, payments, VAT invoices, payroll and a member app in Arabic and English.',
+    h1: 'The whole gym, in one system.',
+    lede: 'Members, doors, payments and payroll. Handled. Built in Bahrain for gyms across the Gulf.',
+    cta: 'Start with a free trial',
+    hintB: 'Go ahead, click around.',
+    hint: 'ABC Gym, sample data.',
+    clients: 'Running gyms including',
+    more: 'Read more on',
+    accessH: 'You name it, we connect it.',
+    accessP:
+      'Members get in with their phone, through turnstiles or with no gates at all. The door checks their plan every time.',
+    ways: [
+      ['QR code', 'in the member app'],
+      ['Apple and Google Wallet', 'straight from the lock screen'],
+    ],
+    access: 'Access control',
+    payH: 'Get paid every way.',
+    payP: 'However they pay, the VAT invoice is done and the membership starts.',
+    payments: 'Payments',
+    autoH: 'Set it once. It follows up for you.',
+    autoP: 'Renewals, birthdays, no-shows. Pick a moment and watch what happens.',
+    automations: 'Automations',
+    payrollH: 'Payday, done.',
+    payrollP:
+      "Salaries and commissions worked out, the money sent to the bank, and every payslip on your team's phones.",
+    payroll: 'HR and payroll',
+    supportH: 'Support that picks up.',
+    supportP:
+      'A real person on our team in Seef answers, in Arabic or English. Message, call or email, any day of the week.',
+    supportWays: [
+      ['7 days a week', 'Friday and Saturday too, when gyms are busiest'],
+      ['WhatsApp, phone or email', 'whichever is quickest for your team'],
+      ['Same-day replies', 'from the people who build Gym Thing'],
+    ],
+    supportMore: 'Read more on how we work with you',
+    allH: "There's more inside.",
+    all: 'See all 13 modules',
+    plansH: 'No tiers. Everything included.',
+    faqH: 'Questions owners ask.',
+  },
+  ar: {
+    title: 'Gym Thing · برنامج إدارة النوادي الرياضية في البحرين والخليج',
+    description:
+      'يدير Gym Thing النادي كاملاً في نظام واحد: الأعضاء والأبواب والمدفوعات والفواتير الضريبية والرواتب، وتطبيق للأعضاء بالعربية والإنجليزية.',
+    h1: 'النادي كله، في نظام واحد.',
+    lede: 'الأعضاء والأبواب والمدفوعات والرواتب، كلها مضبوطة. مبني في البحرين للنوادي في كل الخليج.',
+    cta: 'ابدأ بتجربة مجانية',
+    hintB: 'تفضّل، اضغط وجرّب.',
+    hint: 'ABC Gym، بيانات تجريبية.',
+    clients: 'نوادي تشتغل على Gym Thing، منها',
+    more: 'اقرأ أكثر عن',
+    accessH: 'أي باب عندك، نربطه.',
+    accessP: 'الأعضاء يدخلون بتلفوناتهم، عن طريق البوابات أو حتى بدون بوابات. والباب يتأكد من باقتهم كل مرة.',
+    ways: [
+      ['رمز QR', 'في تطبيق الأعضاء'],
+      ['Apple Wallet وGoogle Wallet', 'على طول من شاشة القفل'],
+    ],
+    access: 'التحكم بالدخول',
+    payH: 'يوصلك الدفع بكل طريقة.',
+    payP: 'مهما كانت طريقة الدفع، الفاتورة الضريبية جاهزة والاشتراك يبدأ.',
+    payments: 'المدفوعات',
+    autoH: 'اضبطها مرة وحدة، وهي تتابع عنك.',
+    autoP: 'التجديدات، أعياد الميلاد، اللي غابوا. اختار لحظة وشوف شنو يصير.',
+    automations: 'الأتمتة',
+    payrollH: 'يوم الراتب، مخلّص.',
+    payrollP: 'الرواتب والعمولات محسوبة، الفلوس تنرسل للبنك، وكل قسيمة راتب توصل لتلفونات فريقك.',
+    payroll: 'الموارد البشرية والرواتب',
+    supportH: 'دعم يرد عليك.',
+    supportP:
+      'شخص حقيقي من فريقنا في السيف يرد عليك، بالعربي أو الإنجليزي. راسلنا أو اتصل أو ارسل إيميل، أي يوم في الأسبوع.',
+    supportWays: [
+      ['7 أيام في الأسبوع', 'حتى الجمعة والسبت، وقت زحمة النوادي'],
+      ['واتساب، تلفون أو إيميل', 'اللي أسرع لفريقك'],
+      ['رد في نفس اليوم', 'من الناس اللي يبنون Gym Thing'],
+    ],
+    supportMore: 'اقرأ أكثر عن طريقة شغلنا وياك',
+    allH: 'وفيه أكثر بعد.',
+    all: 'شوف كل الأقسام الـ13',
+    plansH: 'بدون مستويات. كل شي مشمول.',
+    faqH: 'أسئلة يسألها أصحاب النوادي.',
+  },
+}[lang]
+---
+<Base title={t.title} description={t.description} graph={[faqPage(homeFaq[lang])]}>
+  <section class="hero gutter" aria-labelledby="h-home">
+    <div class="inner">
+      <h1 class="d1" id="h-home">{t.h1}</h1>
+      <div class="hero-row">
+        <p class="lede">{t.lede}</p>
+        <div class="ctas">
+          <a class="btn pri" href={href(lang, '/free-trial/')}>{t.cta} <svg class="i go"><use href="#i-arrow" /></svg></a>
+        </div>
+      </div>
+      <div class="hero-shot">
+        <div lang="en" dir="ltr"><Dashboard client:visible /></div>
+        <p class="hint"><span class="pulse-dot"></span><span><b>{t.hintB}</b> {t.hint}</span></p>
+      </div>
+      <div class="clients"><span>{t.clients}</span>{clients.map((c) => <b lang="en">{c}</b>)}</div>
+    </div>
+  </section>
+
+  <section class="sec gutter" aria-labelledby="h-access">
+    <div class="inner duo">
+      <div class="rise">
+        <h2 class="d2" id="h-access">{t.accessH}</h2>
+        <p class="lede" style="margin-top:20px">{t.accessP}</p>
+        <ul class="ways">{t.ways.map(([b, s]) => <li><b>{b}</b><span>{s}</span></li>)}</ul>
+        <a class="textlink more" href={href(lang, '/modules/access-control/')}>{t.more} {t.access} <svg class="i go"><use href="#i-arrow" /></svg></a>
+      </div>
+      <div class="rise passbox"><WalletPass /></div>
+    </div>
+  </section>
+
+  <section class="sec gutter" aria-labelledby="h-pay">
+    <div class="inner duo flip">
+      <div class="rise"><Invoice /></div>
+      <div class="rise">
+        <h2 class="d2" id="h-pay">{t.payH}</h2>
+        <p class="lede" style="margin-top:20px">{t.payP}</p>
+        <PayMarks />
+        <a class="textlink more" href={href(lang, '/modules/payments/')}>{t.more} {t.payments} <svg class="i go"><use href="#i-arrow" /></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec gutter" aria-labelledby="h-auto">
+    <div class="inner">
+      <div class="feat-head rise">
+        <h2 class="d2" id="h-auto">{t.autoH}</h2>
+        <p class="lede">{t.autoP}</p>
+      </div>
+      <div class="rise"><Flow flow="auto" /></div>
+      <p class="rise" style="margin-top:24px"><a class="textlink more" href={href(lang, '/modules/automations/')}>{t.more} {t.automations} <svg class="i go"><use href="#i-arrow" /></svg></a></p>
+    </div>
+  </section>
+
+  <section class="sec night gutter" aria-labelledby="h-payroll">
+    <div class="inner duo">
+      <div class="rise">
+        <h2 class="d2" id="h-payroll">{t.payrollH}</h2>
+        <p class="lede" style="margin-top:20px">{t.payrollP}</p>
+        <a class="textlink more" href={href(lang, '/modules/hr-payroll/')}>{t.more} {t.payroll} <svg class="i go"><use href="#i-arrow" /></svg></a>
+      </div>
+      <div class="rise paydayui" data-frag="payslipapp" lang="en" dir="ltr"><PayslipApp client:visible /></div>
+    </div>
+  </section>
+
+  <section class="sec gutter" aria-labelledby="h-support">
+    <div class="inner duo flip">
+      <div class="rise"><SupportChat /></div>
+      <div class="rise">
+        <h2 class="d2" id="h-support">{t.supportH}</h2>
+        <p class="lede" style="margin-top:20px">{t.supportP}</p>
+        <ul class="ways">{t.supportWays.map(([b, s]) => <li><b>{b}</b><span>{s}</span></li>)}</ul>
+        <a class="textlink more" href={href(lang, '/about/')}>{t.supportMore} <svg class="i go"><use href="#i-arrow" /></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec gutter" aria-labelledby="h-all">
+    <div class="inner">
+      <div class="feat-head rise">
+        <h2 class="d2" id="h-all">{t.allH}</h2>
+        <p class="lede"><a class="textlink" href={href(lang, '/modules/')}>{t.all} <svg class="i go"><use href="#i-arrow" /></svg></a></p>
+      </div>
+      <div class="rise"><ModulePicks /></div>
+    </div>
+  </section>
+
+  <section class="sec gutter" aria-labelledby="h-plans">
+    <div class="inner">
+      <div class="feat-head rise"><h2 class="d2" id="h-plans">{t.plansH}</h2></div>
+      <div class="rise"><Offer /></div>
+    </div>
+  </section>
+
+  <section class="sec gutter" aria-labelledby="h-faq">
+    <div class="inner">
+      <div class="feat-head rise"><h2 class="d2" id="h-faq">{t.faqH}</h2></div>
+      <Faq items={homeFaq[lang]} />
+    </div>
+  </section>
+
+  <CloseBand />
+</Base>

@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "src/islands/screens/Members.css"
+        ],
+        "createdAt": "2026-10-20T18:16:29.953Z",
+        "reason": "Faithful rebuild of the real Gym Thing UI: plans-tab.tsx and history-tab.tsx in the-gym-thing use border-l-4 on plan and history rows"
+      }
+    ]
+  }
+}

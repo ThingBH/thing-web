@@ -1,0 +1,93 @@
+---
+import CloseBand from '../components/CloseBand.astro'
+import Faq from '../components/Faq.astro'
+import Flow from '../components/Flow.astro'
+import Screen, { type ScreenName } from '../components/Screen.astro'
+import { content } from '../data/content'
+import { href, langOf } from '../data/i18n'
+import { breadcrumbs, faqPage } from '../data/jsonld'
+import Base from '../layouts/Base.astro'
+
+type Props = { slug: string | undefined }
+const lang = langOf(Astro.currentLocale)
+const { modules } = content[lang]
+const i = modules.findIndex((x) => x.slug === Astro.props.slug)
+const m = modules[i]
+const next = modules[(i + 1) % modules.length]
+const t = {
+  en: { crumb: 'Modules', does: 'What it does.', faq: 'Questions owners ask.', next: 'Next module' },
+  ar: { crumb: 'الأقسام', does: 'شنو يسوي.', faq: 'أسئلة يسألها أصحاب النوادي.', next: 'القسم التالي' },
+}[lang]
+// `show` is `screen:<Name>` or `flow:<key>`, joined with `+`.
+const pieces = m.show ? m.show.split('+').map((s) => s.split(':')) : []
+const graph = [
+  breadcrumbs([
+    ['Gym Thing', href(lang, '/')],
+    [t.crumb, href(lang, '/modules/')],
+    [m.name, href(lang, `/modules/${m.slug}/`)],
+  ]),
+  ...(m.faq.length ? [faqPage(m.faq)] : []),
+]
+---
+<Base
+  title={`${m.name} · Gym Thing`}
+  description={m.description ?? m.promise}
+  graph={graph}
+  markdown={href(lang, `/modules/${m.slug}.md`)}
+>
+  <div class="modpage">
+    <section class="page-hero gutter" aria-labelledby={`mh-${m.slug}`}>
+      <div class="inner">
+        <p class="crumbs"><a href={href(lang, '/modules/')}>{t.crumb}</a> <span aria-hidden="true">/</span> {m.name}</p>
+        <h1 class="d1" id={`mh-${m.slug}`}>{m.name}</h1>
+        <p class="lede mod-promise">{m.promise}</p>
+        <p class="body mod-sum">{m.summary}</p>
+      </div>
+    </section>
+    {pieces.length > 0 && (
+      <div class="gutter">
+        <div class="inner" style="margin-top:56px">
+          {pieces.map(([kind, name], i) => (
+            <>
+              {i > 0 && <div style="height:24px" />}
+              {kind === 'screen' && <Screen name={name as ScreenName} />}
+              {kind === 'flow' && <Flow flow={name as 'access' | 'auto'} />}
+            </>
+          ))}
+        </div>
+      </div>
+    )}
+    <section class="sec gutter" aria-labelledby={`mf-${m.slug}`}>
+      <div class="inner">
+        <h2 class="d2" id={`mf-${m.slug}`}>{t.does}</h2>
+        {m.groups.map((g) => (
+          <div class="fgroup rise">
+            <h3>{g.t}</h3>
+            <dl>
+              {g.items.map(([dt, dd]) => (
+                <div>
+                  <dt>{dt}</dt>
+                  <dd>{dd}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        ))}
+      </div>
+    </section>
+    {m.faq.length > 0 && (
+      <section class="sec gutter" aria-labelledby={`mq-${m.slug}`}>
+        <div class="inner">
+          <h2 class="d2" id={`mq-${m.slug}`}>{t.faq}</h2>
+          <div style="margin-top:32px"><Faq items={m.faq} /></div>
+        </div>
+      </section>
+    )}
+    <div class="gutter">
+      <div class="inner">
+        <a class="nextmod" href={href(lang, `/modules/${next.slug}/`)}><small>{t.next}</small><b>{next.name} <svg class="i go"><use href="#i-arrow" /></svg></b></a>
+      </div>
+    </div>
+    <CloseBand />
+  </div>
+</Base>

@@ -1,0 +1,47 @@
+---
+import { href, langOf } from '../data/i18n'
+import { nav } from '../data/site'
+
+type Props = { switchTo: string }
+const { switchTo } = Astro.props
+const lang = langOf(Astro.currentLocale)
+const t = {
+  en: {
+    home: 'Gym Thing home',
+    main: 'Main',
+    cta: 'Start with a free trial',
+    menu: 'Menu',
+    other: 'العربية',
+    otherLang: 'ar',
+  },
+  ar: {
+    home: 'الصفحة الرئيسية لـ Gym Thing',
+    main: 'القائمة الرئيسية',
+    cta: 'ابدأ بتجربة مجانية',
+    menu: 'القائمة',
+    other: 'English',
+    otherLang: 'en',
+  },
+}[lang]
+const here = Astro.url.pathname
+const current = (path: string) => here.startsWith(path)
+---
+<header class="top gutter" id="top">
+  <div class="inner">
+    <a href={href(lang, '/')} aria-label={t.home}><svg class="logo" viewBox="0 0 720 410" role="img" aria-label="Thing"><use href="#thing-logo" /></svg></a>
+    <nav aria-label={t.main}>
+      <ul>
+        {nav[lang].map((n) => {
+          const to = href(lang, n.href)
+          return <li><a href={to} aria-current={current(to) ? 'page' : undefined}>{n.label}</a></li>
+        })}
+        <li class="nav-lang"><a class="lang" href={switchTo} hreflang={t.otherLang} lang={t.otherLang}>{t.other}</a></li>
+      </ul>
+    </nav>
+    <div class="end">
+      <a class="lang" href={switchTo} hreflang={t.otherLang} lang={t.otherLang}>{t.other}</a>
+      <a class="btn sm pri" href={href(lang, '/free-trial/')}>{t.cta}</a>
+      <button class="menu-btn" type="button" aria-label={t.menu} aria-expanded="false" id="menu"><svg class="i"><use href="#i-menu" /></svg></button>
+    </div>
+  </div>
+</header>

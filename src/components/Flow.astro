@@ -1,0 +1,92 @@
+---
+// Node canvas: nodes are static markup; src/scripts/flow.ts draws the wires and moves the selection.
+import { type ActionKey, FLOWS, type FlowKey } from '../data/flows'
+import { langOf } from '../data/i18n'
+
+type Props = { flow: FlowKey }
+const { flow } = Astro.props
+const F = FLOWS[langOf(Astro.currentLocale)][flow]
+const first = F.cols[0] === 'hub' ? undefined : F.cols[0][0]
+const v = first?.v ?? ['ok', '', '']
+const sc = F.scenarios?.[first?.sc ?? 0]
+// Every label a node can show, so the node is sized for the longest and never resizes.
+const labels = (k: ActionKey) => [...new Set(F.scenarios?.map((s) => s[k]))]
+const brand = (i: string) => i.startsWith('b:') && i.slice(2)
+---
+<div data-flow={flow}>
+  <div class="flow" style={`--cols:${F.cols.length}`}>
+    <svg class="wires" aria-hidden="true"></svg>
+    {F.cols.map((col, ci) =>
+      col === 'hub' ? (
+        <div class="fcol hubcol">
+          <div class="fnode hub" data-c={ci} data-r="0">
+            <svg class="logo" viewBox="0 0 720 410" aria-hidden="true"><use href="#thing-logo" /></svg>
+            <p>{F.hub}</p>
+            <div class={`fv ${v[0]}`} aria-live="polite">
+              <span data-vi><svg class="i"><use href={v[0] === 'ok' ? '#i-check' : '#i-x'} /></svg></span>
+              <b data-vt>{v[1]}</b>
+              <small data-vs>{v[2]}</small>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <div class="fcol">
+          {col.map((n, ri) => {
+            const Tag = ci === 0 ? 'button' : 'div'
+            const b = brand(n.i)
+            return (
+              <Tag
+                type={ci === 0 ? 'button' : undefined}
+                class:list={['fnode', { dark: n.dark, on: ci === 0 && ri === 0 }]}
+                aria-pressed={ci === 0 ? ri === 0 : undefined}
+                data-c={ci}
+                data-r={ri}
+                data-k={n.k}
+              >
+                <span class="fi">
+                  {b ? (
+                    <svg class:list={['brand', { wide: ['applepay', 'googlepay', 'visa'].includes(b) }]} viewBox="0 0 24 24" aria-hidden="true"><use href={`#b-${b}`} /></svg>
+                  ) : (
+                    <svg class="i"><use href={`#i-${n.i}`} /></svg>
+                  )}
+                </span>
+                <span class="ft">
+                  {flow === 'auto' && <small class="role">{n.s}</small>}
+                  {n.k && sc ? (
+                    <span class="fl">
+                      <b data-l>{sc[n.k]}</b>
+                      {labels(n.k).map((l) => <b class="fsz" aria-hidden="true">{l}</b>)}
+                    </span>
+                  ) : (
+                    <b>{n.t}</b>
+                  )}
+                  {flow !== 'auto' && <small>{n.s}</small>}
+                </span>
+              </Tag>
+            )
+          })}
+        </div>
+      ),
+    )}
+  </div>
+</div>
+
+<style>
+  .fl {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .fl > b {
+    grid-area: 1 / 1;
+    align-self: center;
+  }
+  .fl > .fsz {
+    visibility: hidden;
+  }
+</style>
+
+<script>
+  import { initFlows } from '../scripts/flow'
+
+  initFlows()
+</script>

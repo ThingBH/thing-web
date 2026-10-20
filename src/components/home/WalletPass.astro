@@ -1,0 +1,29 @@
+---
+// Sample Apple/Google Wallet pass. The QR is a fixed pseudo-random 21×21 grid with real finder patterns.
+let seed = 7
+const cells: boolean[] = []
+for (let r = 0; r < 21; r++)
+  for (let c = 0; c < 21; c++) {
+    const y = r >= 14 ? r - 14 : r
+    const x = c >= 14 ? c - 14 : c
+    if (y < 7 && x < 7 && !(r >= 14 && c >= 14))
+      cells.push(y === 0 || y === 6 || x === 0 || x === 6 || (y > 1 && y < 5 && x > 1 && x < 5))
+    else if ((y === 7 && x < 8) || (x === 7 && y < 8)) cells.push(false)
+    else {
+      seed = (seed * 9301 + 49297) % 233280
+      cells.push(seed / 233280 > 0.52)
+    }
+  }
+---
+<div class="wpass" data-ui lang="en" dir="ltr" aria-label="Sample wallet pass for ABC Gym">
+  <div class="wp-top"><span class="sq">ABC</span><b>ABC Gym</b><span class="wp-r"><small>Plan</small><b>Gold</b></span></div>
+  <div class="wp-name"><small>Member</small><strong>Aisha Kamal</strong></div>
+  <div class="wp-row">
+    <div><small>Membership</small><b>Gold 12 months</b></div>
+    <div><small>Valid until</small><b>25 Mar 2027</b></div>
+  </div>
+  <div class="wp-qr">
+    <div class="qr">{cells.map((on) => (on ? <i /> : <i class="w" />))}</div>
+    <small>ABC-00412</small>
+  </div>
+</div>

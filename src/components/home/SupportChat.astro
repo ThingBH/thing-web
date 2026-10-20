@@ -1,0 +1,46 @@
+---
+// Sample WhatsApp conversation between ABC Gym's desk and our support team.
+import { type Lang, langOf } from '../../data/i18n'
+
+const lang = langOf(Astro.currentLocale)
+const chats: Record<Lang, [dir: 'in' | 'out', time: string, text: string][]> = {
+  en: [
+    ['in', '07:12', "Morning. Gate 2 won't let Aisha in, but she renewed yesterday."],
+    [
+      'out',
+      '07:16',
+      'Morning Layla. Her renewal starts on 1 Nov, so the door still sees her old plan as frozen. Want me to start it today?',
+    ],
+    ['in', '07:17', 'Yes please'],
+    ['out', '07:18', 'Done. She can scan again now.'],
+    ['in', '07:19', "She's in. Thank you"],
+  ],
+  ar: [
+    ['in', '07:12', 'صباح الخير. البوابة 2 ما تدخّل عائشة، وهي مجددة أمس.'],
+    [
+      'out',
+      '07:16',
+      'صباح النور ليلى. تجديدها يبدأ 1 نوفمبر، فالباب للحين يشوف باقتها القديمة مجمّدة. تبيني أبديه اليوم؟',
+    ],
+    ['in', '07:17', 'إي لو سمحت'],
+    ['out', '07:18', 'خلاص، تقدر تمسح الحين.'],
+    ['in', '07:19', 'دخلت. مشكور'],
+  ],
+}
+const chat = chats[lang]
+const t = {
+  en: { label: 'Sample support conversation on WhatsApp', name: 'Thing Support', team: 'Gym Thing team, Seef' },
+  ar: { label: 'محادثة دعم تجريبية على واتساب', name: 'دعم Thing', team: 'فريق Gym Thing، السيف' },
+}[lang]
+---
+<div class="chat" data-ui aria-label={t.label}>
+  <div class="chat-h">
+    <span class="chat-av"><svg class="logo" viewBox="0 0 720 410" aria-hidden="true"><use href="#thing-logo" /></svg></span>
+    <span><b>{t.name}</b><small>{t.team}</small></span>
+  </div>
+  <div class="chat-b">
+    {chat.map(([dir, time, text]) => (
+      <div class={`msg ${dir}`}><p>{text}</p><time>{time}</time></div>
+    ))}
+  </div>
+</div>
