@@ -56,10 +56,11 @@ const ld = JSON.stringify({
     <title>{title}</title>
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex" />}
-    <link rel="canonical" href={canonical} />
-    <link rel="alternate" hreflang="en" href={en} />
-    {ar && <link rel="alternate" hreflang="ar" href={ar} />}
-    {ar && <link rel="alternate" hreflang="x-default" href={en} />}
+    {/* A noindex page (404, thank-you) has no address of its own for search engines to keep. */}
+    {!noindex && <link rel="canonical" href={canonical} />}
+    {!noindex && <link rel="alternate" hreflang="en" href={en} />}
+    {!noindex && ar && <link rel="alternate" hreflang="ar" href={ar} />}
+    {!noindex && ar && <link rel="alternate" hreflang="x-default" href={en} />}
     {markdown && <link rel="alternate" type="text/markdown" href={markdown} />}
     {rss && <link rel="alternate" type="application/rss+xml" title={rss.title} href={rss.href} />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
@@ -78,7 +79,7 @@ const ld = JSON.stringify({
     {ar && <meta property="og:locale:alternate" content={lang === 'ar' ? 'en_GB' : 'ar_BH'} />}
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonical} />
+    {!noindex && <meta property="og:url" content={canonical} />}
     <meta property="og:image" content={new URL(ogImage, SITE_URL).href} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
