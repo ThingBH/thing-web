@@ -2,6 +2,7 @@ import sitemap from '@astrojs/sitemap'
 import solid from '@astrojs/solid-js'
 import { defineConfig, fontProviders } from 'astro/config'
 import { posts } from './src/data/posts'
+import ogCards from './src/integrations/og'
 
 const arabic: [string, ...string[]] = [
   'U+0600-06FF',
@@ -71,6 +72,7 @@ export default defineConfig({
   ],
   integrations: [
     solid(),
+    ogCards(),
     sitemap({
       filter: (page) => !page.endsWith('/thanks/'),
       // Blog posts carry their last change; the blog index carries its newest post's.

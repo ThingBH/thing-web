@@ -88,15 +88,21 @@ export const breadcrumbs = (trail: [name: string, path: string][]): Node => ({
 })
 
 /** The page itself, so every page states its language and which site it belongs to. */
-export const webPage = (lang: Lang, url: string, name: string, description: string): Node => ({
+export const webPage = (lang: Lang, url: string, name: string, description: string, image: string): Node => ({
   '@type': 'WebPage',
   '@id': url,
   url,
   name,
   description,
+  image,
   inLanguage: lang,
   isPartOf: { '@id': website(lang) },
 })
+
+/** A page's share card, drawn at build time by src/integrations/og.ts. The home cards keep the old /og.png
+ *  addresses; pages with no address of their own (404, thank-you) share the home card. */
+export const cardPath = (path: string) =>
+  path === '/' ? '/og.png' : path === '/ar/' ? '/og-ar.png' : `/og${path.replace(/\/$/, '')}.png`
 
 const blogId = (lang: Lang) => `${SITE_URL}${href(lang, '/blog/')}#blog`
 
@@ -112,7 +118,7 @@ export const blogPosting = (lang: Lang, url: string, p: Post): Node => ({
   inLanguage: lang,
   author: { '@id': org },
   publisher: { '@id': org },
-  image: `${SITE_URL}${lang === 'ar' ? '/og-ar.png' : '/og.png'}`,
+  image: `${SITE_URL}${cardPath(new URL(url).pathname)}`,
   mainEntityOfPage: { '@id': url },
   isPartOf: { '@id': blogId(lang) },
   keywords: p.tags.map((t) => TAGS[t][lang]).join(lang === 'ar' ? '، ' : ', '),
