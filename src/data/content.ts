@@ -235,6 +235,7 @@ export function blogRss(lang: Lang) {
   const b = blogCopy[lang]
   const body = [
     '<?xml version="1.0" encoding="UTF-8"?>',
+    '<?xml-stylesheet type="text/xsl" href="/rss.xsl"?>',
     '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
     '<channel>',
     `<title>${xml(b.name)}</title>`,
@@ -259,5 +260,6 @@ export function blogRss(lang: Lang) {
     '</rss>',
     '',
   ]
-  return new Response(body.join('\n'), { headers: { 'Content-Type': 'application/rss+xml; charset=utf-8' } })
+  // application/xml, not rss+xml, so browsers apply rss.xsl instead of downloading the feed. Readers accept both.
+  return new Response(body.join('\n'), { headers: { 'Content-Type': 'application/xml; charset=utf-8' } })
 }
