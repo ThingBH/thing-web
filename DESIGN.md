@@ -219,7 +219,7 @@ The page is flat, and depth comes from tone: Paper White cells sit on the Admin 
 
 ## Shapes
 
-Rounded but not soft. Radii scale with the size of the object: 4px focus rings, 8px nav pills, 10px buttons, fields and the menu button, 12px flow nodes, 16px product windows, 20px cells and FAQ panels, and 28px for the night closing band (20px on mobile). Icons are 16px line icons with a 2px round-capped stroke in the current text colour. Avatars and status dots are full circles. Pills (999px) are rare.
+Rounded but not soft. Radii scale with the size of the object: 4px focus rings, 8px nav pills, 10px buttons, fields and the menu button, 12px flow nodes, 16px product windows, 20px cells and FAQ panels, and 28px for the night closing band (20px on mobile). Icons are 16px line icons with a 2px round-capped stroke in the current text colour; the one larger use is the module-card icon (24px at a 1.75 stroke in a 48px Band Grey well with a 12px corner). Avatars and status dots are full circles. Pills (999px) are rare.
 
 ### Named Rules
 **The Bigger Box, Bigger Corner Rule.** Pick the radius by the object's scale on the ladder above. Never put a cell-sized radius on a control or a control radius on a band.
@@ -244,6 +244,7 @@ Solid and quiet: black-filled actions, white ghost actions and calm fields, with
 - **Shadow Strategy:** hairline lift only (see Elevation).
 - **Border:** none.
 - **Internal Padding:** 32px.
+- **Blog answer panel:** each "How Gym Thing handles it" panel is a Paper White cell with hairline lift, beside its quotes on desktop. It is never a night panel: a long post has a dozen of them, and the night band stays once per page.
 
 ### Inputs / Fields
 - **Style:** 46px tall, a 1px Hairline Strong border, 10px radius, white fill, 16px text (prevents iOS zoom). Labels are 14.5px at 600, with optional hints in Pencil Grey.

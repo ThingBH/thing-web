@@ -1,0 +1,67 @@
+---
+import CloseBand from '../components/CloseBand.astro'
+import PostBlock from '../components/PostBlock.astro'
+import Rich from '../components/Rich.astro'
+import { blogCopy, postText } from '../data/content'
+import { href, langOf } from '../data/i18n'
+import { blogPosting, breadcrumbs } from '../data/jsonld'
+import { postDate, posts, rows, TAGS } from '../data/posts'
+import { SITE_URL } from '../data/site'
+import Base from '../layouts/Base.astro'
+
+type Props = { slug: string | undefined }
+const lang = langOf(Astro.currentLocale)
+const p = posts.find((x) => x.slug === Astro.props.slug)
+if (!p) throw new Error(`Unknown blog post "${Astro.props.slug}"`)
+const c = p[lang]
+const w = postText[lang]
+const t = {
+  en: { crumb: 'Blog' },
+  ar: { crumb: 'المدونة' },
+}[lang]
+const tags = p.tags.map((tag) => TAGS[tag][lang])
+const path = href(lang, `/blog/${p.slug}/`)
+const graph = [
+  blogPosting(lang, `${SITE_URL}${path}`, p),
+  breadcrumbs([
+    ['Gym Thing', href(lang, '/')],
+    [t.crumb, href(lang, '/blog/')],
+    [c.title, path],
+  ]),
+]
+---
+<Base
+  title={`${c.seoTitle ?? c.title} · Gym Thing`}
+  description={c.description}
+  graph={graph}
+  markdown={href(lang, `/blog/${p.slug}.md`)}
+  rss={{ href: href(lang, '/blog/rss.xml'), title: blogCopy[lang].name }}
+  article={{ published: p.date, modified: p.updated ?? p.date, section: tags[0], tags }}
+>
+  <article class="post">
+    <header class="page-hero gutter">
+      <div class="inner post-head">
+        <p class="crumbs"><a href={href(lang, '/blog/')}>{t.crumb}</a></p>
+        <p class="post-meta"><time datetime={p.date}>{postDate(lang, p.date)}</time>{tags.map((tag) => <span>{tag}</span>)}</p>
+        <h1 class="d2 vt" style={`--vt:${lang}-post-${p.slug}`}><Rich text={c.title} /></h1>
+        <p class="lede"><Rich text={c.lede} /></p>
+      </div>
+    </header>
+    <div class="gutter">
+      <div class="inner post-body">
+        {rows(c.blocks).map((r) =>
+          r.pair ? (
+            <div class="post-pair">
+              <div class="post-evidence">{r.pair.map((b) => <PostBlock block={b} />)}</div>
+              <PostBlock block={r.block} />
+            </div>
+          ) : (
+            <PostBlock block={r.block} />
+          ),
+        )}
+        <p class="small post-checked">{w.checked} <time datetime={p.checked}>{postDate(lang, p.checked)}</time></p>
+      </div>
+    </div>
+  </article>
+  <CloseBand />
+</Base>

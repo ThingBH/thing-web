@@ -147,17 +147,13 @@ export default function PayPage() {
                   <small class="host">abcgym.gym.thing.bh</small>
                 </span>
               </div>
+              {/* WhatsApp renders *bold* and _italic_ without the markers, so the bubble shows them styled. */}
               <p>
-                Hi Mariam,
+                Hi <strong>Mariam</strong>,
                 <br />
-                ABC Gym has sent you a payment link for Gold 3 months (BHD 75.000).
+                We've sent you a payment link for <strong>Gold 3 months</strong> (<strong>BHD 75.000</strong>).
                 <br />
-                It expires on 24 Oct 2026, 18:00. Reference: PL-7K3M9Q
-              </p>
-              <p dir="rtl" lang="ar">
-                مرحباً <bdi>Mariam</bdi>،<br />
-                أرسل لك <bdi>ABC Gym</bdi> رابط دفع لـ <bdi>Gold 3 months (BHD 75.000)</bdi>.<br />
-                ينتهي الرابط في 24 أكتوبر 2026، 6:00 م. المرجع: <bdi>PL-7K3M9Q</bdi>
+                <em>It expires on 24 Oct 2026, 18:00.</em>
               </p>
               <p>
                 <span class="url">https://abcgym.gym.thing.bh/pay/q7Xc2LmR9vTn4bWk8sYe1HdJ0pFa6uGz3NoKiE5rMhw</span>

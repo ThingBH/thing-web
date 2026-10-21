@@ -1,4 +1,5 @@
 import { href, type Lang } from './i18n'
+import { type Post, TAGS } from './posts'
 import { contact, SITE_URL } from './site'
 
 type Node = Record<string, unknown>
@@ -94,4 +95,45 @@ export const webPage = (lang: Lang, url: string, name: string, description: stri
   description,
   inLanguage: lang,
   isPartOf: { '@id': website(lang) },
+})
+
+const blogId = (lang: Lang) => `${SITE_URL}${href(lang, '/blog/')}#blog`
+
+/** One blog post. `url` is its canonical URL; author and publisher are the company node in baseGraph. */
+export const blogPosting = (lang: Lang, url: string, p: Post): Node => ({
+  '@type': 'BlogPosting',
+  '@id': `${url}#post`,
+  headline: p[lang].title,
+  description: p[lang].description,
+  url,
+  datePublished: p.date,
+  dateModified: p.updated ?? p.date,
+  inLanguage: lang,
+  author: { '@id': org },
+  publisher: { '@id': org },
+  image: `${SITE_URL}${lang === 'ar' ? '/og-ar.png' : '/og.png'}`,
+  mainEntityOfPage: { '@id': url },
+  isPartOf: { '@id': blogId(lang) },
+  keywords: p.tags.map((t) => TAGS[t][lang]).join(lang === 'ar' ? '، ' : ', '),
+})
+
+/** The blog index, listing every post. */
+export const blog = (lang: Lang, name: string, description: string, posts: Post[]): Node => ({
+  '@type': 'Blog',
+  '@id': blogId(lang),
+  url: `${SITE_URL}${href(lang, '/blog/')}`,
+  name,
+  description,
+  inLanguage: lang,
+  publisher: { '@id': org },
+  blogPost: posts.map((p) => {
+    const url = `${SITE_URL}${href(lang, `/blog/${p.slug}/`)}`
+    return {
+      '@type': 'BlogPosting',
+      '@id': `${url}#post`,
+      headline: p[lang].title,
+      url,
+      datePublished: p.date,
+    }
+  }),
 })

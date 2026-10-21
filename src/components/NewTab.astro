@@ -1,0 +1,8 @@
+---
+// Said by screen readers after a link that opens a new tab (target="_blank").
+import { langOf } from '../data/i18n'
+
+const lang = langOf(Astro.currentLocale)
+const t = { en: '(opens in a new tab)', ar: '(يفتح في تبويب جديد)' }[lang]
+---
+<span class="sr" lang={lang}> {t}</span>

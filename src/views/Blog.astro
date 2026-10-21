@@ -1,0 +1,62 @@
+---
+import CloseBand from '../components/CloseBand.astro'
+import Rich from '../components/Rich.astro'
+import { blogCopy } from '../data/content'
+import { href, langOf } from '../data/i18n'
+import { blog, breadcrumbs } from '../data/jsonld'
+import { postDate, posts, TAGS } from '../data/posts'
+import Base from '../layouts/Base.astro'
+
+const lang = langOf(Astro.currentLocale)
+const b = blogCopy[lang]
+const t = {
+  en: {
+    crumb: 'Blog',
+    title: 'Blog · Gym Thing',
+    h1: 'Notes for gym owners.',
+    lede: 'Research, guides and news for gyms in Bahrain and the Gulf, from the team that builds Gym Thing.',
+    list: 'Posts',
+    read: 'Read the post',
+  },
+  ar: {
+    crumb: 'المدونة',
+    title: 'المدونة · Gym Thing',
+    h1: 'ملاحظات لأصحاب النوادي.',
+    lede: 'بحوث وأدلة وأخبار للنوادي في البحرين والخليج، من الفريق اللي يبني Gym Thing.',
+    list: 'المقالات',
+    read: 'اقرأ المقال',
+  },
+}[lang]
+const graph = [
+  blog(lang, b.name, b.description, posts),
+  breadcrumbs([
+    ['Gym Thing', href(lang, '/')],
+    [t.crumb, href(lang, '/blog/')],
+  ]),
+]
+---
+<Base title={t.title} description={b.description} graph={graph} rss={{ href: href(lang, '/blog/rss.xml'), title: b.name }}>
+  <section class="page-hero gutter" aria-labelledby="h-blog">
+    <div class="inner">
+      <h1 class="d1" id="h-blog">{t.h1}</h1>
+      <p class="lede" style="margin-top:28px">{t.lede}</p>
+    </div>
+  </section>
+  <section class="sec tight gutter" aria-label={t.list}>
+    <div class="inner">
+      <ol class="postlist">
+        {posts.map((p) => (
+          <li class="rise">
+            <p class="post-meta"><time datetime={p.date}>{postDate(lang, p.date)}</time>{p.tags.map((tag) => <span>{TAGS[tag][lang]}</span>)}</p>
+            <div>
+              <h2 class="d3 vt" style={`--vt:${lang}-post-${p.slug}`}><a href={href(lang, `/blog/${p.slug}/`)}>{p[lang].title}</a></h2>
+              <p class="body"><Rich text={p[lang].description} /></p>
+              <span class="textlink" aria-hidden="true">{t.read} <svg class="i go"><use href="#i-arrow" /></svg></span>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+  <CloseBand />
+</Base>

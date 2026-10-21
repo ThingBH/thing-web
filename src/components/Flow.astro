@@ -69,6 +69,10 @@ const brand = (i: string) => i.startsWith('b:') && i.slice(2)
       ),
     )}
   </div>
+  <!-- Pick the phone layout before first paint (flow.ts keeps it in step; same 760px), so the page never lays out wider than a phone. -->
+  <script is:inline>
+    ((f) => f.classList.toggle('v', f.clientWidth < 760))(document.currentScript.previousElementSibling)
+  </script>
 </div>
 
 <style>

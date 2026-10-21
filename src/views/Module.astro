@@ -51,7 +51,7 @@ const graph = [
     <section class="page-hero gutter" aria-labelledby={`mh-${m.slug}`}>
       <div class="inner">
         <p class="crumbs"><a href={href(lang, '/modules/')}>{t.crumb}</a> <span aria-hidden="true">/</span> {m.name}</p>
-        <h1 class="d1" id={`mh-${m.slug}`}>{m.name}</h1>
+        <h1 class="d1 vt" id={`mh-${m.slug}`} style={`--vt:${lang}-mod-${m.slug}`}>{m.name}</h1>
         <p class="lede mod-promise">{m.promise}</p>
         <p class="body mod-sum">{m.summary}</p>
       </div>

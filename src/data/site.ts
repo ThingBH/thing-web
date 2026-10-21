@@ -23,11 +23,13 @@ export const nav: Record<Lang, { href: string; label: string }[]> = {
   en: [
     { href: '/modules/', label: 'Modules' },
     { href: '/compare/', label: 'Compare' },
+    { href: '/blog/', label: 'Blog' },
     { href: '/about/', label: 'About' },
   ],
   ar: [
     { href: '/modules/', label: 'الأقسام' },
     { href: '/compare/', label: 'المقارنة' },
+    { href: '/blog/', label: 'المدونة' },
     { href: '/about/', label: 'من نحن' },
   ],
 }

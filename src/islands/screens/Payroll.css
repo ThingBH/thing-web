@@ -362,6 +362,19 @@
     display: none;
   }
 }
+/* Phone: the period rail runs to the screen's edges and snaps card by card, so a card slides out of
+   the screen instead of being cut off inside its padding. */
+@container (max-width: 600px) {
+  .mx-payroll .pr-rail {
+    margin-inline: -24px;
+    padding-inline: 24px;
+    scroll-padding-inline: 24px;
+    scroll-snap-type: x mandatory;
+  }
+  .mx-payroll .pr-period {
+    scroll-snap-align: start;
+  }
+}
 
 /* ── Interactive island additions ── */
 .mx-payroll {

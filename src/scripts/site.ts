@@ -4,6 +4,8 @@ const menu = document.getElementById('menu')
 const setMenu = (open: boolean) => {
   header?.classList.toggle('open', open)
   menu?.setAttribute('aria-expanded', String(open))
+  // The button shows a close icon while the menu is open.
+  menu?.querySelector('use')?.setAttribute('href', open ? '#i-x' : '#i-menu')
 }
 menu?.addEventListener('click', () => setMenu(!header?.classList.contains('open')))
 addEventListener('keydown', (e) => {

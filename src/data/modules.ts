@@ -2,6 +2,8 @@ export type Feature = [name: string, line: string]
 export type Module = {
   slug: string
   name: string
+  /** Sprite icon id without the `i-` prefix, shown on the module cards. */
+  icon: string
   group: 'Members' | 'The front desk' | 'Money' | 'Running the business'
   promise: string
   /** Search description, when it should differ from the promise. */
@@ -17,6 +19,7 @@ export const modules: Module[] = [
   {
     slug: 'members',
     name: 'Members',
+    icon: 'users',
     group: 'Members',
     promise: "Every member's details, plans and visits on one page.",
     summary:
@@ -126,6 +129,7 @@ export const modules: Module[] = [
   {
     slug: 'memberships',
     name: 'Memberships',
+    icon: 'id',
     group: 'Members',
     promise: 'Sell any plan at your price and hours, and change it in two clicks.',
     summary:
@@ -216,6 +220,7 @@ export const modules: Module[] = [
   {
     slug: 'classes-and-pt',
     name: 'Classes and PT',
+    icon: 'cal',
     group: 'Members',
     promise: "Your timetable, your PT sessions, and every member's sessions left.",
     summary:
@@ -315,6 +320,7 @@ export const modules: Module[] = [
   {
     slug: 'member-app',
     name: 'Member app',
+    icon: 'phone',
     group: 'Members',
     promise: "Your gym in every member's pocket, in Arabic and English.",
     summary:
@@ -410,6 +416,7 @@ export const modules: Module[] = [
   {
     slug: 'access-control',
     name: 'Access control',
+    icon: 'door',
     group: 'The front desk',
     promise: 'Only members with a valid plan get in, and you see every entry.',
     summary:
@@ -499,6 +506,7 @@ export const modules: Module[] = [
   {
     slug: 'point-of-sale',
     name: 'Point of sale and stock',
+    icon: 'cart',
     group: 'The front desk',
     promise: 'A front-desk till that sells in four taps and counts every bottle.',
     summary:
@@ -586,6 +594,7 @@ export const modules: Module[] = [
   {
     slug: 'staff-app',
     name: 'Staff app',
+    icon: 'ucheck',
     group: 'The front desk',
     promise: 'Your team clocks in from their phone, and you see the gym from yours.',
     summary:
@@ -680,6 +689,7 @@ export const modules: Module[] = [
   {
     slug: 'payments',
     name: 'Payments',
+    icon: 'wallet',
     group: 'Money',
     promise: 'Every way Bahrain pays, and links that start the plan once paid.',
     summary:
@@ -762,6 +772,7 @@ export const modules: Module[] = [
   {
     slug: 'invoicing',
     name: 'Invoicing and accounting',
+    icon: 'file',
     group: 'Money',
     promise: 'A correct VAT invoice for every sale, and your month on one page.',
     summary:
@@ -859,6 +870,7 @@ export const modules: Module[] = [
   {
     slug: 'hr-payroll',
     name: 'HR and payroll',
+    icon: 'cash',
     group: 'Running the business',
     promise: 'Rosters, clock-ins, leave and payroll with GOSI and WPS, in one place.',
     summary:
@@ -979,6 +991,7 @@ export const modules: Module[] = [
   {
     slug: 'automations',
     name: 'Automations',
+    icon: 'zap',
     group: 'Running the business',
     promise: 'Birthday, renewal and win-back messages that send themselves.',
     summary:
@@ -1067,6 +1080,7 @@ export const modules: Module[] = [
   {
     slug: 'reports',
     name: 'Reports and analytics',
+    icon: 'trend',
     group: 'Running the business',
     promise: 'Know how the gym is really doing, without building a spreadsheet.',
     summary:
@@ -1140,6 +1154,7 @@ export const modules: Module[] = [
   {
     slug: 'branches',
     name: 'Branches, roles and branding',
+    icon: 'building',
     group: 'Running the business',
     promise: 'Every branch in one account, each person seeing only their part.',
     summary:

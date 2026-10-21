@@ -67,7 +67,7 @@ const graph = [
   <section class="page-hero gutter" aria-labelledby="h-modules">
     <div class="inner">
       <h1 class="d1" id="h-modules">{t.h1}</h1>
-      <p class="lede">{t.lede}</p>
+      <p class="lede" style="margin-top:28px">{t.lede}</p>
     </div>
   </section>
   <section class="sec tight gutter" aria-label={t.all}>
@@ -78,7 +78,10 @@ const graph = [
           <div class="modcards">
             {modules.filter((m) => m.group === g).map((m) => (
               <a class="modcard rise" href={href(lang, `/modules/${m.slug}/`)}>
-                <h3>{m.name}</h3>
+                <div class="modhead">
+                  <h3 class="vt" style={`--vt:${lang}-mod-${m.slug}`}>{m.name}</h3>
+                  <span class="modicon" aria-hidden="true"><svg class="i"><use href={`#i-${m.icon}`} /></svg></span>
+                </div>
                 <p>{m.promise}</p>
                 <ul>{m.groups.slice(0, 4).map((gr) => <li>{gr.items[0][0]}</li>)}</ul>
                 <span class="textlink">{t.features(featCount(m))} <svg class="i go"><use href="#i-arrow" /></svg></span>

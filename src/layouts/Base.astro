@@ -20,6 +20,10 @@ type Props = {
   noindex?: boolean
   /** Pages with no Arabic version (legal pages, 404). */
   englishOnly?: boolean
+  /** Blog posts: Open Graph article tags. Dates are YYYY-MM-DD. */
+  article?: { published: string; modified: string; section: string; tags: string[] }
+  /** An RSS feed for this page (blog pages). */
+  rss?: { href: string; title: string }
 }
 const lang = langOf(Astro.currentLocale)
 const {
@@ -30,6 +34,8 @@ const {
   markdown,
   noindex,
   englishOnly,
+  article,
+  rss,
 } = Astro.props
 const path = Astro.url.pathname
 const canonical = new URL(path, SITE_URL).href
@@ -45,6 +51,8 @@ const ld = JSON.stringify({
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <!-- Page transitions opt in here, not in site.css: Chrome reads the opt-in before an uncached stylesheet arrives. -->
+    <style is:inline>@view-transition{navigation:auto}</style>
     <title>{title}</title>
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex" />}
@@ -53,9 +61,18 @@ const ld = JSON.stringify({
     {ar && <link rel="alternate" hreflang="ar" href={ar} />}
     {ar && <link rel="alternate" hreflang="x-default" href={en} />}
     {markdown && <link rel="alternate" type="text/markdown" href={markdown} />}
+    {rss && <link rel="alternate" type="application/rss+xml" title={rss.title} href={rss.href} />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon.png" type="image/png" />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content={article ? 'article' : 'website'} />
+    {article && (
+      <>
+        <meta property="article:published_time" content={article.published} />
+        <meta property="article:modified_time" content={article.modified} />
+        <meta property="article:section" content={article.section} />
+        {article.tags.map((tag) => <meta property="article:tag" content={tag} />)}
+      </>
+    )}
     <meta property="og:site_name" content="Gym Thing" />
     <meta property="og:locale" content={lang === 'ar' ? 'ar_BH' : 'en_GB'} />
     {ar && <meta property="og:locale:alternate" content={lang === 'ar' ? 'en_GB' : 'ar_BH'} />}
@@ -64,6 +81,9 @@ const ld = JSON.stringify({
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={new URL(ogImage, SITE_URL).href} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={new URL(ogImage, SITE_URL).href} />
     <Font cssVariable="--font-geist" preload />
     {lang === 'ar' && <Font cssVariable="--font-plex-arabic" preload={[{ weight: 400 }, { weight: 700 }]} />}
     <script type="application/ld+json" set:html={ld} />

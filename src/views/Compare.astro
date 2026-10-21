@@ -1,6 +1,7 @@
 ---
 import CloseBand from '../components/CloseBand.astro'
 import Faq from '../components/Faq.astro'
+import NewTab from '../components/NewTab.astro'
 import { checkedOn, content } from '../data/content'
 import { href, langOf } from '../data/i18n'
 import { breadcrumbs, faqPage } from '../data/jsonld'
@@ -24,12 +25,14 @@ const modified = c.sources
 const t = {
   en: {
     crumb: 'Compare',
-    strong: `Where ${c.name} is strong`,
+    strong: c.generic ? 'What it does well' : `Where ${c.name} is strong`,
     side: 'Side by side.',
     need: 'What you need',
-    from: `From ${c.name}'s public website, help pages and listings. Sources are at the bottom of this page.`,
+    from: c.generic
+      ? 'Sources are at the bottom of this page.'
+      : `From ${c.name}'s public website, help pages and listings. Sources are at the bottom of this page.`,
     matters: 'What matters for a gym here.',
-    moving: `Moving from ${c.name}`,
+    moving: c.generic ? 'Moving to Gym Thing' : `Moving from ${c.name}`,
     cta: 'Start with a free trial',
     faq: 'Questions owners ask.',
     more: 'Sources and other comparisons',
@@ -44,9 +47,11 @@ const t = {
     strong: `نقاط قوة ${c.name}`,
     side: 'جنب بعض.',
     need: 'اللي تحتاجه',
-    from: `من موقع ${c.name} الرسمي وصفحات المساعدة والقوائم. المصادر في آخر الصفحة.`,
+    from: c.generic
+      ? 'المصادر في آخر الصفحة.'
+      : `من موقع ${c.name} الرسمي وصفحات المساعدة والقوائم. المصادر في آخر الصفحة.`,
     matters: 'شنو يهم النادي هني.',
-    moving: `النقل من ${c.name}`,
+    moving: c.generic ? 'الانتقال إلى Gym Thing' : `النقل من ${c.name}`,
     cta: 'ابدأ بتجربة مجانية',
     faq: 'أسئلة يسألها أصحاب النوادي.',
     more: 'المصادر ومقارنات ثانية',
@@ -89,7 +94,7 @@ const graph = [
     <section class="page-hero gutter" aria-labelledby={`ch-${c.slug}`}>
       <div class="inner">
         <p class="crumbs"><a href={href(lang, '/compare/')}>{t.crumb}</a> <span aria-hidden="true">/</span> {c.name}</p>
-        <h1 class="d1" id={`ch-${c.slug}`}>{c.title}</h1>
+        <h1 class="d1 vt" id={`ch-${c.slug}`} style={`--vt:${lang}-cmp-${c.slug}`}>{c.title}</h1>
         <p class="lede mod-promise">{c.lede}</p>
       </div>
     </section>
@@ -152,7 +157,7 @@ const graph = [
             <h2 class="d3">{t.sources}</h2>
             <ul class="sources">
               {c.sources.map(([label, link, checked]) => (
-                <li><a href={link} rel="noopener" target="_blank" lang="en">{label}</a><span>{t.checked} {checkedOn(lang, checked)}</span></li>
+                <li><a href={link} rel="noopener" target="_blank" lang="en">{label}<NewTab /></a><span>{t.checked} {checkedOn(lang, checked)}</span></li>
               ))}
             </ul>
             <p class="small">{t.stale}</p>

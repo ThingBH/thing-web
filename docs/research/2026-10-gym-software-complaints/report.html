@@ -1,0 +1,594 @@
+<title>Gym Software Complaints 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="What gym owners and front-desk staff complain about in Mindbody, Glofox, Zen Planner, WellnessLiving and other gym software in 2025-2026, with sources, and how Gym Thing handles each problem.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one reading column; each issue pairs owner quotes with an inverted Gym Thing panel. Daylight look: light canvas, black ink. */
+:root {
+  --bg: #fafaf8;
+  --ink: #0c0c0d;
+  --muted: #5b5b60;
+  --rule: #e2e2de;
+  --soft: #f1f1ed;
+  --panel: #0c0c0d;
+  --panel-ink: #fafaf8;
+  --panel-muted: #b4b4b0;
+  --font-display: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e0e0f; --ink: #f3f3f0; --muted: #a2a2a0; --rule: #2a2a2b; --soft: #18181a;
+    --panel: #f3f3f0; --panel-ink: #0e0e0f; --panel-muted: #55555a; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e0e0f; --ink: #f3f3f0; --muted: #a2a2a0; --rule: #2a2a2b; --soft: #18181a;
+  --panel: #f3f3f0; --panel-ink: #0e0e0f; --panel-muted: #55555a; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 17px; line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap {
+  max-width: 1040px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 56px 96px;
+}
+a { color: inherit; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; border-radius: 2px; }
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; letter-spacing: -0.02em; }
+p { margin: 0; }
+
+.eyebrow {
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+}
+header { display: grid; gap: 20px; max-width: 820px; }
+h1 { font-size: clamp(36px, 6vw, 64px); line-height: 1.04; font-weight: 600; }
+.lede { font-size: clamp(18px, 2.2vw, 21px); color: var(--muted); max-width: 66ch; }
+
+.method {
+  margin-top: 40px; padding: 20px 24px; background: var(--soft); border-radius: 6px;
+  display: grid; gap: 8px; max-width: 820px; font-size: 15px;
+}
+.method strong { font-weight: 600; }
+
+section { margin-top: 72px; }
+.section-head { display: grid; gap: 8px; margin-bottom: 24px; }
+.section-head h2 { font-size: clamp(26px, 3.4vw, 34px); font-weight: 600; line-height: 1.15; }
+
+.table-scroll { overflow-x: auto; border-top: 1px solid var(--ink); }
+table { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 640px; }
+th, td { text-align: left; vertical-align: top; padding: 14px 16px 14px 0; border-bottom: 1px solid var(--rule); }
+th { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+td:first-child { font-weight: 600; width: 30%; }
+td:first-child a { text-decoration: none; }
+td:first-child a:hover { text-decoration: underline; }
+td.who { color: var(--muted); width: 28%; }
+
+.issue { border-top: 1px solid var(--ink); padding-top: 28px; scroll-margin-top: 24px; }
+.issue-head { display: grid; gap: 10px; margin-bottom: 24px; max-width: 820px; }
+.issue-head h2 { font-size: clamp(26px, 3.4vw, 36px); font-weight: 600; line-height: 1.12; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip {
+  font-family: var(--font-mono); font-size: 12px; padding: 3px 9px; border: 1px solid var(--rule); border-radius: 999px; color: var(--muted);
+}
+.cost { color: var(--muted); max-width: 66ch; }
+.cost b { color: var(--ink); font-weight: 600; }
+
+.pair { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 32px; align-items: start; }
+@media (max-width: 760px) { .pair { grid-template-columns: minmax(0, 1fr); gap: 24px; } }
+.quotes { display: grid; gap: 20px; min-width: 0; }
+.label { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+blockquote { margin: 0; padding-left: 16px; border-left: 2px solid var(--rule); display: grid; gap: 6px; }
+blockquote p { font-size: 18px; line-height: 1.5; }
+blockquote cite { font-style: normal; font-size: 13px; color: var(--muted); font-family: var(--font-mono); }
+.fact { font-size: 16px; }
+
+.answer {
+  background: var(--panel); color: var(--panel-ink); border-radius: 6px; padding: 24px;
+  display: grid; gap: 14px; min-width: 0;
+}
+.answer .label { color: var(--panel-muted); }
+.answer h3 { font-size: 21px; font-weight: 600; line-height: 1.25; }
+.answer ul { margin: 0; padding-left: 18px; display: grid; gap: 8px; font-size: 16px; }
+.answer p { font-size: 16px; }
+.answer .contact { font-family: var(--font-mono); font-size: 14px; user-select: all; }
+
+.issues { display: grid; gap: 64px; }
+
+.close {
+  margin-top: 88px; border-top: 1px solid var(--ink); padding-top: 32px; display: grid; gap: 18px; max-width: 820px;
+}
+.close h2 { font-size: clamp(28px, 4vw, 44px); font-weight: 600; line-height: 1.08; }
+.cta {
+  justify-self: start; display: inline-block; background: var(--ink); color: var(--bg);
+  padding: 14px 22px; border-radius: 999px; font-weight: 600; text-decoration: none;
+}
+.cta:hover { text-decoration: none; opacity: 0.88; }
+.notes { margin-top: 64px; font-size: 14px; color: var(--muted); display: grid; gap: 8px; max-width: 820px; }
+.notes h2 { font-size: 16px; color: var(--ink); letter-spacing: 0; }
+@media (prefers-reduced-motion: no-preference) { a, .cta { transition: opacity .15s ease; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Gym Thing research · October 2026</p>
+    <h1>What gym owners are fed up with in their software</h1>
+    <p class="lede">We read what owners and front-desk teams wrote about their gym software between 2025 and October 2026, on review sites, vendor policy pages, app stores and owner forums. Twelve problems came up again and again. Here they are, in owners' own words, with what Gym Thing does about each one. At the end, we look at three systems sold in the Gulf: Tamarran, Gymnago and FLYBY.</p>
+  </header>
+
+  <div class="method">
+    <p><strong>How we did this.</strong> Every quote below links to the page we read it on, with its date. We only quote reviews we could open and read in full. Most come from Trustpilot, Apple's App Store, vendors' own pages and Reddit's r/gymowner and r/crossfit (21 Sep to 21 Oct 2026).</p>
+    <p>A review is one person's experience, not proof of how every gym gets on with a product. We picked problems that showed up across several products and several reviewers.</p>
+  </div>
+
+  <section aria-labelledby="summary">
+    <div class="section-head">
+      <p class="eyebrow">At a glance</p>
+      <h2 id="summary">Twelve problems, and our answer to each</h2>
+    </div>
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th>Problem</th><th>Reported for</th><th>What Gym Thing does</th></tr></thead>
+        <tbody>
+          <tr><td><a href="#price">Prices that climb after year one</a></td><td class="who">ABC Glofox, Mindbody, Zen Planner, Virtuagym</td><td>One monthly price by gym size, every module included</td></tr>
+          <tr><td><a href="#contracts">Contracts that renew themselves</a></td><td class="who">Mindbody, ABC Glofox, Virtuagym, WellnessLiving</td><td>Up to 3 months free, with your real members, before you pay</td></tr>
+          <tr><td><a href="#support">Support that disappears after you sign</a></td><td class="who">Mindbody, WellnessLiving, Virtuagym, ABC Glofox</td><td>WhatsApp, phone and email, 7 days a week, same-day replies</td></tr>
+          <tr><td><a href="#billing">Members charged wrongly, or not at all</a></td><td class="who">ABC Glofox, WellnessLiving, Zen Planner, ABC Fitness</td><td>A plan starts when it's paid, and double payments are refunded</td></tr>
+          <tr><td><a href="#processing">Stuck with one card processor, waiting for your money</a></td><td class="who">Zen Planner, ABC Glofox, PushPress</td><td>Payments go to your own account, and we take no cut</td></tr>
+          <tr><td><a href="#outages">Systems that fail at the busiest moment</a></td><td class="who">Mindbody, ABC Glofox, TeamUp</td><td>Daily backups, a standby database, and a person on WhatsApp</td></tr>
+          <tr><td><a href="#data">Paying to leave with your own data</a></td><td class="who">Mindbody, ABC Glofox, Zen Planner, Exercise.com</td><td>We move your members over, and you can export any time</td></tr>
+          <tr><td><a href="#learning">Screens staff need weeks to learn</a></td><td class="who">TeamUp, WellnessLiving, Zen Planner, Exercise.com</td><td>We set it up and train your team, usually within a week</td></tr>
+          <tr><td><a href="#apps">Member apps that break or never arrive</a></td><td class="who">ABC Glofox, Zen Planner, PushPress, Mindbody</td><td>An app in your gym's name, and a door that doesn't need it</td></tr>
+          <tr><td><a href="#renewals">Renewals chased by hand</a></td><td class="who">Owners on r/gymowner</td><td>Reminder emails, and a pay link on WhatsApp in one tap</td></tr>
+          <tr><td><a href="#access">Members who want to train outside class times</a></td><td class="who">Members on r/crossfit</td><td>Plans with their own door hours and visit rules</td></tr>
+          <tr><td><a href="#gulf">Software built for somewhere else</a></td><td class="who">Software that pays out only through Stripe</td><td>BenefitPay, Arabic, VAT invoices, GOSI and WPS</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="issues" aria-label="The twelve problems">
+
+    <article class="issue" id="price">
+      <div class="issue-head">
+        <p class="eyebrow">Price</p>
+        <h2>Prices that climb after the first year</h2>
+        <div class="chips"><span class="chip">ABC Glofox</span><span class="chip">Mindbody</span><span class="chip">Zen Planner</span><span class="chip">Virtuagym</span></div>
+        <p class="cost"><b>Owner:</b> the software bill doubles with no warning and no reward for staying. <b>Front desk:</b> left explaining price changes the gym never planned for.</p>
+      </div>
+      <div class="pair">
+        <div class="quotes">
+          <p class="label">What owners say</p>
+          <blockquote><p>"They increased the price by over 100% following my 2nd year with them."</p><cite><a href="https://www.trustpilot.com/review/glofox.com?page=5">Trustpilot review of ABC Glofox</a>, 1 Mar 2025</cite></blockquote>
+          <blockquote><p>"I currently use Mindbody but the $900/month is ridiculous."</p><cite><a href="https://www.reddit.com/r/gymowner/comments/1wr3eus/hello_i_run_a_300_client_gym_that_focuses_on/">Owner of a 300-client gym, r/gymowner</a>, 26 Sep 2026</cite></blockquote>
+          <blockquote><p>"Their prices increase every year with no additional benefit."</p><cite><a href="https://ie.trustpilot.com/review/zenplanner.com">Trustpilot review of Zen Planner</a>, 14 Apr 2026</cite></blockquote>
+          <blockquote><p>"they upgraded my subscription to a more expensive plan based on the number of clients in my account"</p><cite><a href="https://www.trustpilot.com/review/virtuagym.com">Trustpilot review of Virtuagym</a>, 9 Jun 2025</cite></blockquote>
+        </div>
+        <div class="answer">
+          <p class="label">How Gym Thing handles it</p>
+          <h3>One monthly price, with everything in it</h3>
+          <p>You pay one monthly price set by the size of your gym. Nothing is sold as an add-on:</p>
+          <ul>
+            <li>Memberships, the door, the till, classes and PT</li>
+            <li>Payroll, payments, automations and every branch</li>
+            <li>Setup, training and moving your members over</li>
+          </ul>
+          <p>There's no setup fee. We tell you your price while we set up your free trial, so you can compare it with what you pay today.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="issue" id="contracts">
+      <div class="issue-head">
+        <p class="eyebrow">Contracts</p>
+        <h2>Contracts that renew themselves</h2>
+        <div class="chips"><span class="chip">Mindbody</span><span class="chip">ABC Glofox</span><span class="chip">Virtuagym</span><span class="chip">WellnessLiving</span><span class="chip">Zen Planner</span></div>
+        <p class="cost"><b>Owner:</b> stuck paying for a year of software that isn't working, and charged again after cancelling. <b>Front desk:</b> keeps working around a tool the owner is trying to leave.</p>
+      </div>
+      <div class="pair">
+        <div class="quotes">
+          <p class="label">What owners say</p>
+          <blockquote><p>Contracts "automatically renew at the end of the current term". Cancelling takes "at least 30 days' notice", and "Cancellation is not available mid-term unless otherwise stated in your Order Form".</p><cite><a href="https://www.mindbodyonline.com/business/education/blog/mindbody-contracts-cancellation-data">Mindbody's own contracts page</a>, updated 12 Mar 2026</cite></blockquote>
+          <blockquote><p>"auto renews for a 12 month contract that I was never told about"</p><cite><a href="https://www.trustpilot.com/review/www.mindbodyonline.com">Trustpilot review of Mindbody</a>, 20 Oct 2026</cite></blockquote>
+          <blockquote><p>"Tried to cancel 3 times, was persuaded not to - when finally cancelled was charged for a further month."</p><cite><a href="https://www.trustpilot.com/review/glofox.com?page=2">Trustpilot review of ABC Glofox</a>, 10 Nov 2025</cite></blockquote>
+          <blockquote><p>"they automatically renew the contract for 12 months at a time and refuse any possibility of early termination"</p><cite><a href="https://www.trustpilot.com/review/virtuagym.com">Trustpilot review of Virtuagym</a>, 9 Jun 2025</cite></blockquote>
+          <blockquote><p>"WellnessLiving would later claim we had already been automatically renewed into another 12-month contract."</p><cite><a href="https://www.trustpilot.com/review/wellnessliving.com">Trustpilot review of WellnessLiving</a>, 10 Jul 2026</cite></blockquote>
+        </div>
+        <div class="answer">
+          <p class="label">How Gym Thing handles it</p>
+          <h3>Try it on your real gym before you pay</h3>
+          <p>You can run Gym Thing free for up to 3 months before paying anything. We move your members over for the trial, so you judge it on your own members, plans and staff, not a demo.</p>
+          <p>You can keep your current system running alongside until you're sure.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="issue" id="support">
+      <div class="issue-head">
+        <p class="eyebrow">Support</p>
+        <h2>Support that disappears after you sign</h2>
+        <div class="chips"><span class="chip">Mindbody</span><span class="chip">WellnessLiving</span><span class="chip">Virtuagym</span><span class="chip">ABC Glofox</span><span class="chip">Exercise.com</span></div>
+        <p class="cost"><b>Owner:</b> problems that cost money sit for days, worst of all at weekends. <b>Front desk:</b> faces upset members with no fix and nobody to call.</p>
+      </div>
+      <div class="pair">
+        <div class="quotes">
+          <p class="label">What owners say</p>
+          <blockquote><p>"they told me to wait until Monday"</p><cite><a href="https://www.trustpilot.com/review/www.mindbodyonline.com?page=3">Trustpilot review of Mindbody</a> from a business open 7 days a week, 27 Sep 2026</cite></blockquote>
+          <blockquote><p>"You could talk to 4 different employees and get 4 totally different conflicting answers."</p><cite><a href="https://www.trustpilot.com/review/www.mindbodyonline.com">Trustpilot review of Mindbody</a>, 13 Oct 2026</cite></blockquote>
+          <blockquote><p>"the moment we signed on and became paying customers, that support disappeared."</p><cite><a href="https://www.trustpilot.com/review/wellnessliving.com">Trustpilot review of WellnessLiving</a>, 1 Jun 2026</cite></blockquote>
+          <blockquote><p>"there are serious bottlenecks in support, it seems like only one person works there"</p><cite><a href="https://www.trustpilot.com/review/virtuagym.com">Trustpilot review of Virtuagym</a>, 16 Sep 2026</cite></blockquote>
+        </div>
+        <div class="answer">
+          <p class="label">How Gym Thing handles it</p>
+          <h3>A person on WhatsApp, 7 days a week</h3>
+          <p>Gyms open at weekends, so we do too. Message us on WhatsApp, call or email any day of the week and you get a reply the same day, in Arabic or English.</p>
+          <p class="contact">WhatsApp +973 3993 6601<br>support@thing.bh</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="issue" id="billing">
+      <div class="issue-head">
+        <p class="eyebrow">Billing</p>
+        <h2>Members charged wrongly, or not at all</h2>
+        <div class="chips"><span class="chip">ABC Glofox</span><span class="chip">WellnessLiving</span><span class="chip">Zen Planner</span><span class="chip">ABC Fitness</span></div>
+        <p class="cost"><b>Owner:</b> lost revenue, and members who stop trusting the gym with their card. <b>Front desk:</b> spends the day on refunds and apologies.</p>
+      </div>
+      <div class="pair">
+        <div class="quotes">
+          <p class="label">What owners say</p>
+          <blockquote><p>"some members are attending classes for free" while "others are being charged without making a purchase"</p><cite><a href="https://www.trustpilot.com/review/glofox.com?page=5">Trustpilot review of ABC Glofox</a>, 10 Mar 2025</cite></blockquote>
+          <blockquote><p>"customers have been charged for memberships we never created and overcharged for others,"</p><cite><a href="https://www.trustpilot.com/review/wellnessliving.com">Trustpilot review of WellnessLiving</a>, 1 Jun 2026</cite></blockquote>
+          <blockquote><p>"the platform continued attempting to bill customers after information had been removed."</p><cite><a href="https://ie.trustpilot.com/review/zenplanner.com">Trustpilot review of Zen Planner</a>, 4 Jun 2026</cite></blockquote>
+          <blockquote><p>"Charged an annual fee twice."</p><cite><a href="https://www.trustpilot.com/review/abcfitness.com">Trustpilot review of ABC Fitness</a> by a gym member, 23 Aug 2026</cite></blockquote>
+        </div>
+        <div class="answer">
+          <p class="label">How Gym Thing handles it</p>
+          <h3>A plan starts when it's paid, and not before</h3>
+          <ul>
+            <li>Sell a plan at the desk, or send a payment link. The plan starts the moment the member pays.</li>
+            <li>Every online payment is matched to its sale. If a member pays twice, the extra payment is refunded.</li>
+            <li>Every sale gets a VAT invoice, numbered with no gaps.</li>
+            <li>Only members with a valid plan get through the door.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="issue" id="processing">
+      <div class="issue-head">
+        <p class="eyebrow">Payments</p>
+        <h2>Stuck with one card processor, and waiting for your own money</h2>
+        <div class="chips"><span class="chip">Zen Planner</span><span class="chip">ABC Glofox</span><span class="chip">PushPress</span></div>
+        <p class="cost"><b>Owner:</b> 3 to 5% of every payment goes in fees they can't negotiate, and payouts can stop without warning. <b>Front desk:</b> explains card surcharges to members.</p>
+      </div>
+      <div class="pair">
+        <div class="quotes">
+          <p class="label">What owners say</p>
+          <blockquote><p>"I am obliged to use your Credit Card payment processor (CardPointe) which is super expensive (~3.5%)."</p><cite><a href="https://ie.trustpilot.com/review/zenplanner.com">Trustpilot review of Zen Planner</a>, 18 Jul 2025</cite></blockquote>
+          <blockquote><p>"My funds are being withheld for proof of ownership."</p><cite><a href="https://www.trustpilot.com/review/glofox.com">Trustpilot review of ABC Glofox</a>, 9 Oct 2026</cite></blockquote>
+          <blockquote><p>"Recently they have withheld all our money earned through credit card transactions."</p><cite><a href="https://www.trustpilot.com/review/glofox.com?page=5">Trustpilot review of ABC Glofox</a>, 12 Mar 2025</cite></blockquote>
+          <p class="fact">PushPress publishes card fees of 4.99% + 30¢ on its free plan and 2.89% + 30¢ on its Pro plan (<a href="https://pushpress.com/pricing">PushPress pricing</a>, read 21 Oct 2026). That's a published price, not a complaint.</p>
+        </div>
+        <div class="answer">
+          <p class="label">How Gym Thing handles it</p>
+          <h3>Your payments go to your account, and we take no cut</h3>
+          <p>Card and wallet payments go straight into your gym's own account with Tap, a licensed payment provider. Gym Thing takes no commission on them. Tap's fees and payout times are agreed between you and Tap.</p>
+          <p>Members pay however they like: BenefitPay, Apple Pay, Google Pay, cards, cash or a payment link.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="issue" id="outages">
+      <div class="issue-head">
+        <p class="eyebrow">Reliability</p>
+        <h2>Systems that fail at the busiest moment</h2>
+        <div class="chips"><span class="chip">Mindbody</span><span class="chip">ABC Glofox</span><span class="chip">TeamUp</span></div>
+        <p class="cost"><b>Owner:</b> lost sales and a bad first impression, often in opening week. <b>Front desk:</b> check-in and checkout stop while members queue.</p>
+      </div>
+      <div class="pair">
+        <div class="quotes">
+          <p class="label">What owners say</p>
+          <blockquote><p>"the software has repeatedly failed since my Grand Opening earlier this month"</p><cite><a href="https://www.trustpilot.com/review/www.mindbodyonline.com?page=3">Trustpilot review of Mindbody</a>, 28 Sep 2026</cite></blockquote>
+          <blockquote><p>"the last 10 months of constant errors has cost our business between £30,000 to £40,000"</p><cite><a href="https://www.trustpilot.com/review/glofox.com?page=5">Trustpilot review of ABC Glofox</a>, 24 Feb 2025</cite></blockquote>
+          <blockquote><p>"The software is slow, unreliable, and frustrating to use."</p><cite><a href="https://www.trustpilot.com/review/goteamup.com">Trustpilot review of TeamUp</a>, 16 Jan 2026</cite></blockquote>
+          <blockquote><p>"users may experience inconsistent or incomplete page loading."</p><cite><a href="https://status.mindbodyonline.com/incidents/csrn1wm6wcrc">Mindbody's own status page</a>, 5 to 6 Aug 2025</cite></blockquote>
+        </div>
+        <div class="answer">
+          <p class="label">How Gym Thing handles it</p>
+          <h3>Your data is safe, and a person answers</h3>
+          <ul>
+            <li>Your data is encrypted and backed up every day.</li>
+            <li>A standby copy of your database is ready if the main one has a problem.</li>
+            <li>If a payment gets stuck, it's checked and finished or refunded.</li>
+            <li>If something does go wrong, you reach a person on WhatsApp the same day.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="issue" id="data">
+      <div class="issue-head">
+        <p class="eyebrow">Switching</p>
+        <h2>Paying to leave with your own data</h2>
+        <div class="chips"><span class="chip">Mindbody</span><span class="chip">ABC Glofox</span><span class="chip">Zen Planner</span><span class="chip">Exercise.com</span></div>
+        <p class="cost"><b>Owner:</b> pays to get their own members back, and risks weeks of lost billing during the move. <b>Front desk:</b> re-types members after a bad import.</p>
+      </div>
+      <div class="pair">
+        <div class="quotes">
+          <p class="label">What owners say</p>
+          <blockquote><p>Mindbody "offers a data export service for an added fee". After the account is closed, "you will no longer be able to access the data".</p><cite><a href="https://www.mindbodyonline.com/business/education/blog/mindbody-contracts-cancellation-data">Mindbody's own contracts page</a>, updated 12 Mar 2026</cite></blockquote>
+          <blockquote><p>"they wanted to charge me £600 to transfer members payment details"</p><cite><a href="https://www.trustpilot.com/review/glofox.com?page=5">Trustpilot review of ABC Glofox</a>, 1 Mar 2025</cite></blockquote>
+          <blockquote><p>"Still don't have my database export, that I paid for and wasn't able to bill my students for 6 weeks now."</p><cite><a href="https://www.trustpilot.com/review/zenplanner.com?page=3">Trustpilot review of Zen Planner</a>, 2 Apr 2024</cite></blockquote>
+          <blockquote><p>"Moving a few hundred member accounts over here was a nightmare the first week."</p><cite><a href="https://www.trustpilot.com/review/exercise.com">Trustpilot review of Exercise.com</a>, 7 Oct 2026</cite></blockquote>
+        </div>
+        <div class="answer">
+          <p class="label">How Gym Thing handles it</p>
+          <h3>We do the move, and your data stays yours</h3>
+          <ul>
+            <li>We move your members, plans and history over as part of setup, at no extra cost.</li>
+            <li>You see a preview before anything goes live.</li>
+            <li>Any time after that, you can download your members, memberships, accounts, analytics and payroll as spreadsheets.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="issue" id="learning">
+      <div class="issue-head">
+        <p class="eyebrow">Ease of use</p>
+        <h2>Screens your staff need weeks to learn</h2>
+        <div class="chips"><span class="chip">TeamUp</span><span class="chip">WellnessLiving</span><span class="chip">Zen Planner</span><span class="chip">Exercise.com</span></div>
+        <p class="cost"><b>Owner:</b> pays for training again every time a staff member leaves. <b>Front desk:</b> new hires make mistakes on busy screens.</p>
+      </div>
+      <div class="pair">
+        <div class="quotes">
+          <p class="label">What owners say</p>
+          <blockquote><p>"This is the worst most unuser friendly, confusing one I have ever used."</p><cite><a href="https://www.trustpilot.com/review/goteamup.com">Trustpilot review of TeamUp</a>, 12 Jan 2025</cite></blockquote>
+          <blockquote><p>"the system is so rigid and convoluted"</p><cite><a href="https://www.trustpilot.com/review/wellnessliving.com">Trustpilot review of WellnessLiving</a>, 1 May 2026</cite></blockquote>
+          <blockquote><p>"The system is challenging to get used to and onboarding is a beast (but worth it)."</p><cite><a href="https://www.trustpilot.com/review/exercise.com?page=2">Trustpilot review of Exercise.com</a>, 17 Nov 2025</cite></blockquote>
+          <blockquote><p>"get your gym software set up before you start promoting. Billing, sign-ups, waivers, all of it."</p><cite><a href="https://www.reddit.com/r/gymowner/comments/1wur9en/gym_owners_what_do_you_wish_you_knew_before/">An owner's advice to new owners, r/gymowner</a>, 1 Oct 2026</cite></blockquote>
+        </div>
+        <div class="answer">
+          <p class="label">How Gym Thing handles it</p>
+          <h3>We set it up and train your team</h3>
+          <p>Most gyms are live within a week. We set up your plans, branches and payments, move your members over and train your staff.</p>
+          <ul>
+            <li>Freeze, extend or upgrade a plan from the member's page, and the end date updates itself.</li>
+            <li>The till is built for a busy counter.</li>
+            <li>Staff clock in, request leave and see payslips in their own app.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="issue" id="apps">
+      <div class="issue-head">
+        <p class="eyebrow">Member app</p>
+        <h2>Member apps that break, and branded apps that never arrive</h2>
+        <div class="chips"><span class="chip">ABC Glofox</span><span class="chip">Zen Planner</span><span class="chip">PushPress</span><span class="chip">Mindbody</span></div>
+        <p class="cost"><b>Owner:</b> for members, the app is the gym, so its bugs cost members. <b>Front desk:</b> turns into app support, walking members through reinstalling.</p>
+      </div>
+      <div class="pair">
+        <div class="quotes">
+          <p class="label">What owners say</p>
+          <blockquote><p>"We have to constantly ask members to delete and re-download the app"</p><cite><a href="https://www.trustpilot.com/review/glofox.com?page=4">Trustpilot review of ABC Glofox</a>, 24 Apr 2025</cite></blockquote>
+          <blockquote><p>"I signed up to Glofox after being promised during the sales call that my package would include a branded app."</p><cite><a href="https://www.trustpilot.com/review/glofox.com">Trustpilot review of ABC Glofox</a>, 5 Jun 2026</cite></blockquote>
+          <blockquote><p>"Have waited months for "branded app" only to be told there is a technical issue"</p><cite><a href="https://www.trustpilot.com/review/zenplanner.com?page=3">Trustpilot review of Zen Planner</a>, Oct 2026</cite></blockquote>
+          <blockquote><p>"I can almost never find my lifting history without substantial digging"</p><cite><a href="https://apps.apple.com/us/app/pushpress-members/id1309909578">App Store review of PushPress Members</a>, 12 Nov 2025</cite></blockquote>
+        </div>
+        <div class="answer">
+          <p class="label">How Gym Thing handles it</p>
+          <h3>An app in your gym's name, and a door that doesn't need it</h3>
+          <ul>
+            <li>Your member app carries your gym's name in the app stores, in Arabic and English. We build it for you.</li>
+            <li>Members see their plan, book classes and log workouts.</li>
+            <li>Nobody needs the app to get in. A pass in Apple or Google Wallet, or a QR code, opens the door.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="issue" id="renewals">
+      <div class="issue-head">
+        <p class="eyebrow">Renewals</p>
+        <h2>Renewals chased by hand</h2>
+        <div class="chips"><span class="chip">Owners on r/gymowner</span></div>
+        <p class="cost"><b>Owner:</b> members drift away when their plan quietly ends. <b>Front desk:</b> spends hours messaging members one by one.</p>
+      </div>
+      <div class="pair">
+        <div class="quotes">
+          <p class="label">What owners say</p>
+          <p class="fact">In October 2026, an <a href="https://www.reddit.com/r/gymowner/comments/1wxeguy/gym_owners_would_you_let_your_management_software/">r/gymowner thread</a> asked owners whether they would let their software send renewal reminders from the gym's own WhatsApp number.</p>
+          <p class="fact">Several other October threads in the same community asked owners what annoys them most about their software, and what it really costs them in money and time.</p>
+        </div>
+        <div class="answer">
+          <p class="label">How Gym Thing handles it</p>
+          <h3>Reminders go out, and paying takes one tap</h3>
+          <ul>
+            <li>Members get a reminder email before their plan ends, without anyone sending it.</li>
+            <li>Plans ending in the next 14 days are flagged for your team.</li>
+            <li>One tap on the member's page opens WhatsApp with a payment link ready to send.</li>
+            <li>A renewal starts the day the current plan ends, so there's no gap.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="issue" id="access">
+      <div class="issue-head">
+        <p class="eyebrow">Access</p>
+        <h2>Members who want to train outside class times</h2>
+        <div class="chips"><span class="chip">Members on r/crossfit</span></div>
+        <p class="cost"><b>Owner:</b> members leave for a gym with open hours. <b>Front desk:</b> lets people in by hand, or turns them away.</p>
+      </div>
+      <div class="pair">
+        <div class="quotes">
+          <p class="label">What members say</p>
+          <blockquote><p>"If my box offered out of hours access or an open gym only membership I would have never left."</p><cite><a href="https://reddit.com/r/crossfit/comments/1x735pn/comment/ph2dgow/">Comment in r/crossfit</a>, Oct 2026, 32 upvotes</cite></blockquote>
+          <blockquote><p>"I actually left a gym because they didn't have sufficient open gym times or 24/7 access."</p><cite><a href="https://www.reddit.com/r/crossfit/comments/1x735pn/gym_owners/">Comment in r/crossfit</a>, Oct 2026</cite></blockquote>
+        </div>
+        <div class="answer">
+          <p class="label">How Gym Thing handles it</p>
+          <h3>Plans with their own door hours</h3>
+          <ul>
+            <li>Sell open gym, off-peak, ladies' hours or 10-visit passes, each with its own access rules.</li>
+            <li>The door lets in only members whose plan allows that time, through Gantner turnstiles, a phone tap or an iPad at reception.</li>
+            <li>Every refusal shows the reason, so staff know what to say.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="issue" id="gulf">
+      <div class="issue-head">
+        <p class="eyebrow">Gulf fit</p>
+        <h2>Software built for somewhere else</h2>
+        <div class="chips"><span class="chip">Software that pays out only through Stripe</span></div>
+        <p class="cost"><b>Owner:</b> can't take BenefitPay or local cards, and pays for VAT and payroll tools on the side. <b>Front desk:</b> runs a second card machine and works in English with members who expect Arabic.</p>
+      </div>
+      <div class="pair">
+        <div class="quotes">
+          <p class="label">What we found</p>
+          <p class="fact">Stripe's list of supported countries includes the UAE, but not Bahrain, Saudi Arabia, Kuwait, Qatar or Oman (<a href="https://stripe.com/global">Stripe global availability</a>, read 21 Oct 2026). Gym software that takes payments only through Stripe has the same gap.</p>
+          <p class="fact">PushPress's pricing page names no Gulf country and says "Contact Sales for international pricing." (<a href="https://pushpress.com/pricing">PushPress pricing</a>, read 21 Oct 2026)</p>
+        </div>
+        <div class="answer">
+          <p class="label">How Gym Thing handles it</p>
+          <h3>Made for gyms in the Gulf</h3>
+          <ul>
+            <li>BenefitPay, Apple Pay, Google Pay, cards and cash</li>
+            <li>Payment links on WhatsApp, written in Arabic or English</li>
+            <li>An Arabic member app, staff app and pay page</li>
+            <li>A VAT invoice for every sale</li>
+            <li>Payroll with GOSI and the WPS file</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+  </section>
+
+  <section aria-labelledby="gulf-systems">
+    <div class="section-head">
+      <p class="eyebrow">Closer to home</p>
+      <h2 id="gulf-systems">Three systems sold in the Gulf: Tamarran, Gymnago and FLYBY</h2>
+      <p class="cost">These three don't show up on the big review sites, so we read their app store reviews instead. Each one publishes a branded app for every gym it serves, so most of these reviews come from members using their own gym's app. We translated reviews written in Arabic and Turkish, and left out reviews that complain about a gym rather than its software.</p>
+    </div>
+
+    <div class="issues">
+
+    <article class="issue" id="tamarran">
+      <div class="issue-head">
+        <p class="eyebrow">Tamarran · Bahrain</p>
+        <h2>Logins that fail, and a new app members call worse</h2>
+        <div class="chips"><span class="chip">Tamarran app</span><span class="chip">Gym apps published by Tamarran</span></div>
+        <p class="cost">Tamarran Sports Online Services W.L.L. runs a sports booking marketplace and publishes branded apps for gyms and studios, mostly in Saudi Arabia and Bahrain. <b>Owner:</b> members who can't log in can't book, and they blame the gym. <b>Front desk:</b> takes the bookings the app failed to make.</p>
+      </div>
+      <div class="pair">
+        <div class="quotes">
+          <p class="label">What users say</p>
+          <blockquote><p>"The password is correct but it always says there's an error."</p><cite><a href="https://apps.apple.com/sa/app/id6443764479?see-all=reviews">App Store review of PT PureGym KSA</a>, published by Tamarran, 27 Sep 2026, translated from Arabic</cite></blockquote>
+          <blockquote><p>"very slow and bad application, can't reserve the class until many times , always an error"</p><cite><a href="https://play.google.com/store/apps/details?id=com.tamarran.puregym">Google Play review of PT PureGym KSA</a>, 18 Nov 2025</cite></blockquote>
+          <blockquote><p>"The first app was excellent, and now it's like begging."</p><cite><a href="https://play.google.com/store/apps/details?id=com.tamarran.puregym">Google Play review of PT PureGym KSA</a>, 10 Jul 2026, translated from Arabic</cite></blockquote>
+          <blockquote><p>"The app is stuck. I deleted it and downloaded it again, same thing."</p><cite><a href="https://play.google.com/store/apps/details?id=com.tamarran.app">Google Play review of the Tamarran app</a>, 4 Apr 2026, translated from Arabic</cite></blockquote>
+          <p class="fact">If a gym cancels its software plan, Tamarran's refund policy says "All eligible refunds are subject to a 50% administrative fee", and refunds can take up to 30 business days (<a href="https://tamarran.co/en/refund-policy/">Tamarran refund policy</a>, last updated 04.11.2025). All five plans on its <a href="https://tamarran.co/en/pricing/">pricing page</a> say "Get a Quote", and every plan includes a listing on the Tamarran app.</p>
+        </div>
+        <div class="answer">
+          <p class="label">How Gym Thing handles it</p>
+          <h3>Members get in without the app, and you pay only once you're sure</h3>
+          <ul>
+            <li>Nobody needs the app to get in. A pass in Apple or Google Wallet, a QR code, a phone tap or an iPad at reception opens the door.</li>
+            <li>Run Gym Thing free for up to 3 months before paying anything.</li>
+            <li>One price with every module included. No tiers to choose between.</li>
+            <li>When a member is stuck, your team reaches a person on WhatsApp the same day.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="issue" id="gymnago">
+      <div class="issue-head">
+        <p class="eyebrow">Gymnago · Bahrain</p>
+        <h2>Apps that freeze, and a door that wants your face</h2>
+        <div class="chips"><span class="chip">Gym apps published by Pixel Mind IT Solutions</span></div>
+        <p class="cost">Gymnago is made by Pixel Mind IT Solutions W.L.L. of Bahrain, which publishes a branded app for each gym it serves, mostly in Saudi Arabia and Bahrain. <b>Owner:</b> members who can't sign up never become members. <b>Front desk:</b> fields complaints about the app and the door.</p>
+      </div>
+      <div class="pair">
+        <div class="quotes">
+          <p class="label">What users say</p>
+          <blockquote><p>"I can't log in, the app freezes every time, very bad."</p><cite><a href="https://play.google.com/store/apps/details?id=com.ironHouse.gym">Google Play review of Iron House Gym KSA</a>, 19 Aug 2026, translated from Arabic</cite></blockquote>
+          <blockquote><p>"The application isn't working and i cant sign up"</p><cite><a href="https://apps.apple.com/sa/app/id6744639286">App Store review of Fitness Maker</a>, 20 Nov 2025</cite></blockquote>
+          <blockquote><p>"There's no option to log in to my account with my phone number."</p><cite><a href="https://play.google.com/store/apps/details?id=com.fleurFit.gym">Google Play review of Fleur Fit Gym</a>, 3 Sep 2026, translated from Arabic</cite></blockquote>
+          <blockquote><p>"Is not activating the bar Code entry feature, instead it uses Face Id … Which has personal data risk. Other Gyms uses QR code in the App."</p><cite><a href="https://apps.apple.com/sa/app/id6741509582">App Store review of Gym 650</a>, 3 Aug 2025</cite></blockquote>
+          <p class="fact">Gymnago's <a href="https://gymnago.com/features/integrations">integrations page</a> lists 18 payment options, including Knet, OmanNet and Apple Pay, but not BenefitPay. Its <a href="https://gymnago.com/termsAndCondition">terms</a> say subscriptions renew automatically and "any paid amount is non-refundable once the subscription period has begun."</p>
+        </div>
+        <div class="answer">
+          <p class="label">How Gym Thing handles it</p>
+          <h3>Any door you like, and BenefitPay built in</h3>
+          <ul>
+            <li>Choose how members get in: QR code, a wallet pass, a phone tap, Gantner turnstiles or an iPad at reception.</li>
+            <li>Members pay with BenefitPay, Apple Pay, Google Pay, cards, cash or a payment link.</li>
+            <li>Every refusal at the door shows the reason, so staff can sort it out on the spot.</li>
+            <li>Try it free for up to 3 months before you pay.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <article class="issue" id="flyby">
+      <div class="issue-head">
+        <p class="eyebrow">FLYBY · Turkey</p>
+        <h2>QR codes that fail at the door, and updates that break the app</h2>
+        <div class="chips"><span class="chip">Gym apps published by Senkron Tech</span></div>
+        <p class="cost">FLYBY is club software from Senkron Tech in Istanbul, which says it runs in "600+ locations in 25+ countries", including all six Gulf states (<a href="https://www.flybyglobal.com/wp-content/uploads/2026/03/flyby-studio-mart-2026-en.pdf">FLYBY brochure</a>, March 2026). <b>Owner:</b> a queue at the door every time the QR code fails. <b>Front desk:</b> lets members in by hand.</p>
+      </div>
+      <div class="pair">
+        <div class="quotes">
+          <p class="label">What users say</p>
+          <blockquote><p>"It gives the error 'This device is not registered for QR'. It hasn't generated a QR code for a month."</p><cite><a href="https://play.google.com/store/apps/details?id=net.senkron.lapis.clubsporium">Google Play review of Club Sporium</a>, 18 Jun 2026, translated from Turkish</cite></blockquote>
+          <blockquote><p>"Every time a new update is released I have to go through hell to get the app to work properly. I've been locked out of my account for a week"</p><cite><a href="https://apps.apple.com/tr/app/id1516830165?see-all=reviews">App Store review of Mi Estilo</a>, 3 Nov 2024</cite></blockquote>
+          <blockquote><p>"The white-screen bug from the last update still isn't fixed. It's been 2 months."</p><cite><a href="https://apps.apple.com/tr/app/id1602335273?see-all=reviews">App Store review of Gym Center</a>, 12 Dec 2023, translated from Turkish</cite></blockquote>
+          <blockquote><p>"Data from the old app wasn't carried over to the new one. My old measurements are lost."</p><cite><a href="https://apps.apple.com/tr/app/id1477595376?see-all=reviews">App Store review of Acıbadem Sports</a>, 19 Jan 2024, translated from Turkish</cite></blockquote>
+          <blockquote><p>"Right now it doesn't work on phones running Android 13."</p><cite><a href="https://play.google.com/store/apps/details?id=net.senkron.lapis.ihu">Google Play review of IHU Sports</a>, 29 Aug 2026, translated from Turkish</cite></blockquote>
+          <p class="fact">We found no reply from the developer on any of the reviews we read.</p>
+        </div>
+        <div class="answer">
+          <p class="label">How Gym Thing handles it</p>
+          <h3>More than one way through the door, and a person who answers</h3>
+          <ul>
+            <li>If a phone won't cooperate, members can use a wallet pass, a QR code, a phone tap or the iPad at reception.</li>
+            <li>Every refusal at the door shows the reason, so staff know what to fix.</li>
+            <li>Your members' plans, visits and history stay in your account, and you can download them as spreadsheets.</li>
+            <li>Support on WhatsApp, phone and email, 7 days a week, with same-day replies.</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    </div>
+  </section>
+
+  <div class="close">
+    <p class="eyebrow">See it on your own gym</p>
+    <h2>Run Gym Thing free for up to 3 months</h2>
+    <p class="lede">We set it up, move your members over and train your team. Most gyms are live within a week.</p>
+    <a class="cta" href="https://thing.bh/free-trial/">Start with a free trial</a>
+  </div>
+
+  <div class="notes">
+    <h2>About the sources</h2>
+    <p>English quotes are copied exactly as written, including the reviewers' spelling. Quotes from Arabic and Turkish reviews are our own translations. We left out reviewers' names. Dates are when the review was posted. Trustpilot moves reviews between pages as new ones arrive, so a quote may now sit on a different page from the one linked.</p>
+    <p>We left out claims we couldn't read for ourselves, including review-site summaries, competitor blogs, and figures quoted second-hand.</p>
+    <p>Gym Thing is made by Thing W.L.L., Seef, Bahrain.</p>
+  </div>
+</div>

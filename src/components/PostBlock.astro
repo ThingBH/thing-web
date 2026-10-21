@@ -1,0 +1,56 @@
+---
+// One block of a blog post (see src/data/posts.ts). Screens stay English, as on module pages.
+import { content, postText } from '../data/content'
+import type { FlowKey } from '../data/flows'
+import { href, langOf } from '../data/i18n'
+import type { Block } from '../data/posts'
+import Flow from './Flow.astro'
+import NewTab from './NewTab.astro'
+import Rich from './Rich.astro'
+import Screen, { type ScreenName } from './Screen.astro'
+
+type Props = { block: Block }
+const b = Astro.props.block
+const lang = langOf(Astro.currentLocale)
+const w = postText[lang]
+// Arabic comma, and each part isolated so Latin names and dates keep their order in RTL.
+const sep = lang === 'ar' ? '، ' : ', '
+const sample = lang === 'ar' ? 'شاشة تجريبية من Gym Thing' : 'Sample Gym Thing screen'
+const m = b.type === 'answer' && b.module ? content[lang].modules.find((x) => x.slug === b.module) : undefined
+// `show` is `screen:<Name>` or `flow:<key>`, joined with `+`, as on module pages.
+const pieces = b.type === 'screen' ? b.show.split('+').map((s) => s.split(':')) : []
+---
+{b.type === 'heading' && <h2 class="d3" id={b.id}><Rich text={b.text} /></h2>}
+{b.type === 'text' && b.paras.map((para) => <p class="post-p"><Rich text={para} /></p>)}
+{b.type === 'list' && <ul class="post-list">{b.items.map((item) => <li><Rich text={item} /></li>)}</ul>}
+{b.type === 'note' && <p class="post-note"><Rich text={b.text} /></p>}
+{b.type === 'quotes' && (
+  <div class="post-quotes">
+    <p class="post-label">{w.words}</p>
+    {b.items.map((q) => (
+      <blockquote cite={q.url}>
+        <p>{q.quote}</p>
+        <cite><bdi><a href={q.url} rel="noopener" target="_blank">{q.source}<NewTab /></a></bdi>{sep}<bdi>{q.date}</bdi>{q.note && <>{sep}<bdi>{q.note}</bdi></>}</cite>
+      </blockquote>
+    ))}
+  </div>
+)}
+{b.type === 'answer' && (
+  <aside class="post-answer">
+    <p class="post-label">{w.answer}</p>
+    <h3><Rich text={b.heading} /></h3>
+    <ul>{b.points.map((pt) => <li><Rich text={pt} /></li>)}</ul>
+    {m && <a class="textlink" href={href(lang, `/modules/${m.slug}/`)}>{w.more} {m.name} <svg class="i go"><use href="#i-arrow" /></svg></a>}
+  </aside>
+)}
+{b.type === 'screen' && (
+  <figure class="post-screen" aria-label={b.caption ? undefined : sample}>
+    {pieces.map(([kind, name]) => (
+      <div>
+        {kind === 'screen' && <Screen name={name as ScreenName} />}
+        {kind === 'flow' && <Flow flow={name as FlowKey} />}
+      </div>
+    ))}
+    {b.caption && <figcaption class="small">{b.caption}</figcaption>}
+  </figure>
+)}

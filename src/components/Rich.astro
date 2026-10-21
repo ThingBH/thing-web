@@ -1,0 +1,19 @@
+---
+// Text with Markdown links ([label](url)) rendered as links. External links open in a new tab.
+// Two-word names never break across lines (in Arabic a break would split the Latin name across the RTL line ends).
+import { langOf } from '../data/i18n'
+import { linkParts } from '../data/posts'
+import NewTab from './NewTab.astro'
+
+type Props = { text: string }
+const ar = langOf(Astro.currentLocale) === 'ar'
+const keep = (s: string) =>
+  s.replace(/Gym Thing|Perfect Gym|Zen Planner|Thing W\.L\.L\./g, (m) => m.replace(' ', '\u00a0'))
+---
+{linkParts(keep(Astro.props.text)).map((p) => {
+  if (!p.url) return p.text
+  const ext = /^https?:/.test(p.url)
+  // Latin-only link text (a phone number, an email) keeps its own direction inside Arabic.
+  const dir = ar && !/[؀-ۿ]/.test(p.text) ? 'ltr' : undefined
+  return <a href={p.url} rel={ext ? 'noopener' : undefined} target={ext ? '_blank' : undefined} dir={dir}>{p.text}{ext && <NewTab />}</a>
+})}

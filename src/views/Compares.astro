@@ -67,7 +67,7 @@ const graph = [
       <div class="modpick cmphub">
         {content[lang].comparisons.map((c) => (
           <a class="modcard rise" href={href(lang, `/compare/${c.slug}/`)}>
-            <h3>{t.vs} {c.name}</h3>
+            <h3 class="vt" style={`--vt:${lang}-cmp-${c.slug}`}>{t.vs} {c.name}</h3>
             <p>{c.lede}</p>
             <span class="textlink">{t.read} <svg class="i go"><use href="#i-arrow" /></svg></span>
           </a>

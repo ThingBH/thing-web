@@ -1,6 +1,6 @@
 import { type Module, modules } from './modules'
 
-type Text = Omit<Module, 'slug' | 'group' | 'show'> & { description: string }
+type Text = Omit<Module, 'slug' | 'icon' | 'group' | 'show'> & { description: string }
 
 // Arabic copy for each module, keyed by slug. Light Bahraini dialect; `description` is formal Arabic for search.
 const ar: Record<string, Text> = {

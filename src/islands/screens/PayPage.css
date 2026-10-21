@@ -94,11 +94,7 @@
   padding: 6px 8px 0;
   overflow-wrap: anywhere;
 }
-.mx-paypage-bubble p[dir="rtl"] {
-  text-align: right;
-  font-size: 14.5px;
-}
-.mx-paypage-bubble bdi {
+.mx-paypage-bubble strong {
   white-space: nowrap;
 }
 .mx-paypage-bubble .url {

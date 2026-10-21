@@ -1,6 +1,7 @@
 import sitemap from '@astrojs/sitemap'
 import solid from '@astrojs/solid-js'
 import { defineConfig, fontProviders } from 'astro/config'
+import { posts } from './src/data/posts'
 
 const arabic: [string, ...string[]] = [
   'U+0600-06FF',
@@ -70,6 +71,12 @@ export default defineConfig({
     solid(),
     sitemap({
       filter: (page) => !page.endsWith('/thanks/'),
+      // Blog posts carry their last change; the blog index carries its newest post's.
+      serialize: (item) => {
+        const slug = /\/blog\/(?:([^/]+)\/)?$/.exec(new URL(item.url).pathname)
+        const p = slug && (slug[1] ? posts.find((x) => x.slug === slug[1]) : posts[0])
+        return p ? { ...item, lastmod: p.updated ?? p.date } : item
+      },
       i18n: { defaultLocale: 'en', locales: { en: 'en', ar: 'ar' } },
       xslURL: '/sitemap.xsl',
     }),

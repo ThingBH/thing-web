@@ -1,0 +1,7 @@
+---
+import { posts } from '../../data/posts'
+import Post from '../../views/Post.astro'
+
+export const getStaticPaths = () => posts.map((p) => ({ params: { slug: p.slug } }))
+---
+<Post slug={Astro.params.slug} />

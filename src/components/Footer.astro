@@ -1,38 +1,41 @@
 ---
 import { content } from '../data/content'
 import { href, langOf } from '../data/i18n'
+import Rich from './Rich.astro'
 
 const lang = langOf(Astro.currentLocale)
 const t = {
   en: {
-    about: 'Gym Thing is gym management software by Thing W.L.L., Seef, Kingdom of Bahrain. CR No. 196454-1.',
+    about: 'Gym Thing is gym management software by Thing W.L.L., Seef, Kingdom of Bahrain. CR\u00a0No.',
     modules: 'Modules',
     all: 'All modules',
     company: 'Company',
     aboutLink: 'About',
     support: 'Support',
     compare: 'Compare',
+    blog: 'Blog',
     start: 'Start',
     trial: 'Start with a free trial',
     privacy: 'Privacy',
     terms: 'Terms',
     rights: 'All rights reserved.',
-    cr: 'Commercial Registration No. 196454-1',
+    tagline: 'Made by gym people, for gyms.',
   },
   ar: {
-    about: 'Gym Thing برنامج لإدارة النوادي الرياضية من Thing W.L.L.، السيف، مملكة البحرين. سجل تجاري رقم 196454-1.',
+    about: 'Gym Thing برنامج لإدارة النوادي الرياضية من Thing W.L.L.، السيف، مملكة البحرين. سجل تجاري رقم',
     modules: 'الأقسام',
     all: 'كل الأقسام',
     company: 'الشركة',
     aboutLink: 'من نحن',
     support: 'الدعم',
     compare: 'المقارنة',
+    blog: 'المدونة',
     start: 'ابدأ',
     trial: 'ابدأ بتجربة مجانية',
     privacy: 'الخصوصية',
     terms: 'الشروط',
     rights: 'جميع الحقوق محفوظة.',
-    cr: 'سجل تجاري رقم 196454-1',
+    tagline: 'من ناس النوادي، للنوادي.',
   },
 }[lang]
 ---
@@ -41,7 +44,7 @@ const t = {
     <div class="foot-grid">
       <div>
         <svg class="logo" viewBox="0 0 720 410" role="img" aria-label="Thing"><use href="#thing-logo" /></svg>
-        <p class="small" style="max-width:34ch">{t.about}</p>
+        <p class="small" style="max-width:34ch"><Rich text={t.about} />&nbsp;<bdi dir="ltr" style="white-space:nowrap">196454-1</bdi>.</p>
       </div>
       <div>
         <h2>{t.modules}</h2>
@@ -49,7 +52,7 @@ const t = {
       </div>
       <div>
         <h2>{t.company}</h2>
-        <ul><li><a href={href(lang, '/about/')}>{t.aboutLink}</a></li><li><a href={href(lang, '/about/#support')}>{t.support}</a></li><li><a href={href(lang, '/compare/')}>{t.compare}</a></li></ul>
+        <ul><li><a href={href(lang, '/about/')}>{t.aboutLink}</a></li><li><a href={href(lang, '/about/#support')}>{t.support}</a></li><li><a href={href(lang, '/compare/')}>{t.compare}</a></li><li><a href={href(lang, '/blog/')}>{t.blog}</a></li></ul>
       </div>
       <div>
         <h2>{t.start}</h2>
@@ -57,6 +60,6 @@ const t = {
         <ul><li><a href={href(lang, '/free-trial/')}>{t.trial}</a></li><li><a href="/privacy/" hreflang="en">{t.privacy}</a></li><li><a href="/terms/" hreflang="en">{t.terms}</a></li></ul>
       </div>
     </div>
-    <div class="foot-base"><span>© {new Date().getFullYear()} Thing W.L.L. {t.rights}</span><span>{t.cr}</span></div>
+    <div class="foot-base"><span>© {new Date().getFullYear()} Thing W.L.L. {t.rights}</span><span>{t.tagline}</span></div>
   </div>
 </footer>
