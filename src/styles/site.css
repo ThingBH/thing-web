@@ -490,12 +490,80 @@ table.cmp {
 .cmp thead th.us {
   color: var(--ink);
 }
-.cmp td:first-child {
+.cmp tbody th {
   font-weight: 600;
 }
 .cmp td.us,
 .cmp th.us {
   background: #f6f7f9;
+}
+/* Phones: no sideways scroll. Each row is a centred topic pill, like a WhatsApp date label, over two labelled answers. */
+@media (width < 900px) {
+  .tbl {
+    overflow: clip;
+  }
+  table.cmp {
+    display: block;
+    min-width: 0;
+    font-size: 16px;
+    line-height: 1.45;
+  }
+  .cmp :is(thead, tbody, tr, th, td) {
+    display: block;
+  }
+  .cmp :is(th, td) {
+    border-top: 0;
+    padding: 0;
+  }
+  /* Each answer carries its own label, so the header row is kept for screen readers only. */
+  .cmp thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+  .cmp tbody tr {
+    display: grid;
+    gap: 8px;
+    padding: 18px 8px;
+  }
+  .cmp tbody th {
+    justify-self: center;
+    max-width: 85%;
+    padding: 5px 12px;
+    /* Half a one-line pill, so a topic that wraps stays a rounded box rather than a lozenge. */
+    border-radius: 15px;
+    background: var(--line);
+    color: var(--ink-2);
+    font-size: 13.5px;
+    text-align: center;
+    text-wrap: balance;
+  }
+  .cmp td {
+    padding: 10px 12px;
+    border-radius: 12px;
+    text-wrap: pretty;
+  }
+  .cmp td.us {
+    background: var(--band);
+  }
+  .cmp td::before {
+    content: attr(data-label) / "";
+    display: block;
+    margin-bottom: 2px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--soft);
+  }
+  .cmp td.us::before {
+    color: var(--ink);
+  }
+  /* Arabic answers need room above and below for dots and descenders. */
+  :lang(ar) .cmp td {
+    line-height: 1.7;
+  }
 }
 .yes {
   color: var(--ink);

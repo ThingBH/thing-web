@@ -15,7 +15,8 @@ const c = comparisons.find((x) => x.slug === Astro.props.slug)
 if (!c) throw new Error(`Unknown comparison "${Astro.props.slug}"`)
 const others = comparisons.filter((o) => o.slug !== c.slug)
 const rows = c.rows.filter((r) => r[0] !== 'Topic')
-const meh = (s: string) => /^(not listed|no|none|غير مذكور|لا)/i.test(s)
+// A "them" cell that names a gap is greyed. "No … fee" is good news for them, so it stays in ink.
+const meh = (s: string) => /^(not |none$|no |غير مذكور|لا )/i.test(s) && !/fee|رسوم/i.test(s)
 // Latest "checked" date as an ISO day; checked dates read like "20 Oct 2026".
 const modified = c.sources
   .map((s) => new Date(`${s[2]} UTC`))
@@ -111,11 +112,12 @@ const graph = [
       <div class="inner">
         <h2 class="d2" id={`ct-${c.slug}`}>{t.side}</h2>
         <div class="tbl" style="margin-top:32px">
-          <table class="cmp">
-            <thead><tr><th>{t.need}</th><th class="us">Gym Thing</th><th>{c.name}</th></tr></thead>
-            <tbody>
+          <!-- Explicit roles keep table semantics on phones, where rows are restyled as blocks. -->
+          <table class="cmp" role="table">
+            <thead role="rowgroup"><tr role="row"><th role="columnheader">{t.need}</th><th role="columnheader" class="us">Gym Thing</th><th role="columnheader">{c.name}</th></tr></thead>
+            <tbody role="rowgroup">
               {rows.map(([topic, us, them]) => (
-                <tr><td>{topic}</td><td class="us">{us}</td><td>{meh(them) ? <span class="meh">{them}</span> : them}</td></tr>
+                <tr role="row"><th role="rowheader" scope="row">{topic}</th><td role="cell" class="us" data-label="Gym Thing">{us}</td><td role="cell" data-label={c.name}>{meh(them) ? <span class="meh">{them}</span> : them}</td></tr>
               ))}
             </tbody>
           </table>
