@@ -732,6 +732,27 @@ table.cmp {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+.foot ul.social {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+}
+.foot .social a {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--r);
+  background: var(--band);
+  color: var(--ink);
+}
+.foot .social a:hover {
+  background: var(--line);
+}
+.foot .social svg.i {
+  width: 20px;
+  height: 20px;
+}
 .foot-base {
   margin-top: 64px;
   display: flex;

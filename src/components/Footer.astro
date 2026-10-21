@@ -1,6 +1,7 @@
 ---
 import { content } from '../data/content'
 import { href, langOf } from '../data/i18n'
+import { contact } from '../data/site'
 import Rich from './Rich.astro'
 
 const lang = langOf(Astro.currentLocale)
@@ -20,6 +21,8 @@ const t = {
     terms: 'Terms',
     rights: 'All rights reserved.',
     tagline: 'Made by gym people, for gyms.',
+    instagram: 'Thing on Instagram (opens in a new tab)',
+    linkedin: 'Thing on LinkedIn (opens in a new tab)',
   },
   ar: {
     about: 'Gym Thing برنامج لإدارة النوادي الرياضية من Thing W.L.L.، السيف، مملكة البحرين. سجل تجاري رقم',
@@ -36,6 +39,8 @@ const t = {
     terms: 'الشروط',
     rights: 'جميع الحقوق محفوظة.',
     tagline: 'من ناس النوادي، للنوادي.',
+    instagram: 'Thing على إنستغرام (يفتح في تبويب جديد)',
+    linkedin: 'Thing على لينكدإن (يفتح في تبويب جديد)',
   },
 }[lang]
 ---
@@ -45,6 +50,10 @@ const t = {
       <div>
         <svg class="logo" viewBox="0 0 720 410" role="img" aria-label="Thing"><use href="#thing-logo" /></svg>
         <p class="small" style="max-width:34ch"><Rich text={t.about} />&nbsp;<bdi dir="ltr" style="white-space:nowrap">196454-1</bdi>.</p>
+        <ul class="social">
+          <li><a href={contact.instagram} target="_blank" rel="noopener" aria-label={t.instagram}><svg class="i" aria-hidden="true"><use href="#i-instagram" /></svg></a></li>
+          <li><a href={contact.linkedin} target="_blank" rel="noopener" aria-label={t.linkedin}><svg class="i" aria-hidden="true"><use href="#i-linkedin" /></svg></a></li>
+        </ul>
       </div>
       <div>
         <h2>{t.modules}</h2>

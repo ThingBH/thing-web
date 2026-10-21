@@ -10,12 +10,12 @@ const product: Record<Lang, { description: string; offer: string }> = {
   en: {
     description:
       'Gym management software built in Bahrain: memberships, access control, payments, VAT invoices, payroll, classes and a member app in Arabic and English.',
-    offer: 'One monthly price by gym size, everything included. Free trial up to 3 months.',
+    offer: 'One yearly price by gym size, everything included. Free trial up to 3 months.',
   },
   ar: {
     description:
       'برنامج لإدارة النوادي الرياضية مطوّر في البحرين: الاشتراكات والتحكم بالدخول والمدفوعات والفواتير الضريبية والرواتب والحصص وتطبيق للأعضاء بالعربية والإنجليزية.',
-    offer: 'سعر شهري واحد حسب حجم النادي، يشمل كل شيء. تجربة مجانية لمدة تصل إلى 3 أشهر.',
+    offer: 'سعر سنوي واحد حسب حجم النادي، يشمل كل شيء. تجربة مجانية لمدة تصل إلى 3 أشهر.',
   },
 }
 
@@ -28,6 +28,7 @@ export const baseGraph = (lang: Lang): Node[] => [
     url: `${SITE_URL}/`,
     logo: `${SITE_URL}/logo.png`,
     email: contact.sales,
+    sameAs: [contact.instagram, contact.linkedin],
     identifier: { '@type': 'PropertyValue', name: 'Commercial Registration No.', value: '196454-1' },
     address: { '@type': 'PostalAddress', addressLocality: 'Seef', addressCountry: 'BH' },
     contactPoint: [

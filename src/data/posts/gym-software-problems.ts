@@ -22,7 +22,7 @@ export const post: Post = {
       {
         type: 'list',
         items: [
-          '[Prices that climb after the first year](#price): one monthly price by gym size, every module included.',
+          '[Prices that climb after the first year](#price): one yearly price by gym size, every module included.',
           '[Contracts that renew themselves](#contracts): up to 3 months free, with your real members, before you pay.',
           '[Support that disappears after you sign](#support): WhatsApp, phone and email, 7 days a week, same-day replies.',
           "[Members charged wrongly, or not at all](#billing): a plan starts when it's paid, and double payments are refunded.",
@@ -69,9 +69,9 @@ export const post: Post = {
       },
       {
         type: 'answer',
-        heading: 'One monthly price, with everything in it',
+        heading: 'One yearly price, with everything in it',
         points: [
-          'You pay one monthly price set by the size of your gym. Nothing is sold as an add-on.',
+          'You pay one yearly price set by the size of your gym. Nothing is sold as an add-on.',
           'Memberships, the door, the till, classes and PT are all in it.',
           'So are payroll, payments, automations and every branch, along with setup, training and moving your members over.',
           "There's no setup fee. We tell you your price while we set up your free trial, so you can compare it with what you pay today.",
@@ -821,7 +821,7 @@ export const post: Post = {
       {
         type: 'list',
         items: [
-          '[أسعار تزيد بعد أول سنة](#price): سعر شهري واحد حسب حجم النادي، وكل الأقسام داخلة فيه.',
+          '[أسعار تزيد بعد أول سنة](#price): سعر سنوي واحد حسب حجم النادي، وكل الأقسام داخلة فيه.',
           '[عقود تتجدد بروحها](#contracts): لين 3 شهور مجاناً، على أعضاءك الحقيقيين، قبل لا تدفع.',
           '[دعم يختفي بعد ما توقّع](#support): واتساب وتلفون وإيميل، 7 أيام في الأسبوع، والرد في نفس اليوم.',
           '[مبالغ تنسحب من الأعضاء غلط، أو ما تنسحب أبداً](#billing): الباقة تبدأ لما تندفع، والدفع المكرر يرجع.',
@@ -871,9 +871,9 @@ export const post: Post = {
       },
       {
         type: 'answer',
-        heading: 'سعر شهري واحد، وكل شي داخل فيه',
+        heading: 'سعر سنوي واحد، وكل شي داخل فيه',
         points: [
-          'تدفع سعر شهري واحد حسب حجم ناديك. وما في شي ينباع كإضافة.',
+          'تدفع سعر سنوي واحد حسب حجم ناديك. وما في شي ينباع كإضافة.',
           'الاشتراكات، والباب، ونقطة البيع، والحصص والتدريب الشخصي، كلها داخلة فيه.',
           'وكذلك الرواتب والمدفوعات والأتمتة وكل الفروع، ومعاهم التجهيز والتدريب ونقل أعضاءك.',
           'ما في رسوم تجهيز. نعطيك سعرك وإحنا نجهز تجربتك المجانية، عشان تقارنه باللي تدفعه اليوم.',

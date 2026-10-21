@@ -411,7 +411,7 @@ export const comparisons: Comparison[] = [
       ],
       [
         'What happens if we cancel Tamarran?',
-        'Its refund policy says every eligible refund carries a 50% administrative fee and can take up to 30 business days. Its own example: a $1,200 annual plan ended after 6 months refunds $300. Gym Thing is one monthly price, and you can run it free for up to 3 months before paying.',
+        'Its refund policy says every eligible refund carries a 50% administrative fee and can take up to 30 business days. Its own example: a $1,200 annual plan ended after 6 months refunds $300. Gym Thing is one yearly price, and you can run it free for up to 3 months before paying.',
       ],
     ],
     sources: [
@@ -462,8 +462,8 @@ export const comparisons: Comparison[] = [
       ['Gantner turnstiles', 'Yes, or phone tap, or iPad', 'No access hardware in its integrations'],
       ['Branded app', 'Yours in the stores, or in ours', 'Yes, published under Pixel Mind'],
       ['Team', 'Seef, Bahrain', 'Bahrain, with GCC sales contacts'],
-      ['Pricing', 'One monthly price by gym size', 'Not shown; book a demo'],
-      ['Contract', 'Monthly, every module included', 'Monthly or annual, renews automatically'],
+      ['Pricing', 'One yearly price by gym size', 'Not shown; book a demo'],
+      ['Contract', 'Yearly, every module included', 'Monthly or annual, renews automatically'],
       ['Setup and moving data', 'Included, with staff training', 'Not listed'],
       ['Free trial', 'Up to 3 months', 'Not listed; book a demo'],
     ],
@@ -482,7 +482,7 @@ export const comparisons: Comparison[] = [
       ],
       [
         'A price you see before you sign',
-        'Gymnago shows no prices and its terms say a paid subscription is non-refundable once the period has begun. Gym Thing has one monthly price by gym size with every module included and no setup fee, and you can run it free for up to 3 months first.',
+        'Gymnago shows no prices and its terms say a paid subscription is non-refundable once the period has begun. Gym Thing has one yearly price by gym size with every module included and no setup fee, and you can run it free for up to 3 months first.',
       ],
     ],
     switching:
@@ -498,7 +498,7 @@ export const comparisons: Comparison[] = [
       ],
       [
         'What does Gymnago cost?',
-        'Its site shows no prices and asks you to book a demo. Its terms say subscriptions are billed monthly or annually and renew automatically. Gym Thing has one monthly price by gym size, with every module included and no setup fee.',
+        'Its site shows no prices and asks you to book a demo. Its terms say subscriptions are billed monthly or annually and renew automatically. Gym Thing has one yearly price by gym size, with every module included and no setup fee.',
       ],
       [
         'Can we get a refund if we leave Gymnago mid-term?',
@@ -549,7 +549,7 @@ export const comparisons: Comparison[] = [
       ['Branded app', 'Yours in the stores, or in ours', 'White-label member app'],
       ['Built for', 'Gyms and studios', 'Gyms, spas, hotels, water parks, golf'],
       ['Team', 'Seef, Bahrain', 'Istanbul, Turkey'],
-      ['Pricing', 'One monthly price by gym size', 'Prices not shown'],
+      ['Pricing', 'One yearly price by gym size', 'Prices not shown'],
       ['Setup and moving data', 'Included, with staff training', 'Not listed'],
       ['Free trial', 'Up to 3 months', 'Not listed'],
     ],
@@ -568,7 +568,7 @@ export const comparisons: Comparison[] = [
       ],
       [
         'One price, every module',
-        'FLYBY does not publish prices. Gym Thing has one monthly price by gym size with every module included, no setup fee and no commission on your sales.',
+        'FLYBY does not publish prices. Gym Thing has one yearly price by gym size with every module included, no setup fee and no commission on your sales.',
       ],
     ],
     switching:
@@ -588,7 +588,7 @@ export const comparisons: Comparison[] = [
       ],
       [
         'What does FLYBY cost?',
-        'FLYBY does not publish prices. Gym Thing has one monthly price by gym size with every module included, and we share yours while we set up your free trial.',
+        'FLYBY does not publish prices. Gym Thing has one yearly price by gym size with every module included, and we share yours while we set up your free trial.',
       ],
     ],
     sources: [
@@ -646,7 +646,7 @@ export const comparisons: Comparison[] = [
       ['When your friend is busy', 'A team in Seef, Bahrain', 'Changes wait until they are free'],
       ['Staff training', 'Done by us at setup', 'Up to you and your friend'],
       ['Support at weekends', 'WhatsApp, phone, email, 7 days a week', 'When your friend has time'],
-      ['Cost', 'One monthly price by gym size, no setup fee', 'Low to start; hosting, store fees and time after'],
+      ['Cost', 'One yearly price by gym size, no setup fee', 'Low to start; hosting, store fees and time after'],
     ],
     differences: [
       [
@@ -671,7 +671,7 @@ export const comparisons: Comparison[] = [
     faq: [
       [
         'My friend can build this for free. Why pay?',
-        'The first version is the quick part. Payments, security fixes, backups, VAT invoices, payroll and app updates carry on every month after it. Gym Thing has one monthly price by gym size with every module included and no setup fee, and you can try it free for up to 3 months.',
+        'The first version is the quick part. Payments, security fixes, backups, VAT invoices, payroll and app updates carry on every month after it. Gym Thing has one yearly price by gym size with every module included and no setup fee, and you can try it free for up to 3 months.',
       ],
       [
         'Can my friend put our app in the App Store and Google Play?',

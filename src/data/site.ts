@@ -11,6 +11,8 @@ export const contact = {
   phoneHref: 'tel:+97339936601',
   support: 'support@thing.bh',
   sales: 'hello@thing.bh',
+  instagram: 'https://www.instagram.com/thing.bh/',
+  linkedin: 'https://www.linkedin.com/company/thing-bh/',
 }
 
 /** Web3Forms delivers the free-trial form by email. The access key is public by design: it only lets the form submit. */
@@ -75,7 +77,7 @@ export const homeFaq: Record<Lang, QA[]> = {
     ],
     [
       'How much does it cost?',
-      "One monthly price based on your gym's size, with every module included and no setup fee. We share your price while we set up your free trial.",
+      "One yearly price based on your gym's size, with every module included and no setup fee. We share your price while we set up your free trial.",
     ],
     ['Can I keep my turnstiles?', 'Yes. And if you have no gates, an iPad at reception does the job.'],
     [
@@ -96,7 +98,7 @@ export const homeFaq: Record<Lang, QA[]> = {
     ['كم ياخذ التجهيز؟', 'أغلب النوادي تشتغل خلال أسبوع. إحنا نجهز كل شي، ننقل أعضاءك وندرّب فريقك.'],
     [
       'كم السعر؟',
-      'سعر شهري واحد حسب حجم ناديك، فيه كل الأقسام وبدون رسوم تجهيز. نعطيك سعرك وإحنا نجهز تجربتك المجانية.',
+      'سعر سنوي واحد حسب حجم ناديك، فيه كل الأقسام وبدون رسوم تجهيز. نعطيك سعرك وإحنا نجهز تجربتك المجانية.',
     ],
     ['أقدر أخلي البوابات اللي عندي؟', 'نعم. وإذا ما عندك بوابات، iPad في الاستقبال يكفي.'],
     [

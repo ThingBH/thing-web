@@ -12,7 +12,7 @@ export const GET: APIRoute = () => {
   const txt = [
     '# Gym Thing',
     '',
-    '> Gym management software built in Bahrain by Thing W.L.L. (Seef): memberships, access control, payments, VAT invoices, payroll, classes and a member app in Arabic and English. Every gym gets every module for one monthly price by gym size, with setup, moving members over, training and a free trial of up to 3 months included.',
+    '> Gym management software built in Bahrain by Thing W.L.L. (Seef): memberships, access control, payments, VAT invoices, payroll, classes and a member app in Arabic and English. Every gym gets every module for one yearly price by gym size, with setup, moving members over, training and a free trial of up to 3 months included.',
     '',
     '## Pages',
     '',

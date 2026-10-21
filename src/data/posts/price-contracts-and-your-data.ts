@@ -66,9 +66,9 @@ export const post: Post = {
       },
       {
         type: 'answer',
-        heading: 'One monthly price, with everything in it',
+        heading: 'One yearly price, with everything in it',
         points: [
-          'You pay one monthly price set by the size of your gym. Nothing is sold as an add-on.',
+          'You pay one yearly price set by the size of your gym. Nothing is sold as an add-on.',
           'Memberships, the door, the till, classes and PT, payroll, payments, automations and every branch are all in it.',
           "Setup, training and moving your members over are included too, and there's no setup fee.",
           'We tell you your price while we set up your free trial, so you can compare it with what you pay today.',
@@ -253,7 +253,7 @@ export const post: Post = {
         type: 'answer',
         heading: 'Plain answers before you pay',
         points: [
-          'Price: one monthly price by gym size, every module included, no setup fee. You hear it while we set up your trial.',
+          'Price: one yearly price by gym size, every module included, no setup fee. You hear it while we set up your trial.',
           'Trial: up to 3 months free, on your real members, before you pay anything.',
           "Switching: we move your members, plans and history over, with a preview first, and your old system keeps running until you're sure.",
           'Your data: members, memberships, accounts, analytics and payroll download as spreadsheets whenever you want them.',
@@ -337,9 +337,9 @@ export const post: Post = {
       },
       {
         type: 'answer',
-        heading: 'سعر شهري واحد، وكل شي داخل فيه',
+        heading: 'سعر سنوي واحد، وكل شي داخل فيه',
         points: [
-          'تدفع سعر شهري واحد حسب حجم ناديك. وما في شي ينباع كإضافة.',
+          'تدفع سعر سنوي واحد حسب حجم ناديك. وما في شي ينباع كإضافة.',
           'الاشتراكات، والباب، ونقطة البيع، والحصص والتدريب الشخصي، والرواتب والمدفوعات والأتمتة وكل الفروع، كلها داخلة فيه.',
           'والتجهيز والتدريب ونقل أعضاءك بعد داخلين، وما في رسوم تجهيز.',
           'نعطيك سعرك وإحنا نجهز تجربتك المجانية، عشان تقارنه باللي تدفعه اليوم.',
@@ -531,7 +531,7 @@ export const post: Post = {
         type: 'answer',
         heading: 'أجوبة واضحة قبل لا تدفع',
         points: [
-          'السعر: سعر شهري واحد حسب حجم النادي، وكل الأقسام داخلة فيه، وما في رسوم تجهيز. تعرفه وإحنا نجهز تجربتك.',
+          'السعر: سعر سنوي واحد حسب حجم النادي، وكل الأقسام داخلة فيه، وما في رسوم تجهيز. تعرفه وإحنا نجهز تجربتك.',
           'التجربة: لين 3 شهور مجاناً، على أعضاءك الحقيقيين، قبل لا تدفع أي شي.',
           'الانتقال: ننقل أعضاءك وباقاتك وتاريخهم، مع معاينة قبلها، ونظامك القديم يظل شغّال لين ما تتأكد.',
           'بياناتك: الأعضاء والاشتراكات والحسابات والتحليلات والرواتب تنزل كملفات إكسل متى ما بغيت.',

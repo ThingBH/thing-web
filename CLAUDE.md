@@ -29,7 +29,7 @@ Nameable clients: Train Fitness, RSX Fitness, Pulse Fitness, Core District Gym, 
 
 ## Site rules the owner set
 
-- One call to action everywhere: **Start with a free trial** (`/free-trial/`). There is no quote flow and no pricing page; price is "one monthly price by gym size, everything included".
+- One call to action everywhere: **Start with a free trial** (`/free-trial/`). There is no quote flow and no pricing page; price is "one yearly price by gym size, everything included".
 - English and Arabic are separate sites (`/`, `/ar/`), and page copy never mixes the two. "Gym Thing" stays in Latin script in Arabic. Arabic copy is light Bahraini dialect; page titles and meta descriptions are formal Arabic. Legal pages (privacy, terms, data deletion) are English only. Product screens stay in English on both sites, as the product is.
 - Look ("Daylight"): light canvas, black ink, large Geist type, black and white for marketing. Product colours appear only inside product screens. Real THING logo from the sprite; the logo mark never gets a border-radius.
 - Product visuals are rebuilt in HTML from the real UI with sample tenant **ABC Gym**, never screenshots or device frames.
