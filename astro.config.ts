@@ -22,6 +22,8 @@ export default defineConfig({
     routing: { prefixDefaultLocale: false },
   },
   redirects: { '/gym': '/', '/pricing': '/', '/get-a-quote': '/free-trial/' },
+  // Every internal link prefetches on hover or focus; links override with data-astro-prefetch (see CLAUDE.md).
+  prefetch: { prefetchAll: true, defaultStrategy: 'hover' },
   fonts: [
     {
       // Self-hosted Geist (SIL OFL), one variable file for every weight.

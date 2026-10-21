@@ -40,7 +40,7 @@ const current = (path: string) => here.startsWith(path)
     </nav>
     <div class="end">
       <a class="lang" href={switchTo} hreflang={t.otherLang} lang={t.otherLang}>{t.other}</a>
-      <a class="btn sm pri" href={href(lang, '/free-trial/')}>{t.cta}</a>
+      <a class="btn sm pri" href={href(lang, '/free-trial/')} data-astro-prefetch="viewport">{t.cta}</a>
       <button class="menu-btn" type="button" aria-label={t.menu} aria-expanded="false" aria-controls="site-nav" id="menu"><svg class="i"><use href="#i-menu" /></svg></button>
     </div>
   </div>
