@@ -77,6 +77,7 @@ const graph = [
               <div class="field"><label for="t-name">{t.name}</label><input id="t-name" name="name" type="text" required autocomplete="name" /><span class="err" aria-live="polite"></span></div>
               <div class="field"><label for="t-wa">{t.wa}</label><input id="t-wa" name="whatsapp" type="tel" dir="ltr" required inputmode="tel" autocomplete="tel" placeholder="+973 3xxx xxxx" /><span class="err" aria-live="polite"></span></div>
             </div>
+            <div class="field" data-captcha-field><div class="h-captcha" data-captcha="true"></div><span class="err" aria-live="polite"></span></div>
             <button class="btn pri" type="submit">{t.submit} <svg class="i go"><use href="#i-arrow" /></svg></button>
           </form>
         </div>
@@ -91,4 +92,5 @@ const graph = [
   <script>
     import '../scripts/forms'
   </script>
+  <script is:inline src="https://web3forms.com/client/script.js" async defer></script>
 </Base>

@@ -7,6 +7,7 @@ const t = {
   en: {
     empty: 'Please fill this in.',
     phone: 'Add the full number, including the country code.',
+    captcha: "Tick the box to show you're not a robot.",
     thanks: (name: string, gym: string) => `Thanks, ${name}. We're setting up ${gym}.`,
     next: "We'll message you on WhatsApp to book your walkthrough.",
     home: 'Back to the homepage',
@@ -14,6 +15,7 @@ const t = {
   ar: {
     empty: 'لو سمحت عبّ هذي الخانة.',
     phone: 'اكتب الرقم كامل، مع رمز الدولة.',
+    captcha: 'أشّر على المربع عشان نتأكد إنك مو روبوت.',
     thanks: (name: string, gym: string) => `شكراً ${name}. قاعدين نجهز ${gym}.`,
     next: 'بنراسلك على واتساب عشان نحجز موعد الشرح.',
     home: 'رجوع للصفحة الرئيسية',
@@ -55,7 +57,12 @@ function validate(form: HTMLFormElement) {
     first ??= el
   }
   first?.focus()
-  return !first
+  // hCaptcha (rendered by Web3Forms' script) puts its token in this textarea once solved.
+  const captcha = form.querySelector<HTMLTextAreaElement>('[name="h-captcha-response"]')
+  if (first || !captcha || captcha.value) return !first
+  const err = form.querySelector('[data-captcha-field] .err')
+  if (err) err.textContent = t.captcha
+  return false
 }
 
 function thanks(gym: string, name: string) {

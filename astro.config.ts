@@ -71,6 +71,7 @@ export default defineConfig({
     sitemap({
       filter: (page) => !page.endsWith('/thanks/'),
       i18n: { defaultLocale: 'en', locales: { en: 'en', ar: 'ar' } },
+      xslURL: '/sitemap.xsl',
     }),
   ],
 })
