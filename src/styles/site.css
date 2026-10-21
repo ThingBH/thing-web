@@ -120,6 +120,21 @@ svg.i {
   width: auto;
   aspect-ratio: 720 / 410;
 }
+.top .inner > a:first-child {
+  flex-shrink: 0;
+}
+/* Phones have no nav row between the logo and the buttons, so the logo gap can tighten. */
+@media (max-width: 1020px) {
+  .top .inner {
+    gap: 16px;
+  }
+}
+/* Below 360px the logo, the full trial button and the menu don't fit one row; the page's own CTAs remain. */
+@media (max-width: 360px) {
+  .top .end .btn {
+    display: none;
+  }
+}
 .top nav ul {
   display: flex;
   gap: 4px;
@@ -459,7 +474,8 @@ svg.i {
 .cell.band {
   background: var(--band);
 }
-.cell :is(h2, h3) {
+.cell h3,
+.aside h2 {
   margin: 0;
   font-size: 26px;
   letter-spacing: -0.035em;
@@ -2204,7 +2220,8 @@ button.fnode:active {
 :lang(ar) .d3 {
   line-height: 1.35;
 }
-:lang(ar) :is(h3, .aside h2, b, strong, .statement) {
+:lang(ar) :is(h3, b, strong, .statement),
+:lang(ar) .aside h2 {
   line-height: 1.4;
 }
 /* Arrows point the way you read. The hover nudge flips with them. */
