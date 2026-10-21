@@ -646,7 +646,9 @@ table.cmp {
   transform: rotate(45deg);
 }
 .faq details p {
-  margin: 0 0 22px;
+  /* Padding, not margin: a bottom margin escapes the animated answer box and jumps in at the end. */
+  margin: 0;
+  padding-bottom: 22px;
   color: var(--ink-2);
   /* Geist's "0" is wide: 50ch is about 70 characters. */
   max-width: 50ch;
