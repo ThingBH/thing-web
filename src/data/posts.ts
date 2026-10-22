@@ -24,9 +24,10 @@ export type Show = Piece | `${Piece}+${Piece}`
 export type Quote = {
   /** As shown, with its quotation marks. */
   quote: string
-  /** Readable label for the link, e.g. "Trustpilot review of ABC Glofox". */
+  /** Readable label, e.g. "Arab News on the CST Saudi Internet Report 2025". Competitor reviews are quoted unnamed and unlinked. */
   source: string
-  url: string
+  /** Link to the source page. Omitted for anonymised competitor reviews. */
+  url?: string
   /** As written, e.g. "1 Mar 2025" or "Oct 2026". */
   date: string
   /** Shown after the date, e.g. "translated from Arabic". */

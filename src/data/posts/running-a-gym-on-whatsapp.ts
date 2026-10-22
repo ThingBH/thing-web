@@ -15,11 +15,6 @@ export const post: Post = {
       'Members in the Gulf message their gym on WhatsApp first. How to take payments, send receipts and answer renewals there, and the Meta rules gyms should know.',
     lede: 'In the Gulf, a member who wants to renew, freeze or cancel doesn’t open your app or write an email. They message you on WhatsApp. That can be the fastest way to get paid, or the place where members wait for a reply that never comes. Here’s what the numbers say, where gyms get it wrong, the rules Meta sets, and how to run the desk on WhatsApp without losing track.',
     blocks: [
-      {
-        type: 'note',
-        text: 'Every source links to the page we read it on, on 22 Oct 2026. App Store reviews are one member’s experience, quoted without their name.',
-      },
-
       { type: 'heading', id: 'members', text: 'Your members already live on WhatsApp' },
       {
         type: 'text',
@@ -59,22 +54,19 @@ export const post: Post = {
         items: [
           {
             quote: '"…complaints don’t work, and neither does the WhatsApp…"',
-            source: 'App Store review of Fitness Time, Saudi Arabia',
-            url: 'https://apps.apple.com/sa/app/id6496972792',
+            source: 'A review of a gym app in Saudi Arabia',
             date: '11 Jun 2026',
             note: 'translated from Arabic',
           },
           {
             quote: '"…I message you on WhatsApp and you don’t reply, ridiculous."',
-            source: 'App Store review of Body Masters, Saudi Arabia',
-            url: 'https://apps.apple.com/sa/app/id6471967326',
+            source: 'A review of a gym app in Saudi Arabia',
             date: '30 Mar 2026',
             note: 'translated from Arabic',
           },
           {
             quote: '"They don’t respond on whatsapp when you ask for cancellation."',
-            source: 'App Store review of GymNation, UAE',
-            url: 'https://apps.apple.com/ae/app/gymnation/id6759922886?see-all=reviews',
+            source: 'A review of a gym app in the UAE',
             date: '22 Sep 2026',
           },
         ],
@@ -188,7 +180,7 @@ export const post: Post = {
       },
       {
         type: 'note',
-        text: 'We read every page linked here on 22 Oct 2026. Gym Thing is made by Thing W.L.L., Seef, Bahrain, and our own support is on WhatsApp, phone and email 7 days a week.',
+        text: 'Meta’s WhatsApp Business rules change, so check the current policy before you build on them.',
       },
     ],
   },
@@ -199,11 +191,6 @@ export const post: Post = {
       'يراسل الأعضاء في الخليج ناديهم عبر واتساب أولاً. كيف تستلم المدفوعات وترسل الإيصالات وترد على التجديدات عبره، وما قواعد Meta التي يجب أن يعرفها كل نادٍ.',
     lede: 'في الخليج، العضو اللي يبي يجدد أو يجمّد أو يلغي ما يفتح تطبيقك ولا يكتب إيميل. يراسلك على الواتساب. وهذا ممكن يكون أسرع طريق توصلك فيه الفلوس، أو المكان اللي ينتظر فيه العضو رد ما يجي. هني شنو تقول الأرقام، ووين تغلط النوادي، والقواعد اللي تحطها Meta، وشلون تدير الاستقبال على الواتساب بدون ما يضيع شي.',
     blocks: [
-      {
-        type: 'note',
-        text: 'كل مصدر مربوط بالصفحة اللي قريناه فيها، في 22 أكتوبر 2026. ومراجعات App Store تجربة عضو واحد، ونقتبسها بدون اسمه.',
-      },
-
       { type: 'heading', id: 'members', text: 'أعضاءك أصلاً عايشين على الواتساب' },
       {
         type: 'text',
@@ -245,20 +232,17 @@ export const post: Post = {
         items: [
           {
             quote: '«…والشكاوي لا تعمل ولا الواتساب يعمل…»',
-            source: 'مراجعة على App Store لتطبيق وقت اللياقة، السعودية',
-            url: 'https://apps.apple.com/sa/app/id6496972792',
+            source: 'مراجعة لأحد تطبيقات النوادي في السعودية',
             date: '11 يونيو 2026',
           },
           {
             quote: '«…واراسلكم واتس ماتردون استهبال»',
-            source: 'مراجعة على App Store لتطبيق Body Masters، السعودية',
-            url: 'https://apps.apple.com/sa/app/id6471967326',
+            source: 'مراجعة لأحد تطبيقات النوادي في السعودية',
             date: '30 مارس 2026',
           },
           {
             quote: '«ما يردون على الواتساب لما تطلب الإلغاء.»',
-            source: 'مراجعة على App Store لتطبيق GymNation، الإمارات',
-            url: 'https://apps.apple.com/ae/app/gymnation/id6759922886?see-all=reviews',
+            source: 'مراجعة لأحد تطبيقات النوادي في الإمارات',
             date: '22 سبتمبر 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -374,7 +358,7 @@ export const post: Post = {
       },
       {
         type: 'note',
-        text: 'قرينا كل صفحة مربوطة هني في 22 أكتوبر 2026. وGym Thing من Thing W.L.L.، السيف، البحرين، ودعمنا إحنا بعد على الواتساب والتلفون والإيميل 7 أيام في الأسبوع.',
+        text: 'قواعد واتساب للأعمال من Meta تتغير، فتأكد من السياسة الحالية قبل لا تبني عليها.',
       },
     ],
   },

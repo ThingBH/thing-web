@@ -1,6 +1,6 @@
 import type { Post } from '../posts'
 
-// Sources: docs/research/2026-10-gym-software-complaints (report.html) and the vibe-coded and flyby entries in
+// Sources: docs/research/2026-10-gym-software-complaints (report.html) and the relevant entries in
 // compare.ts. Vendor and regulator lines were read on their pages on 21 Oct 2026. Gym Thing answers only use what
 // the report and modules.ts claim: the admin website is English only, and WhatsApp is a one-tap pre-filled chat.
 export const post: Post = {
@@ -17,7 +17,7 @@ export const post: Post = {
     blocks: [
       {
         type: 'note',
-        text: 'Every source below links to the page we read it on, with its date. This post builds on our [research into gym software complaints](/blog/gym-software-problems/#gulf). It is written for Bahrain. If you run gyms elsewhere in the GCC, ask the same questions about your own country.',
+        text: 'This post builds on our [research into gym software complaints](/blog/gym-software-problems/#gulf). It is written for Bahrain. If you run gyms elsewhere in the GCC, ask the same questions about your own country.',
       },
 
       { type: 'heading', id: 'why', text: 'Why so much gym software misses the Gulf' },
@@ -34,7 +34,7 @@ export const post: Post = {
         type: 'text',
         paras: [
           "Many international gym systems take payments through Stripe. Stripe's list of supported countries includes the UAE, but not Bahrain, Saudi Arabia, Kuwait, Qatar or Oman ([Stripe global availability](https://stripe.com/global), read 21 Oct 2026). Software that pays out only through Stripe has the same gap.",
-          "Gulf systems aren't always better. Gymnago's [integrations page](https://gymnago.com/features/integrations) lists 18 payment options, including Knet, OmanNet and Apple Pay, but not BenefitPay. The owner ends up running a second card machine and a BenefitPay QR on the counter, and the front desk matches payments to members by hand.",
+          "Gulf systems aren't always better. One Gulf system's integrations page lists 18 payment options, including Knet, OmanNet and Apple Pay, but not BenefitPay. The owner ends up running a second card machine and a BenefitPay QR on the counter, and the front desk matches payments to members by hand.",
         ],
       },
       {
@@ -42,14 +42,12 @@ export const post: Post = {
         items: [
           {
             quote: '"Price in USD. Contact Sales for international pricing."',
-            source: 'PushPress pricing page',
-            url: 'https://pushpress.com/pricing',
+            source: "A gym software vendor's pricing page",
             date: 'read 21 Oct 2026',
           },
           {
             quote: 'Under "Online Package & Product Sales": "Stripe, Assescco, Hyper Pay Integration"',
-            source: 'FLYBY studio brochure, which does not list BenefitPay',
-            url: 'https://www.flybyglobal.com/wp-content/uploads/2026/03/flyby-studio-mart-2026-en.pdf',
+            source: 'A gym software brochure, which does not list BenefitPay',
             date: 'Mar 2026',
           },
         ],
@@ -123,7 +121,7 @@ export const post: Post = {
       {
         type: 'text',
         paras: [
-          'Where foreign gym software lists payroll, it usually means trainer pay and commission, not GOSI or the WPS salary file. FLYBY lists payroll and commission management, but names neither ([Gym Thing vs FLYBY](/compare/flyby/)). So payroll lives in a second tool or with your accountant, and every month someone types the same numbers twice.',
+          'Where foreign gym software lists payroll, it usually means trainer pay and commission, not GOSI or the WPS salary file. One such system lists payroll and commission management, but names neither ([see how it compares](/compare/flyby/)). So payroll lives in a second tool or with your accountant, and every month someone types the same numbers twice.',
         ],
       },
       {
@@ -176,8 +174,7 @@ export const post: Post = {
         items: [
           {
             quote: '"they told me to wait until Monday"',
-            source: 'Trustpilot review of Mindbody from a business open 7 days a week',
-            url: 'https://www.trustpilot.com/review/www.mindbodyonline.com?page=3',
+            source: 'A review of a gym software vendor, from a business open 7 days a week',
             date: '27 Sep 2026',
           },
         ],
@@ -222,13 +219,13 @@ export const post: Post = {
         type: 'text',
         paras: [
           'The best test is a real month: real members paying with BenefitPay, real invoices and a real payroll run. [Start with a free trial](/free-trial/): we move your members over, and you can run Gym Thing free for up to 3 months before paying.',
-          'See how Gym Thing compares with [Gymnago](/compare/gymnago/) and [FLYBY](/compare/flyby/), or read about [payments](/modules/payments/), [invoicing](/modules/invoicing/) and [payroll](/modules/hr-payroll/).',
+          'See how Gym Thing compares on [payments](/compare/gymnago/) and [payroll](/compare/flyby/), or read about [payments](/modules/payments/), [invoicing](/modules/invoicing/) and [payroll](/modules/hr-payroll/).',
           'Payments and support each have their own post: [Billing that charges the right member, and money that reaches you](/blog/billing-that-charges-right/) and [Slow setup, weeks of training, and support that goes quiet](/blog/setup-and-staff-training/). Running gyms elsewhere in the GCC? Read [the best gym software in the GCC](/blog/best-gym-software-gcc/) and [VAT on gym memberships in each GCC country](/blog/gcc-vat-for-gyms/).',
         ],
       },
       {
         type: 'note',
-        text: 'We read every vendor and regulator page linked here on 21 Oct 2026. Vendors change their pages, so check the current version before you decide. Gym Thing is made by Thing W.L.L., Seef, Bahrain.',
+        text: 'Vendor and regulator pages change, so check the current version before you decide.',
       },
     ],
   },
@@ -241,7 +238,7 @@ export const post: Post = {
     blocks: [
       {
         type: 'note',
-        text: 'كل مصدر تحت مربوط بالصفحة اللي قريناه فيها، مع تاريخه. وهالمقال مبني على [بحثنا عن شكاوى برامج النوادي](/ar/blog/gym-software-problems/#gulf). وهو مكتوب للبحرين. إذا عندك نوادي في دولة خليجية ثانية، اسأل نفس الأسئلة عن قوانين بلدك.',
+        text: 'هالمقال مبني على [بحثنا عن شكاوى برامج النوادي](/ar/blog/gym-software-problems/#gulf). وهو مكتوب للبحرين. إذا عندك نوادي في دولة خليجية ثانية، اسأل نفس الأسئلة عن قوانين بلدك.',
       },
 
       { type: 'heading', id: 'why', text: 'ليش برامج وايد ما تناسب الخليج' },
@@ -258,7 +255,7 @@ export const post: Post = {
         type: 'text',
         paras: [
           'وايد من برامج النوادي العالمية تستلم الدفع عن طريق Stripe. وقائمة الدول اللي تدعمها Stripe فيها الإمارات، بس ما فيها البحرين ولا السعودية ولا الكويت ولا قطر ولا عُمان ([توفّر Stripe حول العالم](https://stripe.com/global)، قريناها في 21 أكتوبر 2026). والبرنامج اللي ما يحوّل إلا عن طريق Stripe عنده نفس النقص.',
-          'والأنظمة الخليجية مو دايماً أحسن. [صفحة التكاملات](https://gymnago.com/features/integrations) عند Gymnago فيها 18 طريقة دفع، منها Knet وOmanNet وApple Pay، بس ما فيها BenefitPay. وفي الآخر صاحب النادي يشغّل جهاز بطاقات ثاني ورمز BenefitPay على الكاونتر، والاستقبال يطابق المدفوعات بالأعضاء بيده.',
+          'والأنظمة الخليجية مو دايماً أحسن. في نظام خليجي صفحة التكاملات عنده فيها 18 طريقة دفع، منها Knet وOmanNet وApple Pay، بس ما فيها BenefitPay. وفي الآخر صاحب النادي يشغّل جهاز بطاقات ثاني ورمز BenefitPay على الكاونتر، والاستقبال يطابق المدفوعات بالأعضاء بيده.',
         ],
       },
       {
@@ -266,15 +263,13 @@ export const post: Post = {
         items: [
           {
             quote: '«السعر بالدولار الأمريكي. تواصل مع المبيعات للأسعار الدولية.»',
-            source: 'صفحة أسعار PushPress',
-            url: 'https://pushpress.com/pricing',
+            source: 'صفحة أسعار إحدى شركات برامج النوادي',
             date: 'قريناها في 21 أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: 'تحت «بيع الباقات والمنتجات أونلاين»: «تكامل مع Stripe وAssescco وHyper Pay»',
-            source: 'كتيّب FLYBY، وما فيه BenefitPay',
-            url: 'https://www.flybyglobal.com/wp-content/uploads/2026/03/flyby-studio-mart-2026-en.pdf',
+            source: 'كتيّب أحد برامج النوادي، وما فيه BenefitPay',
             date: 'مارس 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -351,7 +346,7 @@ export const post: Post = {
       {
         type: 'text',
         paras: [
-          'لما برامج النوادي الأجنبية تذكر الرواتب، أغلب الأحيان قصدها رواتب المدربين وعمولاتهم، مو التأمينات الاجتماعية (GOSI) ولا ملف رواتب حماية الأجور (WPS). FLYBY تذكر إدارة الرواتب والعمولات، بس ما تسمي ولا وحدة منهم ([Gym Thing مقارنة مع FLYBY](/ar/compare/flyby/)). فتصير الرواتب في برنامج ثاني أو عند المحاسب، وكل شهر أحد يكتب نفس الأرقام مرتين.',
+          'لما برامج النوادي الأجنبية تذكر الرواتب، أغلب الأحيان قصدها رواتب المدربين وعمولاتهم، مو التأمينات الاجتماعية (GOSI) ولا ملف رواتب حماية الأجور (WPS). في نظام من هذي يذكر إدارة الرواتب والعمولات، بس ما يسمي ولا وحدة منهم ([شوف شلون يقارن](/ar/compare/flyby/)). فتصير الرواتب في برنامج ثاني أو عند المحاسب، وكل شهر أحد يكتب نفس الأرقام مرتين.',
         ],
       },
       {
@@ -404,8 +399,7 @@ export const post: Post = {
         items: [
           {
             quote: '«قالوا لي انطر لين يوم الاثنين»',
-            source: 'مراجعة على Trustpilot لـ Mindbody من نشاط تجاري يفتح 7 أيام في الأسبوع',
-            url: 'https://www.trustpilot.com/review/www.mindbodyonline.com?page=3',
+            source: 'مراجعة لإحدى شركات برامج النوادي، من نشاط تجاري يفتح 7 أيام في الأسبوع',
             date: '27 سبتمبر 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -451,13 +445,13 @@ export const post: Post = {
         type: 'text',
         paras: [
           'أحسن تجربة هي شهر حقيقي: أعضاء حقيقيين يدفعون بـ BenefitPay، وفواتير حقيقية، ومسير رواتب حقيقي. [ابدأ بتجربة مجانية](/ar/free-trial/): ننقل أعضاءك، وتقدر تشغّل Gym Thing مجاناً لين 3 شهور قبل لا تدفع.',
-          'شوف شلون يقارن Gym Thing مع [Gymnago](/ar/compare/gymnago/) و[FLYBY](/ar/compare/flyby/)، أو اقرأ عن [المدفوعات](/ar/modules/payments/) و[الفواتير](/ar/modules/invoicing/) و[الرواتب](/ar/modules/hr-payroll/).',
+          'شوف شلون يقارن Gym Thing في [المدفوعات](/ar/compare/gymnago/) و[الرواتب](/ar/compare/flyby/)، أو اقرأ عن [المدفوعات](/ar/modules/payments/) و[الفواتير](/ar/modules/invoicing/) و[الرواتب](/ar/modules/hr-payroll/).',
           'وللمدفوعات والدعم مقالات خاصة: [فوترة تحصّل المبلغ الصحيح، وأموال تصل إليك](/ar/blog/billing-that-charges-right/) و[إعداد بطيء وتدريب يستغرق أسابيع ودعم يختفي بعد التوقيع](/ar/blog/setup-and-staff-training/). وعندك نوادي في دولة خليجية ثانية؟ اقرأ [أفضل برامج النوادي في الخليج](/ar/blog/best-gym-software-gcc/) و[ضريبة القيمة المضافة على اشتراكات النوادي في كل دولة خليجية](/ar/blog/gcc-vat-for-gyms/).',
         ],
       },
       {
         type: 'note',
-        text: 'قرينا كل صفحات الشركات والجهات الحكومية المربوطة هني في 21 أكتوبر 2026. والشركات تغيّر صفحاتها، فتأكد من النسخة الحالية قبل لا تقرر. Gym Thing من شركة Thing W.L.L.، السيف، البحرين.',
+        text: 'صفحات الشركات والجهات الحكومية تتغير، فتأكد من النسخة الحالية قبل لا تقرر.',
       },
     ],
   },

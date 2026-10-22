@@ -17,7 +17,7 @@ export const post: Post = {
     blocks: [
       {
         type: 'note',
-        text: 'This is a guide, not tax advice. We read every rate and threshold on its source page on 22 Oct 2026. None of the official pages we read names gym memberships as zero-rated or exempt, so the standard rate is the starting point. Confirm with your tax adviser.',
+        text: 'This is a guide, not tax advice. None of the official tax pages we read names gym memberships as zero-rated or exempt, so the standard rate is the starting point. Confirm with your tax adviser.',
       },
 
       { type: 'heading', id: 'rates', text: 'GCC VAT rates and thresholds in 2026' },
@@ -150,7 +150,7 @@ export const post: Post = {
       },
       {
         type: 'note',
-        text: 'Rates and thresholds were read on the ZATCA, FTA, Oman Tax Authority and PwC Tax Summaries pages linked above on 22 Oct 2026. Tax rules change, so check the current page before you file. Gym Thing is made by Thing W.L.L., Seef, Bahrain.',
+        text: 'Tax rules change, so check the current rates before you file.',
       },
     ],
   },
@@ -163,7 +163,7 @@ export const post: Post = {
     blocks: [
       {
         type: 'note',
-        text: 'هذا دليل، مو استشارة ضريبية. قرينا كل نسبة وحد في صفحة مصدره في 22 أكتوبر 2026. وما في صفحة رسمية قريناها تذكر اشتراكات النوادي كخاضعة لنسبة صفر أو معفية، فالنسبة الأساسية هي نقطة البداية. تأكد من مستشارك الضريبي.',
+        text: 'هذا دليل، مو استشارة ضريبية. وما في صفحة رسمية قريناها تذكر اشتراكات النوادي كخاضعة لنسبة صفر أو معفية، فالنسبة الأساسية هي نقطة البداية. تأكد من مستشارك الضريبي.',
       },
 
       { type: 'heading', id: 'rates', text: 'نسب ضريبة القيمة المضافة وحدود التسجيل في الخليج لعام 2026' },
@@ -299,7 +299,7 @@ export const post: Post = {
       },
       {
         type: 'note',
-        text: 'قرينا النسب والحدود في صفحات هيئة الزكاة والضريبة والجمارك، والهيئة الاتحادية للضرائب، وجهاز الضرائب في عُمان، وملخصات PwC الضريبية المربوطة فوق في 22 أكتوبر 2026. القواعد الضريبية تتغير، فتأكد من الصفحة الحالية قبل لا تقدّم. وGym Thing من Thing W.L.L.، السيف، البحرين.',
+        text: 'القواعد الضريبية تتغير، فتأكد من النسب الحالية قبل لا تقدّم.',
       },
     ],
   },

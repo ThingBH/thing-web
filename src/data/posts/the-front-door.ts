@@ -1,7 +1,7 @@
 import type { Post } from '../posts'
 
-// Sources: docs/research/2026-10-gym-software-complaints (report.html), plus App Store and Trustpilot pages read
-// on 21 Oct 2026. Every quote was read on its source page. Gym Thing answers only use what the report claims.
+// Sources: docs/research/2026-10-gym-software-complaints (report.html), compiled 21 Oct 2026.
+// Gym Thing answers only use what the report claims.
 export const post: Post = {
   slug: 'the-front-door',
   date: '2026-10-21',
@@ -16,14 +16,14 @@ export const post: Post = {
     blocks: [
       {
         type: 'note',
-        text: "This post goes deeper on one of the twelve problems in [What gym owners are fed up with in their software](/blog/gym-software-problems/). Every quote links to the page we read it on, with its date. A review is one person's experience, not proof of how every gym gets on with a product.",
+        text: 'This post goes deeper on one of the twelve problems in [What gym owners are fed up with in their software](/blog/gym-software-problems/).',
       },
 
       { type: 'heading', id: 'qr-fails', text: 'When the app is the only key' },
       {
         type: 'text',
         paras: [
-          "FLYBY is club software from Senkron Tech in Istanbul. Clubs that use it get a member app in their own name, and the app's QR code is how members get through the door. Its member reviews in Turkey keep coming back to that code.",
+          "One club software maker in Istanbul sells gyms a member app in their own name, and the app's QR code is how members get through the door. Its member reviews in Türkiye keep coming back to that code.",
           'The reason is a chain. The code needs the app, the app needs a login, the login needs the latest update, and in these reviews the app also needs the phone to be registered for QR. When one link breaks, the member is standing at the turnstile with a paid membership and nothing to scan.',
         ],
       },
@@ -33,23 +33,20 @@ export const post: Post = {
           {
             quote:
               "\"It gives the error 'This device is not registered for QR'. It hasn't generated a QR code for a month.\"",
-            source: 'Google Play review of Club Sporium',
-            url: 'https://play.google.com/store/apps/details?id=net.senkron.lapis.clubsporium',
+            source: 'A review of a gym app',
             date: '18 Jun 2026',
             note: 'translated from Turkish',
           },
           {
             quote: '"It gives the warning \'This device is not registered for QR\'."',
-            source: 'App Store review of Shape Club',
-            url: 'https://apps.apple.com/tr/app/id6737225089?see-all=reviews',
+            source: 'A review of a gym app',
             date: '20 Apr 2026',
             note: 'translated from Turkish',
           },
           {
             quote:
               '"The barcode I used to get in has been deleted, and it doesn\'t come by the app any more. Not a barcode, more like an ex… Nobody calls, nobody asks :)"',
-            source: 'App Store review of AKRA FIT',
-            url: 'https://apps.apple.com/tr/app/id6743120234?see-all=reviews',
+            source: 'A review of a gym app',
             date: '17 Jun 2025',
             note: 'translated from Turkish',
           },
@@ -83,7 +80,7 @@ export const post: Post = {
       {
         type: 'text',
         paras: [
-          'Gymnago, from Pixel Mind IT Solutions W.L.L. in Bahrain, publishes a branded app for each gym it serves. A member of one of those gyms, Gym 650, wrote that the app switched off code entry and asks for their face instead.',
+          'One gym software maker in Bahrain publishes a branded app for each gym it serves. A member of one of those gyms wrote that the app switched off code entry and asks for their face instead.',
         ],
       },
       {
@@ -92,8 +89,7 @@ export const post: Post = {
           {
             quote:
               '"Is not activating the bar Code entry feature, instead it uses Face Id … Which has personal data risk. Other Gyms uses QR code in the App."',
-            source: 'App Store review of Gym 650',
-            url: 'https://apps.apple.com/sa/app/id6741509582',
+            source: 'A review of a gym app',
             date: '3 Aug 2025',
           },
         ],
@@ -120,7 +116,7 @@ export const post: Post = {
         type: 'text',
         paras: [
           "Most doors only know two answers: green or red. An expired plan, a frozen plan, the wrong branch, the wrong hour and a broken code all look the same from the outside. The member doesn't know what to fix, and neither does your team.",
-          'These two reviews are from members of PureGym, a large UK gym chain, not about a software vendor. They show what a refusal with no reason costs, whoever made the door.',
+          'These two reviews are from members of a large UK gym chain, not about a software vendor. They show what a refusal with no reason costs, whoever made the door.',
         ],
       },
       {
@@ -129,15 +125,13 @@ export const post: Post = {
           {
             quote:
               '"I planned my morning around the gym and yet again can’t in- no email, no reason, membership paid, tried QR code, tried pin. I get let in the pod then let straight back out the way I came."',
-            source: 'Trustpilot review of PureGym UK',
-            url: 'https://www.trustpilot.com/reviews/6a368cac6c6ee27ee8590fd8',
+            source: 'A review of a gym chain',
             date: '20 Jun 2026',
           },
           {
             quote:
               '"The gym id amazing and the staff there are very kind and friendly thankfully they let me in after waiting an 1h-30 minutes of waiting outside because the subscription wasnt working"',
-            source: 'Trustpilot review of PureGym UK',
-            url: 'https://www.trustpilot.com/reviews/6ac42ac40243da732fc69f42',
+            source: 'A review of a gym chain',
             date: '6 Oct 2026',
           },
         ],
@@ -178,14 +172,12 @@ export const post: Post = {
         items: [
           {
             quote: '"If my box offered out of hours access or an open gym only membership I would have never left."',
-            source: 'Comment in r/crossfit with 32 upvotes',
-            url: 'https://reddit.com/r/crossfit/comments/1x735pn/comment/ph2dgow/',
+            source: 'A gym owner online',
             date: 'Oct 2026',
           },
           {
             quote: '"I actually left a gym because they didn\'t have sufficient open gym times or 24/7 access."',
-            source: 'Comment in r/crossfit',
-            url: 'https://www.reddit.com/r/crossfit/comments/1x735pn/gym_owners/',
+            source: 'A gym owner online',
             date: 'Oct 2026',
           },
         ],
@@ -236,15 +228,9 @@ export const post: Post = {
       {
         type: 'text',
         paras: [
-          'Comparing systems? See how the door works in [Gym Thing and FLYBY](/compare/flyby/) and [Gym Thing and Gymnago](/compare/gymnago/), or read the full list of [problems owners keep reporting](/blog/gym-software-problems/).',
+          'Comparing systems? See how the door works in [one door comparison](/compare/flyby/) and [another](/compare/gymnago/), or read the full list of [problems owners keep reporting](/blog/gym-software-problems/).',
           'If your members get in with an app, read [Why gym member apps break, and what to ask before you pick one](/blog/member-apps-that-work/).',
         ],
-      },
-
-      { type: 'heading', id: 'sources', text: 'About the sources' },
-      {
-        type: 'note',
-        text: "English quotes are copied exactly as written, including the reviewers' spelling. Quotes from Turkish reviews are our own translations. We left out reviewers' names. Dates are when the review was posted. FLYBY and Gymnago are linked to these apps through the publisher account and app package names. We checked every source on 21 Oct 2026.",
       },
     ],
   },
@@ -257,14 +243,14 @@ export const post: Post = {
     blocks: [
       {
         type: 'note',
-        text: 'هالمقال يتعمق في وحدة من الـ 12 مشكلة اللي في [شنو اللي مضايق أصحاب النوادي في برامجهم](/ar/blog/gym-software-problems/). كل اقتباس مربوط بالصفحة اللي قريناه فيها، مع تاريخه. والمراجعة تجربة شخص واحد، مو دليل على تجربة كل نادي مع البرنامج.',
+        text: 'هالمقال يتعمق في وحدة من الـ 12 مشكلة اللي في [شنو اللي مضايق أصحاب النوادي في برامجهم](/ar/blog/gym-software-problems/).',
       },
 
       { type: 'heading', id: 'qr-fails', text: 'لما يكون التطبيق هو المفتاح الوحيد' },
       {
         type: 'text',
         paras: [
-          'FLYBY برنامج للأندية من Senkron Tech في إسطنبول. الأندية اللي تستخدمه ياخذون تطبيق للأعضاء باسمهم، ورمز QR في التطبيق هو طريقة الأعضاء للدخول من الباب. ومراجعات الأعضاء في تركيا ترجع لهالرمز كل شوي.',
+          'في شركة تسوي برامج للأندية في إسطنبول، تبيع النوادي تطبيق للأعضاء باسمهم، ورمز QR في التطبيق هو طريقة الأعضاء للدخول من الباب. ومراجعات الأعضاء في تركيا ترجع لهالرمز كل شوي.',
           'السبب سلسلة. الرمز يحتاج التطبيق، والتطبيق يحتاج تسجيل دخول، وتسجيل الدخول يحتاج آخر تحديث، وفي هالمراجعات التطبيق يحتاج بعد إن التلفون يكون مسجّل لرمز QR. ولما تنقطع حلقة وحدة، العضو يوقف عند البوابة واشتراكه مدفوع وما عنده شي يمسحه.',
         ],
       },
@@ -273,23 +259,20 @@ export const post: Post = {
         items: [
           {
             quote: '«يطلع خطأ "هذا الجهاز غير مسجّل لرمز QR". وصار له شهر ما يطلّع رمز QR.»',
-            source: 'مراجعة على Google Play لتطبيق Club Sporium',
-            url: 'https://play.google.com/store/apps/details?id=net.senkron.lapis.clubsporium',
+            source: 'مراجعة لأحد تطبيقات النوادي',
             date: '18 يونيو 2026',
             note: 'مترجم من التركية',
           },
           {
             quote: '«يطلع تنبيه "هذا الجهاز غير مسجّل لرمز QR".»',
-            source: 'مراجعة على App Store لتطبيق Shape Club',
-            url: 'https://apps.apple.com/tr/app/id6737225089?see-all=reviews',
+            source: 'مراجعة لأحد تطبيقات النوادي',
             date: '20 أبريل 2026',
             note: 'مترجم من التركية',
           },
           {
             quote:
               '«الباركود اللي كنت أدخل فيه انمسح، وما عاد يمر على التطبيق أبد. مو باركود، كأنه حبيب سابق… لا أحد يتصل ولا أحد يسأل :)»',
-            source: 'مراجعة على App Store لتطبيق AKRA FIT',
-            url: 'https://apps.apple.com/tr/app/id6743120234?see-all=reviews',
+            source: 'مراجعة لأحد تطبيقات النوادي',
             date: '17 يونيو 2025',
             note: 'مترجم من التركية',
           },
@@ -322,7 +305,7 @@ export const post: Post = {
       {
         type: 'text',
         paras: [
-          'Gymnago من Pixel Mind IT Solutions W.L.L. في البحرين، تنشر تطبيق باسم كل نادي تخدمه. وعضو في وحدة من هالنوادي، Gym 650، كتب إن التطبيق وقّف الدخول بالرمز وصار يطلب وجهه بداله.',
+          'في شركة تسوي برامج للأندية في البحرين، تنشر تطبيق باسم كل نادي تخدمه. وعضو في وحدة من هالنوادي كتب إن التطبيق وقّف الدخول بالرمز وصار يطلب وجهه بداله.',
         ],
       },
       {
@@ -331,8 +314,7 @@ export const post: Post = {
           {
             quote:
               '«ما يفعّل خاصية الدخول بالباركود، وبدالها يستخدم Face ID… وهذا فيه خطر على البيانات الشخصية. النوادي الثانية تستخدم رمز QR في التطبيق.»',
-            source: 'مراجعة على App Store لتطبيق Gym 650',
-            url: 'https://apps.apple.com/sa/app/id6741509582',
+            source: 'مراجعة لأحد تطبيقات النوادي',
             date: '3 أغسطس 2025',
             note: 'مترجم من الإنجليزية',
           },
@@ -360,7 +342,7 @@ export const post: Post = {
         type: 'text',
         paras: [
           'أغلب الأبواب ما تعرف إلا جوابين: أخضر أو أحمر. باقة منتهية، أو باقة مجمّدة، أو فرع غلط، أو وقت غلط، أو رمز خربان، كلها تبين نفس الشي من برّا. العضو ما يعرف شنو يصلّح، ولا فريقك يعرف.',
-          'هالمراجعتين من أعضاء في PureGym، سلسلة نوادي كبيرة في بريطانيا، مو عن شركة برامج. بس تبين شكثر يكلّف الرفض بدون سبب، أياً كان اللي مسوي الباب.',
+          'هالمراجعتين من أعضاء في سلسلة نوادي كبيرة في بريطانيا، مو عن شركة برامج. بس تبين شكثر يكلّف الرفض بدون سبب، أياً كان اللي مسوي الباب.',
         ],
       },
       {
@@ -369,16 +351,14 @@ export const post: Post = {
           {
             quote:
               '«رتبت صباحي على النادي ومرة ثانية ما قدرت أدخل، لا إيميل، ولا سبب، والاشتراك مدفوع، جربت رمز QR، وجربت الرقم السري. تدخّلني كبينة الدخول وبعدين ترجّعني برّا على طول من نفس المكان اللي جيت منه.»',
-            source: 'مراجعة على Trustpilot لـ PureGym UK',
-            url: 'https://www.trustpilot.com/reviews/6a368cac6c6ee27ee8590fd8',
+            source: 'مراجعة لإحدى سلاسل النوادي',
             date: '20 يونيو 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote:
               '«النادي رهيب والموظفين وايد لطيفين وودودين، والحمد لله دخّلوني بعد ما انتظرت ساعة ونص برّا لأن الاشتراك ما كان يشتغل»',
-            source: 'مراجعة على Trustpilot لـ PureGym UK',
-            url: 'https://www.trustpilot.com/reviews/6ac42ac40243da732fc69f42',
+            source: 'مراجعة لإحدى سلاسل النوادي',
             date: '6 أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -420,15 +400,13 @@ export const post: Post = {
         items: [
           {
             quote: '«لو النادي حقي كان فيه دخول برّا الأوقات أو اشتراك للصالة المفتوحة بس، ما كان تركته أبداً.»',
-            source: 'تعليق في r/crossfit عليه 32 تصويت',
-            url: 'https://reddit.com/r/crossfit/comments/1x735pn/comment/ph2dgow/',
+            source: 'صاحب نادي على الإنترنت',
             date: 'أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«صراحة تركت نادي لأنه ما كان فيه أوقات كافية للصالة المفتوحة أو دخول 24/7.»',
-            source: 'تعليق في r/crossfit',
-            url: 'https://www.reddit.com/r/crossfit/comments/1x735pn/gym_owners/',
+            source: 'صاحب نادي على الإنترنت',
             date: 'أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -480,15 +458,9 @@ export const post: Post = {
       {
         type: 'text',
         paras: [
-          'تقارن بين الأنظمة؟ شوف شلون يشتغل الباب في [Gym Thing مقابل FLYBY](/ar/compare/flyby/) و[Gym Thing مقابل Gymnago](/ar/compare/gymnago/)، أو اقرأ القائمة كاملة عن [المشاكل اللي يشتكي منها أصحاب النوادي](/ar/blog/gym-software-problems/).',
+          'تقارن بين الأنظمة؟ شوف شلون يشتغل الباب في [مقارنة باب](/ar/compare/flyby/) و[مقارنة ثانية](/ar/compare/gymnago/)، أو اقرأ القائمة كاملة عن [المشاكل اللي يشتكي منها أصحاب النوادي](/ar/blog/gym-software-problems/).',
           'وإذا أعضاءك يدخلون بالتطبيق، اقرأ [لماذا تتعطّل تطبيقات أعضاء النوادي الرياضية، وما الذي ينبغي أن تسأل عنه قبل الاختيار](/ar/blog/member-apps-that-work/).',
         ],
-      },
-
-      { type: 'heading', id: 'sources', text: 'عن المصادر' },
-      {
-        type: 'note',
-        text: 'الاقتباسات من مراجعات بالإنجليزي والتركي ترجمتنا إحنا. ما ذكرنا أسماء المراجعين. والتواريخ هي تاريخ نشر المراجعة. ربطنا FLYBY وGymnago بهالتطبيقات عن طريق حساب الناشر وأسماء حزم التطبيقات. وتأكدنا من كل المصادر في 21 أكتوبر 2026.',
       },
     ],
   },

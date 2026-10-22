@@ -30,7 +30,7 @@ const pieces = b.type === 'screen' ? b.show.split('+').map((s) => s.split(':')) 
     {b.items.map((q) => (
       <blockquote cite={q.url}>
         <p>{q.quote}</p>
-        <cite><bdi><a href={q.url} rel="noopener" target="_blank">{q.source}<NewTab /></a></bdi>{sep}<bdi>{q.date}</bdi>{q.note && <>{sep}<bdi>{q.note}</bdi></>}</cite>
+        <cite><bdi>{q.url ? <a href={q.url} rel="noopener" target="_blank">{q.source}<NewTab /></a> : q.source}</bdi>{sep}<bdi>{q.date}</bdi>{q.note && <>{sep}<bdi>{q.note}</bdi></>}</cite>
       </blockquote>
     ))}
   </div>

@@ -1,8 +1,7 @@
 import type { Post } from '../posts'
 
-// Sources: docs/research/2026-10-gcc-gym-software/vat-and-licences.md (parts B and market facts). Every quote was
-// read on its page on 22 Oct 2026. No official Ministry of Sport page could be opened, so the Saudi licence lines rest
-// on Argaam, Riyadh Daily and Greenberg Traurig. Gym Thing points only use features in modules.ts.
+// Sources: docs/research/2026-10-gcc-gym-software/vat-and-licences.md (parts B and market facts).
+// Gym Thing points only use features in modules.ts.
 export const post: Post = {
   slug: 'opening-a-gym-saudi-uae',
   date: '2026-10-22',
@@ -17,7 +16,7 @@ export const post: Post = {
     blocks: [
       {
         type: 'note',
-        text: 'This is a guide, not legal advice. We read every page linked here on 22 Oct 2026. We couldn’t open the Saudi Ministry of Sport’s own pages, so the Saudi licence lines come from news reports and a law firm. Check the current requirements with the ministry or the Dubai Sports Council before you apply.',
+        text: 'This is a guide, not legal advice. Check the current requirements with the ministry or the Dubai Sports Council before you apply.',
       },
 
       { type: 'heading', id: 'market', text: 'A market that keeps growing' },
@@ -186,7 +185,7 @@ export const post: Post = {
       },
       {
         type: 'note',
-        text: 'We read every page linked here on 22 Oct 2026. Licensing rules and fees change, and we didn’t source fees or timings, so check with the Ministry of Sport or the Dubai Sports Council before you apply. Gym Thing is made by Thing W.L.L., Seef, Bahrain.',
+        text: 'Licensing rules and fees change, so check with the Ministry of Sport or the Dubai Sports Council before you apply.',
       },
     ],
   },
@@ -199,7 +198,7 @@ export const post: Post = {
     blocks: [
       {
         type: 'note',
-        text: 'هذا دليل، مو استشارة قانونية. قرينا كل صفحة مربوطة هني في 22 أكتوبر 2026. وما قدرنا نفتح صفحات وزارة الرياضة السعودية نفسها، فمعلومات الترخيص في السعودية من تقارير إخبارية ومكتب محاماة. تأكد من المتطلبات الحالية مع الوزارة أو مجلس دبي الرياضي قبل لا تقدّم.',
+        text: 'هذا دليل، مو استشارة قانونية. تأكد من المتطلبات الحالية مع الوزارة أو مجلس دبي الرياضي قبل لا تقدّم.',
       },
 
       { type: 'heading', id: 'market', text: 'سوق ما يوقف يكبر' },
@@ -374,7 +373,7 @@ export const post: Post = {
       },
       {
         type: 'note',
-        text: 'قرينا كل صفحة مربوطة هني في 22 أكتوبر 2026. قواعد الترخيص ورسومه تتغير، وما جبنا مصادر للرسوم أو المدد، فتأكد من وزارة الرياضة أو مجلس دبي الرياضي قبل لا تقدّم. وGym Thing من Thing W.L.L.، السيف، البحرين.',
+        text: 'قواعد الترخيص ورسومه تتغير، فتأكد من وزارة الرياضة أو مجلس دبي الرياضي قبل لا تقدّم.',
       },
     ],
   },
