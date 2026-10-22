@@ -114,7 +114,7 @@ const t = {
       <div class="hero-shot">
         <div role="region" aria-label={t.sample}><div lang="en" dir="ltr"><Dashboard client:visible /></div></div>
       </div>
-      <div class="clients"><span>{t.clients}</span>{clients.map((c) => <b lang="en">{c}</b>)}</div>
+      <div class="clients"><span>{t.clients}</span><div class="names">{clients.map((c) => <b lang="en">{c}</b>)}</div></div>
     </div>
   </section>
 
