@@ -24,6 +24,8 @@ export const comparisons: Comparison[] = [
     name: 'Mindbody',
     title: 'Gym Thing vs Mindbody',
     lede: 'Mindbody is a mature booking platform with a large consumer marketplace. Gym Thing is built in Bahrain for gyms that take BenefitPay, run GOSI payroll and want an Arabic member app.',
+    description:
+      'Gym Thing vs Mindbody: a booking platform with a large marketplace, or software built in Bahrain with BenefitPay, GOSI payroll and an Arabic member app.',
     they: 'Mindbody is a booking and business platform founded in San Luis Obispo, California, and now part of Playlist alongside ClassPass, Booker and EGYM. It suits studios and wellness businesses that want to be found on the Mindbody consumer app and are paid in the markets it supports.',
     strengths: [
       'A free listing on the Mindbody app, which Mindbody says draws more than 3 million shoppers a month.',
@@ -244,6 +246,8 @@ export const comparisons: Comparison[] = [
     name: 'Perfect Gym',
     title: 'Gym Thing vs Perfect Gym',
     lede: 'Perfect Gym is enterprise club software with wide hardware support, used by large chains. Gym Thing is built in Bahrain, with BenefitPay, GOSI payroll and one price by size.',
+    description:
+      'Gym Thing vs Perfect Gym: enterprise club software for large chains, or gym software built in Bahrain with BenefitPay, GOSI payroll and one price by size.',
     they: 'Perfect Gym is club management software from Warsaw, part of Hamburg-based Sport Alliance since May 2024. It suits multi-site chains that want deep configuration, a long list of hardware integrations and a formal implementation project.',
     strengths: [
       'A long list of supported access hardware, including Gantner, Suprema, ZKTeco and Assa Abloy readers.',
@@ -348,6 +352,8 @@ export const comparisons: Comparison[] = [
     name: 'Tamarran',
     title: 'Gym Thing vs Tamarran',
     lede: 'Tamarran is a Bahraini booking marketplace and studio system with Arabic support. Gym Thing is a full gym system, from turnstiles and payroll to VAT invoices and WhatsApp payments.',
+    description:
+      'Gym Thing vs Tamarran: a Bahraini booking marketplace and studio system, or a full gym system with turnstiles, payroll, VAT invoices and WhatsApp payments.',
     they: 'Tamarran Sports Online Services W.L.L. is a Bahraini company running a sports booking app and management software for gyms, studios and trainers in the GCC. It suits studios and academies that want bookings from its consumer marketplace and a local team.',
     strengths: [
       'A Bahraini company that offers support 24/7 in Arabic and English, with unlimited training.',
@@ -440,6 +446,8 @@ export const comparisons: Comparison[] = [
     name: 'Gymnago',
     title: 'Gym Thing vs Gymnago',
     lede: 'Gymnago is a Bahrain-registered, all-in-one platform sold across the GCC, with a branded app per gym. Gym Thing adds BenefitPay, GOSI payroll, VAT invoices and turnstiles.',
+    description:
+      'Gym Thing vs Gymnago: an all-in-one GCC platform with a branded app per gym, or Gym Thing with BenefitPay, GOSI payroll, VAT invoices and turnstiles.',
     they: 'Gymnago is owned and operated by Pixel Mind IT Solutions W.L.L., with a developer address in Al Hadd, and says it launched its first web platform in Bahrain. It suits gyms and wellness businesses across the GCC that want bookings, POS, loyalty and a branded app, and pay through gateways such as Knet, OmanNet or Qatar Pay.',
     strengths: [
       'Registered in Bahrain, with WhatsApp sales contacts for the UAE, Saudi Arabia and Kuwait.',
@@ -529,6 +537,8 @@ export const comparisons: Comparison[] = [
     name: 'FLYBY',
     title: 'Gym Thing vs FLYBY',
     lede: 'FLYBY is club software from Istanbul with deep hardware integrations, used from gyms to hotels and water parks. Gym Thing is built in Bahrain for gyms, with BenefitPay and GOSI payroll.',
+    description:
+      'Gym Thing vs FLYBY: club software from Istanbul with deep hardware integrations, or gym software built in Bahrain with BenefitPay and GOSI payroll.',
     they: 'FLYBY is club management software developed in 2004 by Senkron Tech of Istanbul, which says it has 30 years of software and R&D experience. Its 2026 brochure puts it in more than 600 locations in over 25 countries, including Bahrain and the rest of the GCC. It suits large clubs, spas, hotels and resorts that want one system across many kinds of venue.',
     strengths: [
       'A long track record, in use since 2004.',
@@ -730,6 +740,8 @@ export const comparisons: Comparison[] = [
     name: 'Spreadsheets and paper',
     title: 'Gym Thing vs spreadsheets and paper',
     lede: 'Plenty of gyms in Bahrain run on Excel, WhatsApp and a paper register, and it works for a while. Gym Thing takes over the chasing, counting and copying once you outgrow it.',
+    description:
+      'Gym Thing vs spreadsheets and paper: Excel, WhatsApp and a paper register work for a while. Gym Thing takes over the chasing, counting and copying.',
     they: 'Running the gym on Excel, WhatsApp and a paper register costs nothing upfront and everyone already knows how. It suits a new gym with a few dozen members and an owner who is at the desk every day.',
     strengths: [
       'No subscription and nothing to install.',
