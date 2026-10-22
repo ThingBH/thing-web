@@ -1,7 +1,7 @@
 import type { Post } from '../posts'
 
-// Source: docs/research/2026-10-gym-software-complaints (report.html), plus two Mindbody reviews read on
-// Trustpilot on 21 Oct 2026. Recheck a quote before reusing it, and keep its date.
+// Source: docs/research/2026-10-gym-software-complaints (report.html), plus two gym software reviews read on
+// 21 Oct 2026. Recheck a quote before reusing it, and keep its date.
 // Gym Thing answers only use what the report and README allow.
 export const post: Post = {
   slug: 'setup-and-staff-training',
@@ -17,7 +17,7 @@ export const post: Post = {
     blocks: [
       {
         type: 'note',
-        text: "This post goes deeper on two problems from our research, [What gym owners are fed up with in their software](/blog/gym-software-problems/). A review is one person's experience, not proof of how every gym gets on with a product.",
+        text: 'This post goes deeper on two problems from our research, [What gym owners are fed up with in their software](/blog/gym-software-problems/).',
       },
 
       { type: 'heading', id: 'why', text: 'Why new software takes so long to settle in' },
@@ -34,17 +34,17 @@ export const post: Post = {
         items: [
           {
             quote: '"The system is challenging to get used to and onboarding is a beast (but worth it)."',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '17 Nov 2025',
           },
           {
             quote: '"I’m now a month in and still don’t have a booking platform."',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '15 Oct 2026',
           },
           {
             quote: '"I spent THREE MONTHS of time and money on this."',
-            source: 'Trustpilot review of a gym software vendor, from a small business',
+            source: 'A review of a gym software vendor, from a small business',
             date: '2 Oct 2026',
           },
         ],
@@ -63,12 +63,12 @@ export const post: Post = {
         items: [
           {
             quote: '"This is the worst most unuser friendly, confusing one I have ever used."',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '12 Jan 2025',
           },
           {
             quote: '"the system is so rigid and convoluted"',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '1 May 2026',
           },
         ],
@@ -103,22 +103,22 @@ export const post: Post = {
         items: [
           {
             quote: '"they told me to wait until Monday"',
-            source: 'Trustpilot review of a gym software vendor, from a business open 7 days a week',
+            source: 'A review of a gym software vendor, from a business open 7 days a week',
             date: '27 Sep 2026',
           },
           {
             quote: '"the moment we signed on and became paying customers, that support disappeared."',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '1 Jun 2026',
           },
           {
             quote: '"there are serious bottlenecks in support, it seems like only one person works there"',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '16 Sep 2026',
           },
           {
             quote: '"You could talk to 4 different employees and get 4 totally different conflicting answers."',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '13 Oct 2026',
           },
         ],
@@ -136,15 +136,14 @@ export const post: Post = {
       { type: 'heading', id: 'go-live', text: 'A go-live plan for switching' },
       {
         type: 'text',
-        paras: ['One owner on r/gymowner gave new owners advice that works just as well for switching systems:'],
+        paras: ['One gym owner gave new owners advice online that works just as well for switching systems:'],
       },
       {
         type: 'quotes',
         items: [
           {
             quote: '"get your gym software set up before you start promoting. Billing, sign-ups, waivers, all of it."',
-            source: "An owner's advice to new owners, r/gymowner",
-            url: 'https://www.reddit.com/r/gymowner/comments/1wur9en/gym_owners_what_do_you_wish_you_knew_before/',
+            source: "An owner's advice to new owners, posted online",
             date: '1 Oct 2026',
           },
         ],
@@ -226,7 +225,7 @@ export const post: Post = {
       {
         type: 'text',
         paras: [
-          'Weighing Gym Thing against what you use today? Our comparisons with [Mindbody](/compare/mindbody/) and with [running the gym on spreadsheets](/compare/spreadsheets/) go through it point by point.',
+          'Weighing Gym Thing against what you use today? Our comparisons with [what you use now](/compare/mindbody/) and with [running the gym on spreadsheets](/compare/spreadsheets/) go through it point by point.',
           'Contracts and leaving with your data are covered in [What gym software really costs after the first year](/blog/price-contracts-and-your-data/). For Arabic and weekend support, see [Gym software built for somewhere else, seen from a gym in Bahrain](/blog/built-for-the-gulf/).',
         ],
       },
@@ -241,7 +240,7 @@ export const post: Post = {
     blocks: [
       {
         type: 'note',
-        text: 'هذا المقال يتعمق في مشكلتين من بحثنا [شنو اللي مضايق أصحاب النوادي في برامجهم](/ar/blog/gym-software-problems/). المراجعة تجربة شخص واحد، مو دليل على تجربة كل نادي مع البرنامج.',
+        text: 'هذا المقال يتعمق في مشكلتين من بحثنا [شنو اللي مضايق أصحاب النوادي في برامجهم](/ar/blog/gym-software-problems/).',
       },
 
       { type: 'heading', id: 'why', text: 'ليش البرنامج الجديد ياخذ وقت طويل لين يستقر' },
@@ -258,19 +257,19 @@ export const post: Post = {
         items: [
           {
             quote: '«النظام صعب تتعود عليه، والتهيئة متعبة وايد (بس تستاهل).»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '17 نوفمبر 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«صار لي شهر وللحين ما عندي نظام حجوزات.»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '15 أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«صرفت ثلاث شهور من وقتي وفلوسي على هذا.»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي، من نشاط تجاري صغير',
+            source: 'مراجعة لإحدى شركات برامج النوادي، من نشاط تجاري صغير',
             date: '2 أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -290,13 +289,13 @@ export const post: Post = {
         items: [
           {
             quote: '«هذا أسوأ واحد استخدمته في حياتي، صعب الاستخدام ومحيّر.»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '12 يناير 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«النظام جامد ومعقد وايد»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '1 مايو 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -332,25 +331,25 @@ export const post: Post = {
         items: [
           {
             quote: '«قالوا لي انطر لين يوم الاثنين»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي، من نشاط تجاري يفتح 7 أيام في الأسبوع',
+            source: 'مراجعة لإحدى شركات برامج النوادي، من نشاط تجاري يفتح 7 أيام في الأسبوع',
             date: '27 سبتمبر 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«أول ما وقّعنا وصرنا عملاء ندفع، اختفى الدعم.»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '1 يونيو 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«في زحمة كبيرة في الدعم، كأن شخص واحد بس يشتغل عندهم»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '16 سبتمبر 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«تقدر تكلم 4 موظفين مختلفين وتاخذ 4 أجوبة مختلفة ومتناقضة تماماً.»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '13 أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -369,15 +368,14 @@ export const post: Post = {
       { type: 'heading', id: 'go-live', text: 'خطة عشان تنتقل للبرنامج الجديد' },
       {
         type: 'text',
-        paras: ['صاحب نادي في r/gymowner عطى أصحاب النوادي الجدد نصيحة تنفع بعد لما تغيّر برنامجك:'],
+        paras: ['صاحب نادي عطى أصحاب النوادي الجدد نصيحة أونلاين تنفع بعد لما تغيّر برنامجك:'],
       },
       {
         type: 'quotes',
         items: [
           {
             quote: '«جهّز برنامج النادي قبل لا تبدأ الإعلانات. الفوترة، والتسجيل، ونماذج الإقرار، كل شي.»',
-            source: 'نصيحة صاحب نادي لأصحاب النوادي الجدد، في r/gymowner',
-            url: 'https://www.reddit.com/r/gymowner/comments/1wur9en/gym_owners_what_do_you_wish_you_knew_before/',
+            source: 'نصيحة صاحب نادي لأصحاب النوادي الجدد، منشورة أونلاين',
             date: '1 أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -460,7 +458,7 @@ export const post: Post = {
       {
         type: 'text',
         paras: [
-          'تقارن Gym Thing باللي تستخدمه اليوم؟ مقارناتنا مع [Mindbody](/ar/compare/mindbody/) ومع [إدارة النادي على جداول البيانات](/ar/compare/spreadsheets/) تمشي عليها نقطة نقطة.',
+          'تقارن Gym Thing باللي تستخدمه اليوم؟ مقارناتنا مع [اللي تستخدمه الحين](/ar/compare/mindbody/) ومع [إدارة النادي على جداول البيانات](/ar/compare/spreadsheets/) تمشي عليها نقطة نقطة.',
           'العقود والطلعة ببياناتك في مقال [التكلفة الحقيقية لبرامج إدارة النوادي بعد السنة الأولى](/ar/blog/price-contracts-and-your-data/). وعن الدعم بالعربي وفي الويكند، شوف [برامج النوادي المصممة لأسواق أخرى، من منظور نادٍ رياضي في البحرين](/ar/blog/built-for-the-gulf/).',
         ],
       },

@@ -15,11 +15,6 @@ export const post: Post = {
       'Members in the Gulf message their gym on WhatsApp first. How to take payments, send receipts and answer renewals there, and the Meta rules gyms should know.',
     lede: 'In the Gulf, a member who wants to renew, freeze or cancel doesn’t open your app or write an email. They message you on WhatsApp. That can be the fastest way to get paid, or the place where members wait for a reply that never comes. Here’s what the numbers say, where gyms get it wrong, the rules Meta sets, and how to run the desk on WhatsApp without losing track.',
     blocks: [
-      {
-        type: 'note',
-        text: 'The complaints here are quoted from member reviews, each one person’s experience, without their name.',
-      },
-
       { type: 'heading', id: 'members', text: 'Your members already live on WhatsApp' },
       {
         type: 'text',
@@ -59,19 +54,19 @@ export const post: Post = {
         items: [
           {
             quote: '"…complaints don’t work, and neither does the WhatsApp…"',
-            source: 'App Store review of a gym app in Saudi Arabia',
+            source: 'A review of a gym app in Saudi Arabia',
             date: '11 Jun 2026',
             note: 'translated from Arabic',
           },
           {
             quote: '"…I message you on WhatsApp and you don’t reply, ridiculous."',
-            source: 'App Store review of a gym app in Saudi Arabia',
+            source: 'A review of a gym app in Saudi Arabia',
             date: '30 Mar 2026',
             note: 'translated from Arabic',
           },
           {
             quote: '"They don’t respond on whatsapp when you ask for cancellation."',
-            source: 'App Store review of a gym app in the UAE',
+            source: 'A review of a gym app in the UAE',
             date: '22 Sep 2026',
           },
         ],
@@ -196,11 +191,6 @@ export const post: Post = {
       'يراسل الأعضاء في الخليج ناديهم عبر واتساب أولاً. كيف تستلم المدفوعات وترسل الإيصالات وترد على التجديدات عبره، وما قواعد Meta التي يجب أن يعرفها كل نادٍ.',
     lede: 'في الخليج، العضو اللي يبي يجدد أو يجمّد أو يلغي ما يفتح تطبيقك ولا يكتب إيميل. يراسلك على الواتساب. وهذا ممكن يكون أسرع طريق توصلك فيه الفلوس، أو المكان اللي ينتظر فيه العضو رد ما يجي. هني شنو تقول الأرقام، ووين تغلط النوادي، والقواعد اللي تحطها Meta، وشلون تدير الاستقبال على الواتساب بدون ما يضيع شي.',
     blocks: [
-      {
-        type: 'note',
-        text: 'الشكاوى هني مقتبسة من مراجعات الأعضاء، كل وحدة تجربة شخص واحد، وبدون اسمه.',
-      },
-
       { type: 'heading', id: 'members', text: 'أعضاءك أصلاً عايشين على الواتساب' },
       {
         type: 'text',
@@ -242,17 +232,17 @@ export const post: Post = {
         items: [
           {
             quote: '«…والشكاوي لا تعمل ولا الواتساب يعمل…»',
-            source: 'مراجعة على App Store لـأحد تطبيقات النوادي في السعودية',
+            source: 'مراجعة لأحد تطبيقات النوادي في السعودية',
             date: '11 يونيو 2026',
           },
           {
             quote: '«…واراسلكم واتس ماتردون استهبال»',
-            source: 'مراجعة على App Store لـأحد تطبيقات النوادي في السعودية',
+            source: 'مراجعة لأحد تطبيقات النوادي في السعودية',
             date: '30 مارس 2026',
           },
           {
             quote: '«ما يردون على الواتساب لما تطلب الإلغاء.»',
-            source: 'مراجعة على App Store لـأحد تطبيقات النوادي في الإمارات',
+            source: 'مراجعة لأحد تطبيقات النوادي في الإمارات',
             date: '22 سبتمبر 2026',
             note: 'مترجم من الإنجليزية',
           },

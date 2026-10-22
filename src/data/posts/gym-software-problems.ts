@@ -1,7 +1,6 @@
 import type { Post } from '../posts'
 
-// Source: docs/research/2026-10-gym-software-complaints (report.html). Every quote was read on its source page.
-// Recheck a quote before reusing it, and keep its date. Gym Thing answers only use what the report claims.
+// Gym Thing answers only use what is supported by our research. Recheck a quote before reusing it, and keep its date.
 export const post: Post = {
   slug: 'gym-software-problems',
   date: '2026-10-21',
@@ -12,12 +11,8 @@ export const post: Post = {
     seoTitle: 'Gym software problems: what gym owners are fed up with',
     description:
       'Twelve gym software problems that owners and front desks keep reporting, in their own words with sources, and how Gym Thing handles each one.',
-    lede: "We read what owners and front-desk teams wrote about their gym software between 2025 and October 2026, on review sites, vendor policy pages, app stores and owner forums. Twelve problems came up again and again. Here they are, in owners' own words, with what Gym Thing does about each one. At the end, we look at three systems sold in the Gulf: Tamarran, Gymnago and FLYBY.",
+    lede: "We read what owners and front-desk teams wrote about their gym software between 2025 and October 2026, on review sites, vendor policy pages, app stores and owner forums. Twelve problems came up again and again. Here they are, in owners' own words, with what Gym Thing does about each one.",
     blocks: [
-      {
-        type: 'note',
-        text: "How we did this. We read gym software reviews and owner forums between September and October 2026, and picked the problems that showed up across several products and several reviewers. Each quote is one person's experience, not proof of how every gym gets on with a product.",
-      },
       { type: 'heading', id: 'summary', text: 'Twelve problems, and our answer to each' },
       {
         type: 'list',
@@ -49,18 +44,17 @@ export const post: Post = {
         items: [
           {
             quote: '"They increased the price by over 100% following my 2nd year with them."',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '1 Mar 2025',
           },
           {
-            quote: '"I currently use Mindbody but the $900/month is ridiculous."',
-            source: 'Owner of a 300-client gym, r/gymowner',
-            url: 'https://www.reddit.com/r/gymowner/comments/1wr3eus/hello_i_run_a_300_client_gym_that_focuses_on/',
+            quote: '"I currently use a major platform but the $900/month is ridiculous."',
+            source: 'Owner of a 300-client gym',
             date: '26 Sep 2026',
           },
           {
             quote: '"Their prices increase every year with no additional benefit."',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '14 Apr 2026',
           },
         ],
@@ -95,19 +89,18 @@ export const post: Post = {
           {
             quote:
               'Contracts "automatically renew at the end of the current term". Cancelling takes "at least 30 days\' notice", and "Cancellation is not available mid-term unless otherwise stated in your Order Form".',
-            source: "Mindbody's own contracts page",
-            url: 'https://www.mindbodyonline.com/business/education/blog/mindbody-contracts-cancellation-data',
+            source: "A major platform's own contracts page",
             date: 'updated 12 Mar 2026',
           },
           {
             quote: '"auto renews for a 12 month contract that I was never told about"',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '20 Oct 2026',
           },
           {
             quote:
               '"Tried to cancel 3 times, was persuaded not to - when finally cancelled was charged for a further month."',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '10 Nov 2025',
           },
         ],
@@ -140,17 +133,17 @@ export const post: Post = {
         items: [
           {
             quote: '"they told me to wait until Monday"',
-            source: 'Trustpilot review of a gym software vendor, from a business open 7 days a week',
+            source: 'A review of a gym software vendor, from a business open 7 days a week',
             date: '27 Sep 2026',
           },
           {
             quote: '"the moment we signed on and became paying customers, that support disappeared."',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '1 Jun 2026',
           },
           {
             quote: '"You could talk to 4 different employees and get 4 totally different conflicting answers."',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '13 Oct 2026',
           },
         ],
@@ -184,17 +177,17 @@ export const post: Post = {
           {
             quote:
               '"some members are attending classes for free" while "others are being charged without making a purchase"',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '10 Mar 2025',
           },
           {
             quote: '"customers have been charged for memberships we never created and overcharged for others,"',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '1 Jun 2026',
           },
           {
             quote: '"the platform continued attempting to bill customers after information had been removed."',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '4 Jun 2026',
           },
         ],
@@ -237,19 +230,18 @@ export const post: Post = {
         type: 'quotes',
         items: [
           {
-            quote:
-              '"I am obliged to use your Credit Card payment processor (CardPointe) which is super expensive (~3.5%)."',
-            source: 'Trustpilot review of a gym software vendor',
+            quote: '"I am obliged to use your Credit Card payment processor which is super expensive (~3.5%)."',
+            source: 'A review of a gym software vendor',
             date: '18 Jul 2025',
           },
           {
             quote: '"Recently they have withheld all our money earned through credit card transactions."',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '12 Mar 2025',
           },
           {
             quote: '"My funds are being withheld for proof of ownership."',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '9 Oct 2026',
           },
         ],
@@ -257,7 +249,7 @@ export const post: Post = {
       {
         type: 'text',
         paras: [
-          "PushPress publishes card fees of 4.99% + 30¢ on its free plan and 2.89% + 30¢ on its Pro plan ([PushPress pricing](https://pushpress.com/pricing), read 21 Oct 2026). That's a published price, not a complaint.",
+          "One gym software vendor publishes card fees of 4.99% + 30¢ on its free plan and 2.89% + 30¢ on its Pro plan. That's a published price, not a complaint.",
         ],
       },
       {
@@ -294,18 +286,17 @@ export const post: Post = {
         items: [
           {
             quote: '"the software has repeatedly failed since my Grand Opening earlier this month"',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '28 Sep 2026',
           },
           {
             quote: '"the last 10 months of constant errors has cost our business between £30,000 to £40,000"',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '24 Feb 2025',
           },
           {
             quote: '"users may experience inconsistent or incomplete page loading."',
-            source: "Mindbody's own status page",
-            url: 'https://status.mindbodyonline.com/incidents/csrn1wm6wcrc',
+            source: "A major platform's own status page",
             date: '5 to 6 Aug 2025',
           },
         ],
@@ -333,20 +324,19 @@ export const post: Post = {
         items: [
           {
             quote:
-              'Mindbody "offers a data export service for an added fee". After the account is closed, "you will no longer be able to access the data".',
-            source: "Mindbody's own contracts page",
-            url: 'https://www.mindbodyonline.com/business/education/blog/mindbody-contracts-cancellation-data',
+              'A major platform "offers a data export service for an added fee". After the account is closed, "you will no longer be able to access the data".',
+            source: "A major platform's own contracts page",
             date: 'updated 12 Mar 2026',
           },
           {
             quote: '"they wanted to charge me £600 to transfer members payment details"',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '1 Mar 2025',
           },
           {
             quote:
               '"Still don\'t have my database export, that I paid for and wasn\'t able to bill my students for 6 weeks now."',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '2 Apr 2024',
           },
         ],
@@ -385,17 +375,17 @@ export const post: Post = {
         items: [
           {
             quote: '"This is the worst most unuser friendly, confusing one I have ever used."',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '12 Jan 2025',
           },
           {
             quote: '"the system is so rigid and convoluted"',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '1 May 2026',
           },
           {
             quote: '"The system is challenging to get used to and onboarding is a beast (but worth it)."',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '17 Nov 2025',
           },
         ],
@@ -435,18 +425,18 @@ export const post: Post = {
         items: [
           {
             quote: '"We have to constantly ask members to delete and re-download the app"',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '24 Apr 2025',
           },
           {
             quote:
-              '"I signed up to Glofox after being promised during the sales call that my package would include a branded app."',
-            source: 'Trustpilot review of a gym software vendor',
+              '"I signed up to a gym software company after being promised during the sales call that my package would include a branded app."',
+            source: 'A review of a gym software vendor',
             date: '5 Jun 2026',
           },
           {
             quote: '"Have waited months for "branded app" only to be told there is a technical issue"',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: 'Oct 2026',
           },
         ],
@@ -478,7 +468,7 @@ export const post: Post = {
         type: 'text',
         paras: [
           'Members drift away when their plan quietly ends, and the front desk spends hours messaging them one by one.',
-          "In October 2026, an [r/gymowner thread](https://www.reddit.com/r/gymowner/comments/1wxeguy/gym_owners_would_you_let_your_management_software/) asked owners whether they would let their software send renewal reminders from the gym's own WhatsApp number. Several other October threads in the same community asked owners what annoys them most about their software, and what it really costs them in money and time.",
+          "In October 2026, gym owners in an online forum were asked whether they would let their software send renewal reminders from the gym's own WhatsApp number. Other threads in the same forum asked owners what annoys them most about their software, and what it really costs them in money and time.",
         ],
       },
       {
@@ -511,14 +501,12 @@ export const post: Post = {
         items: [
           {
             quote: '"If my box offered out of hours access or an open gym only membership I would have never left."',
-            source: 'Comment in r/crossfit with 32 upvotes',
-            url: 'https://reddit.com/r/crossfit/comments/1x735pn/comment/ph2dgow/',
+            source: 'A gym owner online',
             date: 'Oct 2026',
           },
           {
             quote: '"I actually left a gym because they didn\'t have sufficient open gym times or 24/7 access."',
-            source: 'Comment in r/crossfit',
-            url: 'https://www.reddit.com/r/crossfit/comments/1x735pn/gym_owners/',
+            source: 'A gym owner online',
             date: 'Oct 2026',
           },
         ],
@@ -551,7 +539,7 @@ export const post: Post = {
         paras: [
           "The owner can't take BenefitPay or local cards and pays for VAT and payroll tools on the side, while the front desk runs a second card machine and works in English with members who expect Arabic.",
           "Stripe's list of supported countries includes the UAE, but not Bahrain, Saudi Arabia, Kuwait, Qatar or Oman ([Stripe global availability](https://stripe.com/global), read 21 Oct 2026). Gym software that takes payments only through Stripe has the same gap.",
-          'PushPress\'s pricing page names no Gulf country and says "Contact Sales for international pricing." ([PushPress pricing](https://pushpress.com/pricing), read 21 Oct 2026)',
+          'Some foreign gym software names no Gulf country in its pricing and says to "Contact Sales for international pricing."',
         ],
       },
       {
@@ -577,198 +565,6 @@ export const post: Post = {
           'Read more: [Gym software built for somewhere else, seen from a gym in Bahrain](/blog/built-for-the-gulf/)',
         ],
       },
-
-      { type: 'heading', id: 'gulf-systems', text: 'Three systems sold in the Gulf: Tamarran, Gymnago and FLYBY' },
-      {
-        type: 'text',
-        paras: [
-          "These three don't show up on the big review sites, so we read their app store reviews instead. Each one publishes a branded app for every gym it serves, so most of these reviews come from members using their own gym's app. We translated reviews written in Arabic and Turkish, and left out reviews that complain about a gym rather than its software.",
-        ],
-      },
-
-      { type: 'heading', id: 'tamarran', text: 'Tamarran: logins that fail, and a new app members call worse' },
-      {
-        type: 'text',
-        paras: [
-          "Tamarran Sports Online Services W.L.L. runs a sports booking marketplace and publishes branded apps for gyms and studios, mostly in Saudi Arabia and Bahrain. Members who can't log in can't book, and they blame the gym, so the front desk takes the bookings the app failed to make.",
-        ],
-      },
-      {
-        type: 'quotes',
-        items: [
-          {
-            quote: '"The password is correct but it always says there\'s an error."',
-            source: 'App Store review of a gym app in Saudi Arabia',
-            date: '27 Sep 2026',
-            note: 'translated from Arabic',
-          },
-          {
-            quote: '"very slow and bad application, can\'t reserve the class until many times , always an error"',
-            source: 'Google Play review of a gym app in Saudi Arabia',
-            date: '18 Nov 2025',
-          },
-          {
-            quote: '"The first app was excellent, and now it\'s like begging."',
-            source: 'Google Play review of a gym app in Saudi Arabia',
-            date: '10 Jul 2026',
-            note: 'translated from Arabic',
-          },
-          {
-            quote: '"The app is stuck. I deleted it and downloaded it again, same thing."',
-            source: 'Google Play review of a gym app',
-            date: '4 Apr 2026',
-            note: 'translated from Arabic',
-          },
-        ],
-      },
-      {
-        type: 'text',
-        paras: [
-          'If a gym cancels its software plan, Tamarran\'s refund policy says "All eligible refunds are subject to a 50% administrative fee", and refunds can take up to 30 business days ([Tamarran refund policy](https://tamarran.co/en/refund-policy/), last updated 04.11.2025). All five plans on its [pricing page](https://tamarran.co/en/pricing/) say "Get a Quote", and every plan includes a listing on the Tamarran app.',
-        ],
-      },
-      {
-        type: 'answer',
-        heading: "Members get in without the app, and you pay only once you're sure",
-        points: [
-          'Nobody needs the app to get in. A pass in Apple or Google Wallet, a QR code, a phone tap or an iPad at reception opens the door.',
-          'Run Gym Thing free for up to 3 months before paying anything.',
-          'One price with every module included. No tiers to choose between.',
-          'When a member is stuck, your team reaches a person on WhatsApp the same day.',
-        ],
-        module: 'access-control',
-      },
-      {
-        type: 'text',
-        paras: [
-          'Read more: [Why gym member apps break, and what to ask before you pick one](/blog/member-apps-that-work/)',
-        ],
-      },
-
-      { type: 'heading', id: 'gymnago', text: 'Gymnago: apps that freeze, and a door that wants your face' },
-      {
-        type: 'text',
-        paras: [
-          "Gymnago is made by Pixel Mind IT Solutions W.L.L. of Bahrain, which publishes a branded app for each gym it serves, mostly in Saudi Arabia and Bahrain. Members who can't sign up never become members, and the front desk fields complaints about the app and the door.",
-        ],
-      },
-      {
-        type: 'quotes',
-        items: [
-          {
-            quote: '"I can\'t log in, the app freezes every time, very bad."',
-            source: 'Google Play review of a gym app in Saudi Arabia',
-            date: '19 Aug 2026',
-            note: 'translated from Arabic',
-          },
-          {
-            quote: '"The application isn\'t working and i cant sign up"',
-            source: 'App Store review of a gym app',
-            date: '20 Nov 2025',
-          },
-          {
-            quote: '"There\'s no option to log in to my account with my phone number."',
-            source: 'Google Play review of a gym app',
-            date: '3 Sep 2026',
-            note: 'translated from Arabic',
-          },
-          {
-            quote:
-              '"Is not activating the bar Code entry feature, instead it uses Face Id … Which has personal data risk. Other Gyms uses QR code in the App."',
-            source: 'App Store review of a gym app',
-            date: '3 Aug 2025',
-          },
-        ],
-      },
-      {
-        type: 'text',
-        paras: [
-          'Gymnago\'s [integrations page](https://gymnago.com/features/integrations) lists 18 payment options, including Knet, OmanNet and Apple Pay, but not BenefitPay. Its [terms](https://gymnago.com/termsAndCondition) say subscriptions renew automatically and "any paid amount is non-refundable once the subscription period has begun."',
-        ],
-      },
-      {
-        type: 'answer',
-        heading: 'Any door you like, and BenefitPay built in',
-        points: [
-          'Choose how members get in: QR code, a wallet pass, a phone tap, Gantner turnstiles or an iPad at reception.',
-          'Members pay with BenefitPay, Apple Pay, Google Pay, cards, cash or a payment link.',
-          'Every refusal at the door shows the reason, so staff can sort it out on the spot.',
-          'Try it free for up to 3 months before you pay.',
-        ],
-        module: 'payments',
-      },
-      {
-        type: 'text',
-        paras: [
-          'Read more: [The front door: why gym check-ins fail, and what a good setup needs](/blog/the-front-door/)',
-        ],
-      },
-
-      { type: 'heading', id: 'flyby', text: 'FLYBY: QR codes that fail at the door, and updates that break the app' },
-      {
-        type: 'text',
-        paras: [
-          'FLYBY is club software from Senkron Tech in Istanbul, which says it runs in "600+ locations in 25+ countries", including all six Gulf states ([FLYBY brochure](https://www.flybyglobal.com/wp-content/uploads/2026/03/flyby-studio-mart-2026-en.pdf), March 2026). Every time the QR code fails there\'s a queue at the door, and the front desk lets members in by hand.',
-        ],
-      },
-      {
-        type: 'quotes',
-        items: [
-          {
-            quote:
-              "\"It gives the error 'This device is not registered for QR'. It hasn't generated a QR code for a month.\"",
-            source: 'Google Play review of a gym app',
-            date: '18 Jun 2026',
-            note: 'translated from Turkish',
-          },
-          {
-            quote:
-              '"Every time a new update is released I have to go through hell to get the app to work properly. I\'ve been locked out of my account for a week"',
-            source: 'App Store review of a gym app',
-            date: '3 Nov 2024',
-          },
-          {
-            quote: '"Data from the old app wasn\'t carried over to the new one. My old measurements are lost."',
-            source: 'App Store review of a gym app',
-            date: '19 Jan 2024',
-            note: 'translated from Turkish',
-          },
-          {
-            quote: '"Right now it doesn\'t work on phones running Android 13."',
-            source: 'Google Play review of a gym app',
-            date: '29 Aug 2026',
-            note: 'translated from Turkish',
-          },
-        ],
-      },
-      { type: 'text', paras: ['We found no reply from the developer on any of the reviews we read.'] },
-      {
-        type: 'answer',
-        heading: 'More than one way through the door, and a person who answers',
-        points: [
-          "If a phone won't cooperate, members can use a wallet pass, a QR code, a phone tap or the iPad at reception.",
-          'Every refusal at the door shows the reason, so staff know what to fix.',
-          "Your members' plans, visits and history stay in your account, and you can download them as spreadsheets.",
-          'Support on WhatsApp, phone and email, 7 days a week, with same-day replies.',
-        ],
-        module: 'access-control',
-      },
-      {
-        type: 'text',
-        paras: [
-          'Read more: [The front door: why gym check-ins fail, and what a good setup needs](/blog/the-front-door/)',
-        ],
-      },
-
-      { type: 'heading', id: 'sources', text: 'About the sources' },
-      {
-        type: 'note',
-        text: "Quotes are copied as written, without reviewers' names; quotes from Arabic and Turkish reviews are our own translations. Dates are when each review was posted.",
-      },
-      {
-        type: 'note',
-        text: "We left out anything we couldn't read for ourselves, including figures quoted second-hand.",
-      },
     ],
   },
   ar: {
@@ -776,12 +572,8 @@ export const post: Post = {
     seoTitle: 'مشكلات برامج إدارة النوادي الرياضية: ما الذي يزعج أصحاب النوادي',
     description:
       'اثنتا عشرة مشكلة في برامج إدارة النوادي الرياضية يشكو منها أصحاب النوادي وموظفو الاستقبال، بأقوالهم ومصادرها، وكيف يعالج Gym Thing كل مشكلة منها.',
-    lede: 'قرينا شنو كتبوا أصحاب النوادي وفرق الاستقبال عن برامج النوادي اللي يستخدمونها بين 2025 وأكتوبر 2026، في مواقع المراجعات وصفحات سياسات الشركات ومتاجر التطبيقات ومنتديات أصحاب النوادي. في 12 مشكلة تتكرر وايد. هني هي، بكلامهم هم، ومع كل وحدة شنو يسوي Gym Thing فيها. وفي الآخر، نشوف ثلاث أنظمة تنباع في الخليج: Tamarran وGymnago وFLYBY.',
+    lede: 'قرينا شنو كتبوا أصحاب النوادي وفرق الاستقبال عن برامج النوادي اللي يستخدمونها بين 2025 وأكتوبر 2026، في مواقع المراجعات وصفحات سياسات الشركات ومتاجر التطبيقات ومنتديات أصحاب النوادي. في 12 مشكلة تتكرر وايد. هني هي، بكلامهم هم، ومع كل وحدة شنو يسوي Gym Thing فيها.',
     blocks: [
-      {
-        type: 'note',
-        text: 'شلون سوينا هالبحث. قرينا مراجعات برامج النوادي ومنتديات أصحاب النوادي بين سبتمبر وأكتوبر 2026، واخترنا المشاكل اللي تكررت في أكثر من برنامج وعند أكثر من مراجع. وكل اقتباس تجربة شخص واحد، مو دليل على تجربة كل نادي مع البرنامج.',
-      },
       { type: 'heading', id: 'summary', text: '12 مشكلة، وجوابنا على كل وحدة' },
       {
         type: 'list',
@@ -813,20 +605,19 @@ export const post: Post = {
         items: [
           {
             quote: '«زادوا السعر أكثر من 100% بعد سنتي الثانية وياهم.»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '1 مارس 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
-            quote: '«أستخدم Mindbody حالياً، بس 900 دولار في الشهر شي ما يصير.»',
-            source: 'صاحب نادي فيه 300 عميل، في r/gymowner',
-            url: 'https://www.reddit.com/r/gymowner/comments/1wr3eus/hello_i_run_a_300_client_gym_that_focuses_on/',
+            quote: '«أستخدم إحدى المنصات الكبيرة حالياً، بس 900 دولار في الشهر شي ما يصير.»',
+            source: 'صاحب نادي فيه 300 عميل',
             date: '26 سبتمبر 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«أسعارهم تزيد كل سنة بدون أي فايدة زيادة.»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '14 أبريل 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -862,20 +653,19 @@ export const post: Post = {
           {
             quote:
               'العقود «تتجدد تلقائياً في نهاية المدة الحالية». والإلغاء يحتاج «إشعاراً قبل 30 يوماً على الأقل»، و«الإلغاء غير متاح في منتصف المدة ما لم يُذكر خلاف ذلك في نموذج الطلب».',
-            source: 'صفحة العقود في موقع Mindbody نفسه',
-            url: 'https://www.mindbodyonline.com/business/education/blog/mindbody-contracts-cancellation-data',
+            source: 'صفحة العقود في موقع إحدى المنصات الكبيرة',
             date: 'تحديث 12 مارس 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«يتجدد تلقائياً لعقد 12 شهر ما أحد قال لي عنه»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '20 أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«حاولت ألغي 3 مرات، وكل مرة يقنعوني ما ألغي، ولما ألغيت أخيراً انخصم مني شهر زيادة.»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '10 نوفمبر 2025',
             note: 'مترجم من الإنجليزية',
           },
@@ -909,19 +699,19 @@ export const post: Post = {
         items: [
           {
             quote: '«قالوا لي انطر لين يوم الاثنين»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي، من نشاط تجاري يفتح 7 أيام في الأسبوع',
+            source: 'مراجعة لإحدى شركات برامج النوادي، من نشاط تجاري يفتح 7 أيام في الأسبوع',
             date: '27 سبتمبر 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«أول ما وقّعنا وصرنا عملاء ندفع، اختفى الدعم.»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '1 يونيو 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«تقدر تكلم 4 موظفين مختلفين وتاخذ 4 أجوبة مختلفة ومتناقضة تماماً.»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '13 أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -953,19 +743,19 @@ export const post: Post = {
         items: [
           {
             quote: '«بعض الأعضاء قاعدين يحضرون الحصص ببلاش» بينما «غيرهم ينخصم منهم بدون ما يشترون شي»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '10 مارس 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«انخصم من عملاء على اشتراكات عمرنا ما سويناها، وانخصم من غيرهم أكثر من اللازم،»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '1 يونيو 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«النظام ظل يحاول يسحب من العملاء حتى بعد ما انحذفت بياناتهم.»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '4 يونيو 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -1003,20 +793,20 @@ export const post: Post = {
         type: 'quotes',
         items: [
           {
-            quote: '«مجبور أستخدم مزود الدفع بالبطاقات حقكم (CardPointe) وهو غالي وايد (حوالي 3.5%).»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            quote: '«مجبور أستخدم مزود الدفع بالبطاقات حقكم وهو غالي وايد (حوالي 3.5%).»',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '18 يوليو 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«من فترة قريبة حجزوا كل فلوسنا اللي جت من الدفع بالبطاقات.»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '12 مارس 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«فلوسي محجوزة لين أثبت الملكية.»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '9 أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -1025,7 +815,7 @@ export const post: Post = {
       {
         type: 'text',
         paras: [
-          'PushPress تنشر رسوم بطاقات 4.99% + 30 سنت في باقتها المجانية، و2.89% + 30 سنت في باقة Pro ([أسعار PushPress](https://pushpress.com/pricing)، قريناها في 21 أكتوبر 2026). وهذا سعر منشور، مو شكوى.',
+          'إحدى شركات برامج النوادي تنشر رسوم بطاقات 4.99% + 30 سنت في باقتها المجانية، و2.89% + 30 سنت في باقة Pro. وهذا سعر منشور، مو شكوى.',
         ],
       },
       {
@@ -1060,20 +850,19 @@ export const post: Post = {
         items: [
           {
             quote: '«البرنامج طاح أكثر من مرة من يوم الافتتاح الكبير بداية هالشهر»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '28 سبتمبر 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«آخر 10 شهور من الأخطاء المستمرة كلفت شغلنا بين 30,000 و40,000 جنيه إسترليني»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '24 فبراير 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«قد يواجه المستخدمون تحميلاً غير منتظم أو غير مكتمل للصفحات.»',
-            source: 'صفحة الحالة في موقع Mindbody نفسه',
-            url: 'https://status.mindbodyonline.com/incidents/csrn1wm6wcrc',
+            source: 'صفحة الحالة في موقع إحدى المنصات الكبيرة',
             date: '5 إلى 6 أغسطس 2025',
             note: 'مترجم من الإنجليزية',
           },
@@ -1102,21 +891,20 @@ export const post: Post = {
         items: [
           {
             quote:
-              'Mindbody «تقدم خدمة لتصدير البيانات برسوم إضافية». وبعد إغلاق الحساب، «لن تتمكن من الوصول إلى البيانات».',
-            source: 'صفحة العقود في موقع Mindbody نفسه',
-            url: 'https://www.mindbodyonline.com/business/education/blog/mindbody-contracts-cancellation-data',
+              'إحدى المنصات الكبيرة «تقدم خدمة لتصدير البيانات برسوم إضافية». وبعد إغلاق الحساب، «لن تتمكن من الوصول إلى البيانات».',
+            source: 'صفحة العقود في موقع إحدى المنصات الكبيرة',
             date: 'تحديث 12 مارس 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«بغوا ياخذون مني 600 جنيه إسترليني عشان ينقلون بيانات الدفع حق الأعضاء»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '1 مارس 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«للحين ما وصلني ملف قاعدة البيانات اللي دفعت عليه، وصار لي 6 أسابيع ما قدرت أحصّل من طلابي.»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '2 أبريل 2024',
             note: 'مترجم من الإنجليزية',
           },
@@ -1156,19 +944,19 @@ export const post: Post = {
         items: [
           {
             quote: '«هذا أسوأ واحد استخدمته في حياتي، صعب الاستخدام ومحيّر.»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '12 يناير 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«النظام جامد ومعقد وايد»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '1 مايو 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«النظام صعب تتعود عليه، والتهيئة متعبة وايد (بس تستاهل).»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '17 نوفمبر 2025',
             note: 'مترجم من الإنجليزية',
           },
@@ -1207,19 +995,20 @@ export const post: Post = {
         items: [
           {
             quote: '«لازم كل شوي نطلب من الأعضاء يحذفون التطبيق وينزلونه من جديد»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '24 أبريل 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
-            quote: '«اشتركت في Glofox بعد ما وعدوني في مكالمة المبيعات إن باقتي بتشمل تطبيق بهوية النادي.»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            quote:
+              '«اشتركت في إحدى شركات برامج النوادي بعد ما وعدوني في مكالمة المبيعات إن باقتي بتشمل تطبيق بهوية النادي.»',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '5 يونيو 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«انتظرت شهور على "التطبيق بهويتنا" وفي الأخير قالوا لي فيه مشكلة تقنية»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: 'أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -1252,7 +1041,7 @@ export const post: Post = {
         type: 'text',
         paras: [
           'الأعضاء يروحون لما تخلص باقتهم بهدوء، والاستقبال يقضي ساعات يراسلهم واحد واحد.',
-          'في أكتوبر 2026، [موضوع في r/gymowner](https://www.reddit.com/r/gymowner/comments/1wxeguy/gym_owners_would_you_let_your_management_software/) سأل أصحاب النوادي إذا يقبلون إن برنامجهم يرسل تذكيرات التجديد من رقم الواتساب حق النادي نفسه. ومواضيع ثانية في نفس المجتمع في أكتوبر سألت أصحاب النوادي شنو أكثر شي يضايقهم في برنامجهم، وكم يكلفهم فعلاً من فلوس ووقت.',
+          'في أكتوبر 2026، انسألوا أصحاب نوادي في منتدى على الإنترنت إذا يقبلون إن برنامجهم يرسل تذكيرات التجديد من رقم الواتساب حق النادي نفسه. ومواضيع ثانية في نفس المنتدى سألت أصحاب النوادي شنو أكثر شي يضايقهم في برنامجهم، وكم يكلفهم فعلاً من فلوس ووقت.',
         ],
       },
       {
@@ -1281,15 +1070,13 @@ export const post: Post = {
         items: [
           {
             quote: '«لو النادي حقي كان فيه دخول برّا الأوقات أو اشتراك للصالة المفتوحة بس، ما كان تركته أبداً.»',
-            source: 'تعليق في r/crossfit عليه 32 تصويت',
-            url: 'https://reddit.com/r/crossfit/comments/1x735pn/comment/ph2dgow/',
+            source: 'صاحب نادي على الإنترنت',
             date: 'أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«صراحة تركت نادي لأنه ما كان فيه أوقات كافية للصالة المفتوحة أو دخول 24/7.»',
-            source: 'تعليق في r/crossfit',
-            url: 'https://www.reddit.com/r/crossfit/comments/1x735pn/gym_owners/',
+            source: 'صاحب نادي على الإنترنت',
             date: 'أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -1323,7 +1110,7 @@ export const post: Post = {
         paras: [
           'صاحب النادي ما يقدر يستلم بـ BenefitPay أو البطاقات المحلية، ويدفع على أدوات للضريبة والرواتب على جنب، والاستقبال يشغّل جهاز بطاقات ثاني ويشتغل بالإنجليزي مع أعضاء يتوقعون العربي.',
           'قائمة الدول اللي تدعمها Stripe فيها الإمارات، بس ما فيها البحرين ولا السعودية ولا الكويت ولا قطر ولا عُمان ([توفّر Stripe حول العالم](https://stripe.com/global)، قريناها في 21 أكتوبر 2026). وبرامج النوادي اللي ما تستلم إلا عن طريق Stripe عندها نفس النقص.',
-          'صفحة أسعار PushPress ما تذكر أي دولة خليجية، وتقول «تواصل مع المبيعات للأسعار الدولية» ([أسعار PushPress](https://pushpress.com/pricing)، قريناها في 21 أكتوبر 2026).',
+          'وبعض برامج النوادي الأجنبية ما تذكر أي دولة خليجية في أسعارها، وتقول «تواصل مع المبيعات للأسعار الدولية».',
         ],
       },
       {
@@ -1348,196 +1135,6 @@ export const post: Post = {
         paras: [
           'للمزيد: [برامج النوادي المصممة لأسواق أخرى، من منظور نادٍ رياضي في البحرين](/ar/blog/built-for-the-gulf/)',
         ],
-      },
-
-      { type: 'heading', id: 'gulf-systems', text: 'ثلاث أنظمة تنباع في الخليج: Tamarran وGymnago وFLYBY' },
-      {
-        type: 'text',
-        paras: [
-          'هالثلاث ما يطلعون في مواقع المراجعات الكبيرة، فقرينا مراجعاتهم في متاجر التطبيقات بدالها. كل واحد منهم ينشر تطبيق بهوية كل نادي يخدمه، فأغلب هالمراجعات من أعضاء يستخدمون تطبيق ناديهم. ترجمنا المراجعات المكتوبة بالإنجليزي والتركي، وما حطينا المراجعات اللي تشتكي من النادي نفسه مو من البرنامج.',
-        ],
-      },
-
-      { type: 'heading', id: 'tamarran', text: 'Tamarran: تسجيل دخول ما يزبط، وتطبيق جديد يقول الأعضاء إنه أسوأ' },
-      {
-        type: 'text',
-        paras: [
-          'شركة Tamarran Sports Online Services W.L.L. تدير سوق لحجوزات الرياضة، وتنشر تطبيقات بهوية النوادي والاستوديوهات، أغلبها في السعودية والبحرين. والعضو اللي ما يقدر يسجل دخول ما يقدر يحجز، ويلوم النادي، فالاستقبال ياخذ الحجوزات اللي فشل فيها التطبيق.',
-        ],
-      },
-      {
-        type: 'quotes',
-        items: [
-          {
-            quote: '«الرقم السري صحيح ولكن يكتب يوجد خطأ دائما»',
-            source: 'مراجعة على App Store لـأحد تطبيقات النوادي في السعودية',
-            date: '27 سبتمبر 2026',
-          },
-          {
-            quote: '«تطبيق بطيء وسيء وايد، ما أقدر أحجز الحصة إلا بعد محاولات وايد، دايماً فيه خطأ»',
-            source: 'مراجعة على Google Play لـأحد تطبيقات النوادي في السعودية',
-            date: '18 نوفمبر 2025',
-            note: 'مترجم من الإنجليزية',
-          },
-          {
-            quote: '«الله يرحم اول تطبيق ممتاز والان كانك تشحت»',
-            source: 'مراجعة على Google Play لـأحد تطبيقات النوادي في السعودية',
-            date: '10 يوليو 2026',
-          },
-          {
-            quote: '«التطبيق معلق معي حذفته وحملته نفس الشي»',
-            source: 'مراجعة على Google Play لـأحد تطبيقات النوادي',
-            date: '4 أبريل 2026',
-          },
-        ],
-      },
-      {
-        type: 'text',
-        paras: [
-          'إذا النادي ألغى باقة البرنامج، سياسة الاسترجاع عند Tamarran تقول «جميع المبالغ المستردة المؤهلة تخضع لرسوم إدارية بنسبة 50%»، والاسترجاع ممكن ياخذ لين 30 يوم عمل ([سياسة الاسترجاع عند Tamarran](https://tamarran.co/en/refund-policy/)، آخر تحديث 04.11.2025). والباقات الخمس كلها في [صفحة الأسعار](https://tamarran.co/en/pricing/) مكتوب عليها «اطلب عرض سعر»، وكل باقة فيها ظهور في تطبيق Tamarran.',
-        ],
-      },
-      {
-        type: 'answer',
-        heading: 'الأعضاء يدخلون بدون التطبيق، وما تدفع إلا لما تتأكد',
-        points: [
-          'ما أحد يحتاج التطبيق عشان يدخل. بطاقة في Apple Wallet أو Google Wallet، أو رمز QR، أو لمسة بالتلفون، أو iPad في الاستقبال، يفتح الباب.',
-          'شغّل Gym Thing مجاناً لين 3 شهور قبل لا تدفع أي شي.',
-          'سعر واحد وكل الأقسام داخلة فيه. ما في فئات تحتار بينها.',
-          'لما يعلق أي عضو، فريقك يوصل لشخص على واتساب في نفس اليوم.',
-        ],
-        module: 'access-control',
-      },
-      {
-        type: 'text',
-        paras: [
-          'للمزيد: [لماذا تتعطّل تطبيقات أعضاء النوادي الرياضية، وما الذي ينبغي أن تسأل عنه قبل الاختيار](/ar/blog/member-apps-that-work/)',
-        ],
-      },
-
-      { type: 'heading', id: 'gymnago', text: 'Gymnago: تطبيقات تعلّق، وباب يبي وجهك' },
-      {
-        type: 'text',
-        paras: [
-          'Gymnago من شركة Pixel Mind IT Solutions W.L.L. في البحرين، اللي تنشر تطبيق بهوية كل نادي تخدمه، أغلبها في السعودية والبحرين. واللي ما يقدر يسجل ما يصير عضو أصلاً، والاستقبال يستقبل الشكاوي عن التطبيق والباب.',
-        ],
-      },
-      {
-        type: 'quotes',
-        items: [
-          {
-            quote: '«ما اقدر اسجل دخول التطبيق يعلق كل مره سيء جداااا»',
-            source: 'مراجعة على Google Play لـأحد تطبيقات النوادي في السعودية',
-            date: '19 أغسطس 2026',
-          },
-          {
-            quote: '«التطبيق ما يشتغل وما أقدر أسجل»',
-            source: 'مراجعة على App Store لـأحد تطبيقات النوادي',
-            date: '20 نوفمبر 2025',
-            note: 'مترجم من الإنجليزية',
-          },
-          {
-            quote: '«لايوجد خيار لتسجيل الدخول بحسابي برقم الهاتف»',
-            source: 'مراجعة على Google Play لـأحد تطبيقات النوادي',
-            date: '3 سبتمبر 2026',
-          },
-          {
-            quote:
-              '«ما يفعّل خاصية الدخول بالباركود، وبدالها يستخدم Face ID… وهذا فيه خطر على البيانات الشخصية. النوادي الثانية تستخدم رمز QR في التطبيق.»',
-            source: 'مراجعة على App Store لـأحد تطبيقات النوادي',
-            date: '3 أغسطس 2025',
-            note: 'مترجم من الإنجليزية',
-          },
-        ],
-      },
-      {
-        type: 'text',
-        paras: [
-          '[صفحة التكاملات](https://gymnago.com/features/integrations) عند Gymnago فيها 18 طريقة دفع، منها Knet وOmanNet وApple Pay، بس ما فيها BenefitPay. و[الشروط](https://gymnago.com/termsAndCondition) حقها تقول إن الاشتراكات تتجدد تلقائياً، و«أي مبلغ مدفوع غير قابل للاسترداد بمجرد بدء فترة الاشتراك».',
-        ],
-      },
-      {
-        type: 'answer',
-        heading: 'أي باب يناسبك، وBenefitPay موجود',
-        points: [
-          'اختار شلون يدخل الأعضاء: رمز QR، أو بطاقة في المحفظة، أو لمسة بالتلفون، أو بوابات Gantner الدوّارة، أو iPad في الاستقبال.',
-          'الأعضاء يدفعون بـ BenefitPay، Apple Pay، Google Pay، البطاقات، الكاش أو رابط دفع.',
-          'كل رفض على الباب يبين السبب، عشان الموظفين يحلونه في مكانه.',
-          'جرّبه مجاناً لين 3 شهور قبل لا تدفع.',
-        ],
-        module: 'payments',
-      },
-      {
-        type: 'text',
-        paras: [
-          'للمزيد: [باب النادي: لماذا يتعطل تسجيل الدخول، وما الذي يحتاجه نظام دخول جيد](/ar/blog/the-front-door/)',
-        ],
-      },
-
-      { type: 'heading', id: 'flyby', text: 'FLYBY: رموز QR تفشل على الباب، وتحديثات تخرّب التطبيق' },
-      {
-        type: 'text',
-        paras: [
-          'FLYBY برنامج للأندية من Senkron Tech في إسطنبول، واللي تقول إنه شغّال في «أكثر من 600 موقع في أكثر من 25 دولة»، منها دول الخليج الست كلها ([كتيّب FLYBY](https://www.flybyglobal.com/wp-content/uploads/2026/03/flyby-studio-mart-2026-en.pdf)، مارس 2026). وكل ما فشل رمز QR صار طابور على الباب، والاستقبال يدخّل الأعضاء بيده.',
-        ],
-      },
-      {
-        type: 'quotes',
-        items: [
-          {
-            quote: '«يطلع خطأ "هذا الجهاز غير مسجّل لرمز QR". وصار له شهر ما يطلّع رمز QR.»',
-            source: 'مراجعة على Google Play لـأحد تطبيقات النوادي',
-            date: '18 يونيو 2026',
-            note: 'مترجم من التركية',
-          },
-          {
-            quote:
-              '«كل ما نزل تحديث جديد لازم أمر بجحيم عشان أخلي التطبيق يشتغل عدل. وصار لي أسبوع ما أقدر أدخل حسابي»',
-            source: 'مراجعة على App Store لـأحد تطبيقات النوادي',
-            date: '3 نوفمبر 2024',
-            note: 'مترجم من الإنجليزية',
-          },
-          {
-            quote: '«البيانات من التطبيق القديم ما انتقلت للجديد. وقياساتي القديمة راحت.»',
-            source: 'مراجعة على App Store لـأحد تطبيقات النوادي',
-            date: '19 يناير 2024',
-            note: 'مترجم من التركية',
-          },
-          {
-            quote: '«حالياً ما يشتغل على التلفونات اللي عليها Android 13.»',
-            source: 'مراجعة على Google Play لـأحد تطبيقات النوادي',
-            date: '29 أغسطس 2026',
-            note: 'مترجم من التركية',
-          },
-        ],
-      },
-      { type: 'text', paras: ['ما لقينا أي رد من المطوّر على أي مراجعة من المراجعات اللي قريناها.'] },
-      {
-        type: 'answer',
-        heading: 'أكثر من طريقة للدخول، وشخص يرد عليك',
-        points: [
-          'إذا التلفون ما تعاون، الأعضاء يقدرون يستخدمون بطاقة في المحفظة، أو رمز QR، أو لمسة بالتلفون، أو الـ iPad في الاستقبال.',
-          'كل رفض على الباب يبين السبب، عشان الموظفين يعرفون شنو يصلحون.',
-          'باقات أعضاءك وزياراتهم وتاريخهم تبقى في حسابك، وتقدر تنزّلها كملفات إكسل.',
-          'دعم على واتساب وتلفون وإيميل، 7 أيام في الأسبوع، والرد في نفس اليوم.',
-        ],
-        module: 'access-control',
-      },
-      {
-        type: 'text',
-        paras: [
-          'للمزيد: [باب النادي: لماذا يتعطل تسجيل الدخول، وما الذي يحتاجه نظام دخول جيد](/ar/blog/the-front-door/)',
-        ],
-      },
-
-      { type: 'heading', id: 'sources', text: 'عن المصادر' },
-      {
-        type: 'note',
-        text: 'الاقتباسات منقولة مثل ما انكتبت، بدون أسماء أصحابها. والاقتباسات من مراجعات بالإنجليزي والتركي ترجمتنا إحنا. والتواريخ هي تاريخ نشر المراجعة.',
-      },
-      {
-        type: 'note',
-        text: 'ما حطينا أي معلومة ما قدرنا نقراها بنفسنا، ومنها الأرقام المنقولة من مصدر ثاني.',
       },
     ],
   },

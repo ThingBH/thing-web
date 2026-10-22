@@ -16,7 +16,7 @@ export const post: Post = {
     blocks: [
       {
         type: 'note',
-        text: "This post builds on our [research into gym software complaints](/blog/gym-software-problems/), from reviews read between 2025 and October 2026. A review is one person's experience, not proof of how every gym gets on with a product.",
+        text: 'This post builds on our [research into gym software complaints](/blog/gym-software-problems/).',
       },
 
       { type: 'heading', id: 'why', text: 'Why billing goes wrong' },
@@ -42,22 +42,22 @@ export const post: Post = {
           {
             quote:
               '"some members are attending classes for free" while "others are being charged without making a purchase"',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '10 Mar 2025',
           },
           {
             quote: '"customers have been charged for memberships we never created and overcharged for others,"',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '1 Jun 2026',
           },
           {
             quote: '"the platform continued attempting to bill customers after information had been removed."',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '4 Jun 2026',
           },
           {
             quote: '"Charged an annual fee twice."',
-            source: 'Trustpilot review of a gym software vendor, by a gym member',
+            source: 'A review of a gym software vendor, by a gym member',
             date: '23 Aug 2026',
           },
         ],
@@ -97,9 +97,8 @@ export const post: Post = {
         type: 'quotes',
         items: [
           {
-            quote:
-              '"I am obliged to use your Credit Card payment processor (CardPointe) which is super expensive (~3.5%)."',
-            source: 'Trustpilot review of a gym software vendor',
+            quote: '"I am obliged to use your Credit Card payment processor which is super expensive (~3.5%)."',
+            source: 'A review of a gym software vendor',
             date: '18 Jul 2025',
           },
         ],
@@ -107,7 +106,7 @@ export const post: Post = {
       {
         type: 'text',
         paras: [
-          "PushPress publishes card fees of 4.99% + 30¢ on its free plan and 2.89% + 30¢ on its Pro plan ([PushPress pricing](https://pushpress.com/pricing), read 21 Oct 2026). That's a published price, not a complaint.",
+          "One gym software vendor publishes card fees of 4.99% + 30¢ on its free plan and 2.89% + 30¢ on its Pro plan. That's a published price, not a complaint.",
           'Small percentages add up. On BHD 8,000 of card payments a month, a 3.5% fee is BHD 280 a month, or BHD 3,360 a year.',
         ],
       },
@@ -138,12 +137,12 @@ export const post: Post = {
         items: [
           {
             quote: '"Recently they have withheld all our money earned through credit card transactions."',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '12 Mar 2025',
           },
           {
             quote: '"My funds are being withheld for proof of ownership."',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '9 Oct 2026',
           },
         ],
@@ -151,7 +150,7 @@ export const post: Post = {
       {
         type: 'text',
         paras: [
-          "When a software company takes payments under its own account, it carries the risk for every gym on it. So it runs checks, and while it checks, payouts can stop. That's the trade you make when the merchant account isn't in your gym's name. See [how Gym Thing compares with Glofox](/compare/glofox/) on payments in Bahrain.",
+          "When a software company takes payments under its own account, it carries the risk for every gym on it. So it runs checks, and while it checks, payouts can stop. That's the trade you make when the merchant account isn't in your gym's name. See [a side-by-side](/compare/glofox/) on payments in Bahrain.",
         ],
       },
       {
@@ -171,7 +170,7 @@ export const post: Post = {
         type: 'text',
         paras: [
           "The quietest loss isn't a wrong charge. It's the member whose plan ends on a Tuesday and who never comes back, because nobody reminded them. Front desks fill the gap by messaging members one by one.",
-          "In October 2026, an [r/gymowner thread](https://www.reddit.com/r/gymowner/comments/1wxeguy/gym_owners_would_you_let_your_management_software/) asked owners whether they would let their software send renewal reminders from the gym's own WhatsApp number.",
+          "In October 2026, a thread of gym owners asked whether they would let their software send renewal reminders from the gym's own WhatsApp number.",
         ],
       },
       {
@@ -238,10 +237,6 @@ export const post: Post = {
           'Contracts, price rises and leaving with your data are in [What gym software really costs after the first year](/blog/price-contracts-and-your-data/).',
         ],
       },
-      {
-        type: 'note',
-        text: "Quotes are copied as written, without the reviewer's name. Dates are when each review was posted.",
-      },
     ],
   },
   ar: {
@@ -253,7 +248,7 @@ export const post: Post = {
     blocks: [
       {
         type: 'note',
-        text: 'هالمقال مبني على [بحثنا عن شكاوى برامج النوادي](/ar/blog/gym-software-problems/)، من مراجعات انكتبت بين 2025 وأكتوبر 2026. المراجعة تجربة شخص واحد، مو دليل على تجربة كل نادي مع البرنامج.',
+        text: 'هالمقال مبني على [بحثنا عن شكاوى برامج النوادي](/ar/blog/gym-software-problems/).',
       },
 
       { type: 'heading', id: 'why', text: 'ليش الفوترة تغلط' },
@@ -278,25 +273,25 @@ export const post: Post = {
         items: [
           {
             quote: '«بعض الأعضاء قاعدين يحضرون الحصص ببلاش» بينما «غيرهم ينخصم منهم بدون ما يشترون شي»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '10 مارس 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«انخصم من عملاء على اشتراكات عمرنا ما سويناها، وانخصم من غيرهم أكثر من اللازم،»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '1 يونيو 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«النظام ظل يحاول يسحب من العملاء حتى بعد ما انحذفت بياناتهم.»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '4 يونيو 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«انخصمت مني رسوم سنوية مرتين.»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي، من عضو في نادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي، من عضو في نادي',
             date: '23 أغسطس 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -337,8 +332,8 @@ export const post: Post = {
         type: 'quotes',
         items: [
           {
-            quote: '«مجبور أستخدم مزود الدفع بالبطاقات حقكم (CardPointe) وهو غالي وايد (حوالي 3.5%).»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            quote: '«مجبور أستخدم مزود الدفع بالبطاقات حقكم وهو غالي وايد (حوالي 3.5%).»',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '18 يوليو 2025',
             note: 'مترجم من الإنجليزية',
           },
@@ -347,7 +342,7 @@ export const post: Post = {
       {
         type: 'text',
         paras: [
-          'PushPress تنشر رسوم بطاقات 4.99% + 30 سنت في باقتها المجانية، و2.89% + 30 سنت في باقة Pro ([أسعار PushPress](https://pushpress.com/pricing)، قريناها في 21 أكتوبر 2026). وهذا سعر منشور، مو شكوى.',
+          'إحدى شركات برامج النوادي تنشر رسوم بطاقات 4.99% + 30 سنت في باقتها المجانية، و2.89% + 30 سنت في باقة Pro. وهذا سعر منشور، مو شكوى.',
           'النسب الصغيرة تتجمع. لو عندك 8,000 دينار دفعات بالبطاقة في الشهر، رسوم 3.5% يعني 280 دينار في الشهر، يعني 3,360 دينار في السنة.',
         ],
       },
@@ -378,13 +373,13 @@ export const post: Post = {
         items: [
           {
             quote: '«من فترة قريبة حجزوا كل فلوسنا اللي جت من الدفع بالبطاقات.»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '12 مارس 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«فلوسي محجوزة لين أثبت الملكية.»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '9 أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -393,7 +388,7 @@ export const post: Post = {
       {
         type: 'text',
         paras: [
-          'لما شركة البرنامج تاخذ الدفع تحت حسابها هي، تتحمل المخاطرة عن كل نادي عندها. فتسوي تدقيق، وخلال التدقيق ممكن توقف التحويلات. وهذا الثمن اللي تدفعه لما حساب التاجر مو باسم ناديك. شوف [مقارنة Gym Thing مع Glofox](/ar/compare/glofox/) في الدفع في البحرين.',
+          'لما شركة البرنامج تاخذ الدفع تحت حسابها هي، تتحمل المخاطرة عن كل نادي عندها. فتسوي تدقيق، وخلال التدقيق ممكن توقف التحويلات. وهذا الثمن اللي تدفعه لما حساب التاجر مو باسم ناديك. شوف [مقارنة جنب جنب](/ar/compare/glofox/) في الدفع في البحرين.',
         ],
       },
       {
@@ -413,7 +408,7 @@ export const post: Post = {
         type: 'text',
         paras: [
           'أهدى خسارة مو مبلغ انسحب غلط. هي العضو اللي تخلص باقته يوم ثلاثاء وما يرجع، لأن ما أحد ذكّره. والاستقبال يسد الفراغ ويراسل الأعضاء واحد واحد.',
-          'في أكتوبر 2026، [موضوع في r/gymowner](https://www.reddit.com/r/gymowner/comments/1wxeguy/gym_owners_would_you_let_your_management_software/) سأل أصحاب النوادي إذا يقبلون إن برنامجهم يرسل تذكيرات التجديد من رقم الواتساب حق النادي نفسه.',
+          'في أكتوبر 2026، موضوع بين أصحاب النوادي سأل إذا يقبلون إن برنامجهم يرسل تذكيرات التجديد من رقم الواتساب حق النادي نفسه.',
         ],
       },
       {
@@ -479,10 +474,6 @@ export const post: Post = {
           'الفوترة وحدة من [12 مشكلة يشتكي منها أصحاب النوادي](/ar/blog/gym-software-problems/) في برامجهم. وأحسن تجربة هي ناديك نفسه: [ابدأ بتجربة مجانية](/ar/free-trial/)، وإحنا ننقل أعضاءك، عشان تشوف باقاتك ومدفوعاتك الحقيقية قبل لا تدفع أي شي.',
           'العقود وزيادة الأسعار والطلعة ببياناتك في مقال [التكلفة الحقيقية لبرامج إدارة النوادي بعد السنة الأولى](/ar/blog/price-contracts-and-your-data/).',
         ],
-      },
-      {
-        type: 'note',
-        text: 'الاقتباسات منقولة مثل ما انكتبت، بدون أسماء أصحابها. والتواريخ هي تواريخ نشر المراجعات.',
       },
     ],
   },

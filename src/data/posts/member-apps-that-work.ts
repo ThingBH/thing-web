@@ -1,7 +1,6 @@
 import type { Post } from '../posts'
 
-// Source: docs/research/2026-10-gym-software-complaints (report.html). Every quote was read on its source page; keep its date.
-// Gym Thing answers only use what the report claims. Members sign in with email (no phone-number login).
+// Gym Thing answers only use what is supported by our research; keep each quote's date. Members sign in with email (no phone-number login).
 export const post: Post = {
   slug: 'member-apps-that-work',
   date: '2026-10-21',
@@ -12,13 +11,13 @@ export const post: Post = {
     seoTitle: 'Gym member app problems: failed logins, broken updates, late branded apps',
     description:
       "Gym member apps that won't log in, break after updates, or never arrive as promised. Why it happens, what to ask before you sign, and how Gym Thing does it.",
-    lede: "When a gym's app won't log in, members don't blame the software company. They blame the gym. We read app store and Trustpilot reviews of member apps from Glofox, Zen Planner and PushPress, and of the gym apps published by three systems sold in the Gulf. Three failures keep coming back: branded apps that never arrive, logins that fail, and updates that break what used to work. Here is why each one happens, what to ask a vendor before you sign, and how Gym Thing handles it.",
+    lede: "When a gym's app won't log in, members don't blame the software company. They blame the gym. We read member-app reviews of several gym software vendors, and of the gym apps published by systems sold in the Gulf. Three failures keep coming back: branded apps that never arrive, logins that fail, and updates that break what used to work. Here is why each one happens, what to ask a vendor before you sign, and how Gym Thing handles it.",
     blocks: [
       { type: 'heading', id: 'app-is-the-gym', text: 'To your members, the app is the gym' },
       {
         type: 'text',
         paras: [
-          "Most of the reviews below weren't written by gym owners. They were written by members, about an app with their gym's name on it. Tamarran, Gymnago and FLYBY each publish a branded app for every gym they serve. So a one-star review of PT PureGym KSA or Iron House Gym KSA is a member's verdict on the gym, not on the company that built the app. Most members never learn that company's name.",
+          "Most of the reviews below weren't written by gym owners. They were written by members, about an app with their gym's name on it. Several systems each publish a branded app for every gym they serve. So a one-star review of one gym's app is a member's verdict on the gym, not on the company that built the app. Most members never learn that company's name.",
           "That's the trap. The app carries your name, but you don't decide when it gets fixed. When it breaks, your front desk turns into app support: walking members through reinstalling, booking classes by hand, letting in people who can't open their code. We touched on this in [What gym owners are fed up with in their software](/blog/gym-software-problems/#apps). This post goes deeper.",
         ],
       },
@@ -35,13 +34,13 @@ export const post: Post = {
         items: [
           {
             quote:
-              '"I signed up to Glofox after being promised during the sales call that my package would include a branded app."',
-            source: 'Trustpilot review of a gym software vendor',
+              '"I signed up to a gym software company after being promised during the sales call that my package would include a branded app."',
+            source: 'A review of a gym software vendor',
             date: '5 Jun 2026',
           },
           {
             quote: '"Have waited months for "branded app" only to be told there is a technical issue"',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: 'Oct 2026',
           },
         ],
@@ -59,24 +58,24 @@ export const post: Post = {
         items: [
           {
             quote: '"The password is correct but it always says there\'s an error."',
-            source: 'App Store review of a gym app in Saudi Arabia',
+            source: 'A review of a gym app in Saudi Arabia',
             date: '27 Sep 2026',
             note: 'translated from Arabic',
           },
           {
             quote: '"I can\'t log in, the app freezes every time, very bad."',
-            source: 'Google Play review of a gym app in Saudi Arabia',
+            source: 'A review of a gym app in Saudi Arabia',
             date: '19 Aug 2026',
             note: 'translated from Arabic',
           },
           {
             quote: '"The application isn\'t working and i cant sign up"',
-            source: 'App Store review of a gym app',
+            source: 'A review of a gym app',
             date: '20 Nov 2025',
           },
           {
             quote: '"There\'s no option to log in to my account with my phone number."',
-            source: 'Google Play review of a gym app',
+            source: 'A review of a gym app',
             date: '3 Sep 2026',
             note: 'translated from Arabic',
           },
@@ -101,36 +100,36 @@ export const post: Post = {
         items: [
           {
             quote: '"We have to constantly ask members to delete and re-download the app"',
-            source: 'Trustpilot review of a gym software vendor',
+            source: 'A review of a gym software vendor',
             date: '24 Apr 2025',
           },
           {
             quote: '"The first app was excellent, and now it\'s like begging."',
-            source: 'Google Play review of a gym app in Saudi Arabia',
+            source: 'A review of a gym app in Saudi Arabia',
             date: '10 Jul 2026',
             note: 'translated from Arabic',
           },
           {
             quote:
               '"Every time a new update is released I have to go through hell to get the app to work properly. I\'ve been locked out of my account for a week"',
-            source: 'App Store review of a gym app',
+            source: 'A review of a gym app',
             date: '3 Nov 2024',
           },
           {
             quote: '"The white-screen bug from the last update still isn\'t fixed. It\'s been 2 months."',
-            source: 'App Store review of a gym app',
+            source: 'A review of a gym app',
             date: '12 Dec 2023',
             note: 'translated from Turkish',
           },
           {
             quote: '"Data from the old app wasn\'t carried over to the new one. My old measurements are lost."',
-            source: 'App Store review of a gym app',
+            source: 'A review of a gym app',
             date: '19 Jan 2024',
             note: 'translated from Turkish',
           },
           {
             quote: '"I can almost never find my lifting history without substantial digging"',
-            source: 'App Store review of a gym app',
+            source: 'A review of a gym app',
             date: '12 Nov 2025',
           },
         ],
@@ -138,7 +137,7 @@ export const post: Post = {
       {
         type: 'text',
         paras: [
-          'Mi Estilo, Gym Center and Acıbadem Sports are gym apps published by Senkron Tech, the company behind FLYBY. We found no reply from the developer on any of the FLYBY reviews we read. Who answers reviews, if anyone, tells you who will help your members when this happens to your gym. We compare Gym Thing with [Tamarran](/compare/tamarran/), [Gymnago](/compare/gymnago/), [FLYBY](/compare/flyby/), [Glofox](/compare/glofox/) and [Mindbody](/compare/mindbody/) on their own pages.',
+          'Some gym apps are published by one company on behalf of many gyms. On the reviews we read for one such system, we found no reply from the developer. Who answers reviews, if anyone, tells you who will help your members when this happens to your gym. We compare Gym Thing with the main systems on our [comparison pages](/compare/).',
         ],
       },
 
@@ -224,12 +223,6 @@ export const post: Post = {
           'The app is only one way in. For the door itself, read [The front door: why gym check-ins fail, and what a good setup needs](/blog/the-front-door/).',
         ],
       },
-
-      { type: 'heading', id: 'sources', text: 'About the sources' },
-      {
-        type: 'note',
-        text: "Quotes are copied as written, without reviewers' names; quotes from Arabic and Turkish reviews are our own translations. A review is one person's experience, not proof of how every gym gets on with a product.",
-      },
     ],
   },
   ar: {
@@ -237,13 +230,13 @@ export const post: Post = {
     seoTitle: 'مشكلات تطبيقات أعضاء النوادي الرياضية: تسجيل الدخول والتحديثات والتطبيق بهوية النادي',
     description:
       'تطبيقات أعضاء لا تقبل تسجيل الدخول، وتتعطل بعد التحديثات، وتطبيقات بهوية النادي لا تصل. لماذا يحدث ذلك، وما الأسئلة قبل التعاقد، وكيف يتعامل معها Gym Thing.',
-    lede: 'لما تطبيق النادي ما يقبل تسجيل الدخول، الأعضاء ما يلومون شركة البرنامج. يلومون النادي. قرينا مراجعات في متاجر التطبيقات وعلى Trustpilot عن تطبيقات الأعضاء من Glofox وZen Planner وPushPress، وعن تطبيقات النوادي اللي تنشرها ثلاث أنظمة تنباع في الخليج. ثلاث مشاكل تتكرر: تطبيقات بهوية النادي ما توصل، وتسجيل دخول ما يزبط، وتحديثات تخرّب اللي كان شغّال. هني ليش تصير كل وحدة، وشنو تسأل الشركة قبل لا توقّع، وشلون يتعامل معها Gym Thing.',
+    lede: 'لما تطبيق النادي ما يقبل تسجيل الدخول، الأعضاء ما يلومون شركة البرنامج. يلومون النادي. قرينا مراجعات تطبيقات الأعضاء لعدة شركات برامج نوادي، وتطبيقات النوادي اللي تنشرها أنظمة تنباع في الخليج. ثلاث مشاكل تتكرر: تطبيقات بهوية النادي ما توصل، وتسجيل دخول ما يزبط، وتحديثات تخرّب اللي كان شغّال. هني ليش تصير كل وحدة، وشنو تسأل الشركة قبل لا توقّع، وشلون يتعامل معها Gym Thing.',
     blocks: [
       { type: 'heading', id: 'app-is-the-gym', text: 'عند أعضاءك، التطبيق هو النادي' },
       {
         type: 'text',
         paras: [
-          'أغلب المراجعات اللي تحت ما كتبها أصحاب نوادي. كتبها أعضاء، عن تطبيق عليه اسم ناديهم. Tamarran وGymnago وFLYBY كل واحد منهم ينشر تطبيق بهوية كل نادي يخدمه. يعني لما عضو يعطي نجمة وحدة لتطبيق PT PureGym KSA أو Iron House Gym KSA، هذا حكمه على النادي، مو على الشركة اللي سوّت التطبيق. وأغلب الأعضاء ما يعرفون اسم هالشركة أصلاً.',
+          'أغلب المراجعات اللي تحت ما كتبها أصحاب نوادي. كتبها أعضاء، عن تطبيق عليه اسم ناديهم. كم نظام ينشر تطبيق بهوية كل نادي يخدمه. يعني لما عضو يعطي نجمة وحدة لتطبيق أحد النوادي، هذا حكمه على النادي، مو على الشركة اللي سوّت التطبيق. وأغلب الأعضاء ما يعرفون اسم هالشركة أصلاً.',
           'وهني المشكلة. التطبيق عليه اسمك، بس مو إنت اللي تقرر متى ينصلح. ولما يخرب، الاستقبال يتحول لدعم فني: يمشّي الأعضاء خطوة خطوة عشان ينزلون التطبيق من جديد، ويحجز الحصص بيده، ويدخّل اللي ما يقدرون يفتحون رمزهم. تكلمنا عن هالشي باختصار في [شنو اللي مضايق أصحاب النوادي في برامجهم](/ar/blog/gym-software-problems/#apps). هني ندخل في التفاصيل.',
         ],
       },
@@ -259,14 +252,15 @@ export const post: Post = {
         type: 'quotes',
         items: [
           {
-            quote: '«اشتركت في Glofox بعد ما وعدوني في مكالمة المبيعات إن باقتي بتشمل تطبيق بهوية النادي.»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            quote:
+              '«اشتركت في إحدى شركات برامج النوادي بعد ما وعدوني في مكالمة المبيعات إن باقتي بتشمل تطبيق بهوية النادي.»',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '5 يونيو 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«انتظرت شهور على "التطبيق بهويتنا" وفي الأخير قالوا لي فيه مشكلة تقنية»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: 'أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -285,23 +279,23 @@ export const post: Post = {
         items: [
           {
             quote: '«الرقم السري صحيح ولكن يكتب يوجد خطأ دائما»',
-            source: 'مراجعة على App Store لـأحد تطبيقات النوادي في السعودية',
+            source: 'مراجعة لأحد تطبيقات النوادي في السعودية',
             date: '27 سبتمبر 2026',
           },
           {
             quote: '«ما اقدر اسجل دخول التطبيق يعلق كل مره سيء جداااا»',
-            source: 'مراجعة على Google Play لـأحد تطبيقات النوادي في السعودية',
+            source: 'مراجعة لأحد تطبيقات النوادي في السعودية',
             date: '19 أغسطس 2026',
           },
           {
             quote: '«التطبيق ما يشتغل وما أقدر أسجل»',
-            source: 'مراجعة على App Store لـأحد تطبيقات النوادي',
+            source: 'مراجعة لأحد تطبيقات النوادي',
             date: '20 نوفمبر 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«لايوجد خيار لتسجيل الدخول بحسابي برقم الهاتف»',
-            source: 'مراجعة على Google Play لـأحد تطبيقات النوادي',
+            source: 'مراجعة لأحد تطبيقات النوادي',
             date: '3 سبتمبر 2026',
           },
         ],
@@ -325,37 +319,37 @@ export const post: Post = {
         items: [
           {
             quote: '«لازم كل شوي نطلب من الأعضاء يحذفون التطبيق وينزلونه من جديد»',
-            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
+            source: 'مراجعة لإحدى شركات برامج النوادي',
             date: '24 أبريل 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«الله يرحم اول تطبيق ممتاز والان كانك تشحت»',
-            source: 'مراجعة على Google Play لـأحد تطبيقات النوادي في السعودية',
+            source: 'مراجعة لأحد تطبيقات النوادي في السعودية',
             date: '10 يوليو 2026',
           },
           {
             quote:
               '«كل ما نزل تحديث جديد لازم أمر بجحيم عشان أخلي التطبيق يشتغل عدل. وصار لي أسبوع ما أقدر أدخل حسابي»',
-            source: 'مراجعة على App Store لـأحد تطبيقات النوادي',
+            source: 'مراجعة لأحد تطبيقات النوادي',
             date: '3 نوفمبر 2024',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«مشكلة الشاشة البيضا من آخر تحديث للحين ما انحلت. صار لها شهرين.»',
-            source: 'مراجعة على App Store لـأحد تطبيقات النوادي',
+            source: 'مراجعة لأحد تطبيقات النوادي',
             date: '12 ديسمبر 2023',
             note: 'مترجم من التركية',
           },
           {
             quote: '«البيانات من التطبيق القديم ما انتقلت للجديد. وقياساتي القديمة راحت.»',
-            source: 'مراجعة على App Store لـأحد تطبيقات النوادي',
+            source: 'مراجعة لأحد تطبيقات النوادي',
             date: '19 يناير 2024',
             note: 'مترجم من التركية',
           },
           {
             quote: '«تقريباً أبداً ما ألقى تاريخ رفعاتي إلا بعد تدوير وايد»',
-            source: 'مراجعة على App Store لـأحد تطبيقات النوادي',
+            source: 'مراجعة لأحد تطبيقات النوادي',
             date: '12 نوفمبر 2025',
             note: 'مترجم من الإنجليزية',
           },
@@ -364,7 +358,7 @@ export const post: Post = {
       {
         type: 'text',
         paras: [
-          'Mi Estilo وGym Center وAcıbadem Sports تطبيقات نوادي تنشرها Senkron Tech، الشركة اللي ورا FLYBY. وما لقينا أي رد من المطوّر على أي مراجعة من مراجعات FLYBY اللي قريناها. ومن يرد على المراجعات، إذا في أحد يرد أصلاً، يقول لك منو بيساعد أعضاءك لما يصير هالشي في ناديك. نقارن Gym Thing مع [Tamarran](/ar/compare/tamarran/) و[Gymnago](/ar/compare/gymnago/) و[FLYBY](/ar/compare/flyby/) و[Glofox](/ar/compare/glofox/) و[Mindbody](/ar/compare/mindbody/) كل واحد في صفحته.',
+          'بعض تطبيقات النوادي تنشرها شركة وحدة بالنيابة عن نوادي وايدة. وفي المراجعات اللي قريناها لأحد هالأنظمة، ما لقينا أي رد من المطوّر. ومن يرد على المراجعات، إذا في أحد يرد أصلاً، يقول لك منو بيساعد أعضاءك لما يصير هالشي في ناديك. نقارن Gym Thing مع الأنظمة الرئيسية في [صفحات المقارنة](/ar/compare/).',
         ],
       },
 
@@ -448,12 +442,6 @@ export const post: Post = {
           'أحسن اختبار لتطبيق الأعضاء إن أعضاءك هم اللي يستخدمونه. [ابدأ بتجربة مجانية](/ar/free-trial/): إحنا نجهزه، وننقل أعضاءك، وتقدر تشغّله لين 3 شهور قبل لا تدفع.',
           'والتطبيق طريقة وحدة بس للدخول. وعن الباب نفسه، اقرأ [باب النادي: لماذا يتعطل تسجيل الدخول، وما الذي يحتاجه نظام دخول جيد](/ar/blog/the-front-door/).',
         ],
-      },
-
-      { type: 'heading', id: 'sources', text: 'عن المصادر' },
-      {
-        type: 'note',
-        text: 'الاقتباسات منقولة مثل ما انكتبت، بدون أسماء أصحابها. والاقتباسات من مراجعات بالإنجليزي والتركي ترجمتنا إحنا. والمراجعة تجربة شخص واحد، مو دليل على تجربة كل نادي مع البرنامج.',
       },
     ],
   },
