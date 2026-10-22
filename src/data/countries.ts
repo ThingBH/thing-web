@@ -92,7 +92,7 @@ export const countries: Country[] = [
       ],
       [
         'Is Gym Thing in Arabic?',
-        'The member app, the staff app and the payment pages are in Arabic and English, and every WhatsApp message can go out in Arabic.',
+        'The member app, the staff app and the payment pages are in Arabic and English, and the WhatsApp payment message comes ready in Arabic.',
       ],
       [
         'Your team is in Bahrain. How does support work?',
@@ -154,7 +154,7 @@ export const countries: Country[] = [
     name: 'Qatar',
     title: 'Gym Management Software in Qatar',
     description:
-      'Gym management software for Qatar: memberships, freezes for summer travel, ladies’ hours, WhatsApp renewals, doors and a member app in Arabic and English.',
+      'Gym management software for Qatar: memberships, freezes for summer travel, ladies’ hours, renewal reminders, WhatsApp payment links, doors and a member app in Arabic and English.',
     h1: 'Gym software for Qatar.',
     lede: 'For gyms in Doha, Lusail, Al Wakrah and Al Rayyan. Memberships, doors, payments and renewals in one system, with an Arabic member app and support every day of the week.',
     points: [
@@ -164,7 +164,7 @@ export const countries: Country[] = [
       ],
       [
         'Renewals that chase themselves',
-        'Gym Thing messages members on WhatsApp before their plan ends. Send a payment link and the plan renews the moment they pay.',
+        'Gym Thing emails members before their plan ends. One tap opens WhatsApp with a payment link, and the plan renews the moment they pay.',
       ],
       [
         'Ladies’ hours, enforced',
@@ -181,8 +181,8 @@ export const countries: Country[] = [
         'Freeze their plan for the time away, and the end date moves out by the same number of days.',
       ],
       [
-        'Can renewal reminders go out on WhatsApp?',
-        'Yes. Automations send a WhatsApp message or email before a plan ends, on birthdays, or when a member stops coming.',
+        'Can members be reminded before their plan ends?',
+        'Yes. Automations email members before a plan ends, on their birthday or when they stop coming, and one tap sends a payment link on WhatsApp.',
       ],
       [
         'Your team is in Bahrain. How does support work?',
@@ -209,7 +209,7 @@ export const countries: Country[] = [
       ],
       [
         'Win back members who drift off',
-        'When someone stops coming or lets a plan run out, Gym Thing sends them a WhatsApp message to bring them back.',
+        'When someone stops coming or lets a plan run out, Gym Thing emails them to come back, and their profile opens WhatsApp in one tap.',
       ],
       [
         'Staff clock in at the branch',
