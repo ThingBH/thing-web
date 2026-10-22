@@ -22,7 +22,7 @@ The marketing site for Gym Thing, gym management software by Thing W.L.L. (Seef,
 
 ## Where things live
 
-- `src/data/`: the content. `modules.ts` (13 module pages), `compare.ts` (comparison pages, with dated sources), `site.ts` (contact, FAQs, offer), `jsonld.ts` (structured data).
+- `src/data/`: the content. `modules.ts` (13 module pages), `compare.ts` (comparison pages, with dated sources), `countries.ts` (GCC country pages), `site.ts` (contact, FAQs, offer), `jsonld.ts` (structured data).
 - `src/views/`: one template per page, shared by both languages.
 - `src/pages/`, `src/pages/ar/`: thin routes per language. Module and compare pages are generated from the data files, along with Markdown copies, `llms.txt` and `robots.txt`.
 - `src/components/screens/`: product screens rebuilt in HTML from the real Gym Thing UI, with ABC Gym sample data.

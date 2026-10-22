@@ -16,6 +16,8 @@ const t = {
     compare: 'Compare',
     blog: 'Blog',
     start: 'Start',
+    gcc: 'Gym software in',
+    gccAll: 'The whole GCC',
     trial: 'Start with a free trial',
     privacy: 'Privacy',
     terms: 'Terms',
@@ -34,6 +36,8 @@ const t = {
     compare: 'المقارنة',
     blog: 'المدونة',
     start: 'ابدأ',
+    gcc: 'Gym Thing في',
+    gccAll: 'كل الخليج',
     trial: 'ابدأ بتجربة مجانية',
     privacy: 'الخصوصية',
     terms: 'الشروط',
@@ -58,6 +62,10 @@ const t = {
       <div>
         <h2>{t.modules}</h2>
         <ul>{content[lang].modules.slice(0, 6).map((m) => <li><a href={href(lang, `/modules/${m.slug}/`)}>{m.name}</a></li>)}<li><a href={href(lang, '/modules/')}>{t.all}</a></li></ul>
+      </div>
+      <div>
+        <h2>{t.gcc}</h2>
+        <ul>{content[lang].countries.map((c) => <li><a href={href(lang, `/gym-software/${c.slug}/`)}>{c.name}</a></li>)}<li><a href={href(lang, '/gym-software/')}>{t.gccAll}</a></li></ul>
       </div>
       <div>
         <h2>{t.company}</h2>

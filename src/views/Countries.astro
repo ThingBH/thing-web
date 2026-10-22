@@ -1,0 +1,115 @@
+---
+import CloseBand from '../components/CloseBand.astro'
+import ModulePicks from '../components/home/ModulePicks.astro'
+import { content } from '../data/content'
+import { href, langOf } from '../data/i18n'
+import { breadcrumbs } from '../data/jsonld'
+import { SITE_URL } from '../data/site'
+import Base from '../layouts/Base.astro'
+
+const lang = langOf(Astro.currentLocale)
+const { countries } = content[lang]
+const t = {
+  en: {
+    crumb: 'GCC',
+    title: 'Gym Management Software for the GCC · Gym Thing',
+    description:
+      'Gym management software built in Bahrain for gyms across the GCC: Saudi Arabia, the UAE, Qatar, Kuwait, Oman and Bahrain. Arabic member app, WhatsApp payments and support 7 days a week.',
+    h1: 'Gym software for the whole Gulf.',
+    lede: 'Built in Bahrain for gyms across the GCC. Members, doors, payments and payroll in one system, with an Arabic member app and a team that answers seven days a week.',
+    cta: 'Start with a free trial',
+    list: 'Countries',
+    read: 'Gym Thing in',
+    sameH: 'Made for how Gulf gyms run.',
+    sameP: 'Wherever your gym is, it gets every module and the same team behind it.',
+    same: [
+      ['Arabic and English', 'for the member app, payment pages and messages'],
+      ['Payment links on WhatsApp', 'paid by card, Apple Pay or Google Pay'],
+      ['VAT at your rate', "or switched off where there's none"],
+      ['Support 7 days a week', 'on WhatsApp, phone or email, in Gulf hours'],
+    ],
+    allH: "There's more inside.",
+    all: 'See all 13 modules',
+  },
+  ar: {
+    crumb: 'الخليج',
+    title: 'برنامج إدارة النوادي الرياضية في دول الخليج · Gym Thing',
+    description:
+      'برنامج لإدارة النوادي الرياضية مطوّر في البحرين للنوادي في دول الخليج: السعودية والإمارات وقطر والكويت وعُمان والبحرين. تطبيق أعضاء بالعربية ومدفوعات عبر واتساب ودعم طوال أيام الأسبوع.',
+    h1: 'برنامج النوادي للخليج كله.',
+    lede: 'مبني في البحرين للنوادي في كل الخليج. الأعضاء والأبواب والمدفوعات والرواتب في نظام واحد، مع تطبيق أعضاء بالعربي وفريق يرد عليك 7 أيام في الأسبوع.',
+    cta: 'ابدأ بتجربة مجانية',
+    list: 'الدول',
+    read: 'Gym Thing في',
+    sameH: 'مصمم على طريقة نوادي الخليج.',
+    sameP: 'وين ما كان ناديك، ياخذ كل الأقسام ونفس الفريق وراه.',
+    same: [
+      ['عربي وإنجليزي', 'في تطبيق الأعضاء وصفحات الدفع والرسائل'],
+      ['روابط دفع على الواتساب', 'بالبطاقة أو Apple Pay أو Google Pay'],
+      ['الضريبة بنسبتك', 'أو طافية وين ما في ضريبة'],
+      ['دعم 7 أيام في الأسبوع', 'على الواتساب أو التلفون أو الإيميل، بتوقيت الخليج'],
+    ],
+    allH: 'وفيه أكثر بعد.',
+    all: 'شوف كل الأقسام الـ13',
+  },
+}[lang]
+const graph = [
+  breadcrumbs([
+    ['Gym Thing', href(lang, '/')],
+    [t.crumb, href(lang, '/gym-software/')],
+  ]),
+  {
+    '@type': 'ItemList',
+    name: t.list,
+    itemListElement: countries.map((c, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: c.title,
+      url: `${SITE_URL}${href(lang, `/gym-software/${c.slug}/`)}`,
+    })),
+  },
+]
+---
+<Base title={t.title} description={t.description} graph={graph}>
+  <section class="page-hero gutter" aria-labelledby="h-gcc">
+    <div class="inner">
+      <h1 class="d1" id="h-gcc">{t.h1}</h1>
+      <p class="lede" style="margin-top:28px">{t.lede}</p>
+      <div class="ctas" style="margin-top:32px">
+        <a class="btn pri" href={href(lang, '/free-trial/')}>{t.cta} <svg class="i go"><use href="#i-arrow" /></svg></a>
+      </div>
+    </div>
+  </section>
+  <section class="sec tight gutter" aria-label={t.list}>
+    <div class="inner">
+      <div class="modpick cmphub">
+        {countries.map((c) => (
+          <a class="modcard rise" href={href(lang, `/gym-software/${c.slug}/`)}>
+            <h3 class="vt" style={`--vt:${lang}-gcc-${c.slug}`}>{c.name}</h3>
+            <p>{c.lede}</p>
+            <span class="textlink">{t.read} {c.name} <svg class="i go"><use href="#i-arrow" /></svg></span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="sec gutter" aria-labelledby="h-same">
+    <div class="inner duo">
+      <div class="rise">
+        <h2 class="d2" id="h-same">{t.sameH}</h2>
+        <p class="lede" style="margin-top:20px">{t.sameP}</p>
+      </div>
+      <ul class="ways rise">{t.same.map(([b, s]) => <li><b>{b}</b><span>{s}</span></li>)}</ul>
+    </div>
+  </section>
+  <section class="sec gutter" aria-labelledby="h-more">
+    <div class="inner">
+      <div class="feat-head rise">
+        <h2 class="d2" id="h-more">{t.allH}</h2>
+        <p class="lede"><a class="textlink" href={href(lang, '/modules/')}>{t.all} <svg class="i go"><use href="#i-arrow" /></svg></a></p>
+      </div>
+      <div class="rise"><ModulePicks /></div>
+    </div>
+  </section>
+  <CloseBand />
+</Base>

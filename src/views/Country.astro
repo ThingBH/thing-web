@@ -1,0 +1,126 @@
+---
+import CloseBand from '../components/CloseBand.astro'
+import Faq from '../components/Faq.astro'
+import SupportChat from '../components/home/SupportChat.astro'
+import { content } from '../data/content'
+import { href, langOf } from '../data/i18n'
+import { breadcrumbs, faqPage } from '../data/jsonld'
+import Base from '../layouts/Base.astro'
+
+type Props = { slug: string | undefined }
+const lang = langOf(Astro.currentLocale)
+const { countries, modules } = content[lang]
+const c = countries.find((x) => x.slug === Astro.props.slug)
+if (!c) throw new Error(`Unknown country "${Astro.props.slug}"`)
+const others = countries.filter((o) => o.slug !== c.slug)
+const t = {
+  en: {
+    crumb: 'GCC',
+    cta: 'Start with a free trial',
+    why: `Made for gyms in ${c.name}.`,
+    allH: 'Everything a gym runs on.',
+    all: 'See all 13 modules',
+    supportH: 'Support that picks up.',
+    supportP: 'A real person on our team answers, in Arabic or English. Message, call or email, any day of the week.',
+    supportWays: [
+      ['7 days a week', 'Friday and Saturday too, when gyms are busiest'],
+      ['WhatsApp, phone or email', 'whichever is quickest for your team'],
+      ['Same-day replies', 'from the people who build Gym Thing'],
+    ],
+    faq: 'Questions owners ask.',
+    others: 'Gym Thing in',
+  },
+  ar: {
+    crumb: 'الخليج',
+    cta: 'ابدأ بتجربة مجانية',
+    why: `مصمم للنوادي في ${c.name}.`,
+    allH: 'كل شي يحتاجه النادي.',
+    all: 'شوف كل الأقسام الـ13',
+    supportH: 'دعم يرد عليك.',
+    supportP: 'شخص حقيقي من فريقنا يرد عليك، بالعربي أو الإنجليزي. راسلنا أو اتصل أو ارسل إيميل، أي يوم في الأسبوع.',
+    supportWays: [
+      ['7 أيام في الأسبوع', 'حتى الجمعة والسبت، وقت زحمة النوادي'],
+      ['واتساب، تلفون أو إيميل', 'اللي أسرع لفريقك'],
+      ['رد في نفس اليوم', 'من الناس اللي يبنون Gym Thing'],
+    ],
+    faq: 'أسئلة يسألها أصحاب النوادي.',
+    others: 'Gym Thing في',
+  },
+}[lang]
+const graph = [
+  breadcrumbs([
+    ['Gym Thing', href(lang, '/')],
+    [t.crumb, href(lang, '/gym-software/')],
+    [c.name, href(lang, `/gym-software/${c.slug}/`)],
+  ]),
+  faqPage(c.faq),
+]
+---
+<Base
+  title={`${c.title} · Gym Thing`}
+  description={c.description}
+  graph={graph}
+  markdown={href(lang, `/gym-software/${c.slug}.md`)}
+>
+  <section class="page-hero gutter" aria-labelledby={`gh-${c.slug}`}>
+    <div class="inner">
+      <p class="crumbs"><a href={href(lang, '/gym-software/')}>{t.crumb}</a> <span aria-hidden="true">/</span> {c.name}</p>
+      <h1 class="d1 vt" id={`gh-${c.slug}`} style={`--vt:${lang}-gcc-${c.slug}`}>{c.h1}</h1>
+      <p class="lede" style="margin-top:28px">{c.lede}</p>
+      <div class="ctas" style="margin-top:32px">
+        <a class="btn pri" href={href(lang, '/free-trial/')}>{t.cta} <svg class="i go"><use href="#i-arrow" /></svg></a>
+      </div>
+    </div>
+  </section>
+  <section class="sec gutter" aria-labelledby={`gw-${c.slug}`}>
+    <div class="inner">
+      <h2 class="d2" id={`gw-${c.slug}`}>{t.why}</h2>
+      <div class="diffs">
+        {c.points.map(([h, p]) => (
+          <div class="rise"><h3>{h}</h3><p>{p}</p></div>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="sec gutter" aria-labelledby={`ga-${c.slug}`}>
+    <div class="inner">
+      <div class="feat-head rise">
+        <h2 class="d2" id={`ga-${c.slug}`}>{t.allH}</h2>
+        <p class="lede"><a class="textlink" href={href(lang, '/modules/')}>{t.all} <svg class="i go"><use href="#i-arrow" /></svg></a></p>
+      </div>
+      <div class="modcards">
+        {modules.map((m) => (
+          <a class="modcard rise" href={href(lang, `/modules/${m.slug}/`)}>
+            <div class="modhead">
+              <h3>{m.name}</h3>
+              <span class="modicon" aria-hidden="true"><svg class="i"><use href={`#i-${m.icon}`} /></svg></span>
+            </div>
+            {/* Group titles, not the promise: some promises are written for Bahrain. */}
+            <p>{m.groups.slice(0, 3).map((g) => g.t).join(lang === 'ar' ? '، ' : ', ')}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+  <section class="sec gutter" aria-labelledby={`gs-${c.slug}`}>
+    <div class="inner duo flip">
+      <div class="rise"><SupportChat /></div>
+      <div class="rise">
+        <h2 class="d2" id={`gs-${c.slug}`}>{t.supportH}</h2>
+        <p class="lede" style="margin-top:20px">{t.supportP}</p>
+        <ul class="ways">{t.supportWays.map(([b, s]) => <li><b>{b}</b><span>{s}</span></li>)}</ul>
+      </div>
+    </div>
+  </section>
+  <section class="sec gutter" aria-labelledby={`gq-${c.slug}`}>
+    <div class="inner">
+      <h2 class="d2" id={`gq-${c.slug}`}>{t.faq}</h2>
+      <div style="margin-top:32px"><Faq items={c.faq} /></div>
+      <div class="othercmp">
+        <span>{t.others}</span>
+        {others.map((o) => <a href={href(lang, `/gym-software/${o.slug}/`)}>{o.name}</a>)}
+      </div>
+    </div>
+  </section>
+  <CloseBand />
+</Base>

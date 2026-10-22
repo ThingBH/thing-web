@@ -1,0 +1,7 @@
+---
+import { countries } from '../../../data/countries'
+import Country from '../../../views/Country.astro'
+
+export const getStaticPaths = () => countries.map((c) => ({ params: { slug: c.slug } }))
+---
+<Country slug={Astro.params.slug} />

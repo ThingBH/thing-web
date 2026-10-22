@@ -2,6 +2,8 @@
 
 import { comparisons } from './compare'
 import { comparisonsAr } from './compare.ar'
+import { countries } from './countries'
+import { countriesAr } from './countries.ar'
 import { href, type Lang, locale } from './i18n'
 import { modules } from './modules'
 import { modulesAr } from './modules.ar'
@@ -9,8 +11,8 @@ import { postDate, posts, TAGS } from './posts'
 import { SITE_URL } from './site'
 
 export const content = {
-  en: { modules, comparisons },
-  ar: { modules: modulesAr, comparisons: comparisonsAr },
+  en: { modules, comparisons, countries },
+  ar: { modules: modulesAr, comparisons: comparisonsAr, countries: countriesAr },
 } satisfies Record<Lang, unknown>
 
 /** A source's "checked" date (written like "20 Oct 2026") in the page's language. */
@@ -27,6 +29,7 @@ const md = (body: string[]) =>
 const words = {
   en: {
     canonical: 'Canonical page',
+    modules: 'Modules',
     does: 'What it does',
     faq: 'Questions owners ask',
     trial: 'Start with a free trial',
@@ -44,6 +47,7 @@ const words = {
   },
   ar: {
     canonical: 'الصفحة الأصلية',
+    modules: 'الأقسام',
     does: 'شنو يسوي',
     faq: 'أسئلة يسألها أصحاب النوادي',
     trial: 'ابدأ بتجربة مجانية',
@@ -77,6 +81,38 @@ export function moduleMd(lang: Lang, slug: string | undefined) {
     `## ${w.does}`,
     ...m.groups.flatMap((g) => ['', `### ${g.t}`, '', ...g.items.map(([name, line]) => `- **${name}**: ${line}`)]),
     ...(m.faq.length ? ['', `## ${w.faq}`, ...m.faq.flatMap(([q, a]) => ['', `### ${q}`, '', a])] : []),
+    '',
+    `${w.trial}: ${url('/free-trial/')}`,
+    '',
+  ])
+}
+
+/** A plain Markdown copy of a country page for AI readers. */
+export function countryMd(lang: Lang, slug: string | undefined) {
+  const c = content[lang].countries.find((x) => x.slug === slug)
+  if (!c) throw new Error(`Unknown country "${slug}"`)
+  const w = words[lang]
+  const url = (path: string) => `${SITE_URL}${href(lang, path)}`
+  return md([
+    `# ${c.title}`,
+    '',
+    `> ${c.lede}`,
+    '',
+    `${w.canonical}: ${url(`/gym-software/${c.slug}/`)}`,
+    ...c.points.flatMap(([h, p]) => ['', `## ${h}`, '', p]),
+    '',
+    `## ${w.modules}`,
+    '',
+    ...content[lang].modules.map(
+      (m) =>
+        `- [${m.name}](${url(`/modules/${m.slug}/`)}): ${m.groups
+          .slice(0, 3)
+          .map((g) => g.t)
+          .join(lang === 'ar' ? '، ' : ', ')}`,
+    ),
+    '',
+    `## ${w.faq}`,
+    ...c.faq.flatMap(([q, a]) => ['', `### ${q}`, '', a]),
     '',
     `${w.trial}: ${url('/free-trial/')}`,
     '',

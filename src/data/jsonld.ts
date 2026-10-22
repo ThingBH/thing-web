@@ -62,6 +62,10 @@ export const baseGraph = (lang: Lang): Node[] => [
     applicationSubCategory: 'Gym management software',
     operatingSystem: 'Web, iOS, Android, Windows, macOS',
     description: product[lang].description,
+    areaServed: ['Bahrain', 'Saudi Arabia', 'United Arab Emirates', 'Qatar', 'Kuwait', 'Oman'].map((name) => ({
+      '@type': 'Country',
+      name,
+    })),
     publisher: { '@id': org },
     offers: {
       '@type': 'Offer',

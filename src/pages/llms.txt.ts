@@ -1,6 +1,8 @@
 import type { APIRoute } from 'astro'
 import { comparisons } from '../data/compare'
 import { comparisonsAr } from '../data/compare.ar'
+import { countries } from '../data/countries'
+import { countriesAr } from '../data/countries.ar'
 import { modules } from '../data/modules'
 import { modulesAr } from '../data/modules.ar'
 import { posts } from '../data/posts'
@@ -18,6 +20,11 @@ export const GET: APIRoute = () => {
     '',
     link('Home', '/', 'The whole gym, in one system.'),
     link('Modules', '/modules/', 'Every module, grouped from the front desk to payday.'),
+    link(
+      'Gym software in the GCC',
+      '/gym-software/',
+      'Gym Thing for gyms in Bahrain, Saudi Arabia, the UAE, Qatar, Kuwait and Oman.',
+    ),
     link('Compare', '/compare/', 'Gym Thing side by side with the other options gyms in Bahrain use.'),
     link('Blog', '/blog/', 'Research, guides and news for gym owners in Bahrain and the Gulf.'),
     link('About', '/about/', 'Who builds Gym Thing, how we work with you, and how to reach support.'),
@@ -26,6 +33,10 @@ export const GET: APIRoute = () => {
     '## Modules',
     '',
     ...modules.map((m) => link(m.name, `/modules/${m.slug}.md`, m.promise)),
+    '',
+    '## Countries',
+    '',
+    ...countries.map((c) => link(c.title, `/gym-software/${c.slug}.md`, c.lede)),
     '',
     '## Comparisons',
     '',
@@ -39,11 +50,17 @@ export const GET: APIRoute = () => {
     '',
     link('الصفحة الرئيسية', '/ar/', 'النادي كله، في نظام واحد.'),
     link('الأقسام', '/ar/modules/', 'كل أقسام Gym Thing، من الاستقبال لين يوم الراتب.'),
+    link(
+      'Gym Thing في الخليج',
+      '/ar/gym-software/',
+      'Gym Thing للنوادي في البحرين والسعودية والإمارات وقطر والكويت وعُمان.',
+    ),
     link('المقارنة', '/ar/compare/', 'Gym Thing جنب الخيارات الثانية اللي تستخدمها النوادي في البحرين.'),
     link('المدونة', '/ar/blog/', 'بحوث وأدلة وأخبار لأصحاب النوادي في البحرين والخليج.'),
     link('من نحن', '/ar/about/', 'منو يبني Gym Thing، وشلون نشتغل وياك، وشلون توصل للدعم.'),
     link('ابدأ بتجربة مجانية', '/ar/free-trial/', 'لين 3 شهور على النظام كامل، مجهّز لناديك.'),
     ...modulesAr.map((m) => link(m.name, `/ar/modules/${m.slug}.md`, m.promise)),
+    ...countriesAr.map((c) => link(c.title, `/ar/gym-software/${c.slug}.md`, c.lede)),
     ...comparisonsAr.map((c) => link(c.title, `/ar/compare/${c.slug}.md`, c.lede)),
     ...posts.map((p) => link(p.ar.title, `/ar/blog/${p.slug}.md`, p.ar.description)),
     '',
