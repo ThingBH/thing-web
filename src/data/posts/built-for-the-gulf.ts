@@ -17,7 +17,7 @@ export const post: Post = {
     blocks: [
       {
         type: 'note',
-        text: 'Every source below links to the page we read it on, with its date. This post builds on our [research into gym software complaints](/blog/gym-software-problems/#gulf). It is written for Bahrain. If you run gyms elsewhere in the GCC, ask the same questions about your own country.',
+        text: 'This post builds on our [research into gym software complaints](/blog/gym-software-problems/#gulf). It is written for Bahrain. If you run gyms elsewhere in the GCC, ask the same questions about your own country.',
       },
 
       { type: 'heading', id: 'why', text: 'Why so much gym software misses the Gulf' },
@@ -176,8 +176,7 @@ export const post: Post = {
         items: [
           {
             quote: '"they told me to wait until Monday"',
-            source: 'Trustpilot review of Mindbody from a business open 7 days a week',
-            url: 'https://www.trustpilot.com/review/www.mindbodyonline.com?page=3',
+            source: 'Trustpilot review of a gym software vendor, from a business open 7 days a week',
             date: '27 Sep 2026',
           },
         ],
@@ -228,7 +227,7 @@ export const post: Post = {
       },
       {
         type: 'note',
-        text: 'We read every vendor and regulator page linked here on 21 Oct 2026. Vendors change their pages, so check the current version before you decide. Gym Thing is made by Thing W.L.L., Seef, Bahrain.',
+        text: 'Vendor and regulator pages change, so check the current version before you decide.',
       },
     ],
   },
@@ -241,7 +240,7 @@ export const post: Post = {
     blocks: [
       {
         type: 'note',
-        text: 'كل مصدر تحت مربوط بالصفحة اللي قريناه فيها، مع تاريخه. وهالمقال مبني على [بحثنا عن شكاوى برامج النوادي](/ar/blog/gym-software-problems/#gulf). وهو مكتوب للبحرين. إذا عندك نوادي في دولة خليجية ثانية، اسأل نفس الأسئلة عن قوانين بلدك.',
+        text: 'هالمقال مبني على [بحثنا عن شكاوى برامج النوادي](/ar/blog/gym-software-problems/#gulf). وهو مكتوب للبحرين. إذا عندك نوادي في دولة خليجية ثانية، اسأل نفس الأسئلة عن قوانين بلدك.',
       },
 
       { type: 'heading', id: 'why', text: 'ليش برامج وايد ما تناسب الخليج' },
@@ -404,8 +403,7 @@ export const post: Post = {
         items: [
           {
             quote: '«قالوا لي انطر لين يوم الاثنين»',
-            source: 'مراجعة على Trustpilot لـ Mindbody من نشاط تجاري يفتح 7 أيام في الأسبوع',
-            url: 'https://www.trustpilot.com/review/www.mindbodyonline.com?page=3',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي، من نشاط تجاري يفتح 7 أيام في الأسبوع',
             date: '27 سبتمبر 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -457,7 +455,7 @@ export const post: Post = {
       },
       {
         type: 'note',
-        text: 'قرينا كل صفحات الشركات والجهات الحكومية المربوطة هني في 21 أكتوبر 2026. والشركات تغيّر صفحاتها، فتأكد من النسخة الحالية قبل لا تقرر. Gym Thing من شركة Thing W.L.L.، السيف، البحرين.',
+        text: 'صفحات الشركات والجهات الحكومية تتغير، فتأكد من النسخة الحالية قبل لا تقرر.',
       },
     ],
   },

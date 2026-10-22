@@ -16,7 +16,7 @@ export const post: Post = {
     blocks: [
       {
         type: 'note',
-        text: "Every quote below links to the page we read it on, with its date. They come from our [research into gym software complaints](/blog/gym-software-problems/), read between 2025 and October 2026. A review is one person's experience, not proof of how every gym gets on with a product.",
+        text: "This post builds on our [research into gym software complaints](/blog/gym-software-problems/), from reviews read between 2025 and October 2026. A review is one person's experience, not proof of how every gym gets on with a product.",
       },
 
       { type: 'heading', id: 'why', text: 'Why billing goes wrong' },
@@ -42,26 +42,22 @@ export const post: Post = {
           {
             quote:
               '"some members are attending classes for free" while "others are being charged without making a purchase"',
-            source: 'Trustpilot review of ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com?page=5',
+            source: 'Trustpilot review of a gym software vendor',
             date: '10 Mar 2025',
           },
           {
             quote: '"customers have been charged for memberships we never created and overcharged for others,"',
-            source: 'Trustpilot review of WellnessLiving',
-            url: 'https://www.trustpilot.com/review/wellnessliving.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '1 Jun 2026',
           },
           {
             quote: '"the platform continued attempting to bill customers after information had been removed."',
-            source: 'Trustpilot review of Zen Planner',
-            url: 'https://ie.trustpilot.com/review/zenplanner.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '4 Jun 2026',
           },
           {
             quote: '"Charged an annual fee twice."',
-            source: 'Trustpilot review of ABC Fitness by a gym member',
-            url: 'https://www.trustpilot.com/review/abcfitness.com',
+            source: 'Trustpilot review of a gym software vendor, by a gym member',
             date: '23 Aug 2026',
           },
         ],
@@ -103,8 +99,7 @@ export const post: Post = {
           {
             quote:
               '"I am obliged to use your Credit Card payment processor (CardPointe) which is super expensive (~3.5%)."',
-            source: 'Trustpilot review of Zen Planner',
-            url: 'https://ie.trustpilot.com/review/zenplanner.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '18 Jul 2025',
           },
         ],
@@ -143,14 +138,12 @@ export const post: Post = {
         items: [
           {
             quote: '"Recently they have withheld all our money earned through credit card transactions."',
-            source: 'Trustpilot review of ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com?page=5',
+            source: 'Trustpilot review of a gym software vendor',
             date: '12 Mar 2025',
           },
           {
             quote: '"My funds are being withheld for proof of ownership."',
-            source: 'Trustpilot review of ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '9 Oct 2026',
           },
         ],
@@ -247,7 +240,7 @@ export const post: Post = {
       },
       {
         type: 'note',
-        text: "English quotes are copied exactly as written. We left out reviewers' names. Dates are when the review was posted. Trustpilot moves reviews between pages as new ones arrive, so a quote may now sit on a different page from the one linked. Gym Thing is made by Thing W.L.L., Seef, Bahrain.",
+        text: "Quotes are copied as written, without the reviewer's name. Dates are when each review was posted.",
       },
     ],
   },
@@ -260,7 +253,7 @@ export const post: Post = {
     blocks: [
       {
         type: 'note',
-        text: 'كل اقتباس تحت مربوط بالصفحة اللي قريناه فيها، مع تاريخه. وكلها من [بحثنا عن شكاوى برامج النوادي](/ar/blog/gym-software-problems/)، من مراجعات انكتبت بين 2025 وأكتوبر 2026. المراجعة تجربة شخص واحد، مو دليل على تجربة كل نادي مع البرنامج.',
+        text: 'هالمقال مبني على [بحثنا عن شكاوى برامج النوادي](/ar/blog/gym-software-problems/)، من مراجعات انكتبت بين 2025 وأكتوبر 2026. المراجعة تجربة شخص واحد، مو دليل على تجربة كل نادي مع البرنامج.',
       },
 
       { type: 'heading', id: 'why', text: 'ليش الفوترة تغلط' },
@@ -285,29 +278,25 @@ export const post: Post = {
         items: [
           {
             quote: '«بعض الأعضاء قاعدين يحضرون الحصص ببلاش» بينما «غيرهم ينخصم منهم بدون ما يشترون شي»',
-            source: 'مراجعة على Trustpilot لـ ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com?page=5',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '10 مارس 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«انخصم من عملاء على اشتراكات عمرنا ما سويناها، وانخصم من غيرهم أكثر من اللازم،»',
-            source: 'مراجعة على Trustpilot لـ WellnessLiving',
-            url: 'https://www.trustpilot.com/review/wellnessliving.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '1 يونيو 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«النظام ظل يحاول يسحب من العملاء حتى بعد ما انحذفت بياناتهم.»',
-            source: 'مراجعة على Trustpilot لـ Zen Planner',
-            url: 'https://ie.trustpilot.com/review/zenplanner.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '4 يونيو 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«انخصمت مني رسوم سنوية مرتين.»',
-            source: 'مراجعة على Trustpilot لـ ABC Fitness من عضو في نادي',
-            url: 'https://www.trustpilot.com/review/abcfitness.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي، من عضو في نادي',
             date: '23 أغسطس 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -349,8 +338,7 @@ export const post: Post = {
         items: [
           {
             quote: '«مجبور أستخدم مزود الدفع بالبطاقات حقكم (CardPointe) وهو غالي وايد (حوالي 3.5%).»',
-            source: 'مراجعة على Trustpilot لـ Zen Planner',
-            url: 'https://ie.trustpilot.com/review/zenplanner.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '18 يوليو 2025',
             note: 'مترجم من الإنجليزية',
           },
@@ -390,15 +378,13 @@ export const post: Post = {
         items: [
           {
             quote: '«من فترة قريبة حجزوا كل فلوسنا اللي جت من الدفع بالبطاقات.»',
-            source: 'مراجعة على Trustpilot لـ ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com?page=5',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '12 مارس 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«فلوسي محجوزة لين أثبت الملكية.»',
-            source: 'مراجعة على Trustpilot لـ ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '9 أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -496,7 +482,7 @@ export const post: Post = {
       },
       {
         type: 'note',
-        text: 'الاقتباسات مترجمة من الإنجليزية. ما ذكرنا أسماء أصحاب المراجعات. والتواريخ هي تواريخ نشر المراجعات. Trustpilot ينقل المراجعات بين الصفحات لما تنزل مراجعات جديدة، فممكن الاقتباس يكون الحين في صفحة غير الصفحة المربوطة. Gym Thing من صنع Thing W.L.L.، السيف، البحرين.',
+        text: 'الاقتباسات منقولة مثل ما انكتبت، بدون أسماء أصحابها. والتواريخ هي تواريخ نشر المراجعات.',
       },
     ],
   },

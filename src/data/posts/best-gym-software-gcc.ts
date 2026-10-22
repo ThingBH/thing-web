@@ -16,7 +16,7 @@ export const post: Post = {
     blocks: [
       {
         type: 'note',
-        text: 'We make Gym Thing, so it comes first. Everything about the others is in their own words, from their own websites, read on 22 Oct 2026. Where a page didn’t mention something, we say so, which doesn’t mean the product lacks it. Vendors change their pages, so check before you decide.',
+        text: 'We make Gym Thing, so it comes first. Everything about the others is in their own words, from their own pages. Where a page didn’t mention something, we say so — that doesn’t mean the product lacks it. Vendors change their pages, so check before you decide.',
       },
 
       { type: 'heading', id: 'checklist', text: 'What to check before you shortlist' },
@@ -287,7 +287,7 @@ export const post: Post = {
       },
       {
         type: 'note',
-        text: 'Every vendor quote above was read on the vendor’s own website on 22 Oct 2026. Gym Thing is made by Thing W.L.L., Seef, Bahrain.',
+        text: 'Everything here about other vendors comes from their own public pages, which change — check the current version before you decide.',
       },
     ],
   },
@@ -300,7 +300,7 @@ export const post: Post = {
     blocks: [
       {
         type: 'note',
-        text: 'إحنا اللي نسوي Gym Thing، فهو أول واحد في القائمة. وكل شي عن الباقين بكلامهم، من مواقعهم، قريناه في 22 أكتوبر 2026. ولما الصفحة ما تذكر شي، نقول هالشي، وهذا ما يعني إن النظام ما فيه. والشركات تغيّر صفحاتها، فتأكد قبل لا تقرر.',
+        text: 'إحنا اللي نسوي Gym Thing، فهو أول واحد في القائمة. وكل شي عن الباقين بكلامهم، من صفحاتهم. ولما الصفحة ما تذكر شي، نقول هالشي، وهذا ما يعني إن النظام ما فيه. والشركات تغيّر صفحاتها، فتأكد قبل لا تقرر.',
       },
 
       { type: 'heading', id: 'checklist', text: 'شنو تتأكد منه قبل لا تختار' },
@@ -578,7 +578,7 @@ export const post: Post = {
       },
       {
         type: 'note',
-        text: 'كل اقتباس من الشركات فوق قريناه في موقع الشركة نفسها في 22 أكتوبر 2026. وGym Thing من Thing W.L.L.، السيف، البحرين.',
+        text: 'كل شي هني عن الشركات الثانية من صفحاتهم العامة، وهي تتغير — تأكد من النسخة الحالية قبل لا تقرر.',
       },
     ],
   },

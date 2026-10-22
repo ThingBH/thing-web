@@ -16,7 +16,7 @@ export const post: Post = {
     blocks: [
       {
         type: 'note',
-        text: "How we did this. Every quote below links to the page we read it on, with its date. We only quote reviews we could open and read in full. Most come from Trustpilot, Apple's App Store, vendors' own pages and Reddit's r/gymowner and r/crossfit (21 Sep to 21 Oct 2026). A review is one person's experience, not proof of how every gym gets on with a product. We picked problems that showed up across several products and several reviewers.",
+        text: "How we did this. We read gym software reviews and owner forums between September and October 2026, and picked the problems that showed up across several products and several reviewers. Each quote is one person's experience, not proof of how every gym gets on with a product.",
       },
       { type: 'heading', id: 'summary', text: 'Twelve problems, and our answer to each' },
       {
@@ -49,8 +49,7 @@ export const post: Post = {
         items: [
           {
             quote: '"They increased the price by over 100% following my 2nd year with them."',
-            source: 'Trustpilot review of ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com?page=5',
+            source: 'Trustpilot review of a gym software vendor',
             date: '1 Mar 2025',
           },
           {
@@ -61,8 +60,7 @@ export const post: Post = {
           },
           {
             quote: '"Their prices increase every year with no additional benefit."',
-            source: 'Trustpilot review of Zen Planner',
-            url: 'https://ie.trustpilot.com/review/zenplanner.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '14 Apr 2026',
           },
         ],
@@ -103,15 +101,13 @@ export const post: Post = {
           },
           {
             quote: '"auto renews for a 12 month contract that I was never told about"',
-            source: 'Trustpilot review of Mindbody',
-            url: 'https://www.trustpilot.com/review/www.mindbodyonline.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '20 Oct 2026',
           },
           {
             quote:
               '"Tried to cancel 3 times, was persuaded not to - when finally cancelled was charged for a further month."',
-            source: 'Trustpilot review of ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com?page=2',
+            source: 'Trustpilot review of a gym software vendor',
             date: '10 Nov 2025',
           },
         ],
@@ -144,20 +140,17 @@ export const post: Post = {
         items: [
           {
             quote: '"they told me to wait until Monday"',
-            source: 'Trustpilot review of Mindbody from a business open 7 days a week',
-            url: 'https://www.trustpilot.com/review/www.mindbodyonline.com?page=3',
+            source: 'Trustpilot review of a gym software vendor, from a business open 7 days a week',
             date: '27 Sep 2026',
           },
           {
             quote: '"the moment we signed on and became paying customers, that support disappeared."',
-            source: 'Trustpilot review of WellnessLiving',
-            url: 'https://www.trustpilot.com/review/wellnessliving.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '1 Jun 2026',
           },
           {
             quote: '"You could talk to 4 different employees and get 4 totally different conflicting answers."',
-            source: 'Trustpilot review of Mindbody',
-            url: 'https://www.trustpilot.com/review/www.mindbodyonline.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '13 Oct 2026',
           },
         ],
@@ -191,20 +184,17 @@ export const post: Post = {
           {
             quote:
               '"some members are attending classes for free" while "others are being charged without making a purchase"',
-            source: 'Trustpilot review of ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com?page=5',
+            source: 'Trustpilot review of a gym software vendor',
             date: '10 Mar 2025',
           },
           {
             quote: '"customers have been charged for memberships we never created and overcharged for others,"',
-            source: 'Trustpilot review of WellnessLiving',
-            url: 'https://www.trustpilot.com/review/wellnessliving.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '1 Jun 2026',
           },
           {
             quote: '"the platform continued attempting to bill customers after information had been removed."',
-            source: 'Trustpilot review of Zen Planner',
-            url: 'https://ie.trustpilot.com/review/zenplanner.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '4 Jun 2026',
           },
         ],
@@ -249,20 +239,17 @@ export const post: Post = {
           {
             quote:
               '"I am obliged to use your Credit Card payment processor (CardPointe) which is super expensive (~3.5%)."',
-            source: 'Trustpilot review of Zen Planner',
-            url: 'https://ie.trustpilot.com/review/zenplanner.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '18 Jul 2025',
           },
           {
             quote: '"Recently they have withheld all our money earned through credit card transactions."',
-            source: 'Trustpilot review of ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com?page=5',
+            source: 'Trustpilot review of a gym software vendor',
             date: '12 Mar 2025',
           },
           {
             quote: '"My funds are being withheld for proof of ownership."',
-            source: 'Trustpilot review of ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '9 Oct 2026',
           },
         ],
@@ -307,14 +294,12 @@ export const post: Post = {
         items: [
           {
             quote: '"the software has repeatedly failed since my Grand Opening earlier this month"',
-            source: 'Trustpilot review of Mindbody',
-            url: 'https://www.trustpilot.com/review/www.mindbodyonline.com?page=3',
+            source: 'Trustpilot review of a gym software vendor',
             date: '28 Sep 2026',
           },
           {
             quote: '"the last 10 months of constant errors has cost our business between £30,000 to £40,000"',
-            source: 'Trustpilot review of ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com?page=5',
+            source: 'Trustpilot review of a gym software vendor',
             date: '24 Feb 2025',
           },
           {
@@ -355,15 +340,13 @@ export const post: Post = {
           },
           {
             quote: '"they wanted to charge me £600 to transfer members payment details"',
-            source: 'Trustpilot review of ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com?page=5',
+            source: 'Trustpilot review of a gym software vendor',
             date: '1 Mar 2025',
           },
           {
             quote:
               '"Still don\'t have my database export, that I paid for and wasn\'t able to bill my students for 6 weeks now."',
-            source: 'Trustpilot review of Zen Planner',
-            url: 'https://www.trustpilot.com/review/zenplanner.com?page=3',
+            source: 'Trustpilot review of a gym software vendor',
             date: '2 Apr 2024',
           },
         ],
@@ -402,20 +385,17 @@ export const post: Post = {
         items: [
           {
             quote: '"This is the worst most unuser friendly, confusing one I have ever used."',
-            source: 'Trustpilot review of TeamUp',
-            url: 'https://www.trustpilot.com/review/goteamup.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '12 Jan 2025',
           },
           {
             quote: '"the system is so rigid and convoluted"',
-            source: 'Trustpilot review of WellnessLiving',
-            url: 'https://www.trustpilot.com/review/wellnessliving.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '1 May 2026',
           },
           {
             quote: '"The system is challenging to get used to and onboarding is a beast (but worth it)."',
-            source: 'Trustpilot review of Exercise.com',
-            url: 'https://www.trustpilot.com/review/exercise.com?page=2',
+            source: 'Trustpilot review of a gym software vendor',
             date: '17 Nov 2025',
           },
         ],
@@ -455,21 +435,18 @@ export const post: Post = {
         items: [
           {
             quote: '"We have to constantly ask members to delete and re-download the app"',
-            source: 'Trustpilot review of ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com?page=4',
+            source: 'Trustpilot review of a gym software vendor',
             date: '24 Apr 2025',
           },
           {
             quote:
               '"I signed up to Glofox after being promised during the sales call that my package would include a branded app."',
-            source: 'Trustpilot review of ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '5 Jun 2026',
           },
           {
             quote: '"Have waited months for "branded app" only to be told there is a technical issue"',
-            source: 'Trustpilot review of Zen Planner',
-            url: 'https://www.trustpilot.com/review/zenplanner.com?page=3',
+            source: 'Trustpilot review of a gym software vendor',
             date: 'Oct 2026',
           },
         ],
@@ -621,28 +598,24 @@ export const post: Post = {
         items: [
           {
             quote: '"The password is correct but it always says there\'s an error."',
-            source: 'App Store review of PT PureGym KSA, published by Tamarran',
-            url: 'https://apps.apple.com/sa/app/id6443764479?see-all=reviews',
+            source: 'App Store review of a gym app in Saudi Arabia',
             date: '27 Sep 2026',
             note: 'translated from Arabic',
           },
           {
             quote: '"very slow and bad application, can\'t reserve the class until many times , always an error"',
-            source: 'Google Play review of PT PureGym KSA',
-            url: 'https://play.google.com/store/apps/details?id=com.tamarran.puregym',
+            source: 'Google Play review of a gym app in Saudi Arabia',
             date: '18 Nov 2025',
           },
           {
             quote: '"The first app was excellent, and now it\'s like begging."',
-            source: 'Google Play review of PT PureGym KSA',
-            url: 'https://play.google.com/store/apps/details?id=com.tamarran.puregym',
+            source: 'Google Play review of a gym app in Saudi Arabia',
             date: '10 Jul 2026',
             note: 'translated from Arabic',
           },
           {
             quote: '"The app is stuck. I deleted it and downloaded it again, same thing."',
-            source: 'Google Play review of the Tamarran app',
-            url: 'https://play.google.com/store/apps/details?id=com.tamarran.app',
+            source: 'Google Play review of a gym app',
             date: '4 Apr 2026',
             note: 'translated from Arabic',
           },
@@ -684,29 +657,25 @@ export const post: Post = {
         items: [
           {
             quote: '"I can\'t log in, the app freezes every time, very bad."',
-            source: 'Google Play review of Iron House Gym KSA',
-            url: 'https://play.google.com/store/apps/details?id=com.ironHouse.gym',
+            source: 'Google Play review of a gym app in Saudi Arabia',
             date: '19 Aug 2026',
             note: 'translated from Arabic',
           },
           {
             quote: '"The application isn\'t working and i cant sign up"',
-            source: 'App Store review of Fitness Maker',
-            url: 'https://apps.apple.com/sa/app/id6744639286',
+            source: 'App Store review of a gym app',
             date: '20 Nov 2025',
           },
           {
             quote: '"There\'s no option to log in to my account with my phone number."',
-            source: 'Google Play review of Fleur Fit Gym',
-            url: 'https://play.google.com/store/apps/details?id=com.fleurFit.gym',
+            source: 'Google Play review of a gym app',
             date: '3 Sep 2026',
             note: 'translated from Arabic',
           },
           {
             quote:
               '"Is not activating the bar Code entry feature, instead it uses Face Id … Which has personal data risk. Other Gyms uses QR code in the App."',
-            source: 'App Store review of Gym 650',
-            url: 'https://apps.apple.com/sa/app/id6741509582',
+            source: 'App Store review of a gym app',
             date: '3 Aug 2025',
           },
         ],
@@ -748,29 +717,25 @@ export const post: Post = {
           {
             quote:
               "\"It gives the error 'This device is not registered for QR'. It hasn't generated a QR code for a month.\"",
-            source: 'Google Play review of Club Sporium',
-            url: 'https://play.google.com/store/apps/details?id=net.senkron.lapis.clubsporium',
+            source: 'Google Play review of a gym app',
             date: '18 Jun 2026',
             note: 'translated from Turkish',
           },
           {
             quote:
               '"Every time a new update is released I have to go through hell to get the app to work properly. I\'ve been locked out of my account for a week"',
-            source: 'App Store review of Mi Estilo',
-            url: 'https://apps.apple.com/tr/app/id1516830165?see-all=reviews',
+            source: 'App Store review of a gym app',
             date: '3 Nov 2024',
           },
           {
             quote: '"Data from the old app wasn\'t carried over to the new one. My old measurements are lost."',
-            source: 'App Store review of Acıbadem Sports',
-            url: 'https://apps.apple.com/tr/app/id1477595376?see-all=reviews',
+            source: 'App Store review of a gym app',
             date: '19 Jan 2024',
             note: 'translated from Turkish',
           },
           {
             quote: '"Right now it doesn\'t work on phones running Android 13."',
-            source: 'Google Play review of IHU Sports',
-            url: 'https://play.google.com/store/apps/details?id=net.senkron.lapis.ihu',
+            source: 'Google Play review of a gym app',
             date: '29 Aug 2026',
             note: 'translated from Turkish',
           },
@@ -798,11 +763,11 @@ export const post: Post = {
       { type: 'heading', id: 'sources', text: 'About the sources' },
       {
         type: 'note',
-        text: "English quotes are copied exactly as written, including the reviewers' spelling. Quotes from Arabic and Turkish reviews are our own translations. We left out reviewers' names. Dates are when the review was posted. Trustpilot moves reviews between pages as new ones arrive, so a quote may now sit on a different page from the one linked.",
+        text: "Quotes are copied as written, without reviewers' names; quotes from Arabic and Turkish reviews are our own translations. Dates are when each review was posted.",
       },
       {
         type: 'note',
-        text: "We left out claims we couldn't read for ourselves, including review-site summaries, competitor blogs, and figures quoted second-hand. Gym Thing is made by Thing W.L.L., Seef, Bahrain.",
+        text: "We left out anything we couldn't read for ourselves, including figures quoted second-hand.",
       },
     ],
   },
@@ -815,7 +780,7 @@ export const post: Post = {
     blocks: [
       {
         type: 'note',
-        text: 'شلون سوينا هالبحث. كل اقتباس تحت مربوط بالصفحة اللي قريناه فيها، مع تاريخه. وما اقتبسنا إلا مراجعات قدرنا نفتحها ونقراها كاملة. أغلبها من Trustpilot وApp Store وصفحات الشركات نفسها، ومن r/gymowner وr/crossfit على Reddit (من 21 سبتمبر لين 21 أكتوبر 2026). المراجعة تجربة شخص واحد، مو دليل على تجربة كل نادي مع البرنامج. واخترنا المشاكل اللي تكررت في أكثر من برنامج وعند أكثر من مراجع.',
+        text: 'شلون سوينا هالبحث. قرينا مراجعات برامج النوادي ومنتديات أصحاب النوادي بين سبتمبر وأكتوبر 2026، واخترنا المشاكل اللي تكررت في أكثر من برنامج وعند أكثر من مراجع. وكل اقتباس تجربة شخص واحد، مو دليل على تجربة كل نادي مع البرنامج.',
       },
       { type: 'heading', id: 'summary', text: '12 مشكلة، وجوابنا على كل وحدة' },
       {
@@ -848,8 +813,7 @@ export const post: Post = {
         items: [
           {
             quote: '«زادوا السعر أكثر من 100% بعد سنتي الثانية وياهم.»',
-            source: 'مراجعة على Trustpilot لـ ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com?page=5',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '1 مارس 2025',
             note: 'مترجم من الإنجليزية',
           },
@@ -862,8 +826,7 @@ export const post: Post = {
           },
           {
             quote: '«أسعارهم تزيد كل سنة بدون أي فايدة زيادة.»',
-            source: 'مراجعة على Trustpilot لـ Zen Planner',
-            url: 'https://ie.trustpilot.com/review/zenplanner.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '14 أبريل 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -906,15 +869,13 @@ export const post: Post = {
           },
           {
             quote: '«يتجدد تلقائياً لعقد 12 شهر ما أحد قال لي عنه»',
-            source: 'مراجعة على Trustpilot لـ Mindbody',
-            url: 'https://www.trustpilot.com/review/www.mindbodyonline.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '20 أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«حاولت ألغي 3 مرات، وكل مرة يقنعوني ما ألغي، ولما ألغيت أخيراً انخصم مني شهر زيادة.»',
-            source: 'مراجعة على Trustpilot لـ ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com?page=2',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '10 نوفمبر 2025',
             note: 'مترجم من الإنجليزية',
           },
@@ -948,22 +909,19 @@ export const post: Post = {
         items: [
           {
             quote: '«قالوا لي انطر لين يوم الاثنين»',
-            source: 'مراجعة على Trustpilot لـ Mindbody من نشاط تجاري يفتح 7 أيام في الأسبوع',
-            url: 'https://www.trustpilot.com/review/www.mindbodyonline.com?page=3',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي، من نشاط تجاري يفتح 7 أيام في الأسبوع',
             date: '27 سبتمبر 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«أول ما وقّعنا وصرنا عملاء ندفع، اختفى الدعم.»',
-            source: 'مراجعة على Trustpilot لـ WellnessLiving',
-            url: 'https://www.trustpilot.com/review/wellnessliving.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '1 يونيو 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«تقدر تكلم 4 موظفين مختلفين وتاخذ 4 أجوبة مختلفة ومتناقضة تماماً.»',
-            source: 'مراجعة على Trustpilot لـ Mindbody',
-            url: 'https://www.trustpilot.com/review/www.mindbodyonline.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '13 أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -995,22 +953,19 @@ export const post: Post = {
         items: [
           {
             quote: '«بعض الأعضاء قاعدين يحضرون الحصص ببلاش» بينما «غيرهم ينخصم منهم بدون ما يشترون شي»',
-            source: 'مراجعة على Trustpilot لـ ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com?page=5',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '10 مارس 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«انخصم من عملاء على اشتراكات عمرنا ما سويناها، وانخصم من غيرهم أكثر من اللازم،»',
-            source: 'مراجعة على Trustpilot لـ WellnessLiving',
-            url: 'https://www.trustpilot.com/review/wellnessliving.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '1 يونيو 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«النظام ظل يحاول يسحب من العملاء حتى بعد ما انحذفت بياناتهم.»',
-            source: 'مراجعة على Trustpilot لـ Zen Planner',
-            url: 'https://ie.trustpilot.com/review/zenplanner.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '4 يونيو 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -1049,22 +1004,19 @@ export const post: Post = {
         items: [
           {
             quote: '«مجبور أستخدم مزود الدفع بالبطاقات حقكم (CardPointe) وهو غالي وايد (حوالي 3.5%).»',
-            source: 'مراجعة على Trustpilot لـ Zen Planner',
-            url: 'https://ie.trustpilot.com/review/zenplanner.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '18 يوليو 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«من فترة قريبة حجزوا كل فلوسنا اللي جت من الدفع بالبطاقات.»',
-            source: 'مراجعة على Trustpilot لـ ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com?page=5',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '12 مارس 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«فلوسي محجوزة لين أثبت الملكية.»',
-            source: 'مراجعة على Trustpilot لـ ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '9 أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -1108,15 +1060,13 @@ export const post: Post = {
         items: [
           {
             quote: '«البرنامج طاح أكثر من مرة من يوم الافتتاح الكبير بداية هالشهر»',
-            source: 'مراجعة على Trustpilot لـ Mindbody',
-            url: 'https://www.trustpilot.com/review/www.mindbodyonline.com?page=3',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '28 سبتمبر 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«آخر 10 شهور من الأخطاء المستمرة كلفت شغلنا بين 30,000 و40,000 جنيه إسترليني»',
-            source: 'مراجعة على Trustpilot لـ ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com?page=5',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '24 فبراير 2025',
             note: 'مترجم من الإنجليزية',
           },
@@ -1160,15 +1110,13 @@ export const post: Post = {
           },
           {
             quote: '«بغوا ياخذون مني 600 جنيه إسترليني عشان ينقلون بيانات الدفع حق الأعضاء»',
-            source: 'مراجعة على Trustpilot لـ ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com?page=5',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '1 مارس 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«للحين ما وصلني ملف قاعدة البيانات اللي دفعت عليه، وصار لي 6 أسابيع ما قدرت أحصّل من طلابي.»',
-            source: 'مراجعة على Trustpilot لـ Zen Planner',
-            url: 'https://www.trustpilot.com/review/zenplanner.com?page=3',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '2 أبريل 2024',
             note: 'مترجم من الإنجليزية',
           },
@@ -1208,22 +1156,19 @@ export const post: Post = {
         items: [
           {
             quote: '«هذا أسوأ واحد استخدمته في حياتي، صعب الاستخدام ومحيّر.»',
-            source: 'مراجعة على Trustpilot لـ TeamUp',
-            url: 'https://www.trustpilot.com/review/goteamup.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '12 يناير 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«النظام جامد ومعقد وايد»',
-            source: 'مراجعة على Trustpilot لـ WellnessLiving',
-            url: 'https://www.trustpilot.com/review/wellnessliving.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '1 مايو 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«النظام صعب تتعود عليه، والتهيئة متعبة وايد (بس تستاهل).»',
-            source: 'مراجعة على Trustpilot لـ Exercise.com',
-            url: 'https://www.trustpilot.com/review/exercise.com?page=2',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '17 نوفمبر 2025',
             note: 'مترجم من الإنجليزية',
           },
@@ -1262,22 +1207,19 @@ export const post: Post = {
         items: [
           {
             quote: '«لازم كل شوي نطلب من الأعضاء يحذفون التطبيق وينزلونه من جديد»',
-            source: 'مراجعة على Trustpilot لـ ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com?page=4',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '24 أبريل 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«اشتركت في Glofox بعد ما وعدوني في مكالمة المبيعات إن باقتي بتشمل تطبيق بهوية النادي.»',
-            source: 'مراجعة على Trustpilot لـ ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '5 يونيو 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«انتظرت شهور على "التطبيق بهويتنا" وفي الأخير قالوا لي فيه مشكلة تقنية»',
-            source: 'مراجعة على Trustpilot لـ Zen Planner',
-            url: 'https://www.trustpilot.com/review/zenplanner.com?page=3',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: 'أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -1428,27 +1370,23 @@ export const post: Post = {
         items: [
           {
             quote: '«الرقم السري صحيح ولكن يكتب يوجد خطأ دائما»',
-            source: 'مراجعة على App Store لتطبيق PT PureGym KSA، من نشر Tamarran',
-            url: 'https://apps.apple.com/sa/app/id6443764479?see-all=reviews',
+            source: 'مراجعة على App Store لـأحد تطبيقات النوادي في السعودية',
             date: '27 سبتمبر 2026',
           },
           {
             quote: '«تطبيق بطيء وسيء وايد، ما أقدر أحجز الحصة إلا بعد محاولات وايد، دايماً فيه خطأ»',
-            source: 'مراجعة على Google Play لتطبيق PT PureGym KSA',
-            url: 'https://play.google.com/store/apps/details?id=com.tamarran.puregym',
+            source: 'مراجعة على Google Play لـأحد تطبيقات النوادي في السعودية',
             date: '18 نوفمبر 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«الله يرحم اول تطبيق ممتاز والان كانك تشحت»',
-            source: 'مراجعة على Google Play لتطبيق PT PureGym KSA',
-            url: 'https://play.google.com/store/apps/details?id=com.tamarran.puregym',
+            source: 'مراجعة على Google Play لـأحد تطبيقات النوادي في السعودية',
             date: '10 يوليو 2026',
           },
           {
             quote: '«التطبيق معلق معي حذفته وحملته نفس الشي»',
-            source: 'مراجعة على Google Play لتطبيق Tamarran',
-            url: 'https://play.google.com/store/apps/details?id=com.tamarran.app',
+            source: 'مراجعة على Google Play لـأحد تطبيقات النوادي',
             date: '4 أبريل 2026',
           },
         ],
@@ -1489,28 +1427,24 @@ export const post: Post = {
         items: [
           {
             quote: '«ما اقدر اسجل دخول التطبيق يعلق كل مره سيء جداااا»',
-            source: 'مراجعة على Google Play لتطبيق Iron House Gym KSA',
-            url: 'https://play.google.com/store/apps/details?id=com.ironHouse.gym',
+            source: 'مراجعة على Google Play لـأحد تطبيقات النوادي في السعودية',
             date: '19 أغسطس 2026',
           },
           {
             quote: '«التطبيق ما يشتغل وما أقدر أسجل»',
-            source: 'مراجعة على App Store لتطبيق Fitness Maker',
-            url: 'https://apps.apple.com/sa/app/id6744639286',
+            source: 'مراجعة على App Store لـأحد تطبيقات النوادي',
             date: '20 نوفمبر 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«لايوجد خيار لتسجيل الدخول بحسابي برقم الهاتف»',
-            source: 'مراجعة على Google Play لتطبيق Fleur Fit Gym',
-            url: 'https://play.google.com/store/apps/details?id=com.fleurFit.gym',
+            source: 'مراجعة على Google Play لـأحد تطبيقات النوادي',
             date: '3 سبتمبر 2026',
           },
           {
             quote:
               '«ما يفعّل خاصية الدخول بالباركود، وبدالها يستخدم Face ID… وهذا فيه خطر على البيانات الشخصية. النوادي الثانية تستخدم رمز QR في التطبيق.»',
-            source: 'مراجعة على App Store لتطبيق Gym 650',
-            url: 'https://apps.apple.com/sa/app/id6741509582',
+            source: 'مراجعة على App Store لـأحد تطبيقات النوادي',
             date: '3 أغسطس 2025',
             note: 'مترجم من الإنجليزية',
           },
@@ -1552,30 +1486,26 @@ export const post: Post = {
         items: [
           {
             quote: '«يطلع خطأ "هذا الجهاز غير مسجّل لرمز QR". وصار له شهر ما يطلّع رمز QR.»',
-            source: 'مراجعة على Google Play لتطبيق Club Sporium',
-            url: 'https://play.google.com/store/apps/details?id=net.senkron.lapis.clubsporium',
+            source: 'مراجعة على Google Play لـأحد تطبيقات النوادي',
             date: '18 يونيو 2026',
             note: 'مترجم من التركية',
           },
           {
             quote:
               '«كل ما نزل تحديث جديد لازم أمر بجحيم عشان أخلي التطبيق يشتغل عدل. وصار لي أسبوع ما أقدر أدخل حسابي»',
-            source: 'مراجعة على App Store لتطبيق Mi Estilo',
-            url: 'https://apps.apple.com/tr/app/id1516830165?see-all=reviews',
+            source: 'مراجعة على App Store لـأحد تطبيقات النوادي',
             date: '3 نوفمبر 2024',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«البيانات من التطبيق القديم ما انتقلت للجديد. وقياساتي القديمة راحت.»',
-            source: 'مراجعة على App Store لتطبيق Acıbadem Sports',
-            url: 'https://apps.apple.com/tr/app/id1477595376?see-all=reviews',
+            source: 'مراجعة على App Store لـأحد تطبيقات النوادي',
             date: '19 يناير 2024',
             note: 'مترجم من التركية',
           },
           {
             quote: '«حالياً ما يشتغل على التلفونات اللي عليها Android 13.»',
-            source: 'مراجعة على Google Play لتطبيق IHU Sports',
-            url: 'https://play.google.com/store/apps/details?id=net.senkron.lapis.ihu',
+            source: 'مراجعة على Google Play لـأحد تطبيقات النوادي',
             date: '29 أغسطس 2026',
             note: 'مترجم من التركية',
           },
@@ -1603,11 +1533,11 @@ export const post: Post = {
       { type: 'heading', id: 'sources', text: 'عن المصادر' },
       {
         type: 'note',
-        text: 'الاقتباسات العربية منقولة مثل ما انكتبت، بإملاء أصحابها. والاقتباسات من مراجعات بالإنجليزي والتركي ترجمتنا إحنا. ما ذكرنا أسماء المراجعين. والتواريخ هي تاريخ نشر المراجعة. Trustpilot ينقل المراجعات بين الصفحات كل ما نزلت مراجعات جديدة، فممكن تلقى الاقتباس الحين في صفحة غير الصفحة المربوطة.',
+        text: 'الاقتباسات منقولة مثل ما انكتبت، بدون أسماء أصحابها. والاقتباسات من مراجعات بالإنجليزي والتركي ترجمتنا إحنا. والتواريخ هي تاريخ نشر المراجعة.',
       },
       {
         type: 'note',
-        text: 'ما حطينا أي معلومة ما قدرنا نقراها بنفسنا، ومنها ملخصات مواقع المراجعات، ومدونات المنافسين، والأرقام المنقولة من مصدر ثاني. Gym Thing من Thing W.L.L.، السيف، البحرين.',
+        text: 'ما حطينا أي معلومة ما قدرنا نقراها بنفسنا، ومنها الأرقام المنقولة من مصدر ثاني.',
       },
     ],
   },

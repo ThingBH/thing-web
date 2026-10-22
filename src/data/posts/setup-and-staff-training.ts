@@ -17,7 +17,7 @@ export const post: Post = {
     blocks: [
       {
         type: 'note',
-        text: "This post goes deeper into two problems from our research, [What gym owners are fed up with in their software](/blog/gym-software-problems/). Every quote links to the page we read it on, with its date. A review is one person's experience, not proof of how every gym gets on with a product.",
+        text: "This post goes deeper on two problems from our research, [What gym owners are fed up with in their software](/blog/gym-software-problems/). A review is one person's experience, not proof of how every gym gets on with a product.",
       },
 
       { type: 'heading', id: 'why', text: 'Why new software takes so long to settle in' },
@@ -34,20 +34,17 @@ export const post: Post = {
         items: [
           {
             quote: '"The system is challenging to get used to and onboarding is a beast (but worth it)."',
-            source: 'Trustpilot review of Exercise.com',
-            url: 'https://www.trustpilot.com/review/exercise.com?page=2',
+            source: 'Trustpilot review of a gym software vendor',
             date: '17 Nov 2025',
           },
           {
             quote: '"I’m now a month in and still don’t have a booking platform."',
-            source: 'Trustpilot review of Mindbody',
-            url: 'https://www.trustpilot.com/review/www.mindbodyonline.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '15 Oct 2026',
           },
           {
             quote: '"I spent THREE MONTHS of time and money on this."',
-            source: 'Trustpilot review of Mindbody from a small business',
-            url: 'https://www.trustpilot.com/review/www.mindbodyonline.com?page=3',
+            source: 'Trustpilot review of a gym software vendor, from a small business',
             date: '2 Oct 2026',
           },
         ],
@@ -66,14 +63,12 @@ export const post: Post = {
         items: [
           {
             quote: '"This is the worst most unuser friendly, confusing one I have ever used."',
-            source: 'Trustpilot review of TeamUp',
-            url: 'https://www.trustpilot.com/review/goteamup.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '12 Jan 2025',
           },
           {
             quote: '"the system is so rigid and convoluted"',
-            source: 'Trustpilot review of WellnessLiving',
-            url: 'https://www.trustpilot.com/review/wellnessliving.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '1 May 2026',
           },
         ],
@@ -108,26 +103,22 @@ export const post: Post = {
         items: [
           {
             quote: '"they told me to wait until Monday"',
-            source: 'Trustpilot review of Mindbody from a business open 7 days a week',
-            url: 'https://www.trustpilot.com/review/www.mindbodyonline.com?page=3',
+            source: 'Trustpilot review of a gym software vendor, from a business open 7 days a week',
             date: '27 Sep 2026',
           },
           {
             quote: '"the moment we signed on and became paying customers, that support disappeared."',
-            source: 'Trustpilot review of WellnessLiving',
-            url: 'https://www.trustpilot.com/review/wellnessliving.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '1 Jun 2026',
           },
           {
             quote: '"there are serious bottlenecks in support, it seems like only one person works there"',
-            source: 'Trustpilot review of Virtuagym',
-            url: 'https://www.trustpilot.com/review/virtuagym.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '16 Sep 2026',
           },
           {
             quote: '"You could talk to 4 different employees and get 4 totally different conflicting answers."',
-            source: 'Trustpilot review of Mindbody',
-            url: 'https://www.trustpilot.com/review/www.mindbodyonline.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '13 Oct 2026',
           },
         ],
@@ -250,7 +241,7 @@ export const post: Post = {
     blocks: [
       {
         type: 'note',
-        text: 'هذا المقال يتعمق في مشكلتين من بحثنا [شنو اللي مضايق أصحاب النوادي في برامجهم](/ar/blog/gym-software-problems/). كل اقتباس مربوط بالصفحة اللي قريناه فيها، مع تاريخه. المراجعة تجربة شخص واحد، مو دليل على تجربة كل نادي مع البرنامج.',
+        text: 'هذا المقال يتعمق في مشكلتين من بحثنا [شنو اللي مضايق أصحاب النوادي في برامجهم](/ar/blog/gym-software-problems/). المراجعة تجربة شخص واحد، مو دليل على تجربة كل نادي مع البرنامج.',
       },
 
       { type: 'heading', id: 'why', text: 'ليش البرنامج الجديد ياخذ وقت طويل لين يستقر' },
@@ -267,22 +258,19 @@ export const post: Post = {
         items: [
           {
             quote: '«النظام صعب تتعود عليه، والتهيئة متعبة وايد (بس تستاهل).»',
-            source: 'مراجعة على Trustpilot لـ Exercise.com',
-            url: 'https://www.trustpilot.com/review/exercise.com?page=2',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '17 نوفمبر 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«صار لي شهر وللحين ما عندي نظام حجوزات.»',
-            source: 'مراجعة على Trustpilot لـ Mindbody',
-            url: 'https://www.trustpilot.com/review/www.mindbodyonline.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '15 أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«صرفت ثلاث شهور من وقتي وفلوسي على هذا.»',
-            source: 'مراجعة على Trustpilot لـ Mindbody من نشاط تجاري صغير',
-            url: 'https://www.trustpilot.com/review/www.mindbodyonline.com?page=3',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي، من نشاط تجاري صغير',
             date: '2 أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -302,15 +290,13 @@ export const post: Post = {
         items: [
           {
             quote: '«هذا أسوأ واحد استخدمته في حياتي، صعب الاستخدام ومحيّر.»',
-            source: 'مراجعة على Trustpilot لـ TeamUp',
-            url: 'https://www.trustpilot.com/review/goteamup.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '12 يناير 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«النظام جامد ومعقد وايد»',
-            source: 'مراجعة على Trustpilot لـ WellnessLiving',
-            url: 'https://www.trustpilot.com/review/wellnessliving.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '1 مايو 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -346,29 +332,25 @@ export const post: Post = {
         items: [
           {
             quote: '«قالوا لي انطر لين يوم الاثنين»',
-            source: 'مراجعة على Trustpilot لـ Mindbody من نشاط تجاري يفتح 7 أيام في الأسبوع',
-            url: 'https://www.trustpilot.com/review/www.mindbodyonline.com?page=3',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي، من نشاط تجاري يفتح 7 أيام في الأسبوع',
             date: '27 سبتمبر 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«أول ما وقّعنا وصرنا عملاء ندفع، اختفى الدعم.»',
-            source: 'مراجعة على Trustpilot لـ WellnessLiving',
-            url: 'https://www.trustpilot.com/review/wellnessliving.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '1 يونيو 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«في زحمة كبيرة في الدعم، كأن شخص واحد بس يشتغل عندهم»',
-            source: 'مراجعة على Trustpilot لـ Virtuagym',
-            url: 'https://www.trustpilot.com/review/virtuagym.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '16 سبتمبر 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«تقدر تكلم 4 موظفين مختلفين وتاخذ 4 أجوبة مختلفة ومتناقضة تماماً.»',
-            source: 'مراجعة على Trustpilot لـ Mindbody',
-            url: 'https://www.trustpilot.com/review/www.mindbodyonline.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '13 أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },

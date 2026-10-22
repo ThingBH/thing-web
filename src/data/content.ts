@@ -237,7 +237,7 @@ export function postMd(lang: Lang, slug: string | undefined) {
             '',
             `> ${q.quote}`,
             '>',
-            `> [${q.source}](${q.url})${lang === 'ar' ? '، ' : ', '}${[q.date, q.note].filter(Boolean).join(lang === 'ar' ? '، ' : ', ')}`,
+            `> ${q.url ? `[${q.source}](${q.url})` : q.source}${lang === 'ar' ? '، ' : ', '}${[q.date, q.note].filter(Boolean).join(lang === 'ar' ? '، ' : ', ')}`,
           ])
         case 'answer': {
           const m = b.module ? mods.find((x) => x.slug === b.module) : undefined

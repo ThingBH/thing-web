@@ -17,7 +17,7 @@ export const post: Post = {
     blocks: [
       {
         type: 'note',
-        text: "Every quote links to the page we read it on, with its date. A review is one person's experience. Vendor terms change, so read the current version before you rely on it. This post goes deeper on three of the twelve problems in [What gym owners are fed up with in their software](/blog/gym-software-problems/).",
+        text: "This post goes deeper on three of the twelve problems in [What gym owners are fed up with in their software](/blog/gym-software-problems/). A review is one person's experience, and vendor terms change, so read the current version before you rely on it.",
       },
 
       { type: 'heading', id: 'price', text: 'Why the price climbs after year one' },
@@ -32,21 +32,18 @@ export const post: Post = {
         items: [
           {
             quote: '"They increased the price by over 100% following my 2nd year with them."',
-            source: 'Trustpilot review of ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com?page=5',
+            source: 'Trustpilot review of a gym software vendor',
             date: '1 Mar 2025',
           },
           {
             quote:
               '"they upgraded my subscription to a more expensive plan based on the number of clients in my account"',
-            source: 'Trustpilot review of Virtuagym',
-            url: 'https://www.trustpilot.com/review/virtuagym.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '9 Jun 2025',
           },
           {
             quote: '"Their prices increase every year with no additional benefit."',
-            source: 'Trustpilot review of Zen Planner',
-            url: 'https://ie.trustpilot.com/review/zenplanner.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '14 Apr 2026',
           },
           {
@@ -94,22 +91,19 @@ export const post: Post = {
           },
           {
             quote: '"auto renews for a 12 month contract that I was never told about"',
-            source: 'Trustpilot review of Mindbody',
-            url: 'https://www.trustpilot.com/review/www.mindbodyonline.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '20 Oct 2026',
           },
           {
             quote:
               '"they automatically renew the contract for 12 months at a time and refuse any possibility of early termination"',
-            source: 'Trustpilot review of Virtuagym',
-            url: 'https://www.trustpilot.com/review/virtuagym.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '9 Jun 2025',
           },
           {
             quote:
               '"WellnessLiving would later claim we had already been automatically renewed into another 12-month contract."',
-            source: 'Trustpilot review of WellnessLiving',
-            url: 'https://www.trustpilot.com/review/wellnessliving.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '10 Jul 2026',
           },
         ],
@@ -181,21 +175,18 @@ export const post: Post = {
           },
           {
             quote: '"they wanted to charge me £600 to transfer members payment details"',
-            source: 'Trustpilot review of ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com?page=5',
+            source: 'Trustpilot review of a gym software vendor',
             date: '1 Mar 2025',
           },
           {
             quote:
               '"Still don\'t have my database export, that I paid for and wasn\'t able to bill my students for 6 weeks now."',
-            source: 'Trustpilot review of Zen Planner',
-            url: 'https://www.trustpilot.com/review/zenplanner.com?page=3',
+            source: 'Trustpilot review of a gym software vendor',
             date: '2 Apr 2024',
           },
           {
             quote: '"Moving a few hundred member accounts over here was a nightmare the first week."',
-            source: 'Trustpilot review of Exercise.com',
-            url: 'https://www.trustpilot.com/review/exercise.com',
+            source: 'Trustpilot review of a gym software vendor',
             date: '7 Oct 2026',
           },
         ],
@@ -285,7 +276,7 @@ export const post: Post = {
     blocks: [
       {
         type: 'note',
-        text: 'كل اقتباس مربوط بالصفحة اللي قريناه فيها، مع تاريخه. والمراجعة تجربة شخص واحد. وشروط الشركات تتغير، فاقرا النسخة الحالية قبل لا تعتمد عليها. هالمقال يتعمق في ثلاث من المشاكل الـ 12 اللي في [شنو اللي مضايق أصحاب النوادي في برامجهم](/ar/blog/gym-software-problems/).',
+        text: 'هالمقال يتعمق في ثلاث من المشاكل الـ 12 اللي في [شنو اللي مضايق أصحاب النوادي في برامجهم](/ar/blog/gym-software-problems/). والمراجعة تجربة شخص واحد، وشروط الشركات تتغير، فاقرا النسخة الحالية قبل لا تعتمد عليها.',
       },
 
       { type: 'heading', id: 'price', text: 'ليش السعر يزيد بعد أول سنة' },
@@ -300,22 +291,19 @@ export const post: Post = {
         items: [
           {
             quote: '«زادوا السعر أكثر من 100% بعد سنتي الثانية وياهم.»',
-            source: 'مراجعة على Trustpilot لـ ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com?page=5',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '1 مارس 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«نقلوا اشتراكي لباقة أغلى على حسب عدد العملاء اللي في حسابي»',
-            source: 'مراجعة على Trustpilot لـ Virtuagym',
-            url: 'https://www.trustpilot.com/review/virtuagym.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '9 يونيو 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«أسعارهم تزيد كل سنة بدون أي فايدة زيادة.»',
-            source: 'مراجعة على Trustpilot لـ Zen Planner',
-            url: 'https://ie.trustpilot.com/review/zenplanner.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '14 أبريل 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -365,22 +353,19 @@ export const post: Post = {
           },
           {
             quote: '«يتجدد تلقائياً لعقد 12 شهر ما أحد قال لي عنه»',
-            source: 'مراجعة على Trustpilot لـ Mindbody',
-            url: 'https://www.trustpilot.com/review/www.mindbodyonline.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '20 أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«يجددون العقد تلقائياً 12 شهر كل مرة، ويرفضون أي إمكانية إنك تنهيه بدري»',
-            source: 'مراجعة على Trustpilot لـ Virtuagym',
-            url: 'https://www.trustpilot.com/review/virtuagym.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '9 يونيو 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«بعدين WellnessLiving قالوا إننا أصلاً تجددنا تلقائياً لعقد ثاني مدته 12 شهر.»',
-            source: 'مراجعة على Trustpilot لـ WellnessLiving',
-            url: 'https://www.trustpilot.com/review/wellnessliving.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '10 يوليو 2026',
             note: 'مترجم من الإنجليزية',
           },
@@ -457,22 +442,19 @@ export const post: Post = {
           },
           {
             quote: '«بغوا ياخذون مني 600 جنيه إسترليني عشان ينقلون بيانات الدفع حق الأعضاء»',
-            source: 'مراجعة على Trustpilot لـ ABC Glofox',
-            url: 'https://www.trustpilot.com/review/glofox.com?page=5',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '1 مارس 2025',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«للحين ما وصلني ملف قاعدة البيانات اللي دفعت عليه، وصار لي 6 أسابيع ما قدرت أحصّل من طلابي.»',
-            source: 'مراجعة على Trustpilot لـ Zen Planner',
-            url: 'https://www.trustpilot.com/review/zenplanner.com?page=3',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '2 أبريل 2024',
             note: 'مترجم من الإنجليزية',
           },
           {
             quote: '«نقل كم مية حساب عضو لهني كان كابوس في أول أسبوع.»',
-            source: 'مراجعة على Trustpilot لـ Exercise.com',
-            url: 'https://www.trustpilot.com/review/exercise.com',
+            source: 'مراجعة على Trustpilot لـإحدى شركات برامج النوادي',
             date: '7 أكتوبر 2026',
             note: 'مترجم من الإنجليزية',
           },
