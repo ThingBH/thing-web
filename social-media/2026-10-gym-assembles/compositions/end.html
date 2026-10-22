@@ -1,0 +1,69 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "Geist";
+      src: url("assets/fonts/Geist-Variable.woff2") format("woff2");
+      font-weight: 100 900;
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      background: #f8f9fb;
+      font-family: "Geist", sans-serif;
+      color: #0a0a0a;
+    }
+    #end-stack {
+      position: absolute;
+      left: 0;
+      width: 1080px;
+      top: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    #end-logo {
+      width: 420px;
+      height: 239px;
+    }
+    #end-name {
+      margin-top: 72px;
+      font-size: 120px;
+      font-weight: 600;
+      letter-spacing: -0.04em;
+    }
+    #end-name span {
+      display: inline-block;
+    }
+    #end-cta {
+      margin-top: 40px;
+      font-size: 48px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+    #end-url {
+      margin-top: 18px;
+      font-size: 36px;
+      color: #737373;
+    }
+  </style>
+  <div id="root" data-composition-id="end" data-width="1080" data-height="1920">
+    <div id="end-stack">
+      <img id="end-logo" src="assets/thing-logo.svg" alt="THING" />
+      <div id="end-name"><span>G</span><span>y</span><span>m</span><span>&nbsp;</span><span>T</span><span>h</span><span>i</span><span>n</span><span>g</span></div>
+      <div id="end-cta" data-var-text="cta">Start with a free trial</div>
+      <div id="end-url">thing.bh</div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+      // The mark is wiped in left to right, then the name types in letter by letter.
+      tl.fromTo("#end-logo", { clipPath: "inset(0% 100% 0% 0%)" }, { clipPath: "inset(0% 0% 0% 0%)", duration: 0.5, ease: "power2.inOut" }, 0.05);
+      tl.fromTo("#end-name span", { opacity: 0.15, filter: "blur(4px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.12, stagger: 0.04, ease: "power2.out" }, 0.45);
+      tl.fromTo("#end-cta", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 0.85);
+      tl.fromTo("#end-url", { color: "#e5e5e5" }, { color: "#737373", duration: 0.2, ease: "none" }, 1.0);
+      window.__timelines["end"] = tl;
+    })();
+  </script>
+</template>

@@ -1,0 +1,279 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "Geist";
+      src: url("assets/fonts/Geist-Variable.woff2") format("woff2");
+      font-weight: 100 900;
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      background: #f4f4f2;
+      font-family: "Geist", sans-serif;
+      color: #0a0a0a;
+    }
+    #build-canvas {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1080px;
+      height: 1920px;
+    }
+    .build-txt {
+      position: absolute;
+      left: 0;
+      width: 1080px;
+      top: 1140px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .build-txt span {
+      display: inline-block;
+    }
+    #build-hook span {
+      font-size: 84px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+    }
+    .build-word span {
+      font-size: 150px;
+      font-weight: 600;
+      letter-spacing: -0.04em;
+    }
+  </style>
+  <div id="root" data-composition-id="build" data-width="1080" data-height="1920">
+    <canvas id="build-canvas" width="1080" height="1920" data-layout-ignore></canvas>
+
+    <div id="build-hook" class="clip build-txt" data-start="0" data-duration="2" data-track-index="1">
+      <span id="build-hook-t" data-var-text="hook">Running a gym is a lot</span>
+    </div>
+    <div id="build-w1" class="clip build-txt build-word" data-start="2.45" data-duration="1.4" data-track-index="1">
+      <span id="build-w1-t">Doors</span>
+    </div>
+    <div id="build-w2" class="clip build-txt build-word" data-start="3.85" data-duration="1.4" data-track-index="1">
+      <span id="build-w2-t">Payments</span>
+    </div>
+    <div id="build-w3" class="clip build-txt build-word" data-start="5.25" data-duration="1.4" data-track-index="1">
+      <span id="build-w3-t">Members</span>
+    </div>
+    <div id="build-w4" class="clip build-txt build-word" data-start="6.65" data-duration="1.4" data-track-index="1">
+      <span id="build-w4-t">Payroll</span>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.min.js"></script>
+  <script>
+    (function () {
+      const W = 1080;
+      const H = 1920;
+      const canvas = document.getElementById("build-canvas");
+      const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, preserveDrawingBuffer: true });
+      renderer.setPixelRatio(1);
+      renderer.setSize(W, H, false);
+      renderer.setClearColor(0xf4f4f2, 1);
+      renderer.shadowMap.enabled = true;
+      renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(40, W / H, 0.05, 200);
+
+      scene.add(new THREE.HemisphereLight(0xffffff, 0xd9d8d4, 0.75));
+      const key = new THREE.DirectionalLight(0xffffff, 0.85);
+      key.position.set(-7, 14, 9);
+      key.castShadow = true;
+      key.shadow.mapSize.set(2048, 2048);
+      key.shadow.camera.left = -9;
+      key.shadow.camera.right = 9;
+      key.shadow.camera.top = 9;
+      key.shadow.camera.bottom = -9;
+      key.shadow.radius = 4;
+      scene.add(key);
+
+      const ground = new THREE.Mesh(
+        new THREE.PlaneGeometry(80, 80),
+        new THREE.ShadowMaterial({ opacity: 0.12 }),
+      );
+      ground.rotation.x = -Math.PI / 2;
+      ground.position.y = -0.3;
+      ground.receiveShadow = true;
+      scene.add(ground);
+
+      const ink = new THREE.LineBasicMaterial({ color: 0x0a0a0a });
+      const white = new THREE.MeshStandardMaterial({ color: 0xfbfbfa, roughness: 0.9 });
+
+      // Icon paths copied from the site's sprite (24x24 line icons).
+      const ICONS = {
+        card: ["M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Z", "M2 10h20"],
+        users: [
+          "M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2",
+          "M13 7a4 4 0 1 1-8 0a4 4 0 1 1 8 0",
+          "M22 21v-2a4 4 0 0 0-3-3.87",
+          "M16 3.13a4 4 0 0 1 0 7.75",
+        ],
+        brief: [
+          "M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16",
+          "M4 6h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z",
+        ],
+      };
+
+      function faceMaterial(w, h, icon) {
+        const ppu = 256;
+        const c = document.createElement("canvas");
+        c.width = Math.round(w * ppu);
+        c.height = Math.round(h * ppu);
+        const g = c.getContext("2d");
+        g.fillStyle = "#fbfbfa";
+        g.fillRect(0, 0, c.width, c.height);
+        const size = Math.min(c.width, c.height) * 0.58;
+        g.translate(c.width / 2 - size / 2, c.height / 2 - size / 2);
+        g.scale(size / 24, size / 24);
+        g.strokeStyle = "#0a0a0a";
+        g.lineWidth = 1.6;
+        g.lineCap = "round";
+        g.lineJoin = "round";
+        for (const d of ICONS[icon]) g.stroke(new Path2D(d));
+        const tex = new THREE.CanvasTexture(c);
+        tex.anisotropy = 4;
+        return new THREE.MeshStandardMaterial({ map: tex, roughness: 0.9 });
+      }
+
+      // A block is a group whose origin sits on its base, so a y-scale squashes from the ground.
+      function block(w, h, d, x, y, z, color, icon) {
+        const grp = new THREE.Group();
+        const mat = color ? new THREE.MeshStandardMaterial({ color, roughness: 0.95 }) : white;
+        const mats = [mat, mat, mat, mat, icon ? faceMaterial(w, h, icon) : mat, mat];
+        const geo = new THREE.BoxGeometry(w, h, d);
+        const mesh = new THREE.Mesh(geo, mats);
+        mesh.position.y = h / 2;
+        mesh.castShadow = true;
+        mesh.receiveShadow = true;
+        const edges = new THREE.LineSegments(new THREE.EdgesGeometry(geo), ink);
+        edges.position.y = h / 2;
+        grp.add(mesh, edges);
+        grp.userData.base = new THREE.Vector3(x, y, z);
+        grp.position.copy(grp.userData.base);
+        scene.add(grp);
+        return grp;
+      }
+
+      const slab = block(8, 0.3, 6, 0, -0.3, 0.4, 0xc9c7c1);
+      const doors = block(2.6, 2.2, 2.4, 0, 0, 0.6);
+      const pay = block(2.0, 1.6, 2.4, -2.3, 0, 0.6, null, "card");
+      const mem = block(2.0, 1.6, 2.4, 2.3, 0, 0.6, null, "users");
+      const roll = block(2.6, 1.3, 2.4, 0, 2.2, 0.6, null, "brief");
+
+      // The entrance: a lit opening behind two sliding black door leaves.
+      const front = 1.2 + 0.002;
+      const opening = new THREE.Mesh(
+        new THREE.PlaneGeometry(0.9, 1.4),
+        new THREE.MeshBasicMaterial({ color: 0xf8f9fb }),
+      );
+      opening.position.set(0, 0.7, front);
+      const frame = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.PlaneGeometry(0.9, 1.4)), ink);
+      frame.position.set(0, 0.7, front + 0.001);
+      const leafGeo = new THREE.PlaneGeometry(0.45, 1.4);
+      const leafMat = new THREE.MeshBasicMaterial({ color: 0x0a0a0a });
+      const leafL = new THREE.Mesh(leafGeo, leafMat);
+      const leafR = new THREE.Mesh(leafGeo, leafMat);
+      leafL.position.set(-0.225, 0.7, front + 0.002);
+      leafR.position.set(0.225, 0.7, front + 0.002);
+      doors.add(opening, frame, leafL, leafR);
+
+      const clamp = (v) => Math.min(1, Math.max(0, v));
+      const lerp = (a, b, p) => a + (b - a) * p;
+      const inCubic = (p) => p * p * p;
+      const inOut2 = (p) => (p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2);
+
+      // Each block falls under gravity, lands on its time, then squashes 4% and recovers.
+      const DROPS = [
+        [slab, 0.3, 0.55],
+        [doors, 2.45, 0.45],
+        [pay, 3.85, 0.45],
+        [mem, 5.25, 0.45],
+        [roll, 6.65, 0.45],
+      ];
+      function placeBlocks(t) {
+        for (const [g, land, dur] of DROPS) {
+          const base = g.userData.base;
+          const p = clamp((t - (land - dur)) / dur);
+          g.visible = t >= land - dur || g === slab;
+          g.position.y = base.y + 6 * (1 - inCubic(p));
+          const q = clamp((t - land) / 0.2);
+          const squash = q > 0 && q < 1 ? Math.sin(Math.PI * q) * 0.04 : 0;
+          g.scale.set(1 + squash / 2, 1 - squash, 1 + squash / 2);
+        }
+      }
+
+      const target0 = new THREE.Vector3(0, 1.3, 0.4);
+      function overview(t) {
+        const az = THREE.MathUtils.degToRad(28 + 1.5 * t);
+        const el = THREE.MathUtils.degToRad(24);
+        const r = 23.5;
+        return new THREE.Vector3(
+          target0.x + r * Math.cos(el) * Math.sin(az),
+          target0.y + r * Math.sin(el),
+          target0.z + r * Math.cos(el) * Math.cos(az),
+        );
+      }
+
+      function placeCamera(t) {
+        let pos = overview(Math.min(t, 8));
+        let tgt = target0.clone();
+        let offset = 430;
+        if (t > 8) {
+          // Stage A: swing round to face the door. Stage B: accelerate through it.
+          const a = inOut2(clamp((t - 8) / 1.6));
+          const aPos = new THREE.Vector3(0, 0.8, 1.8 + 3.0);
+          const aTgt = new THREE.Vector3(0, 0.75, 0);
+          pos = pos.clone().lerp(aPos, a);
+          tgt = tgt.clone().lerp(aTgt, a);
+          offset = lerp(430, 0, a);
+          const b = inCubic(clamp((t - 9.6) / 0.85));
+          if (b > 0) {
+            pos.lerp(new THREE.Vector3(0, 0.7, 1.8 + 0.1), b);
+            tgt.lerp(new THREE.Vector3(0, 0.7, 0), b);
+          }
+        }
+        camera.position.copy(pos);
+        camera.setViewOffset(W, H, 0, offset, W, H);
+        camera.lookAt(tgt);
+      }
+
+      function placeDoors(t) {
+        const o = inOut2(clamp((t - 9.5) / 0.45));
+        leafL.position.x = lerp(-0.225, -0.675, o);
+        leafR.position.x = lerp(0.225, 0.675, o);
+      }
+
+      function render(t) {
+        placeBlocks(t);
+        placeCamera(t);
+        placeDoors(t);
+        renderer.render(scene, camera);
+      }
+
+      const tl = gsap.timeline({ paused: true });
+      const clock = { t: 0 };
+      tl.fromTo(clock, { t: 0 }, { t: 10.5, duration: 10.5, ease: "none", onUpdate: () => render(clock.t) }, 0);
+
+      // Hook line is on screen at frame 0, leaves with a blur.
+      tl.fromTo("#build-hook-t", { opacity: 1, filter: "blur(0px)" }, { opacity: 0, filter: "blur(8px)", duration: 0.15, ease: "power2.in" }, 1.8);
+
+      // Each module word stamps in on its block's landing frame.
+      [
+        ["#build-w1-t", 2.45],
+        ["#build-w2-t", 3.85],
+        ["#build-w3-t", 5.25],
+        ["#build-w4-t", 6.65],
+      ].forEach(([sel, at]) => {
+        tl.fromTo(sel, { opacity: 0, scale: 1.06, filter: "blur(8px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.15, ease: "power4.out" }, at);
+        tl.to(sel, { opacity: 0, filter: "blur(8px)", duration: 0.15, ease: "power2.in" }, at + 1.22);
+      });
+
+      render(0);
+      window.__timelines["build"] = tl;
+    })();
+  </script>
+</template>

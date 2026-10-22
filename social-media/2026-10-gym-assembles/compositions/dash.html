@@ -1,0 +1,297 @@
+<template>
+  <style>
+    @font-face {
+      font-family: "Geist";
+      src: url("assets/fonts/Geist-Variable.woff2") format("woff2");
+      font-weight: 100 900;
+    }
+    #root {
+      position: absolute;
+      inset: 0;
+      background: #f8f9fb;
+      font-family: "Geist", sans-serif;
+      color: #171717;
+    }
+    #dash-title {
+      position: absolute;
+      left: 60px;
+      width: 960px;
+      top: 190px;
+      height: 190px;
+      display: flex;
+      align-items: center;
+    }
+    .dash-line {
+      font-size: 76px;
+      font-weight: 600;
+      letter-spacing: -0.035em;
+      line-height: 1.02;
+      color: #0a0a0a;
+    }
+    .dash-line span {
+      display: inline-block;
+    }
+    #dash-l2 {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 960px;
+      height: 190px;
+      display: flex;
+      align-items: center;
+    }
+    #dash-app {
+      position: absolute;
+      left: 60px;
+      top: 410px;
+      width: 960px;
+      height: 910px;
+    }
+    #dash-app .org {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      height: 64px;
+    }
+    #dash-app .sq {
+      width: 60px;
+      height: 60px;
+      border-radius: 14px;
+      background: #0a0a0a;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 22px;
+      font-weight: 700;
+    }
+    #dash-app .org b {
+      font-size: 32px;
+      font-weight: 600;
+    }
+    #dash-app .org small {
+      margin-left: auto;
+      font-size: 28px;
+      color: #737373;
+    }
+    #dash-app .ph {
+      margin-top: 22px;
+    }
+    #dash-app .ph h4 {
+      font-size: 44px;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+    }
+    #dash-app .ph p {
+      font-size: 28px;
+      color: #737373;
+      margin-top: 4px;
+    }
+    .card {
+      background: #fff;
+      border: 2px solid #e8eaee;
+      border-radius: 24px;
+      padding: 24px;
+    }
+    .card-h {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .card-h b {
+      font-size: 30px;
+      font-weight: 600;
+    }
+    .card-h svg {
+      width: 34px;
+      height: 34px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    #dash-glance {
+      margin-top: 24px;
+    }
+    .tiles {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.3fr;
+      gap: 14px;
+    }
+    .tiles > div {
+      border-radius: 18px;
+      padding: 18px 10px;
+      display: grid;
+      justify-items: center;
+      gap: 4px;
+      text-align: center;
+    }
+    .tiles b {
+      font-size: 38px;
+      font-weight: 700;
+    }
+    .tiles small {
+      font-size: 28px;
+      color: #404040;
+    }
+    .t-indigo { background: #eef2ff; color: #4338ca; }
+    .t-teal { background: #f0fdfa; color: #0f766e; }
+    .t-purple { background: #faf5ff; color: #7e22ce; }
+    #dash-grid {
+      position: absolute;
+      left: 0;
+      top: 470px;
+      width: 960px;
+      height: 440px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 16px;
+    }
+    #dash-grid .card {
+      padding: 20px 22px;
+      position: relative;
+    }
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 28px;
+    }
+    .row + .row {
+      margin-top: 8px;
+    }
+    .muted {
+      color: #737373;
+    }
+    .badge {
+      display: inline-block;
+      font-size: 28px;
+      font-weight: 600;
+      padding: 4px 16px;
+      border-radius: 999px;
+    }
+    .b-ok { background: #dcfce7; color: #15803d; }
+    .mono { font-variant-numeric: tabular-nums; font-weight: 600; }
+    .hl {
+      position: absolute;
+      inset: -2px;
+      border-radius: 24px;
+      border: 4px solid var(--tone);
+      opacity: 0;
+    }
+  </style>
+  <div id="root" data-composition-id="dash" data-width="1080" data-height="1920">
+    <div id="dash-title">
+      <div id="dash-l1" class="clip dash-line" data-start="0.25" data-duration="5.75" data-track-index="1">
+        <span>All</span> <span>of</span> <span>it,</span> <span>in</span> <span>one</span> <span>place</span>
+      </div>
+      <div id="dash-l2" class="clip" data-start="6" data-duration="3" data-track-index="1">
+        <div class="dash-line" id="dash-l2-t"><span>Gym Thing runs</span><br /><span>the whole gym</span></div>
+      </div>
+    </div>
+
+    <div id="dash-app">
+      <div class="org" id="dash-org">
+        <div class="sq" data-layout-ignore>AG</div>
+        <b>ABC Gym</b>
+        <small>Dashboard</small>
+      </div>
+      <div class="ph" id="dash-ph">
+        <h4>Good morning, Layla</h4>
+        <p>Here's what's happening at ABC Gym today.</p>
+      </div>
+      <div class="card" id="dash-glance">
+        <div class="card-h"><b>Today at a Glance</b></div>
+        <div class="tiles">
+          <div class="t-indigo"><b>6</b><small>Classes</small></div>
+          <div class="t-teal"><b>4</b><small>New Customers</small></div>
+          <div class="t-purple"><b>BHD 412.500</b><small>Revenue</small></div>
+        </div>
+      </div>
+
+      <div id="dash-grid">
+        <div class="card" id="dash-c1" style="--tone: #16a34a">
+          <div class="card-h" style="color: #16a34a">
+            <svg viewBox="0 0 24 24"><path d="M13 4h3a2 2 0 0 1 2 2v14" /><path d="M2 20h3" /><path d="M13 20h9" /><path d="M10 12v.01" /><path d="M13 4.562v16.157a1 1 0 0 1-1.242.97L5 20V5.562a2 2 0 0 1 1.515-1.94l4-1A2 2 0 0 1 13 4.561Z" /></svg>
+            <b style="color: #171717">Check-ins</b>
+          </div>
+          <div class="row"><span>Hussain Jaffar</span><span class="badge b-ok" id="dash-k1">Allowed</span></div>
+          <div class="row muted"><span>07:31 · Gate 1</span><span>QR code</span></div>
+          <div class="hl" id="dash-h1"></div>
+        </div>
+        <div class="card" id="dash-c2" style="--tone: #ea580c">
+          <div class="card-h" style="color: #ea580c">
+            <svg viewBox="0 0 24 24"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7" /><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4" /><path d="M2 7h20" /></svg>
+            <b style="color: #171717">Point of Sale</b>
+          </div>
+          <div class="row muted"><span>Protein Shake</span><span>2.500</span></div>
+          <div class="row"><span>Total</span><span class="mono" id="dash-k2">BHD 32.500</span></div>
+          <div class="hl" id="dash-h2"></div>
+        </div>
+        <div class="card" id="dash-c3" style="--tone: #16a34a">
+          <div class="card-h" style="color: #16a34a">
+            <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+            <b style="color: #171717">Customers</b>
+          </div>
+          <div class="row"><span>Aisha Kamal</span><span class="badge b-ok" id="dash-k3">Active</span></div>
+          <div class="row muted"><span>Gold 12 months</span></div>
+          <div class="hl" id="dash-h3"></div>
+        </div>
+        <div class="card" id="dash-c4" style="--tone: #9333ea">
+          <div class="card-h" style="color: #9333ea">
+            <svg viewBox="0 0 24 24"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /><rect width="20" height="14" x="2" y="6" rx="2" /></svg>
+            <b style="color: #171717">Payroll</b>
+          </div>
+          <div class="row muted"><span>Sara Ahmed · Head Coach</span></div>
+          <div class="row"><span>Gross pay</span><span class="mono" id="dash-k4">BHD 785.000</span></div>
+          <div class="hl" id="dash-h4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    (function () {
+      const tl = gsap.timeline({ paused: true });
+
+      // The ground is already the app's canvas; the shell sharpens into place.
+      tl.fromTo(["#dash-org", "#dash-ph", "#dash-glance"], { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.2, ease: "power4.out", stagger: 0.08 }, 0.05);
+
+      // Line 1: words go from light grey to ink.
+      tl.fromTo("#dash-l1 span", { color: "#d4d4d4" }, { color: "#0a0a0a", duration: 0.12, stagger: 0.08, ease: "none" }, 0.3);
+      tl.to("#dash-l1 span", { opacity: 0, filter: "blur(8px)", duration: 0.15, stagger: 0.03, ease: "power2.in" }, 5.75);
+
+      // Four module cards fly in from the edges and lock into the grid.
+      [
+        ["#dash-c1", { x: -760, y: 0 }, 1.1],
+        ["#dash-c2", { x: 760, y: 0 }, 1.45],
+        ["#dash-c3", { x: 0, y: 900 }, 1.8],
+        ["#dash-c4", { x: 760, y: 500 }, 2.15],
+      ].forEach(([sel, from, at]) => {
+        tl.fromTo(sel, { x: from.x, y: from.y, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 0.6, ease: "expo.out" }, at);
+      });
+
+      // One detail per beat: a door scan, a sale, a member, a payslip.
+      [
+        ["#dash-k1", "#dash-h1", 3.3],
+        ["#dash-k2", "#dash-h2", 3.9],
+        ["#dash-k3", "#dash-h3", 4.5],
+        ["#dash-k4", "#dash-h4", 5.1],
+      ].forEach(([k, h, at]) => {
+        tl.fromTo(k, { scale: 0.85 }, { scale: 1, duration: 0.3, ease: "back.out(1.6)", immediateRender: false }, at);
+        tl.fromTo(h, { opacity: 0 }, { opacity: 1, duration: 0.15, ease: "power2.out" }, at);
+        tl.to(h, { opacity: 0, duration: 0.3, ease: "power2.in" }, at + 0.55);
+      });
+
+      // Line 2 blurs in as one block and holds.
+      tl.fromTo("#dash-l2-t", { opacity: 0, filter: "blur(8px)" }, { opacity: 1, filter: "blur(0px)", duration: 0.18, ease: "power4.out" }, 6.0);
+
+      // Blur swap out to the end card on the same ground.
+      tl.to(["#dash-app", "#dash-l2-t"], { opacity: 0, filter: "blur(8px)", duration: 0.18, ease: "power2.in" }, 8.8);
+
+      window.__timelines["dash"] = tl;
+    })();
+  </script>
+</template>
