@@ -220,7 +220,7 @@ export const post: Post = {
         paras: [
           'The best test is a real month: real members paying with BenefitPay, real invoices and a real payroll run. [Start with a free trial](/free-trial/): we move your members over, and you can run Gym Thing free for up to 3 months before paying.',
           'See how Gym Thing compares on [payments](/compare/gymnago/) and [payroll](/compare/flyby/), or read about [payments](/modules/payments/), [invoicing](/modules/invoicing/) and [payroll](/modules/hr-payroll/).',
-          'Payments and support each have their own post: [Billing that charges the right member, and money that reaches you](/blog/billing-that-charges-right/) and [Slow setup, weeks of training, and support that goes quiet](/blog/setup-and-staff-training/). Running gyms elsewhere in the GCC? Read [the best gym software in the GCC](/blog/best-gym-software-gcc/) and [VAT on gym memberships in each GCC country](/blog/gcc-vat-for-gyms/).',
+          'Payments and support each have their own post: [Billing that charges the right member, and money that reaches you](/blog/billing-that-charges-right/) and [Slow setup, weeks of training, and support that goes quiet](/blog/setup-and-staff-training/). Running gyms elsewhere in the GCC? Read [the best gym software in the GCC](/blog/best-gym-software-gcc/) and [VAT on gym memberships in each GCC country](/blog/gcc-vat-for-gyms/). In Bahrain, [Tamkeen can part-fund the switch](/blog/tamkeen-digital-enablement-gym-software/).',
         ],
       },
       {
@@ -446,7 +446,7 @@ export const post: Post = {
         paras: [
           'أحسن تجربة هي شهر حقيقي: أعضاء حقيقيين يدفعون بـ BenefitPay، وفواتير حقيقية، ومسير رواتب حقيقي. [ابدأ بتجربة مجانية](/ar/free-trial/): ننقل أعضاءك، وتقدر تشغّل Gym Thing مجاناً لين 3 شهور قبل لا تدفع.',
           'شوف شلون يقارن Gym Thing في [المدفوعات](/ar/compare/gymnago/) و[الرواتب](/ar/compare/flyby/)، أو اقرأ عن [المدفوعات](/ar/modules/payments/) و[الفواتير](/ar/modules/invoicing/) و[الرواتب](/ar/modules/hr-payroll/).',
-          'وللمدفوعات والدعم مقالات خاصة: [فوترة تحصّل المبلغ الصحيح، وأموال تصل إليك](/ar/blog/billing-that-charges-right/) و[إعداد بطيء وتدريب يستغرق أسابيع ودعم يختفي بعد التوقيع](/ar/blog/setup-and-staff-training/). وعندك نوادي في دولة خليجية ثانية؟ اقرأ [أفضل برامج النوادي في الخليج](/ar/blog/best-gym-software-gcc/) و[ضريبة القيمة المضافة على اشتراكات النوادي في كل دولة خليجية](/ar/blog/gcc-vat-for-gyms/).',
+          'وللمدفوعات والدعم مقالات خاصة: [فوترة تحصّل المبلغ الصحيح، وأموال تصل إليك](/ar/blog/billing-that-charges-right/) و[إعداد بطيء وتدريب يستغرق أسابيع ودعم يختفي بعد التوقيع](/ar/blog/setup-and-staff-training/). وعندك نوادي في دولة خليجية ثانية؟ اقرأ [أفضل برامج النوادي في الخليج](/ar/blog/best-gym-software-gcc/) و[ضريبة القيمة المضافة على اشتراكات النوادي في كل دولة خليجية](/ar/blog/gcc-vat-for-gyms/). وفي البحرين، [تمكين تقدر تموّل جزء من النقلة](/ar/blog/tamkeen-digital-enablement-gym-software/).',
         ],
       },
       {
