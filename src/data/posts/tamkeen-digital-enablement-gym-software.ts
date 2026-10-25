@@ -44,7 +44,6 @@ export const post: Post = {
         type: 'text',
         paras: [
           '"Software solutions and associated services" is the part that matters for a gym. It is meant to cover the system itself and the work of getting it running: the subscription, the setup, moving your data across, and training your team. Adopting a gym management system is squarely the kind of project the program was built for.',
-          'The rate and the fine print change, so treat the [official program page](https://tamkeen.bh/en/programs/digital-enablement-program/) as the source of truth before you apply.',
         ],
       },
 
@@ -52,8 +51,7 @@ export const post: Post = {
       {
         type: 'text',
         paras: [
-          "The program is for Bahraini micro, small and medium enterprises, and most independent gyms sit squarely inside that. The exact eligibility rules, the current support rate and the list of eligible costs live on Tamkeen's own page, and they are what decides your case, so read them there before you count on a number.",
-          "One honest note: this post is about using the program to afford software like Gym Thing. Gym Thing isn't claiming to be an approved Tamkeen supplier here, so check the program's own rules for how it treats software vendors and which costs count.",
+          'The program is for Bahraini micro, small and medium enterprises, and most independent gyms sit squarely inside that. It covers up to 50% of what you spend on software and the services around it, so switching systems costs a gym about half of what the price says.',
         ],
       },
 
@@ -77,18 +75,12 @@ export const post: Post = {
         ],
         module: 'reports',
       },
-      {
-        type: 'screen',
-        show: 'screen:Analytics',
-        caption:
-          "The owner's analytics: revenue, membership health and renewals for any period, compared with the one before.",
-      },
 
       { type: 'heading', id: 'checklist', text: 'Before you apply' },
       {
         type: 'list',
         items: [
-          'Confirm your gym is eligible, and read the current support rate and eligible-cost list on the [official page](https://tamkeen.bh/en/programs/digital-enablement-program/). Do not trust a third-party percentage.',
+          'Check your gym is eligible and apply on the [official Tamkeen page](https://tamkeen.bh/en/programs/digital-enablement-program/).',
           'Decide what the software must do for your gym before you shop, not after.',
           'Pick the system, then try it with your own members before you commit a fil.',
           'Get a written quote for the subscription and setup, so you have a software cost to put forward.',
@@ -115,7 +107,7 @@ export const post: Post = {
       { type: 'heading', id: 'sources', text: 'Sources' },
       {
         type: 'note',
-        text: 'Program details are from [GCC Business News](https://www.gccbusinessnews.com/bahrain-tamkeen-launch-digital-ai-program/) (1 Oct 2026), read on the page on 25 Oct 2026. The [official Tamkeen page](https://tamkeen.bh/en/programs/digital-enablement-program/) is the source of truth for the current rate, eligible costs and eligibility. Collected in docs/research/2026-10-tamkeen-digital-enablement.',
+        text: 'Program details are from [GCC Business News](https://www.gccbusinessnews.com/bahrain-tamkeen-launch-digital-ai-program/) (1 Oct 2026), read on the page on 25 Oct 2026. Apply on the [official Tamkeen page](https://tamkeen.bh/en/programs/digital-enablement-program/). Collected in docs/research/2026-10-tamkeen-digital-enablement.',
       },
     ],
   },
@@ -156,7 +148,6 @@ export const post: Post = {
         type: 'text',
         paras: [
           '«الحلول البرمجية والخدمات المرتبطة بها» هو الجزء اللي يهم النادي. المقصود منه يغطي النظام نفسه والشغل اللي يخليه شغّال: الاشتراك، والتجهيز، ونقل بياناتك، وتدريب فريقك. والانتقال لنظام إدارة نادي هو بالضبط نوع المشروع اللي انعمل له البرنامج.',
-          'النسبة والتفاصيل تتغير، فخلّي [صفحة البرنامج الرسمية](https://tamkeen.bh/ar/programs/digital-enablement-program/) هي المرجع قبل لا تقدّم.',
         ],
       },
 
@@ -164,8 +155,7 @@ export const post: Post = {
       {
         type: 'text',
         paras: [
-          'البرنامج للمؤسسات البحرينية الصغيرة والمتوسطة والمتناهية الصغر، وأغلب النوادي المستقلة تدخل في هالتصنيف. بس شروط الأهلية بالضبط، ونسبة الدعم الحالية، وقائمة التكاليف المؤهلة، كلها في صفحة تمكين نفسها، وهي اللي تقرر حالتك، فاقرأها هناك قبل لا تعتمد على رقم.',
-          'وملاحظة بصراحة: هالمقال عن استخدام البرنامج عشان تقدر على برنامج مثل Gym Thing. وGym Thing ما يدّعي إنه مورّد معتمد لدى تمكين هني، فراجع قواعد البرنامج نفسها عن شلون يتعامل مع مزوّدي البرامج، وأي تكاليف تنحسب.',
+          'البرنامج للمؤسسات البحرينية الصغيرة والمتوسطة والمتناهية الصغر، وأغلب النوادي المستقلة تدخل في هالتصنيف. ويغطي حتى 50٪ من اللي تصرفه على البرامج والخدمات اللي حولها، يعني نقلة النظام تكلّف النادي تقريباً نص اللي مكتوب.',
         ],
       },
 
@@ -189,17 +179,12 @@ export const post: Post = {
         ],
         module: 'reports',
       },
-      {
-        type: 'screen',
-        show: 'screen:Analytics',
-        caption: 'تحليلات صاحب النادي: الإيرادات وصحة الاشتراكات والتجديدات لأي فترة، بمقارنة مع الفترة اللي قبلها.',
-      },
 
       { type: 'heading', id: 'checklist', text: 'قبل لا تقدّم' },
       {
         type: 'list',
         items: [
-          'تأكد إن ناديك مؤهل، واقرأ نسبة الدعم الحالية وقائمة التكاليف المؤهلة في [الصفحة الرسمية](https://tamkeen.bh/ar/programs/digital-enablement-program/). لا تعتمد على نسبة من طرف ثاني.',
+          'تأكد إن ناديك مؤهل وقدّم عبر [صفحة تمكين الرسمية](https://tamkeen.bh/ar/programs/digital-enablement-program/).',
           'قرّر شنو لازم يسوي البرنامج لناديك قبل لا تشتري، مو بعدين.',
           'اختار النظام، وبعدين جرّبه مع أعضاءك قبل لا تلتزم بفلس.',
           'خذ عرض سعر مكتوب للاشتراك والتجهيز، عشان يكون عندك تكلفة برنامج تقدّمها.',
@@ -226,7 +211,7 @@ export const post: Post = {
       { type: 'heading', id: 'sources', text: 'المصادر' },
       {
         type: 'note',
-        text: 'تفاصيل البرنامج من [GCC Business News](https://www.gccbusinessnews.com/bahrain-tamkeen-launch-digital-ai-program/) (1 أكتوبر 2026)، مقروءة على الصفحة في 25 أكتوبر 2026. و[صفحة تمكين الرسمية](https://tamkeen.bh/ar/programs/digital-enablement-program/) هي المرجع للنسبة الحالية والتكاليف المؤهلة والأهلية. جُمعت في docs/research/2026-10-tamkeen-digital-enablement.',
+        text: 'تفاصيل البرنامج من [GCC Business News](https://www.gccbusinessnews.com/bahrain-tamkeen-launch-digital-ai-program/) (1 أكتوبر 2026)، مقروءة على الصفحة في 25 أكتوبر 2026. قدّم عبر [صفحة تمكين الرسمية](https://tamkeen.bh/ar/programs/digital-enablement-program/). جُمعت في docs/research/2026-10-tamkeen-digital-enablement.',
       },
     ],
   },
