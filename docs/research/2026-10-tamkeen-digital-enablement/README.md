@@ -12,7 +12,7 @@ The angle: Tamkeen's Digital Enablement and AI Program can cover part of a Bahra
 
 - **Quoted in the post:** one sentence from GCC Business News, read on its page on 25 Oct 2026 (article dated 1 Oct 2026). It is a regional trade-news site, not Tamkeen itself; it is the strongest read-on-page source available.
 - **Official Tamkeen page** (`tamkeen.bh/en/programs/digital-enablement-program/`): sits behind Cloudflare bot protection and would not open in a headless browser or to `WebFetch` (403 / "Just a moment..."). It is **linked, not quoted**, and named in the post as the source of truth for the current rate, eligible costs and eligibility.
-- **Support percentage conflicts.** GCC Business News (1 Oct 2026) says **up to 50%** of software-solution costs. Third-party consultancy blogs (hornettec.com, creatrixe.com) say up to 60%. The post uses **50%** (the news figure) and tells the reader to confirm on the official page.
+- **Support percentage.** GCC Business News (1 Oct 2026) says **up to 50%** of software-solution costs. The post states 50%. (Some third-party consultancy blogs, hornettec.com and creatrixe.com, say up to 60%; not used.)
 - **Eligibility** is stated only as broadly as the read-on-page source supports: "micro, small and medium enterprises." Specific rules (CR, no government violations) appeared only in unread third-party summaries, so they are **not asserted** in the post; the reader is sent to the official page.
 
 ## Gym Thing claims checked
