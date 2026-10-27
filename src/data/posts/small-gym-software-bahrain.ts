@@ -104,11 +104,6 @@ export const post: Post = {
         ],
         module: 'memberships',
       },
-      {
-        type: 'screen',
-        show: 'screen:PayLinks',
-        caption: 'Payment links at ABC Gym: sent, paid, expired, each one tied to a member and a plan.',
-      },
 
       { type: 'heading', id: 'money', text: "Cash, card and BenefitPay that don't add up" },
       {
@@ -127,11 +122,6 @@ export const post: Post = {
         ],
         module: 'point-of-sale',
       },
-      {
-        type: 'screen',
-        show: 'screen:Pos',
-        caption: 'The Gym Thing till: cash, card or BenefitPay, with the change worked out.',
-      },
 
       { type: 'heading', id: 'door', text: 'Who is actually in the gym' },
       {
@@ -149,11 +139,6 @@ export const post: Post = {
           'The check-ins list shows who came in today, and who was turned away.',
         ],
         module: 'access-control',
-      },
-      {
-        type: 'screen',
-        show: 'screen:CheckIns',
-        caption: 'Check-ins at ABC Gym: every entry and every refusal, with the reason.',
       },
 
       { type: 'heading', id: 'staff-time', text: 'The hours nobody counts' },
@@ -308,11 +293,6 @@ export const post: Post = {
         ],
         module: 'memberships',
       },
-      {
-        type: 'screen',
-        show: 'screen:PayLinks',
-        caption: 'روابط الدفع في ABC Gym: مرسلة ومدفوعة ومنتهية، وكل رابط مربوط بعضو وباقة.',
-      },
 
       { type: 'heading', id: 'money', text: 'كاش وبطاقات وBenefitPay ما تطابق' },
       {
@@ -331,11 +311,6 @@ export const post: Post = {
         ],
         module: 'point-of-sale',
       },
-      {
-        type: 'screen',
-        show: 'screen:Pos',
-        caption: 'نقطة البيع في Gym Thing: كاش أو بطاقة أو BenefitPay، والباقي محسوب.',
-      },
 
       { type: 'heading', id: 'door', text: 'منو فعلاً داخل النادي' },
       {
@@ -353,11 +328,6 @@ export const post: Post = {
           'قائمة الدخول تبيّن منو دخل اليوم، ومنو انرفض.',
         ],
         module: 'access-control',
-      },
-      {
-        type: 'screen',
-        show: 'screen:CheckIns',
-        caption: 'الدخول في ABC Gym: كل دخول وكل رفض، مع السبب.',
       },
 
       { type: 'heading', id: 'staff-time', text: 'الساعات اللي محد يحسبها' },

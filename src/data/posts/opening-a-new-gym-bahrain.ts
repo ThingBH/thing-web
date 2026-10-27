@@ -9,10 +9,10 @@ export const post: Post = {
   checked: '2026-10-27',
   tags: ['gulf', 'running-the-gym', 'gym-software'],
   en: {
-    title: 'Opening a new gym in Bahrain: the software to sort out first',
-    seoTitle: 'Opening a gym in Bahrain: the software checklist for new gyms',
+    title: 'Free for up to a year: gym software for new gyms in Bahrain',
+    seoTitle: 'Free gym software for new gyms in Bahrain, for up to a year',
     description:
-      'Opening a gym in Bahrain? The software calls to make in the first months: members, pre-sales, BenefitPay, the door, staff and VAT, and a free year for new gyms.',
+      'New gyms in Bahrain can run Gym Thing free for up to a year, with setup, data migration and staff training. Plus the software calls to make before opening day.',
     lede: 'The licence is in, the equipment is on its way, and members are already asking how to sign up. In the first months of a new gym in Bahrain, the software gets picked last and in a hurry, and it ends up running everything: who paid, who gets in, who works when, and what goes on the invoice. Here are the calls to make before opening day, what goes wrong when they wait, and an offer for gyms that are just starting.',
     blocks: [
       {
@@ -81,11 +81,6 @@ export const post: Post = {
         ],
         module: 'memberships',
       },
-      {
-        type: 'screen',
-        show: 'screen:Memberships',
-        caption: 'Plans at ABC Gym, each with its own price, days, hours and branches.',
-      },
 
       { type: 'heading', id: 'too-late', text: 'What goes wrong when the software comes last' },
       {
@@ -142,11 +137,6 @@ export const post: Post = {
         ],
         module: 'payments',
       },
-      {
-        type: 'screen',
-        show: 'screen:PayPage',
-        caption: 'The ABC Gym pay page, with card, Apple Pay and BenefitPay.',
-      },
 
       { type: 'heading', id: 'door', text: 'The door, before the first busy evening' },
       {
@@ -165,11 +155,6 @@ export const post: Post = {
           'Every entry is logged, so you see who came in and when.',
         ],
         module: 'access-control',
-      },
-      {
-        type: 'screen',
-        show: 'screen:CheckIns',
-        caption: 'The check-ins log at ABC Gym: every scan, allowed or refused, with the reason.',
       },
 
       { type: 'heading', id: 'staff-vat', text: 'Staff and VAT, before they pile up' },
@@ -230,10 +215,10 @@ export const post: Post = {
     ],
   },
   ar: {
-    title: 'افتتاح نادٍ رياضي جديد في البحرين: البرنامج الذي يجب حسمه أولاً',
-    seoTitle: 'افتتاح نادٍ رياضي في البحرين: قائمة برنامج الإدارة للأندية الجديدة',
+    title: 'مجاناً لمدة تصل إلى سنة: برنامج إدارة للأندية الرياضية الجديدة في البحرين',
+    seoTitle: 'برنامج إدارة مجاني للأندية الرياضية الجديدة في البحرين لمدة تصل إلى سنة',
     description:
-      'تفتتح نادياً رياضياً في البحرين؟ قرارات البرنامج في الأشهر الأولى: الأعضاء والبيع المسبق وBenefitPay والدخول والموظفون والضريبة، وسنة مجانية للأندية الجديدة.',
+      'تستطيع الأندية الرياضية الجديدة في البحرين تشغيل Gym Thing مجاناً لمدة تصل إلى سنة، مع الإعداد ونقل البيانات وتدريب الموظفين، وقرارات البرنامج قبل الافتتاح.',
     lede: 'الترخيص طلع، والأجهزة في الطريق، والناس من الحين يسألون شلون يشتركون. في أول شهور النادي الجديد في البحرين، البرنامج ينختار آخر شي وعلى عجل، وبعدين هو اللي يدير كل شي: منو دفع، ومنو يدخل، ومنو يداوم متى، وشنو ينكتب في الفاتورة. هني القرارات اللي لازم تحسمها قبل يوم الافتتاح، وشنو يصير إذا تأخرت، وعرض للنوادي اللي توها تبدأ.',
     blocks: [
       {
@@ -302,11 +287,6 @@ export const post: Post = {
         ],
         module: 'memberships',
       },
-      {
-        type: 'screen',
-        show: 'screen:Memberships',
-        caption: 'الباقات في ABC Gym، كل وحدة بسعرها وأيامها وساعاتها وفروعها.',
-      },
 
       { type: 'heading', id: 'too-late', text: 'شنو يصير لما البرنامج يجي آخر شي' },
       {
@@ -365,11 +345,6 @@ export const post: Post = {
         ],
         module: 'payments',
       },
-      {
-        type: 'screen',
-        show: 'screen:PayPage',
-        caption: 'صفحة الدفع في ABC Gym، بالبطاقة وApple Pay وBenefitPay.',
-      },
 
       { type: 'heading', id: 'door', text: 'الباب، قبل أول ليلة زحمة' },
       {
@@ -388,11 +363,6 @@ export const post: Post = {
           'كل دخول ينسجّل، فتشوف منو دخل ومتى.',
         ],
         module: 'access-control',
-      },
-      {
-        type: 'screen',
-        show: 'screen:CheckIns',
-        caption: 'سجل الدخول في ABC Gym: كل مسح، مسموح أو مرفوض، مع السبب.',
       },
 
       { type: 'heading', id: 'staff-vat', text: 'الموظفين والضريبة، قبل لا تتكدس' },
