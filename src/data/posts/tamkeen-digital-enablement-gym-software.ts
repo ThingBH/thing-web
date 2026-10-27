@@ -100,7 +100,7 @@ export const post: Post = {
       {
         type: 'text',
         paras: [
-          'New to choosing a system? Start with [what owners keep reporting about their software](/blog/gym-software-problems/), then read why Gym Thing is [built for the Gulf](/blog/built-for-the-gulf/) and how it handles [VAT for gyms](/blog/gcc-vat-for-gyms/).',
+          'New to choosing a system? Start with [what owners keep reporting about their software](/blog/gym-software-problems/), then read why Gym Thing is [built for the Gulf](/blog/built-for-the-gulf/) and how it handles [VAT for gyms](/blog/gcc-vat-for-gyms/). Still opening? See [opening a new gym in Bahrain](/blog/opening-a-new-gym-bahrain/).',
         ],
       },
 
@@ -204,7 +204,7 @@ export const post: Post = {
       {
         type: 'text',
         paras: [
-          'لسه في بداية اختيار نظام؟ ابدأ بـ[المشاكل اللي يشتكي منها أصحاب النوادي في برامجهم](/ar/blog/gym-software-problems/)، وبعدين اقرأ ليش Gym Thing [مصمّم للخليج](/ar/blog/built-for-the-gulf/) وشلون يتعامل مع [ضريبة القيمة المضافة للنوادي](/ar/blog/gcc-vat-for-gyms/).',
+          'لسه في بداية اختيار نظام؟ ابدأ بـ[المشاكل اللي يشتكي منها أصحاب النوادي في برامجهم](/ar/blog/gym-software-problems/)، وبعدين اقرأ ليش Gym Thing [مصمّم للخليج](/ar/blog/built-for-the-gulf/) وشلون يتعامل مع [ضريبة القيمة المضافة للنوادي](/ar/blog/gcc-vat-for-gyms/). لسه ما فتحت؟ شوف [افتتاح نادي جديد في البحرين](/ar/blog/opening-a-new-gym-bahrain/).',
         ],
       },
 
