@@ -73,7 +73,11 @@ export async function trial(request: Request, env: Pick<Env, 'TURNSTILE_SECRET_K
       subject: `Free trial request${lang === 'ar' ? ' (Arabic site)' : ''} · ${t.gym}`,
       text: `Gym: ${t.gym}\nName: ${t.name}\nWhatsApp: ${t.whatsapp}\nSite: ${lang === 'ar' ? 'Arabic' : 'English'}`,
     }),
-  }).catch(() => null)
+  }).catch((e: unknown) => {
+    console.error('resend fetch failed', e)
+    return null
+  })
+  if (sent && !sent.ok) console.error('resend rejected', sent.status, await sent.text())
   return sent?.ok ? done() : fail(502)
 }
 
