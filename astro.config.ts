@@ -25,6 +25,8 @@ export default defineConfig({
   redirects: { '/gym': '/', '/pricing': '/', '/get-a-quote': '/free-trial/' },
   // Every internal link prefetches on hover or focus; links override with data-astro-prefetch (see CLAUDE.md).
   prefetch: { prefetchAll: true, defaultStrategy: 'hover' },
+  // Chromium prerenders the hovered page (speculation rules) so the click is instant; other browsers keep plain prefetch.
+  experimental: { clientPrerender: true },
   fonts: [
     {
       // Self-hosted Geist (SIL OFL), one variable file for every weight.
