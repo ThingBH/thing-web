@@ -29,3 +29,4 @@ dist-ssr
 .astro
 .taste-skill
 .dev.vars
+.wrangler/
