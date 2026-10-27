@@ -1,6 +1,6 @@
 # Website engineering
 
-Static Astro 7 site on GitHub Pages. README has commands and layout. Read `docs/brand/` before writing copy.
+Static Astro 7 site on Cloudflare Pages (`wrangler.json`). README has commands and layout. Read `docs/brand/` before writing copy.
 
 ## Look ("Daylight")
 
@@ -14,13 +14,13 @@ Static Astro 7 site on GitHub Pages. README has commands and layout. Read `docs/
 
 - **One template per page, both languages.** Markup in `src/views/`. `src/pages/` and `src/pages/ar/` are thin routes. Views read language from `Astro.currentLocale` (`langOf`, `href` in `src/data/i18n.ts`), short copy in an `{ en, ar }` object beside the markup.
 - **Arabic copy** is in `modules.ar.ts`, `compare.ar.ts`, `countries.ar.ts`, keyed by slug. Build fails if it falls out of step with the English lists or tables. Change English copy or a competitor fact, change the Arabic too.
-- **Content is data** in `src/data/`: `modules.ts` (13 modules, feature groups, FAQ, `show` = `screen:<Name>`/`flow:<key>` joined by `+`), `compare.ts`, `countries.ts` (GCC pages at `/gym-software/<slug>/`), `site.ts` (contact, FAQs, Web3Forms key), `flows.ts`, `jsonld.ts`. Pages, Markdown, `llms.txt`, JSON-LD are generated from these. Edit the data, not the pages.
+- **Content is data** in `src/data/`: `modules.ts` (13 modules, feature groups, FAQ, `show` = `screen:<Name>`/`flow:<key>` joined by `+`), `compare.ts`, `countries.ts` (GCC pages at `/gym-software/<slug>/`), `site.ts` (contact, FAQs, Turnstile site key), `flows.ts`, `jsonld.ts`. Pages, Markdown, `llms.txt`, JSON-LD are generated from these. Edit the data, not the pages.
 - **Product screens are Solid islands** in `src/islands/screens/<Name>.tsx` + `.css`. Contract: root `<div class="mx mx-<name>">`, every selector scoped under `.mx-<name>`, `container-type: inline-size` on root, shared `Icon`/`bhd`/`createToast` from `shared.tsx`, browser-only code inside `onMount`. Register each in `src/components/Screen.astro` (Astro hydrates only islands named in markup, so a lookup map won't work).
 - **Share cards** (`src/integrations/og.ts`): post-build, each page gets a 1200x630 PNG at `/og/<path>.png` (home is `/og.png`, `/og-ar.png`), drawn by sharp from the page's `<title>`, `<h1>`, language, with repo Geist + IBM Plex Sans Arabic (unpacked by `wawoff2`, never system fonts). Build fails if a title can't fit. No cards under `npm run dev`. Tags in `Base.astro`, JSON-LD image via `jsonld.ts` (`cardPath`).
 - **Prefetch** (`astro.config.ts`): `prefetchAll: true, defaultStrategy: 'hover'`. Override with `data-astro-prefetch`: `"viewport"` only on the header's "Start with a free trial", `"false"` on big/non-page files (none today). Never `"load"`/`"viewport"` on lists of cards or posts (fetches every page). `clientPrerender` is off.
 - **Flow canvases** (`Flow.astro`, `scripts/flow.ts`): nodes never move or resize on selection change. Wires drawn once per layout; picking a trigger only toggles classes. Check node rects before and after a click.
 - **Icons**: one inline sprite, `src/components/Sprite.astro`. `#i-<name>` line icons, `#b-<brand>` payment marks, `#thing-logo`. BenefitPay mark is `/brand/benefitpay.png`.
-- **Forms** post to Web3Forms. The `site.ts` access key is public by design.
+- **Forms** post to the Worker `src/worker.ts` (`/api/trial/`): Turnstile check, then email via Resend. The `site.ts` Turnstile site key is public by design; secrets live in the Cloudflare dashboard. `node scripts/trial-check.ts` after changing it.
 - `public/.well-known/` holds Apple Pay domain verification. It must ship.
 
 ## Gotchas

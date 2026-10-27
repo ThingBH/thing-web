@@ -1,7 +1,7 @@
 ---
 import { href, langOf } from '../data/i18n'
 import { breadcrumbs } from '../data/jsonld'
-import { contact, SITE_URL, web3forms } from '../data/site'
+import { contact, trialForm } from '../data/site'
 import Base from '../layouts/Base.astro'
 
 const lang = langOf(Astro.currentLocale)
@@ -13,7 +13,6 @@ const t = {
       'We set up Gym Thing for your gym, walk your team through it, and you run it for up to 3 months. No card, no contract.',
     h1: 'Try it on your own gym.',
     lede: 'We set up Gym Thing for your gym, walk your team through it, and you run it for up to 3 months. No card, no contract.',
-    subject: 'Free trial request · thing.bh',
     gym: 'Gym name',
     name: 'Your name',
     wa: 'WhatsApp number',
@@ -35,7 +34,6 @@ const t = {
     description: 'نجهّز Gym Thing لناديك وندرّب فريقك، وتستخدمه مجاناً لمدة تصل إلى 3 أشهر. بدون بطاقة دفع وبدون عقد.',
     h1: 'جرّبه على ناديك.',
     lede: 'نجهز Gym Thing لناديك، نمشّي فريقك فيه خطوة خطوة، وتشغّله لين 3 شهور. بدون بطاقة، وبدون عقد.',
-    subject: 'Free trial request (Arabic site) · thing.bh',
     gym: 'اسم النادي',
     name: 'اسمك',
     wa: 'رقم الواتساب',
@@ -66,18 +64,15 @@ const graph = [
       <p class="lede" style="margin-top:24px">{t.lede}</p>
       <div class="formwrap">
         <div data-form="trial">
-          <form class="form" data-kind="trial" action={web3forms.endpoint} method="POST">
-            <input type="hidden" name="access_key" value={web3forms.accessKey} />
-            <input type="hidden" name="subject" value={t.subject} />
-            <input type="hidden" name="from_name" value="thing.bh free trial" />
-            <input type="hidden" name="redirect" value={`${SITE_URL}${href(lang, '/free-trial/thanks/')}`} />
+          <form class="form" data-kind="trial" action={trialForm.endpoint} method="POST">
+            <input type="hidden" name="lang" value={lang} />
             <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
             <div class="field"><label for="t-gym">{t.gym}</label><input id="t-gym" name="gym" type="text" required autocomplete="organization" /><span class="err" aria-live="polite"></span></div>
             <div class="row2">
               <div class="field"><label for="t-name">{t.name}</label><input id="t-name" name="name" type="text" required autocomplete="name" /><span class="err" aria-live="polite"></span></div>
               <div class="field"><label for="t-wa">{t.wa}</label><input id="t-wa" name="whatsapp" type="tel" dir="ltr" required inputmode="tel" autocomplete="tel" placeholder="+973 3xxx xxxx" /><span class="err" aria-live="polite"></span></div>
             </div>
-            <div class="field" data-captcha-field><div class="h-captcha" data-captcha="true"></div><span class="err" aria-live="polite"></span></div>
+            <div class="field" data-captcha-field><div class="cf-turnstile" data-sitekey={trialForm.turnstileSiteKey} data-language={lang} data-theme="light"></div><span class="err" aria-live="polite"></span></div>
             <button class="btn pri" type="submit">{t.submit} <svg class="i go"><use href="#i-arrow" /></svg></button>
           </form>
         </div>
@@ -92,5 +87,5 @@ const graph = [
   <script>
     import '../scripts/forms'
   </script>
-  <script is:inline src="https://web3forms.com/client/script.js" async defer></script>
+  <script is:inline src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </Base>

@@ -1,0 +1,3 @@
+# Keep workers.dev hosts (production and branch previews) out of search; thing.bh is the only indexed host.
+https://:host.thing-3a1.workers.dev/*
+  X-Robots-Tag: noindex

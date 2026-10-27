@@ -15,10 +15,12 @@ export const contact = {
   linkedin: 'https://www.linkedin.com/company/thing-bh/',
 }
 
-/** Web3Forms delivers the free-trial form by email. The access key is public by design: it only lets the form submit. */
-export const web3forms = {
-  endpoint: 'https://api.web3forms.com/submit',
-  accessKey: '510232bf-da33-4f69-93b1-0391b5cb489d',
+/** The free-trial form posts to the Worker (`src/worker.ts`), which checks Turnstile and emails the request. */
+export const trialForm = {
+  endpoint: '/api/trial/',
+  // Turnstile widget "thing.bh free-trial form" (thing.bh + thing-3a1.workers.dev). Public by design;
+  // its secret is the Worker secret TURNSTILE_SECRET_KEY.
+  turnstileSiteKey: '0x4AAAAAAFn_q7OLR3Y8cUPR',
 }
 
 export const nav: Record<Lang, { href: string; label: string }[]> = {

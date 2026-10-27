@@ -1,5 +1,5 @@
 // Progressive enhancement for the free-trial form: inline validation, then a fetch
-// submit to Web3Forms with a thank-you panel. Without JS the form posts normally and Web3Forms redirects to /free-trial/thanks/.
+// submit to /api/trial/ with a thank-you panel. Without JS the form posts normally and the Worker redirects to /free-trial/thanks/.
 import { href, langOf } from '../data/i18n'
 
 const lang = langOf(document.documentElement.lang)
@@ -8,6 +8,7 @@ const t = {
     empty: 'Please fill this in.',
     phone: 'Add the full number, including the country code.',
     captcha: "Tick the box to show you're not a robot.",
+    failed: "We couldn't send that. Tick the box and try again, or message us on WhatsApp.",
     thanks: (name: string, gym: string) => `Thanks, ${name}. We're setting up ${gym}.`,
     next: "We'll message you on WhatsApp to book your walkthrough.",
     home: 'Back to the homepage',
@@ -16,6 +17,7 @@ const t = {
     empty: 'لو سمحت عبّ هذي الخانة.',
     phone: 'اكتب الرقم كامل، مع رمز الدولة.',
     captcha: 'أشّر على المربع عشان نتأكد إنك مو روبوت.',
+    failed: 'ما قدرنا نرسله. أشّر على المربع وجرّب مرة ثانية، أو راسلنا على واتساب.',
     thanks: (name: string, gym: string) => `شكراً ${name}. قاعدين نجهز ${gym}.`,
     next: 'بنراسلك على واتساب عشان نحجز موعد الشرح.',
     home: 'رجوع للصفحة الرئيسية',
@@ -57,12 +59,16 @@ function validate(form: HTMLFormElement) {
     first ??= el
   }
   first?.focus()
-  // hCaptcha (rendered by Web3Forms' script) puts its token in this textarea once solved.
-  const captcha = form.querySelector<HTMLTextAreaElement>('[name="h-captcha-response"]')
+  // Turnstile puts its token in this hidden input once solved.
+  const captcha = form.querySelector<HTMLInputElement>('[name="cf-turnstile-response"]')
   if (first || !captcha || captcha.value) return !first
-  const err = form.querySelector('[data-captcha-field] .err')
-  if (err) err.textContent = t.captcha
+  captchaError(form, t.captcha)
   return false
+}
+
+function captchaError(form: HTMLFormElement, msg: string) {
+  const err = form.querySelector('[data-captcha-field] .err')
+  if (err) err.textContent = msg
 }
 
 function thanks(gym: string, name: string) {
@@ -97,8 +103,10 @@ for (const host of document.querySelectorAll<HTMLElement>('[data-form]')) {
       const data: { success?: boolean } = await res.json()
       if (!res.ok || !data.success) throw new Error(String(res.status))
     } catch {
-      // Network or service trouble: let the browser post the form the ordinary way.
-      form.submit()
+      // Tokens are single-use, so a retry needs a fresh one.
+      ;(globalThis as { turnstile?: { reset: () => void } }).turnstile?.reset()
+      captchaError(form, t.failed)
+      if (button) button.disabled = false
       return
     }
     host.innerHTML = thanks(value('[id$="-gym"]'), value('[id$="-name"]').split(' ')[0])

@@ -6,7 +6,7 @@ Status: working prototype on branch `worktree-agent-ad20553bef6fe684c`. Nothing 
 
 Use **cross-document (MPA) view transitions in CSS**, with a few `view-transition-name`s and no router.
 
-- Every page stays a static document. Islands, `flow.ts`, `forms.ts`, hCaptcha, gtag, JSON-LD and hreflang all behave exactly as today, because each navigation is still a full page load.
+- Every page stays a static document. Islands, `flow.ts`, `forms.ts`, Turnstile, gtag, JSON-LD and hreflang all behave exactly as today, because each navigation is still a full page load.
 - The change is progressive enhancement. Browsers that support it cross-fade and morph. The rest navigate as they do now, with no polyfill and no extra JS.
 - It is small: 31 lines of CSS, one inline `<style>` in the head, and a `--vt` name on four templates.
 - Motion is calm and short, matching Daylight. The page cross-fades over 140/240 ms and a title morphs over 300 ms on the site's `--ease-out`. Nothing slides, bounces or blurs.
@@ -35,7 +35,7 @@ What it would cost here:
 - **Scripts.** Bundled module scripts run once per session, not once per page. `site.ts` (menu, header shadow, `.rise` observer), `flow.ts` (`initFlows`, its `ResizeObserver`s and its 3.4 s `setInterval`) and `forms.ts` would all need rewriting around `astro:page-load`, with cleanup on `astro:before-swap`. Otherwise listeners would point at a header that was swapped out, and flow timers would build up from page to page.
 - **Islands.** Each swap tears down and re-hydrates the Solid islands. Every timer in a screen (the Dashboard clock, toasts) would need its `onCleanup` checked.
 - **Analytics.** gtag only sends a `page_view` on a real load. Soft navigations would need a manual `gtag('event', 'page_view')` on `astro:page-load`, or they would go uncounted.
-- **Web3Forms and hCaptcha.** The free-trial form binds in place and loads hCaptcha. Both would need re-initialising after a swap.
+- **The form and Turnstile.** The free-trial form binds in place and loads Turnstile. Both would need re-initialising after a swap.
 - **Language switch.** EN↔AR flips `lang`/`dir`, the font preloads (Plex Arabic) and the hreflang links. The router swaps the head and root attributes, but the safe choice is `data-astro-reload` on the language link, which gives up the transition for exactly the move we most want to look clean.
 - **JSON-LD and the per-page `<link rel="alternate" type="text/markdown">`.** These are swapped in the head. That's fine for people and doesn't matter to crawlers, but it is one more thing to keep right.
 - Every page ships the router's JS, while today's pages load only the island code they use.
@@ -85,7 +85,7 @@ Checked against what I knew in October 2026. Confirm on caniuse before shipping.
 3. **Duplicate names abort the whole transition.** A name must be unique on each page. Today `/modules/` has 13 module names and `/compare/` has 5 comparison names, and the check below found no duplicates. Never put `class="vt"` with a `--vt` on anything that repeats (for example the "Next module" link, the "Other comparisons" list, or the home showcase).
 4. **Mismatched text in the compare morph.** "vs Mindbody" (one line) grows into "Gym Thing vs Mindbody" (two lines). The old copy fades out in 140 ms, so the scaled-up ghost is faint and brief (sample 02). If it bothers anyone, drop moment 2 and keep only the cross-fade.
 5. **Input is ignored while the transition runs** (about 300 ms), as with every view transition. This is fine at these durations. Don't lengthen them.
-6. **Slow navigations.** The old page stays frozen until the new one is ready to render, and Chrome gives up after 4 s and just shows the page. GitHub Pages is fast. Astro `prefetch` (hover) would make it instant, but it isn't part of this change.
+6. **Slow navigations.** The old page stays frozen until the new one is ready to render, and Chrome gives up after 4 s and just shows the page. Cloudflare Pages is fast. Astro `prefetch` (hover) would make it instant, but it isn't part of this change.
 7. **Arabic font on the language switch.** Plex Arabic is preloaded, so the new page usually renders in it. On a very cold load the cross-fade can land on the fallback font for a moment. No worse than today.
 
 ## Verification (in the worktree)
