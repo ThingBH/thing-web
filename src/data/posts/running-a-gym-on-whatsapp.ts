@@ -175,7 +175,7 @@ export const post: Post = {
         type: 'text',
         paras: [
           '[Start with a free trial](/free-trial/): we set Gym Thing up with your plans and members, and your desk can send its first payment link the same day. Run it free for up to 3 months.',
-          'Gym Thing for [Saudi Arabia](/gym-software/saudi-arabia/), [the UAE](/gym-software/uae/), [Qatar](/gym-software/qatar/), [Kuwait](/gym-software/kuwait/), [Oman](/gym-software/oman/) and [Bahrain](/gym-software/bahrain/). Read more on [billing that charges the right member](/blog/billing-that-charges-right/) and [the best gym software in the GCC](/blog/best-gym-software-gcc/).',
+          'Gym Thing for [Saudi Arabia](/gym-software/saudi-arabia/), [the UAE](/gym-software/uae/), [Qatar](/gym-software/qatar/), [Kuwait](/gym-software/kuwait/), [Oman](/gym-software/oman/) and [Bahrain](/gym-software/bahrain/). Read more on [billing that charges the right member](/blog/billing-that-charges-right/) and [the best gym software in the GCC](/blog/best-gym-software-gcc/). Small gym? See [gym software for small gyms in Bahrain](/blog/small-gym-software-bahrain/).',
         ],
       },
       {
@@ -353,7 +353,7 @@ export const post: Post = {
         type: 'text',
         paras: [
           '[ابدأ بتجربة مجانية](/ar/free-trial/): نجهز Gym Thing بباقاتك وأعضاءك، والاستقبال يقدر يرسل أول رابط دفع في نفس اليوم. وشغّله ببلاش لين 3 شهور.',
-          'Gym Thing لـ[السعودية](/ar/gym-software/saudi-arabia/) و[الإمارات](/ar/gym-software/uae/) و[قطر](/ar/gym-software/qatar/) و[الكويت](/ar/gym-software/kuwait/) و[عُمان](/ar/gym-software/oman/) و[البحرين](/ar/gym-software/bahrain/). واقرأ أكثر عن [الدفع اللي يوصل من العضو الصح](/ar/blog/billing-that-charges-right/) و[أفضل برامج النوادي في الخليج](/ar/blog/best-gym-software-gcc/).',
+          'Gym Thing لـ[السعودية](/ar/gym-software/saudi-arabia/) و[الإمارات](/ar/gym-software/uae/) و[قطر](/ar/gym-software/qatar/) و[الكويت](/ar/gym-software/kuwait/) و[عُمان](/ar/gym-software/oman/) و[البحرين](/ar/gym-software/bahrain/). واقرأ أكثر عن [الدفع اللي يوصل من العضو الصح](/ar/blog/billing-that-charges-right/) و[أفضل برامج النوادي في الخليج](/ar/blog/best-gym-software-gcc/). عندك نادي صغير؟ شوف [برنامج إدارة النوادي الصغيرة في البحرين](/ar/blog/small-gym-software-bahrain/).',
         ],
       },
       {

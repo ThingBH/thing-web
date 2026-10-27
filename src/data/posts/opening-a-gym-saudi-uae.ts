@@ -180,7 +180,7 @@ export const post: Post = {
         type: 'text',
         paras: [
           '[Start with a free trial](/free-trial/): we set Gym Thing up with your logo, plans and team while you finish the fit-out, train your staff, and you run it free for up to 3 months.',
-          'See Gym Thing for [Saudi Arabia](/gym-software/saudi-arabia/) and [the UAE](/gym-software/uae/), or compare [the best gym software in the GCC](/blog/best-gym-software-gcc/).',
+          'See Gym Thing for [Saudi Arabia](/gym-software/saudi-arabia/) and [the UAE](/gym-software/uae/), or compare [the best gym software in the GCC](/blog/best-gym-software-gcc/). Opening in Bahrain? Read [opening a new gym in Bahrain](/blog/opening-a-new-gym-bahrain/).',
         ],
       },
       {
@@ -368,7 +368,7 @@ export const post: Post = {
         type: 'text',
         paras: [
           '[ابدأ بتجربة مجانية](/ar/free-trial/): نجهز Gym Thing بشعارك وباقاتك وفريقك وإنت تخلّص التجهيز، وندرّب موظفينك، وتشغّله ببلاش لين 3 شهور.',
-          'شوف Gym Thing لـ[السعودية](/ar/gym-software/saudi-arabia/) و[الإمارات](/ar/gym-software/uae/)، أو قارن [أفضل برامج النوادي في الخليج](/ar/blog/best-gym-software-gcc/).',
+          'شوف Gym Thing لـ[السعودية](/ar/gym-software/saudi-arabia/) و[الإمارات](/ar/gym-software/uae/)، أو قارن [أفضل برامج النوادي في الخليج](/ar/blog/best-gym-software-gcc/). بتفتح في البحرين؟ اقرأ [افتتاح نادي جديد في البحرين](/ar/blog/opening-a-new-gym-bahrain/).',
         ],
       },
       {
