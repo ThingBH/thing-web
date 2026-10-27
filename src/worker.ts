@@ -68,7 +68,7 @@ export async function trial(request: Request, env: Pick<Env, 'TURNSTILE_SECRET_K
     method: 'POST',
     headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      from: 'thing.bh free trial <trial@thing.bh>',
+      from: 'thing.bh free trial <trial@site.thing.bh>',
       to: contact.sales,
       subject: `Free trial request${lang === 'ar' ? ' (Arabic site)' : ''} · ${t.gym}`,
       text: `Gym: ${t.gym}\nName: ${t.name}\nWhatsApp: ${t.whatsapp}\nSite: ${lang === 'ar' ? 'Arabic' : 'English'}`,
