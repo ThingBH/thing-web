@@ -28,3 +28,4 @@ dist-ssr
 # Astro
 .astro
 .taste-skill
+.dev.vars

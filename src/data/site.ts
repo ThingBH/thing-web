@@ -15,10 +15,12 @@ export const contact = {
   linkedin: 'https://www.linkedin.com/company/thing-bh/',
 }
 
-/** Web3Forms delivers the free-trial form by email. The access key is public by design: it only lets the form submit. */
-export const web3forms = {
-  endpoint: 'https://api.web3forms.com/submit',
-  accessKey: '510232bf-da33-4f69-93b1-0391b5cb489d',
+/** The free-trial form posts to the Worker (`src/worker.ts`), which checks Turnstile and emails the request. */
+export const trialForm = {
+  endpoint: '/api/trial/',
+  // PLACEHOLDER: Cloudflare's always-pass test key. Replace with the real Turnstile site key (public by design);
+  // its secret goes in the Cloudflare dashboard as TURNSTILE_SECRET_KEY.
+  turnstileSiteKey: '1x00000000000000000000AA',
 }
 
 export const nav: Record<Lang, { href: string; label: string }[]> = {
