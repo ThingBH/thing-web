@@ -6,9 +6,9 @@ export const SITE_URL = 'https://thing.bh'
 export const clients = ['Train Fitness', 'RSX Fitness', 'Pulse Fitness', 'Core District Gym', 'Elevation Fitness Club']
 
 export const contact = {
-  whatsapp: '+973 3993 6601',
-  whatsappHref: 'https://wa.me/97339936601',
-  phoneHref: 'tel:+97339936601',
+  whatsapp: '+973 3330 9918',
+  whatsappHref: 'https://wa.me/97333309918',
+  phoneHref: 'tel:+97333309918',
   support: 'support@thing.bh',
   sales: 'hello@thing.bh',
   instagram: 'https://www.instagram.com/thing.bh/',

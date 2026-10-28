@@ -186,7 +186,7 @@ export const post: Post = {
           'Our team is in Seef, Bahrain, on your clock.',
           'WhatsApp, phone and email, 7 days a week, with same-day replies, in Arabic or English.',
           'We set you up, move your members and train your staff. Most gyms are live within a week.',
-          '[WhatsApp +973 3993 6601](https://wa.me/97339936601) or [support@thing.bh](mailto:support@thing.bh)',
+          '[WhatsApp +973 3330 9918](https://wa.me/97333309918) or [support@thing.bh](mailto:support@thing.bh)',
         ],
       },
 
@@ -412,7 +412,7 @@ export const post: Post = {
           'فريقنا في السيف، في البحرين، وعلى نفس توقيتك.',
           'واتساب وتلفون وإيميل، 7 أيام في الأسبوع، والرد في نفس اليوم، بالعربي أو بالإنجليزي.',
           'نجهز لك النظام وننقل أعضاءك وندرّب موظفينك. وأغلب النوادي تشتغل خلال أسبوع.',
-          'واتساب [+973 3993 6601](https://wa.me/97339936601)، أو [support@thing.bh](mailto:support@thing.bh)',
+          'واتساب [+973 3330 9918](https://wa.me/97333309918)، أو [support@thing.bh](mailto:support@thing.bh)',
         ],
       },
 

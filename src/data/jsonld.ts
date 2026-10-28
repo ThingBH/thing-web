@@ -35,7 +35,7 @@ export const baseGraph = (lang: Lang): Node[] => [
       {
         '@type': 'ContactPoint',
         contactType: 'customer support',
-        telephone: '+973-3993-6601',
+        telephone: '+973-3330-9918',
         email: contact.support,
         availableLanguage: ['en', 'ar'],
         hoursAvailable: {

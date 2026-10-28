@@ -218,7 +218,7 @@ export const post: Post = {
       {
         type: 'text',
         paras: [
-          'Members can call your reception from the app in one tap. Your team can reach us on WhatsApp at [+973 3993 6601](https://wa.me/97339936601), by phone or at [support@thing.bh](mailto:support@thing.bh), 7 days a week, and gets a reply the same day, in Arabic or English. Gyms are open on Fridays, so we are too.',
+          'Members can call your reception from the app in one tap. Your team can reach us on WhatsApp at [+973 3330 9918](https://wa.me/97333309918), by phone or at [support@thing.bh](mailto:support@thing.bh), 7 days a week, and gets a reply the same day, in Arabic or English. Gyms are open on Fridays, so we are too.',
           'The best test of a member app is your own members using it. [Start with a free trial](/free-trial/): we set it up, move your members over, and you can run it for up to 3 months before you pay.',
           'The app is only one way in. For the door itself, read [The front door: why gym check-ins fail, and what a good setup needs](/blog/the-front-door/).',
         ],
@@ -438,7 +438,7 @@ export const post: Post = {
       {
         type: 'text',
         paras: [
-          'الأعضاء يقدرون يتصلون بالاستقبال من التطبيق بضغطة وحدة. وفريقك يوصل لنا على واتساب على [+973 3993 6601](https://wa.me/97339936601)، أو بالتلفون، أو على [support@thing.bh](mailto:support@thing.bh)، 7 أيام في الأسبوع، والرد في نفس اليوم، بالعربي أو الإنجليزي. النوادي فاتحة يوم الجمعة، وإحنا بعد.',
+          'الأعضاء يقدرون يتصلون بالاستقبال من التطبيق بضغطة وحدة. وفريقك يوصل لنا على واتساب على [+973 3330 9918](https://wa.me/97333309918)، أو بالتلفون، أو على [support@thing.bh](mailto:support@thing.bh)، 7 أيام في الأسبوع، والرد في نفس اليوم، بالعربي أو الإنجليزي. النوادي فاتحة يوم الجمعة، وإحنا بعد.',
           'أحسن اختبار لتطبيق الأعضاء إن أعضاءك هم اللي يستخدمونه. [ابدأ بتجربة مجانية](/ar/free-trial/): إحنا نجهزه، وننقل أعضاءك، وتقدر تشغّله لين 3 شهور قبل لا تدفع.',
           'والتطبيق طريقة وحدة بس للدخول. وعن الباب نفسه، اقرأ [باب النادي: لماذا يتعطل تسجيل الدخول، وما الذي يحتاجه نظام دخول جيد](/ar/blog/the-front-door/).',
         ],

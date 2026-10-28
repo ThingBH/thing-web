@@ -7,12 +7,12 @@ const form = (fields: Record<string, string>) => {
   for (const [k, v] of Object.entries(fields)) f.set(k, v)
   return f
 }
-const ok = { gym: ' RSX\nFitness ', name: 'Sara Ali', whatsapp: '+973 3993 6601', 'cf-turnstile-response': 'tok' }
+const ok = { gym: ' RSX\nFitness ', name: 'Sara Ali', whatsapp: '+973 3330 9918', 'cf-turnstile-response': 'tok' }
 
 assert.deepEqual(parse(form(ok)), {
   gym: 'RSX Fitness',
   name: 'Sara Ali',
-  whatsapp: '+973 3993 6601',
+  whatsapp: '+973 3330 9918',
   token: 'tok',
   bot: false,
 })
@@ -21,7 +21,7 @@ for (const bad of [
   { gym: ' ' },
   { name: '' },
   { whatsapp: '1234567' },
-  { whatsapp: '+973 3993 6601 <x>' },
+  { whatsapp: '+973 3330 9918 <x>' },
   { 'cf-turnstile-response': '' },
   { gym: 'x'.repeat(121) },
   { 'cf-turnstile-response': 'x'.repeat(2049) },

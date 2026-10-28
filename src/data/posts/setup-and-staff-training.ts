@@ -129,7 +129,7 @@ export const post: Post = {
         points: [
           'Gyms open at weekends, so we do too.',
           'Message us on WhatsApp, call or email any day of the week and you get a reply the same day, in Arabic or English.',
-          '[WhatsApp +973 3993 6601](https://wa.me/97339936601), [call +973 3993 6601](tel:+97339936601) or [support@thing.bh](mailto:support@thing.bh)',
+          '[WhatsApp +973 3330 9918](https://wa.me/97333309918), [call +973 3330 9918](tel:+97333309918) or [support@thing.bh](mailto:support@thing.bh)',
         ],
       },
 
@@ -361,7 +361,7 @@ export const post: Post = {
         points: [
           'النوادي تفتح في الويكند، وإحنا بعد.',
           'راسلنا على واتساب أو اتصل أو ارسل إيميل أي يوم في الأسبوع، والرد يوصلك في نفس اليوم، بالعربي أو بالإنجليزي.',
-          'واتساب [+973 3993 6601](https://wa.me/97339936601)، أو اتصل على [+973 3993 6601](tel:+97339936601)، أو [support@thing.bh](mailto:support@thing.bh)',
+          'واتساب [+973 3330 9918](https://wa.me/97333309918)، أو اتصل على [+973 3330 9918](tel:+97333309918)، أو [support@thing.bh](mailto:support@thing.bh)',
         ],
       },
 

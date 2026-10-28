@@ -50,7 +50,7 @@ Gym Thing is built and supported locally for how Gulf gyms actually work. Member
 
 - Gyms running Gym Thing that may be named: **Train Fitness**, **RSX Fitness**, **Pulse Fitness**, **Core District Gym**, **Elevation Fitness Club**. Never write "in Bahrain" in the clients line.
 - Competitor comparisons with dated sources: `src/data/compare.ts`.
-- Contact: WhatsApp and phone +973 3993 6601, support@thing.bh, hello@thing.bh (`src/data/site.ts`).
+- Contact: WhatsApp and phone +973 3330 9918, support@thing.bh, hello@thing.bh (`src/data/site.ts`).
 - **No testimonials, owner quotes, case studies, metrics or benchmarks exist yet.** Do not invent any. Only real, attributed owner quotes may be used.
 
 ## Product Principles
